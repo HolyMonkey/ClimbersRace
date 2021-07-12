@@ -3,30 +3,30 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class OrbitCamera : MonoBehaviour
 {
-    [SerializeField] private Transform focus = default;
+    [SerializeField] private Transform _focus = default;
     [SerializeField, Range(1f, 20f)] private float _distance = 5f;
     [SerializeField, Min(0f)] private float _focusRadius = 5f;
-    [SerializeField, Range(0f, 1f)] float focusCentering = 0.5f;
-    [SerializeField, Range(-89f, 89f)] float minVerticalAngle = -45f, maxVerticalAngle = 45f;
+    [SerializeField, Range(0f, 1f)] private float _focusCentering = 0.5f;
+    [SerializeField, Range(-89f, 89f)] private float _minVerticalAngle = -45f, _maxVerticalAngle = 45f;
 
-    Vector3 focusPoint;
-    Vector2 orbitAngles = new Vector2(15f, -6f);
+    private Vector3 _focusPoint;
+    private Vector2 _orbitAngles = new Vector2(15f, -6f);
 
-    void OnValidate()
+    private void OnValidate()
     {
-        if (maxVerticalAngle < minVerticalAngle)
+        if (_maxVerticalAngle < _minVerticalAngle)
         {
-            maxVerticalAngle = minVerticalAngle;
+            _maxVerticalAngle = _minVerticalAngle;
         }
     }
 
-    void Awake()
+    private void Awake()
     {
-        focusPoint = focus.position;
-        transform.localRotation = Quaternion.Euler(orbitAngles);
+        _focusPoint = _focus.position;
+        transform.localRotation = Quaternion.Euler(_orbitAngles);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         UpdateFocusPoint();
         Quaternion lookRotation;
@@ -34,31 +34,31 @@ public class OrbitCamera : MonoBehaviour
         lookRotation = transform.localRotation;
 
         Vector3 lookDirection = lookRotation * Vector3.forward;
-        Vector3 lookPosition = focusPoint - lookDirection * _distance;
+        Vector3 lookPosition = _focusPoint - lookDirection * _distance;
 
         transform.SetPositionAndRotation(lookPosition, lookRotation);
     }
 
-    void UpdateFocusPoint()
+    private void UpdateFocusPoint()
     {
-        Vector3 targetPoint = focus.position;
+        Vector3 targetPoint = _focus.position;
         if (_focusRadius > 0f)
         {
-            float distance = Vector3.Distance(targetPoint, focusPoint);
+            float distance = Vector3.Distance(targetPoint, _focusPoint);
             float t = 1f;
-            if (distance > 0.01f && focusCentering > 0f)
+            if (distance > 0.01f && _focusCentering > 0f)
             {
-                t = Mathf.Pow(1f - focusCentering, Time.unscaledDeltaTime);
+                t = Mathf.Pow(1f - _focusCentering, Time.unscaledDeltaTime);
             }
             if (distance > _focusRadius)
             {
                 t = Mathf.Min(t, _focusRadius / distance);
             }
-            focusPoint = Vector3.Lerp(targetPoint, focusPoint, t);
+            _focusPoint = Vector3.Lerp(targetPoint, _focusPoint, t);
         }
         else
         {
-            focusPoint = targetPoint;
+            _focusPoint = targetPoint;
         }
     }
 }

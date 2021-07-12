@@ -14,7 +14,7 @@ public class GameWall : MonoBehaviour
 
     private List<GameWallTile> _spawnedBalks = new List<GameWallTile>();
 
-    public int SpawnedBalks => _spawnedBalks.Count;
+    public int SpawnedBalksCount => _spawnedBalks.Count;
 
     public void Initialize(Vector2Int size, GameWallTileContentFactory contentFactory, int playerStartTailIndex, int enemyStartTailIndex)
     {
@@ -59,6 +59,7 @@ public class GameWall : MonoBehaviour
     public List<GameWallTile> GetPlayerBalksOnWall()
     {
         var enemyBalks = _spawnedBalks.Where(balk => balk.Content.Type.Equals(GameWallTileContentType.PlayerBalk)).ToList();
+
         return enemyBalks;
     }
 }

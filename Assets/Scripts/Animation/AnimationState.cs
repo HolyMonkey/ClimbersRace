@@ -5,11 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class AnimationState : MonoBehaviour
 {
-    [SerializeField] private Movement _movement;
+    [SerializeField] private MovementHandler _movement;
 
     private Animator _animator;
-
-    private string _rightHangBoolName = "RightHang", _leftHangBoolName = "LeftHang", _flyBoolName = "Flying", _slideDownAnimation = "Miss Balk";
 
     private void Awake()
     {
@@ -18,43 +16,32 @@ public class AnimationState : MonoBehaviour
 
     private void OnEnable()
     {
-        _movement.CatchedtBalkOnRight += OnRightHangState;
-        _movement.CatchedtBalkOnLeft += OnLeftHangState;
-        _movement.LeftBalk += OnFlyState;
-        _movement.SlidDown += OnSlidDown;
+        _movement.CatchedBalkOnRight += OnCatchedBalkOnRight;
+        _movement.CatchedBalkOnLeft += OnCatchedBalkOnLeft;
+        _movement.SlidingDown += OnSlidingDown;
     }
 
     private void OnDisable()
     {
-        _movement.CatchedtBalkOnRight -= OnRightHangState;
-        _movement.CatchedtBalkOnLeft -= OnLeftHangState;
-        _movement.LeftBalk -= OnFlyState;
-        _movement.SlidDown -= OnSlidDown;
+        _movement.CatchedBalkOnRight -= OnCatchedBalkOnRight;
+        _movement.CatchedBalkOnLeft -= OnCatchedBalkOnLeft;
+        _movement.SlidingDown -= OnSlidingDown;
     }
 
-    private void OnRightHangState()
+    private void OnCatchedBalkOnRight()
     {
-        _animator.SetBool(_rightHangBoolName, true);
-        _animator.SetBool(_leftHangBoolName, false);
-        _animator.SetBool(_flyBoolName, false);
+        _animator.SetBool(SampleAnimationController.Params.RightHang, true);
+        _animator.SetBool(SampleAnimationController.Params.LeftHang, false);
     }
 
-    private void OnLeftHangState()
+    private void OnCatchedBalkOnLeft()
     {
-        _animator.SetBool(_rightHangBoolName, false);
-        _animator.SetBool(_leftHangBoolName, true);
-        _animator.SetBool(_flyBoolName, false);
+        _animator.SetBool(SampleAnimationController.Params.RightHang, false);
+        _animator.SetBool(SampleAnimationController.Params.LeftHang, true);
     }
 
-    private void OnFlyState()
+    private void OnSlidingDown()
     {
-        _animator.SetBool(_rightHangBoolName, false);
-        _animator.SetBool(_leftHangBoolName, false);
-        _animator.SetBool(_flyBoolName, true);
-    }
-
-    private void OnSlidDown()
-    {
-        _animator.Play(_slideDownAnimation);
+        _animator.Play(SampleAnimationController.States.MissBalk);
     }
 }
