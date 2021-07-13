@@ -34,6 +34,11 @@ public class OrbitCamera : MonoBehaviour
         transform.position = lookPosition;
     }
 
+    public void SetTarget(Transform target)
+    {
+        _focus = target;
+    }
+
     private void UpdateFocusPoint()
     {
         Vector3 targetPoint = _focus.position;
