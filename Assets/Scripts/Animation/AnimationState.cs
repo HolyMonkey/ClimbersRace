@@ -32,16 +32,19 @@ public class AnimationState : MonoBehaviour
     {
         _animator.SetBool(SampleAnimationController.Params.RightHang, true);
         _animator.SetBool(SampleAnimationController.Params.LeftHang, false);
+        _animator.SetBool(SampleAnimationController.Params.SlidingDown, false);
     }
 
     private void OnCatchedBalkOnLeft()
     {
         _animator.SetBool(SampleAnimationController.Params.RightHang, false);
         _animator.SetBool(SampleAnimationController.Params.LeftHang, true);
+        _animator.SetBool(SampleAnimationController.Params.SlidingDown, false);
     }
 
     private void OnSlidingDown()
     {
+        _animator.SetBool(SampleAnimationController.Params.SlidingDown, true);
         _animator.Play(SampleAnimationController.States.MissBalk);
     }
 }

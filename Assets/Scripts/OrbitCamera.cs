@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class OrbitCamera : MonoBehaviour
 {
-    [SerializeField] private Transform _focus = default;
-    [SerializeField, Range(1f, 20f)] private float _distance = 5f;
+    [SerializeField] private Transform _focus;
+    [SerializeField] private Vector3 _offset;
     [SerializeField, Min(0f)] private float _focusRadius = 5f;
     [SerializeField, Range(0f, 1f)] private float _focusCentering = 0.5f;
     [SerializeField, Range(-89f, 89f)] private float _minVerticalAngle = -45f, _maxVerticalAngle = 45f;
@@ -29,14 +29,9 @@ public class OrbitCamera : MonoBehaviour
     private void LateUpdate()
     {
         UpdateFocusPoint();
-        Quaternion lookRotation;
+        Vector3 lookPosition = _focusPoint + _offset;
 
-        lookRotation = transform.localRotation;
-
-        Vector3 lookDirection = lookRotation * Vector3.forward;
-        Vector3 lookPosition = _focusPoint - lookDirection * _distance;
-
-        transform.SetPositionAndRotation(lookPosition, lookRotation);
+        transform.position = lookPosition;
     }
 
     private void UpdateFocusPoint()

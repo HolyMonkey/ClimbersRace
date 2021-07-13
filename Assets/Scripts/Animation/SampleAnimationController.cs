@@ -8,7 +8,7 @@ public static class SampleAnimationController
     {
         public const string RightHang = "RightHang";
         public const string LeftHang = "LeftHang";
-        public const string RightHandReach = "RightHandReach";
+        public const string SlidingDown = "SlidingDown";
     }
 
     public static class States
