@@ -42,6 +42,11 @@ public class MovementHandler : MonoBehaviour
         _rigidbody.AddForce(direction * _pushForce, ForceMode.Impulse);
     }
 
+    public void PushInDirectionMovement(float force)
+    {
+        Push(_rigidbody.velocity.normalized * force);
+    }
+
     public void AttachToBalk(Balk balk)
     {
         _rigidbody.drag = _swingReducerPower;
@@ -70,6 +75,7 @@ public class MovementHandler : MonoBehaviour
     public void CollideWithTrap()
     {
         SlidingDown?.Invoke();
+        DetachFromBalk();
     }
 
     private void ResetJoint()
@@ -82,12 +88,14 @@ public class MovementHandler : MonoBehaviour
 
     private void SetHandGripDirection(Balk balk)
     {
-        if (_startDragPosition.x - transform.position.x > 0)
+        float distanceToBalk = _startDragPosition.x - transform.position.x;
+
+        if (distanceToBalk > 0.05f)
         {
             _keepOnIK.SetTarget(balk.NearPoint, balk.FarPoint);
             CatchedBalkOnLeft?.Invoke();
         }
-        else
+        else if (distanceToBalk < -0.05f)
         {
             _keepOnIK.SetTarget(balk.FarPoint, balk.NearPoint);
             CatchedBalkOnRight?.Invoke();

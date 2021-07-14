@@ -24,7 +24,7 @@ public class FinishGameHandler : MonoBehaviour
 
     private IEnumerator PushWinner(MovementHandler winnerMovement, float timeToStop)
     {
-        winnerMovement.Push(Vector3.up * _pushForceWinner);
+        winnerMovement.PushInDirectionMovement(_pushForceWinner);
 
         yield return new WaitForSeconds(timeToStop);
 

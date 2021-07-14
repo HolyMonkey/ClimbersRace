@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
         _basePosition = transform.position;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent(out PlayerBalk playerBalk))
         {
