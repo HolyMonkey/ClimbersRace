@@ -19,10 +19,13 @@ public class MovementHandler : MonoBehaviour
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
     private Vector3 _startDragPosition;
+    private bool _catchedOnBalk;
 
     public event UnityAction CatchedBalkOnRight;
     public event UnityAction CatchedBalkOnLeft;
     public event UnityAction SlidingDown;
+
+    public bool CatchedOnBalk => _catchedOnBalk;
 
     private void Start()
     {
@@ -49,6 +52,7 @@ public class MovementHandler : MonoBehaviour
 
     public void AttachToBalk(Balk balk)
     {
+        _catchedOnBalk = true;
         _rigidbody.drag = _swingReducerPower;
         _springJoint.connectedBody = balk.Rigidbody;
         _springJoint.connectedAnchor = balk.Rigidbody.centerOfMass;
@@ -61,6 +65,7 @@ public class MovementHandler : MonoBehaviour
     {
         if (Vector3.Distance(_startDragPosition, transform.localPosition) > _minDragForceToJump)
         {
+            _catchedOnBalk = false;
             _keepOnIK.SetTarget(null, null);
             StartCoroutine(LetFlyThrough(_timeToLeaveBalk));
             ResetJoint();

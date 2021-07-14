@@ -11,10 +11,12 @@ public class EnemyBalkMovement : MonoBehaviour
 
     private EnemyMovement _enemyMovement;
     private float _basePositionZ;
+    private float _baseTolerance;
 
     private void Awake()
     {
         _basePositionZ = transform.position.z;
+        _baseTolerance = _springJoint.tolerance;
     }
 
     private void Update()
@@ -52,7 +54,7 @@ public class EnemyBalkMovement : MonoBehaviour
             _enemyMovement = null;
             _balkMovement.FinishDragBalk();
 
-            _springJoint.tolerance = 0;
+            _springJoint.tolerance = _baseTolerance;
         }
     }
 }
