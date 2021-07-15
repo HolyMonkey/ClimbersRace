@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerBalkMovement : MonoBehaviour
 {
     [SerializeField] private BalkMovementHandler _balkMovement;
+    [SerializeField] private float _minDragForceToJump;
 
     private Vector3 _offset;
     private float _zOffset;
+    private Vector3 _startDragPosition;
 
     private void Start()
     {
@@ -17,6 +19,7 @@ public class PlayerBalkMovement : MonoBehaviour
     private void OnMouseDown()
     {
         _offset = transform.position - GetMousePosition();
+        _startDragPosition = transform.position;
         _balkMovement.BeginDragBalk();
     }
 
@@ -29,7 +32,10 @@ public class PlayerBalkMovement : MonoBehaviour
 
     private void OnMouseUp()
     {
-        _balkMovement.FinishDragBalk();
+        if (Vector3.Distance(_startDragPosition, transform.position) > _minDragForceToJump)
+        {
+            _balkMovement.FinishDragBalk();
+        }
     }
 
     private Vector3 GetMousePosition()

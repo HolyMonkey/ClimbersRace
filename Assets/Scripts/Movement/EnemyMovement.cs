@@ -13,12 +13,31 @@ public class EnemyMovement : MonoBehaviour
 
     private int _currentWaypointNumber = 0;
     private Tweener _tweener;
+    private bool _isSlidingDown;
 
     public Vector3 NextTargetPosition => _wayPoints[_currentWaypointNumber - 1].position;
+
+    private void OnEnable()
+    {
+        _movement.SlidingDown += OnSlidingDown;
+    }
+
+    private void OnDisable()
+    {
+        _movement.SlidingDown -= OnSlidingDown;
+    }
 
     private void Start()
     {
         MoveToNextPosition();
+    }
+
+    private void Update()
+    {
+        if (_isSlidingDown)
+        {
+            _movement.FallDown();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,17 +58,26 @@ public class EnemyMovement : MonoBehaviour
 
     public void MoveToNextPosition()
     {
-        if (_tweener == null || _tweener.IsComplete())
+        if (_isSlidingDown == false)
         {
-            Vector3 targetPosition = _wayPoints[_currentWaypointNumber].position;
-
-            if (_currentWaypointNumber + 1 < _wayPoints.Length)
+            if (_tweener == null || _tweener.IsComplete())
             {
-                _currentWaypointNumber++;
-            }
+                Vector3 targetPosition = _wayPoints[_currentWaypointNumber].position;
 
-            _tweener = transform.DOMove(targetPosition, _timeOfDragging).SetDelay(_dragDelay).SetAutoKill(false);
-            _tweener.Restart();
+                if (_currentWaypointNumber + 1 < _wayPoints.Length)
+                {
+                    _currentWaypointNumber++;
+                }
+
+                _tweener = transform.DOMove(targetPosition, _timeOfDragging).SetDelay(_dragDelay).SetAutoKill(false);
+                _tweener.Restart();
+            }
         }
+    }
+
+    private void OnSlidingDown()
+    {
+        _isSlidingDown = true;
+        _tweener.Kill();
     }
 }

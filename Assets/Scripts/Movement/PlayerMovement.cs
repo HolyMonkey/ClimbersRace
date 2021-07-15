@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.TryGetComponent(out PlayerBalk playerBalk))
+        if (other.TryGetComponent(out PlayerBalk playerBalk) && _movement.CatchedOnBalk == false)
         {
             _movement.AttachToBalk(playerBalk);
         }

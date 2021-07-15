@@ -48,12 +48,14 @@ public class BalkMovementHandler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (_movement == null)
+        if (other.TryGetComponent(out MovementHandler movement))
         {
-            if (other.TryGetComponent(out MovementHandler mover))
+            if (_movement != null && _movement != movement)
             {
-                _movement = mover;
+                _movement.CollideWithTrap();
             }
+
+            _movement = movement;
         }
     }
 

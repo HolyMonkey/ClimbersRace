@@ -10,13 +10,13 @@ public class CurvedLineRenderer : MonoBehaviour
     [SerializeField] private bool _showGizmos = true;
 
     private LineRenderer _lineRenderer;
-    private CurvedLinePoint[] _linePoints;
+    private CurvedLinePoint[] _linePoints = new CurvedLinePoint[0];
     private Vector3[] _linePositions = new Vector3[0];
     private Vector3[] _linePositionsOld = new Vector3[0];
 
     private void OnValidate()
     {
-        if (Application.isPlaying && _linePoints.Length != 0)
+        if (Application.isPlaying && _linePoints.Length > 0)
         {
             foreach (CurvedLinePoint linePoint in _linePoints)
             {

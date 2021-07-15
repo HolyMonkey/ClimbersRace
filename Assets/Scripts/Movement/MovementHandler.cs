@@ -10,7 +10,6 @@ public class MovementHandler : MonoBehaviour
     [SerializeField] private Rigidbody _tempRigidbody;
     [SerializeField] private float _pushForce;
     [SerializeField] private float _maxSpeed;
-    [SerializeField] private float _minDragForceToJump;
     [SerializeField] private float _springTougthness;
     [SerializeField] private float _swingReducerPower;
     [SerializeField] private float _timeToLeaveBalk;
@@ -63,13 +62,10 @@ public class MovementHandler : MonoBehaviour
 
     public void DetachFromBalk()
     {
-        if (Vector3.Distance(_startDragPosition, transform.localPosition) > _minDragForceToJump)
-        {
-            _catchedOnBalk = false;
-            _keepOnIK.SetTarget(null, null);
-            StartCoroutine(LetFlyThrough(_timeToLeaveBalk));
-            ResetJoint();
-        }
+        _catchedOnBalk = false;
+        ResetJoint();
+        _keepOnIK.SetTarget(null, null);
+        StartCoroutine(LetFlyThrough(_timeToLeaveBalk));
     }
 
     public void SetStartDragPosition(Vector3 startDragPosition)
@@ -81,6 +77,12 @@ public class MovementHandler : MonoBehaviour
     {
         SlidingDown?.Invoke();
         DetachFromBalk();
+    }
+
+    public void FallDown()
+    {
+        _collider.enabled = false;
+        ResetJoint();
     }
 
     private void ResetJoint()
@@ -100,7 +102,7 @@ public class MovementHandler : MonoBehaviour
             _keepOnIK.SetTarget(balk.NearPoint, balk.FarPoint);
             CatchedBalkOnLeft?.Invoke();
         }
-        else if (distanceToBalk < -0.05f)
+        else
         {
             _keepOnIK.SetTarget(balk.FarPoint, balk.NearPoint);
             CatchedBalkOnRight?.Invoke();

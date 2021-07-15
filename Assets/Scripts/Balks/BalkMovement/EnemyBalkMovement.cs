@@ -45,6 +45,14 @@ public class EnemyBalkMovement : MonoBehaviour
                 _springJoint.tolerance = _tolerance;
             }
         }
+        else
+        {
+            if (other.gameObject.TryGetComponent(out PlayerMovement playerMovement))
+            {
+                _enemyMovement = null;
+                _springJoint.tolerance = _baseTolerance;
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
