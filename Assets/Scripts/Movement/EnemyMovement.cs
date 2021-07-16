@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform[] _wayPoints;
     [SerializeField] private float _timeOfDragging = 0.75f;
     [SerializeField] private float _dragDelay = 1.5f;
+    [SerializeField] private float _fallSpeed;
 
     private int _currentWaypointNumber = 0;
     private Tweener _tweener;
@@ -36,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (_isSlidingDown)
         {
-            _movement.FallDown();
+            _movement.FallDown(_fallSpeed);
         }
     }
 

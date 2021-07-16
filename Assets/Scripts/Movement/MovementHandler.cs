@@ -79,8 +79,9 @@ public class MovementHandler : MonoBehaviour
         DetachFromBalk();
     }
 
-    public void FallDown()
+    public void FallDown(float fallSpeed)
     {
+        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, fallSpeed);
         _collider.enabled = false;
         ResetJoint();
     }
