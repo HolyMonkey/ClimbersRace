@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class Emotions : MonoBehaviour
 {
-    [SerializeField] private Transform _emotion;
+    [SerializeField] private GameObject _emotionPrefab;
     [SerializeField] private Canvas _canvas;
     [SerializeField] private PlayerMovement _player;
     [SerializeField] private float _appearanceDuration;
@@ -17,8 +17,7 @@ public class Emotions : MonoBehaviour
 
     private void Awake()
     {
-        _baseEmotionScale = _emotion.localScale;
-        _emotion.gameObject.SetActive(false);
+        _baseEmotionScale = _emotionPrefab.transform.localScale;
     }
 
     private void OnEnable()
@@ -43,14 +42,14 @@ public class Emotions : MonoBehaviour
 
     private void ShowEmotion(Vector2 position, float apperanceDuration, float disappearanceDuration)
     {
-        _emotion.position = position;
-        _emotion.localScale = Vector3.zero;
-        _emotion.gameObject.SetActive(true);
+        Transform emotion = Instantiate(_emotionPrefab, position, Quaternion.identity, _canvas.transform).transform;
+        emotion.localScale = Vector3.zero;
+        emotion.gameObject.SetActive(true);
 
-        _emotion.DOShakeRotation(apperanceDuration);
-        _emotion.DOMove(_endDistance, apperanceDuration).SetRelative();
-        _emotion.DOScale(_baseEmotionScale, apperanceDuration)
-                .OnComplete(() => _emotion.DOScale(Vector3.zero, disappearanceDuration)
-                .OnComplete(() => _emotion.gameObject.SetActive(false)));
+        emotion.DOShakeRotation(apperanceDuration);
+        emotion.DOMove(_endDistance, apperanceDuration).SetRelative();
+        emotion.DOScale(_baseEmotionScale, apperanceDuration)
+                .OnComplete(() => emotion.DOScale(Vector3.zero, disappearanceDuration)
+                .OnComplete(() => emotion.gameObject.SetActive(false)));
     }
 }

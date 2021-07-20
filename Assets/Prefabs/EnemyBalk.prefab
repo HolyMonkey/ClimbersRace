@@ -478,7 +478,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.54
+  m_Radius: 0.75
   m_Height: 8.197559
   m_Direction: 2
   m_Center: {x: -0.000000074505806, y: 0, z: 3.7583663}
@@ -535,8 +535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4561247814887912524}
-  _nearPoint: {fileID: 4961747785778422565}
-  _farPoint: {fileID: 5644064094450803784}
+  _nearPoint: {fileID: 5644064094450803784}
+  _farPoint: {fileID: 4961747785778422565}
 --- !u!114 &3934645196769127931
 MonoBehaviour:
   m_ObjectHideFlags: 0

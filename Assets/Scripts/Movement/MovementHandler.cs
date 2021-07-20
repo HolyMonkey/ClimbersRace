@@ -23,6 +23,7 @@ public class MovementHandler : MonoBehaviour
     public event UnityAction CatchedBalkOnRight;
     public event UnityAction CatchedBalkOnLeft;
     public event UnityAction SlidingDown;
+    public event UnityAction Flying;
 
     public bool CatchedOnBalk => _catchedOnBalk;
 
@@ -62,6 +63,8 @@ public class MovementHandler : MonoBehaviour
 
     public void DetachFromBalk()
     {
+        Flying?.Invoke();
+
         _catchedOnBalk = false;
         ResetJoint();
         _keepOnIK.SetTarget(null, null);
@@ -103,7 +106,7 @@ public class MovementHandler : MonoBehaviour
             _keepOnIK.SetTarget(balk.NearPoint, balk.FarPoint);
             CatchedBalkOnLeft?.Invoke();
         }
-        else
+        else if (distanceToBalk < -0.05f)
         {
             _keepOnIK.SetTarget(balk.FarPoint, balk.NearPoint);
             CatchedBalkOnRight?.Invoke();
