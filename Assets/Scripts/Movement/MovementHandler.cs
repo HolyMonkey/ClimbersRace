@@ -106,7 +106,7 @@ public class MovementHandler : MonoBehaviour
             _keepOnIK.SetTarget(balk.NearPoint, balk.FarPoint);
             CatchedBalkOnLeft?.Invoke();
         }
-        else if (distanceToBalk < -0.05f)
+        else
         {
             _keepOnIK.SetTarget(balk.FarPoint, balk.NearPoint);
             CatchedBalkOnRight?.Invoke();
