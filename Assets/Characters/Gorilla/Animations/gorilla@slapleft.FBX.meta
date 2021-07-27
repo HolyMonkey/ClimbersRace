@@ -1,0 +1,821 @@
+fileFormatVersion: 2
+guid: 92501098c7c450143aa041407bf46917
+timeCreated: 1518902291
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Circle001
+    100002: Circle002
+    100004: Circle003
+    100006: Circle004
+    100008: Circle005
+    100010: //RootNode
+    100012: gorilla_COM_ctrl
+    100014: gorilla_Head-nub_bone
+    100016: gorilla_Head_bone
+    100018: gorilla_Head_ctrl
+    100020: gorilla_Hip_ctrl
+    100022: gorilla_l_Ankle_bone
+    100024: gorilla_l_ball_IKGoal
+    100026: gorilla_l_Clav_bone
+    100028: gorilla_l_Clavicle_ctrl
+    100030: gorilla_l_Elbow_FK_ctrl
+    100032: Gorilla_l_Eye_mesh
+    100034: Gorilla_l_Eye_mesh001
+    100036: gorilla_l_EyelidLow-nub_bone
+    100038: gorilla_l_EyelidLow_bone
+    100040: Gorilla_l_Eyelids_mesh
+    100042: Gorilla_l_Eyelids_mesh001
+    100044: gorilla_l_EyelidUp-nub_bone
+    100046: gorilla_l_EyelidUp_bone
+    100048: gorilla_l_Foot_ctrl
+    100050: gorilla_l_Forearm_bone
+    100052: gorilla_l_Forearm_FK_bone
+    100054: gorilla_l_Forearm_IK_bone
+    100056: gorilla_l_ForearmRoll1_bone
+    100058: gorilla_l_ForearmRoll2_bone
+    100060: gorilla_l_Hand-nub_bone
+    100062: gorilla_l_Hand_bone
+    100064: gorilla_l_Hand_FK_ctrl
+    100066: gorilla_l_Hand_IK_ctrl
+    100068: gorilla_l_Hand_IKGoal
+    100070: gorilla_l_Heel_hlp
+    100072: gorilla_l_heel_IKGoal
+    100074: gorilla_l_HeelPeel_hlp
+    100076: gorilla_l_Index_1_bone
+    100078: gorilla_l_Index_2_bone
+    100080: gorilla_l_Index_3-nub_bone
+    100082: gorilla_l_Index_3_bone
+    100084: gorilla_l_Index_ctrl
+    100086: gorilla_l_Index_ctrl001
+    100088: gorilla_l_Knee_bone
+    100090: gorilla_l_Middle_1_bone
+    100092: gorilla_l_Middle_2_bone
+    100094: gorilla_l_Middle_3-nub_bone
+    100096: gorilla_l_Middle_3_bone
+    100098: gorilla_l_Middle_ctrl
+    100100: gorilla_l_Middle_ctrl001
+    100102: gorilla_l_Pinky_1_bone
+    100104: gorilla_l_Pinky_2_bone
+    100106: gorilla_l_Pinky_3-nub_bone
+    100108: gorilla_l_Pinky_3_bone
+    100110: gorilla_l_Pinky_ctrl
+    100112: gorilla_l_Pinky_ctrl001
+    100114: gorilla_l_Ring_1_bone
+    100116: gorilla_l_Ring_2_bone
+    100118: gorilla_l_Ring_3-nub_bone
+    100120: gorilla_l_Ring_3_bone
+    100122: gorilla_l_Ring_ctrl
+    100124: gorilla_l_Ring_ctrl001
+    100126: gorilla_l_Shoulder_bone
+    100128: gorilla_l_Shoulder_FK_bone
+    100130: gorilla_l_Shoulder_FK_ctrl
+    100132: gorilla_l_Shoulder_IK_bone
+    100134: gorilla_l_ShoulderRoll_bone
+    100136: gorilla_l_ShoulderTwist_hlp
+    100138: gorilla_l_Thigh_bone
+    100140: gorilla_l_Thumb_1_bone
+    100142: gorilla_l_Thumb_2_bone
+    100144: gorilla_l_Thumb_3-nub_bone
+    100146: gorilla_l_Thumb_3_bone
+    100148: gorilla_l_Thumb_ctrl
+    100150: gorilla_l_Thumb_ctrl001
+    100152: gorilla_l_Toe-nub_bone
+    100154: gorilla_l_Toe_bone
+    100156: gorilla_l_toe_IKGoal
+    100158: gorilla_l_ToeLift_hlp
+    100160: gorilla_l_ToeLift_hlp 1
+    100162: gorilla_l_ToeTap_hlp
+    100164: gorilla_l_Wrist_bone
+    100166: gorilla_l_Wrist_FK_bone
+    100168: gorilla_l_Wrist_IK_bone
+    100170: gorilla_Main_ctrl
+    100172: gorilla_Mandible-nub_bone
+    100174: gorilla_Mandible_bone
+    100176: gorilla_Mandible_ctrl
+    100178: Gorilla_mesh
+    100180: gorilla_Mouth-nub_bone
+    100182: gorilla_Mouth_bone
+    100184: gorilla_Mouth_ctrl
+    100186: gorilla_Neck_bone
+    100188: gorilla_NeckBase_ctrl
+    100190: gorilla_Pelvis-nub_bone
+    100192: gorilla_Pelvis_bone
+    100194: gorilla_r_Ankle_bone
+    100196: gorilla_r_ball_IKGoal
+    100198: gorilla_r_Clav_bone
+    100200: gorilla_r_Clavicle_ctrl
+    100202: gorilla_r_Elbow_FK_ctrl
+    100204: gorilla_r_EyelidLow-nub_bone
+    100206: gorilla_r_EyelidLow_bone
+    100208: gorilla_r_EyelidUp-nub_bone
+    100210: gorilla_r_EyelidUp_bone
+    100212: gorilla_r_Foot_ctrl
+    100214: gorilla_r_Forearm_bone
+    100216: gorilla_r_Forearm_FK_bone
+    100218: gorilla_r_Forearm_IK_bone
+    100220: gorilla_r_ForearmRoll1_bone
+    100222: gorilla_r_ForearmRoll2_bone
+    100224: gorilla_r_Hand-nub_bone
+    100226: gorilla_r_Hand_bone
+    100228: gorilla_r_Hand_FK_ctrl
+    100230: gorilla_r_Hand_IK_ctrl
+    100232: gorilla_r_Hand_IKGoal
+    100234: gorilla_r_Heel_hlp
+    100236: gorilla_r_heel_IKGoal
+    100238: gorilla_r_HeelPeel_hlp
+    100240: gorilla_r_Index_1_bone
+    100242: gorilla_r_Index_2_bone
+    100244: gorilla_r_Index_3-nub_bone
+    100246: gorilla_r_Index_3_bone
+    100248: gorilla_r_Knee_bone
+    100250: gorilla_r_Middle_1_bone
+    100252: gorilla_r_Middle_2_bone
+    100254: gorilla_r_Middle_3-nub_bone
+    100256: gorilla_r_Middle_3_bone
+    100258: gorilla_r_Pinky_1_bone
+    100260: gorilla_r_Pinky_2_bone
+    100262: gorilla_r_Pinky_3-nub_bone
+    100264: gorilla_r_Pinky_3_bone
+    100266: gorilla_r_Ring_1_bone
+    100268: gorilla_r_Ring_2_bone
+    100270: gorilla_r_Ring_3-nub_bone
+    100272: gorilla_r_Ring_3_bone
+    100274: gorilla_r_Shoulder_bone
+    100276: gorilla_r_Shoulder_FK_bone
+    100278: gorilla_r_Shoulder_FK_ctrl
+    100280: gorilla_r_Shoulder_IK_bone
+    100282: gorilla_r_ShoulderRoll_bone
+    100284: gorilla_r_ShoulderTwist_hlp
+    100286: gorilla_r_Thigh_bone
+    100288: gorilla_r_Thumb_1_bone
+    100290: gorilla_r_Thumb_2_bone
+    100292: gorilla_r_Thumb_3-nub_bone
+    100294: gorilla_r_Thumb_3_bone
+    100296: gorilla_r_Toe-nub_bone
+    100298: gorilla_r_Toe_bone
+    100300: gorilla_r_toe_IKGoal
+    100302: gorilla_r_ToeLift_hlp
+    100304: gorilla_r_Wrist_bone
+    100306: gorilla_r_Wrist_FK_bone
+    100308: gorilla_r_Wrist_IK_bone
+    100310: gorilla_Spine1_bone
+    100312: gorilla_Spine2_bone
+    100314: gorilla_Spine3_bone
+    100316: gorilla_SpineBase_ctrl
+    400000: Circle001
+    400002: Circle002
+    400004: Circle003
+    400006: Circle004
+    400008: Circle005
+    400010: //RootNode
+    400012: gorilla_COM_ctrl
+    400014: gorilla_Head-nub_bone
+    400016: gorilla_Head_bone
+    400018: gorilla_Head_ctrl
+    400020: gorilla_Hip_ctrl
+    400022: gorilla_l_Ankle_bone
+    400024: gorilla_l_ball_IKGoal
+    400026: gorilla_l_Clav_bone
+    400028: gorilla_l_Clavicle_ctrl
+    400030: gorilla_l_Elbow_FK_ctrl
+    400032: Gorilla_l_Eye_mesh
+    400034: Gorilla_l_Eye_mesh001
+    400036: gorilla_l_EyelidLow-nub_bone
+    400038: gorilla_l_EyelidLow_bone
+    400040: Gorilla_l_Eyelids_mesh
+    400042: Gorilla_l_Eyelids_mesh001
+    400044: gorilla_l_EyelidUp-nub_bone
+    400046: gorilla_l_EyelidUp_bone
+    400048: gorilla_l_Foot_ctrl
+    400050: gorilla_l_Forearm_bone
+    400052: gorilla_l_Forearm_FK_bone
+    400054: gorilla_l_Forearm_IK_bone
+    400056: gorilla_l_ForearmRoll1_bone
+    400058: gorilla_l_ForearmRoll2_bone
+    400060: gorilla_l_Hand-nub_bone
+    400062: gorilla_l_Hand_bone
+    400064: gorilla_l_Hand_FK_ctrl
+    400066: gorilla_l_Hand_IK_ctrl
+    400068: gorilla_l_Hand_IKGoal
+    400070: gorilla_l_Heel_hlp
+    400072: gorilla_l_heel_IKGoal
+    400074: gorilla_l_HeelPeel_hlp
+    400076: gorilla_l_Index_1_bone
+    400078: gorilla_l_Index_2_bone
+    400080: gorilla_l_Index_3-nub_bone
+    400082: gorilla_l_Index_3_bone
+    400084: gorilla_l_Index_ctrl
+    400086: gorilla_l_Index_ctrl001
+    400088: gorilla_l_Knee_bone
+    400090: gorilla_l_Middle_1_bone
+    400092: gorilla_l_Middle_2_bone
+    400094: gorilla_l_Middle_3-nub_bone
+    400096: gorilla_l_Middle_3_bone
+    400098: gorilla_l_Middle_ctrl
+    400100: gorilla_l_Middle_ctrl001
+    400102: gorilla_l_Pinky_1_bone
+    400104: gorilla_l_Pinky_2_bone
+    400106: gorilla_l_Pinky_3-nub_bone
+    400108: gorilla_l_Pinky_3_bone
+    400110: gorilla_l_Pinky_ctrl
+    400112: gorilla_l_Pinky_ctrl001
+    400114: gorilla_l_Ring_1_bone
+    400116: gorilla_l_Ring_2_bone
+    400118: gorilla_l_Ring_3-nub_bone
+    400120: gorilla_l_Ring_3_bone
+    400122: gorilla_l_Ring_ctrl
+    400124: gorilla_l_Ring_ctrl001
+    400126: gorilla_l_Shoulder_bone
+    400128: gorilla_l_Shoulder_FK_bone
+    400130: gorilla_l_Shoulder_FK_ctrl
+    400132: gorilla_l_Shoulder_IK_bone
+    400134: gorilla_l_ShoulderRoll_bone
+    400136: gorilla_l_ShoulderTwist_hlp
+    400138: gorilla_l_Thigh_bone
+    400140: gorilla_l_Thumb_1_bone
+    400142: gorilla_l_Thumb_2_bone
+    400144: gorilla_l_Thumb_3-nub_bone
+    400146: gorilla_l_Thumb_3_bone
+    400148: gorilla_l_Thumb_ctrl
+    400150: gorilla_l_Thumb_ctrl001
+    400152: gorilla_l_Toe-nub_bone
+    400154: gorilla_l_Toe_bone
+    400156: gorilla_l_toe_IKGoal
+    400158: gorilla_l_ToeLift_hlp
+    400160: gorilla_l_ToeLift_hlp 1
+    400162: gorilla_l_ToeTap_hlp
+    400164: gorilla_l_Wrist_bone
+    400166: gorilla_l_Wrist_FK_bone
+    400168: gorilla_l_Wrist_IK_bone
+    400170: gorilla_Main_ctrl
+    400172: gorilla_Mandible-nub_bone
+    400174: gorilla_Mandible_bone
+    400176: gorilla_Mandible_ctrl
+    400178: Gorilla_mesh
+    400180: gorilla_Mouth-nub_bone
+    400182: gorilla_Mouth_bone
+    400184: gorilla_Mouth_ctrl
+    400186: gorilla_Neck_bone
+    400188: gorilla_NeckBase_ctrl
+    400190: gorilla_Pelvis-nub_bone
+    400192: gorilla_Pelvis_bone
+    400194: gorilla_r_Ankle_bone
+    400196: gorilla_r_ball_IKGoal
+    400198: gorilla_r_Clav_bone
+    400200: gorilla_r_Clavicle_ctrl
+    400202: gorilla_r_Elbow_FK_ctrl
+    400204: gorilla_r_EyelidLow-nub_bone
+    400206: gorilla_r_EyelidLow_bone
+    400208: gorilla_r_EyelidUp-nub_bone
+    400210: gorilla_r_EyelidUp_bone
+    400212: gorilla_r_Foot_ctrl
+    400214: gorilla_r_Forearm_bone
+    400216: gorilla_r_Forearm_FK_bone
+    400218: gorilla_r_Forearm_IK_bone
+    400220: gorilla_r_ForearmRoll1_bone
+    400222: gorilla_r_ForearmRoll2_bone
+    400224: gorilla_r_Hand-nub_bone
+    400226: gorilla_r_Hand_bone
+    400228: gorilla_r_Hand_FK_ctrl
+    400230: gorilla_r_Hand_IK_ctrl
+    400232: gorilla_r_Hand_IKGoal
+    400234: gorilla_r_Heel_hlp
+    400236: gorilla_r_heel_IKGoal
+    400238: gorilla_r_HeelPeel_hlp
+    400240: gorilla_r_Index_1_bone
+    400242: gorilla_r_Index_2_bone
+    400244: gorilla_r_Index_3-nub_bone
+    400246: gorilla_r_Index_3_bone
+    400248: gorilla_r_Knee_bone
+    400250: gorilla_r_Middle_1_bone
+    400252: gorilla_r_Middle_2_bone
+    400254: gorilla_r_Middle_3-nub_bone
+    400256: gorilla_r_Middle_3_bone
+    400258: gorilla_r_Pinky_1_bone
+    400260: gorilla_r_Pinky_2_bone
+    400262: gorilla_r_Pinky_3-nub_bone
+    400264: gorilla_r_Pinky_3_bone
+    400266: gorilla_r_Ring_1_bone
+    400268: gorilla_r_Ring_2_bone
+    400270: gorilla_r_Ring_3-nub_bone
+    400272: gorilla_r_Ring_3_bone
+    400274: gorilla_r_Shoulder_bone
+    400276: gorilla_r_Shoulder_FK_bone
+    400278: gorilla_r_Shoulder_FK_ctrl
+    400280: gorilla_r_Shoulder_IK_bone
+    400282: gorilla_r_ShoulderRoll_bone
+    400284: gorilla_r_ShoulderTwist_hlp
+    400286: gorilla_r_Thigh_bone
+    400288: gorilla_r_Thumb_1_bone
+    400290: gorilla_r_Thumb_2_bone
+    400292: gorilla_r_Thumb_3-nub_bone
+    400294: gorilla_r_Thumb_3_bone
+    400296: gorilla_r_Toe-nub_bone
+    400298: gorilla_r_Toe_bone
+    400300: gorilla_r_toe_IKGoal
+    400302: gorilla_r_ToeLift_hlp
+    400304: gorilla_r_Wrist_bone
+    400306: gorilla_r_Wrist_FK_bone
+    400308: gorilla_r_Wrist_IK_bone
+    400310: gorilla_Spine1_bone
+    400312: gorilla_Spine2_bone
+    400314: gorilla_Spine3_bone
+    400316: gorilla_SpineBase_ctrl
+    2300000: gorilla_l_Clavicle_ctrl
+    2300002: gorilla_l_Elbow_FK_ctrl
+    2300004: Gorilla_l_Eye_mesh
+    2300006: Gorilla_l_Eye_mesh001
+    2300008: gorilla_l_Foot_ctrl
+    2300010: gorilla_l_Hand_FK_ctrl
+    2300012: gorilla_l_Hand_IK_ctrl
+    2300014: gorilla_l_Index_ctrl
+    2300016: gorilla_l_Index_ctrl001
+    2300018: gorilla_l_Middle_ctrl
+    2300020: gorilla_l_Middle_ctrl001
+    2300022: gorilla_l_Pinky_ctrl
+    2300024: gorilla_l_Pinky_ctrl001
+    2300026: gorilla_l_Ring_ctrl
+    2300028: gorilla_l_Ring_ctrl001
+    2300030: gorilla_l_Shoulder_FK_ctrl
+    2300032: gorilla_l_Thumb_ctrl
+    2300034: gorilla_l_Thumb_ctrl001
+    2300036: gorilla_r_Clavicle_ctrl
+    2300038: gorilla_r_Elbow_FK_ctrl
+    2300040: gorilla_r_Foot_ctrl
+    2300042: gorilla_r_Hand_FK_ctrl
+    2300044: gorilla_r_Hand_IK_ctrl
+    2300046: gorilla_r_Shoulder_FK_ctrl
+    3300000: gorilla_l_Clavicle_ctrl
+    3300002: gorilla_l_Elbow_FK_ctrl
+    3300004: Gorilla_l_Eye_mesh
+    3300006: Gorilla_l_Eye_mesh001
+    3300008: gorilla_l_Foot_ctrl
+    3300010: gorilla_l_Hand_FK_ctrl
+    3300012: gorilla_l_Hand_IK_ctrl
+    3300014: gorilla_l_Index_ctrl
+    3300016: gorilla_l_Index_ctrl001
+    3300018: gorilla_l_Middle_ctrl
+    3300020: gorilla_l_Middle_ctrl001
+    3300022: gorilla_l_Pinky_ctrl
+    3300024: gorilla_l_Pinky_ctrl001
+    3300026: gorilla_l_Ring_ctrl
+    3300028: gorilla_l_Ring_ctrl001
+    3300030: gorilla_l_Shoulder_FK_ctrl
+    3300032: gorilla_l_Thumb_ctrl
+    3300034: gorilla_l_Thumb_ctrl001
+    3300036: gorilla_r_Clavicle_ctrl
+    3300038: gorilla_r_Elbow_FK_ctrl
+    3300040: gorilla_r_Foot_ctrl
+    3300042: gorilla_r_Hand_FK_ctrl
+    3300044: gorilla_r_Hand_IK_ctrl
+    3300046: gorilla_r_Shoulder_FK_ctrl
+    4300000: Gorilla_mesh
+    4300002: Gorilla_l_Eyelids_mesh
+    4300004: Gorilla_l_Eyelids_mesh001
+    4300006: gorilla_r_Foot_ctrl
+    4300008: gorilla_l_Foot_ctrl
+    4300010: Gorilla_l_Eye_mesh001
+    4300012: Gorilla_l_Eye_mesh
+    4300014: gorilla_l_Thumb_ctrl001
+    4300016: gorilla_l_Index_ctrl001
+    4300018: gorilla_l_Middle_ctrl001
+    4300020: gorilla_l_Ring_ctrl001
+    4300022: gorilla_l_Pinky_ctrl001
+    4300024: gorilla_r_Shoulder_FK_ctrl
+    4300026: gorilla_r_Elbow_FK_ctrl
+    4300028: gorilla_r_Hand_FK_ctrl
+    4300030: gorilla_l_Thumb_ctrl
+    4300032: gorilla_l_Index_ctrl
+    4300034: gorilla_l_Middle_ctrl
+    4300036: gorilla_l_Ring_ctrl
+    4300038: gorilla_l_Pinky_ctrl
+    4300040: gorilla_l_Shoulder_FK_ctrl
+    4300042: gorilla_l_Elbow_FK_ctrl
+    4300044: gorilla_l_Hand_FK_ctrl
+    4300046: gorilla_l_Clavicle_ctrl
+    4300048: gorilla_r_Clavicle_ctrl
+    4300050: gorilla_r_Hand_IK_ctrl
+    4300052: gorilla_l_Hand_IK_ctrl
+    7400000: slapleft
+    9500000: //RootNode
+    13700000: Gorilla_l_Eyelids_mesh
+    13700002: Gorilla_l_Eyelids_mesh001
+    13700004: Gorilla_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: slapleft
+      takeName: Take 001
+      firstFrame: 441
+      lastFrame: 468
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: gorilla_Head_ctrl
+        weight: 1
+      - path: gorilla_Hip_ctrl
+        weight: 1
+      - path: Gorilla_l_Eyelids_mesh
+        weight: 1
+      - path: Gorilla_l_Eyelids_mesh001
+        weight: 1
+      - path: gorilla_l_ShoulderTwist_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_l_Hand_IK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_l_Hand_IK_ctrl/gorilla_l_Hand_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_l_Thigh_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_l_Thigh_bone/gorilla_l_Knee_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_l_Thigh_bone/gorilla_l_Knee_bone/gorilla_l_Ankle_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_l_Thigh_bone/gorilla_l_Knee_bone/gorilla_l_Ankle_bone/gorilla_l_Toe_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_l_Thigh_bone/gorilla_l_Knee_bone/gorilla_l_Ankle_bone/gorilla_l_Toe_bone/gorilla_l_Toe-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_Pelvis-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_r_Thigh_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_r_Thigh_bone/gorilla_r_Knee_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_r_Thigh_bone/gorilla_r_Knee_bone/gorilla_r_Ankle_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_r_Thigh_bone/gorilla_r_Knee_bone/gorilla_r_Ankle_bone/gorilla_r_Toe_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Pelvis_bone/gorilla_r_Thigh_bone/gorilla_r_Knee_bone/gorilla_r_Ankle_bone/gorilla_r_Toe_bone/gorilla_r_Toe-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_r_Hand_IK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_r_Hand_IK_ctrl/gorilla_r_Hand_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_ForearmRoll1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_ForearmRoll2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Hand-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Index_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Index_ctrl/gorilla_l_Index_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Index_ctrl/gorilla_l_Index_1_bone/gorilla_l_Index_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Index_ctrl/gorilla_l_Index_1_bone/gorilla_l_Index_2_bone/gorilla_l_Index_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Index_ctrl/gorilla_l_Index_1_bone/gorilla_l_Index_2_bone/gorilla_l_Index_3_bone/gorilla_l_Index_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Middle_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Middle_ctrl/gorilla_l_Middle_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Middle_ctrl/gorilla_l_Middle_1_bone/gorilla_l_Middle_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Middle_ctrl/gorilla_l_Middle_1_bone/gorilla_l_Middle_2_bone/gorilla_l_Middle_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Middle_ctrl/gorilla_l_Middle_1_bone/gorilla_l_Middle_2_bone/gorilla_l_Middle_3_bone/gorilla_l_Middle_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Pinky_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Pinky_ctrl/gorilla_l_Pinky_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Pinky_ctrl/gorilla_l_Pinky_1_bone/gorilla_l_Pinky_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Pinky_ctrl/gorilla_l_Pinky_1_bone/gorilla_l_Pinky_2_bone/gorilla_l_Pinky_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Pinky_ctrl/gorilla_l_Pinky_1_bone/gorilla_l_Pinky_2_bone/gorilla_l_Pinky_3_bone/gorilla_l_Pinky_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Ring_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Ring_ctrl/gorilla_l_Ring_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Ring_ctrl/gorilla_l_Ring_1_bone/gorilla_l_Ring_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Ring_ctrl/gorilla_l_Ring_1_bone/gorilla_l_Ring_2_bone/gorilla_l_Ring_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Ring_ctrl/gorilla_l_Ring_1_bone/gorilla_l_Ring_2_bone/gorilla_l_Ring_3_bone/gorilla_l_Ring_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Thumb_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Thumb_ctrl/gorilla_l_Thumb_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Thumb_ctrl/gorilla_l_Thumb_1_bone/gorilla_l_Thumb_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Thumb_ctrl/gorilla_l_Thumb_1_bone/gorilla_l_Thumb_2_bone/gorilla_l_Thumb_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_Forearm_bone/gorilla_l_Wrist_bone/gorilla_l_Hand_bone/gorilla_l_Thumb_ctrl/gorilla_l_Thumb_1_bone/gorilla_l_Thumb_2_bone/gorilla_l_Thumb_3_bone/gorilla_l_Thumb_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_bone/gorilla_l_ShoulderRoll_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_FK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_FK_bone/gorilla_l_Forearm_FK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_FK_bone/gorilla_l_Forearm_FK_bone/gorilla_l_Wrist_FK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_FK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_FK_ctrl/gorilla_l_Elbow_FK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_FK_ctrl/gorilla_l_Elbow_FK_ctrl/gorilla_l_Hand_FK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_IK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_IK_bone/gorilla_l_Forearm_IK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clav_bone/gorilla_l_Shoulder_IK_bone/gorilla_l_Forearm_IK_bone/gorilla_l_Wrist_IK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_l_Clavicle_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Circle001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Circle002
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Circle003
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Circle004
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Circle005
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Head-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Gorilla_l_Eye_mesh
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/Gorilla_l_Eye_mesh001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_l_EyelidLow_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_l_EyelidLow_bone/gorilla_l_EyelidLow-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_l_EyelidUp_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_l_EyelidUp_bone/gorilla_l_EyelidUp-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Mandible_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Mandible_bone/gorilla_Mandible-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Mandible_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Mouth_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Mouth_bone/gorilla_Mouth-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_Mouth_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_r_EyelidLow_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_r_EyelidLow_bone/gorilla_r_EyelidLow-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_r_EyelidUp_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_Neck_bone/gorilla_Head_bone/gorilla_r_EyelidUp_bone/gorilla_r_EyelidUp-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_ForearmRoll1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_ForearmRoll2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Index_ctrl001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Index_ctrl001/gorilla_r_Index_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Index_ctrl001/gorilla_r_Index_1_bone/gorilla_r_Index_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Index_ctrl001/gorilla_r_Index_1_bone/gorilla_r_Index_2_bone/gorilla_r_Index_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Index_ctrl001/gorilla_r_Index_1_bone/gorilla_r_Index_2_bone/gorilla_r_Index_3_bone/gorilla_r_Index_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Middle_ctrl001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Middle_ctrl001/gorilla_r_Middle_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Middle_ctrl001/gorilla_r_Middle_1_bone/gorilla_r_Middle_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Middle_ctrl001/gorilla_r_Middle_1_bone/gorilla_r_Middle_2_bone/gorilla_r_Middle_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Middle_ctrl001/gorilla_r_Middle_1_bone/gorilla_r_Middle_2_bone/gorilla_r_Middle_3_bone/gorilla_r_Middle_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Pinky_ctrl001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Pinky_ctrl001/gorilla_r_Pinky_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Pinky_ctrl001/gorilla_r_Pinky_1_bone/gorilla_r_Pinky_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Pinky_ctrl001/gorilla_r_Pinky_1_bone/gorilla_r_Pinky_2_bone/gorilla_r_Pinky_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Pinky_ctrl001/gorilla_r_Pinky_1_bone/gorilla_r_Pinky_2_bone/gorilla_r_Pinky_3_bone/gorilla_r_Pinky_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Ring_ctrl001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Ring_ctrl001/gorilla_r_Ring_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Ring_ctrl001/gorilla_r_Ring_1_bone/gorilla_r_Ring_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Ring_ctrl001/gorilla_r_Ring_1_bone/gorilla_r_Ring_2_bone/gorilla_r_Ring_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Ring_ctrl001/gorilla_r_Ring_1_bone/gorilla_r_Ring_2_bone/gorilla_r_Ring_3_bone/gorilla_r_Ring_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Thumb_ctrl001
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Thumb_ctrl001/gorilla_r_Thumb_1_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Thumb_ctrl001/gorilla_r_Thumb_1_bone/gorilla_r_Thumb_2_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Thumb_ctrl001/gorilla_r_Thumb_1_bone/gorilla_r_Thumb_2_bone/gorilla_r_Thumb_3_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_l_Thumb_ctrl001/gorilla_r_Thumb_1_bone/gorilla_r_Thumb_2_bone/gorilla_r_Thumb_3_bone/gorilla_r_Thumb_3-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_Forearm_bone/gorilla_r_Wrist_bone/gorilla_r_Hand_bone/gorilla_r_Hand-nub_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_bone/gorilla_r_ShoulderRoll_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_FK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_FK_bone/gorilla_r_Forearm_FK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_FK_bone/gorilla_r_Forearm_FK_bone/gorilla_r_Wrist_FK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_FK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_FK_ctrl/gorilla_r_Elbow_FK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_FK_ctrl/gorilla_r_Elbow_FK_ctrl/gorilla_r_Hand_FK_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_IK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_IK_bone/gorilla_r_Forearm_IK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clav_bone/gorilla_r_Shoulder_IK_bone/gorilla_r_Forearm_IK_bone/gorilla_r_Wrist_IK_bone
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_COM_ctrl/gorilla_Spine1_bone/gorilla_Spine2_bone/gorilla_Spine3_bone/gorilla_r_Clavicle_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp/gorilla_l_ToeLift_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp/gorilla_l_ToeLift_hlp/gorilla_l_HeelPeel_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp/gorilla_l_ToeLift_hlp/gorilla_l_HeelPeel_hlp/gorilla_l_ball_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp/gorilla_l_ToeLift_hlp/gorilla_l_HeelPeel_hlp/gorilla_l_heel_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp/gorilla_l_ToeLift_hlp/gorilla_l_ToeTap_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_l_Foot_ctrl/gorilla_l_Heel_hlp/gorilla_l_ToeLift_hlp/gorilla_l_ToeTap_hlp/gorilla_l_toe_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp/gorilla_l_ToeLift_hlp
+          1
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp/gorilla_l_ToeLift_hlp
+          1/gorilla_r_HeelPeel_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp/gorilla_l_ToeLift_hlp
+          1/gorilla_r_HeelPeel_hlp/gorilla_r_ball_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp/gorilla_l_ToeLift_hlp
+          1/gorilla_r_HeelPeel_hlp/gorilla_r_heel_IKGoal
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp/gorilla_l_ToeLift_hlp
+          1/gorilla_r_ToeLift_hlp
+        weight: 1
+      - path: gorilla_Main_ctrl/gorilla_r_Foot_ctrl/gorilla_r_Heel_hlp/gorilla_l_ToeLift_hlp
+          1/gorilla_r_ToeLift_hlp/gorilla_r_toe_IKGoal
+        weight: 1
+      - path: Gorilla_mesh
+        weight: 1
+      - path: gorilla_NeckBase_ctrl
+        weight: 1
+      - path: gorilla_r_ShoulderTwist_hlp
+        weight: 1
+      - path: gorilla_SpineBase_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: gorilla_Main_ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
