@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBalkMovement : MonoBehaviour
+public class PlayerBalkInteraction : MonoBehaviour
 {
-    [SerializeField] private BalkMovementHandler _balkMovement;
-    [SerializeField] private float _minDragForceToJump;
+    [SerializeField] private BalkInteractionHandler _balkInteraction;
+    [SerializeField] private float _minDragDistanceToJump;
 
     private Vector3 _offset;
     private float _zOffset;
@@ -20,22 +20,20 @@ public class PlayerBalkMovement : MonoBehaviour
     {
         _offset = transform.position - GetMousePosition();
         _startDragPosition = transform.position;
-        _balkMovement.BeginDragBalk();
+        _balkInteraction.BeginDragBalk();
     }
 
     private void OnMouseDrag()
     {
         Vector3 newPosition = GetMousePosition() + _offset;
 
-        _balkMovement.DragBalk(newPosition);
+        _balkInteraction.DragBalk(newPosition);
     }
 
     private void OnMouseUp()
     {
-        if (Vector3.Distance(_startDragPosition, transform.position) > _minDragForceToJump)
-        {
-            _balkMovement.FinishDragBalk();
-        }
+        if (Vector3.Distance(_startDragPosition, transform.position) > _minDragDistanceToJump)
+            _balkInteraction.FinishDragBalk();
     }
 
     private Vector3 GetMousePosition()

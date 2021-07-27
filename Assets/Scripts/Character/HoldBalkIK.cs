@@ -8,10 +8,24 @@ public class HoldBalkIK : MonoBehaviour
     [SerializeField] private bool _ikActive;
     [SerializeField] [Range(0f, 1f)] private float _rightHandWeight;
     [SerializeField] [Range(0f, 1f)] private float _leftHandWeight;
+    [SerializeField] private CharacterInteractionHandler _characterInteractionHandler;
+    [SerializeField] private float _turningDistance;
 
     private Animator _animator;
     private Transform _targetForRightHand;
     private Transform _targetForLeftHand;
+
+    private void OnEnable()
+    {
+        _characterInteractionHandler.AttachingBalk += OnAttachingBalk;
+        _characterInteractionHandler.DetachingBalk += OnDetachingBalk;
+    }
+
+    private void OnDisable()
+    {
+        _characterInteractionHandler.AttachingBalk -= OnAttachingBalk;
+        _characterInteractionHandler.DetachingBalk -= OnDetachingBalk;
+    }
 
     private void Start()
     {
@@ -39,9 +53,22 @@ public class HoldBalkIK : MonoBehaviour
         } 
     }
 
-    public void SetTarget(Transform targetForRightHand, Transform targetForLeftHand)
+    private void SetTarget(Transform targetForRightHand, Transform targetForLeftHand)
     {
         _targetForRightHand = targetForRightHand;
         _targetForLeftHand = targetForLeftHand;
+    }
+
+    private void OnAttachingBalk(Balk balk)
+    {
+        if (_characterInteractionHandler.DistanceToBalk > _turningDistance)
+            SetTarget(balk.NearPoint, balk.FarPoint);
+        else
+            SetTarget(balk.FarPoint, balk.NearPoint);
+    }
+
+    private void OnDetachingBalk()
+    {
+        SetTarget(null, null);
     }
 }

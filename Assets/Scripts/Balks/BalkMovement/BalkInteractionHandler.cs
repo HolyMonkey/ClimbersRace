@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BalkMovementHandler : MonoBehaviour
+public class BalkInteractionHandler : MonoBehaviour
 {
     [SerializeField] private Collider _balkCollider;
     [SerializeField] private float _maxDragDistance;
     [SerializeField] private float _timeToLeaveBalk;
 
-    private MovementHandler _movement;
+    private CharacterInteractionHandler _character;
     private Vector3 _startDragPosition;
 
     public void BeginDragBalk()
     {
-        if (_movement != null)
+        if (_character != null)
         {
-            _movement.SetStartDragPosition(transform.position);
+            _character.SetStartDragPosition();
             _startDragPosition = transform.position;
         }
     }
 
     public void DragBalk(Vector3 currentPosition)
     {
-        if (_movement != null)
+        if (_character != null)
         {
             Vector3 offset = currentPosition - _startDragPosition;
 
@@ -32,34 +32,33 @@ public class BalkMovementHandler : MonoBehaviour
 
     public void FinishDragBalk()
     {
-        if (_movement != null)
+        if (_character != null)
         {
             Vector3 endDragPosition = transform.position;
             Vector3 direction = _startDragPosition - endDragPosition;
-            direction.y = Mathf.Abs(direction.y);
 
-            _movement.DetachFromBalk();
-            _movement.Push(direction.normalized);
-            _movement = null;
+            _character.DetachFromBalk();
+            _character.Push(direction.normalized);
+            _character = null;
 
-            StartCoroutine(DisableColliderForWhile(_timeToLeaveBalk));
+            StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out MovementHandler movement))
+        if (other.TryGetComponent(out CharacterInteractionHandler character))
         {
-            if (_movement != null && _movement != movement)
+            if (_character != null && _character != character)
             {
-                _movement.CollideWithTrap();
+                _character.CollideWithTrap();
             }
 
-            _movement = movement;
+            _character = character;
         }
     }
 
-    private IEnumerator DisableColliderForWhile(float delay)
+    private IEnumerator DisableColliderOnTime(float delay)
     {
         _balkCollider.enabled = false;
 

@@ -13,21 +13,21 @@ public class FinishGameHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out MovementHandler movement))
+        if (other.TryGetComponent(out CharacterInteractionHandler character))
         {
             _confetti.Play();
             _camera.SetTarget(_pointForCamera);
 
-            StartCoroutine(PushWinner(movement, _timeToStopWinner));
+            StartCoroutine(PushWinner(character, _timeToStopWinner));
         }
     }
 
-    private IEnumerator PushWinner(MovementHandler winnerMovement, float timeToStop)
+    private IEnumerator PushWinner(CharacterInteractionHandler winnerCharacter, float timeToStop)
     {
-        winnerMovement.PushInDirectionMovement(_pushForceWinner);
+        winnerCharacter.PushInDirectionMovement(_pushForceWinner);
 
         yield return new WaitForSeconds(timeToStop);
 
-        winnerMovement.gameObject.SetActive(false);
+        winnerCharacter.gameObject.SetActive(false);
     }
 }

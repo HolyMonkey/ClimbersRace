@@ -6,11 +6,10 @@ using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private MovementHandler _movement;
+    [SerializeField] private CharacterInteractionHandler _characterInteractionHandler;
     [SerializeField] private Transform[] _wayPoints;
     [SerializeField] private float _timeOfDragging = 0.75f;
     [SerializeField] private float _dragDelay = 1.5f;
-    [SerializeField] private float _fallSpeed;
 
     private int _currentWaypointNumber = 0;
     private Tweener _tweener;
@@ -20,41 +19,17 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _movement.SlidingDown += OnSlidingDown;
+        _characterInteractionHandler.SlidingDown += OnSlidingDown;
     }
 
     private void OnDisable()
     {
-        _movement.SlidingDown -= OnSlidingDown;
+        _characterInteractionHandler.SlidingDown -= OnSlidingDown;
     }
 
     private void Start()
     {
         MoveToNextPosition();
-    }
-
-    private void Update()
-    {
-        if (_isSlidingDown)
-        {
-            _movement.FallDown(_fallSpeed);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent(out EnemyBalk enemyBalk))
-        {
-            _movement.AttachToBalk(enemyBalk);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.TryGetComponent(out EnemyBalk enemyBalk))
-        {
-            _movement.DetachFromBalk();
-        }
     }
 
     public void MoveToNextPosition()

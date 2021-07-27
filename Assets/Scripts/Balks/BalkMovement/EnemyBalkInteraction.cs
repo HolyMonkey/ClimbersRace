@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBalkMovement : MonoBehaviour
+public class EnemyBalkInteraction : MonoBehaviour
 {
-    [SerializeField] private BalkMovementHandler _balkMovement;
+    [SerializeField] private BalkInteractionHandler _balkInteraction;
     [SerializeField] private SpringJoint _springJoint;
     [SerializeField] private float _pullingForce;
     [SerializeField] private float _tolerance;
@@ -28,7 +28,7 @@ public class EnemyBalkMovement : MonoBehaviour
             newPosition.z = _basePositionZ;
             Debug.DrawLine(_enemyMovement.transform.position, _enemyMovement.NextTargetPosition, Color.green);
 
-            _balkMovement.DragBalk(newPosition);
+            _balkInteraction.DragBalk(newPosition);
             _enemyMovement.MoveToNextPosition();
         }
     }
@@ -40,14 +40,14 @@ public class EnemyBalkMovement : MonoBehaviour
             if (other.gameObject.TryGetComponent(out EnemyMovement enemyMovement))
             {
                 _enemyMovement = enemyMovement;
-                _balkMovement.BeginDragBalk();
+                _balkInteraction.BeginDragBalk();
 
                 _springJoint.tolerance = _tolerance;
             }
         }
         else
         {
-            if (other.gameObject.TryGetComponent(out PlayerMovement playerMovement))
+            if (other.gameObject.TryGetComponent(out PlayerCollideHandler playerMovement))
             {
                 _enemyMovement = null;
                 _springJoint.tolerance = _baseTolerance;
@@ -60,7 +60,7 @@ public class EnemyBalkMovement : MonoBehaviour
         if (other.gameObject.TryGetComponent(out EnemyMovement enemyMovement))
         {
             _enemyMovement = null;
-            _balkMovement.FinishDragBalk();
+            _balkInteraction.FinishDragBalk();
 
             _springJoint.tolerance = _baseTolerance;
         }

@@ -206,10 +206,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.79095566
-  m_Height: 2.4053025
+  m_Radius: 1.3
+  m_Height: 3.71
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: -0.00000044703484}
+  m_Center: {x: 0, y: 0, z: -0.81}
 --- !u!54 &1597505330160404011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a457e4878d3bc4980f940d273df4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balkMovement: {fileID: 1200766371007926493}
-  _minDragForceToJump: 0.1
+  _balkInteraction: {fileID: 1200766371007926493}
+  _minDragDistanceToJump: 0.1
 --- !u!1 &4941231430814940147
 GameObject:
   m_ObjectHideFlags: 0
