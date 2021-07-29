@@ -8,7 +8,7 @@ public class BalkInteractionHandler : MonoBehaviour
     [SerializeField] private float _maxDragDistance;
     [SerializeField] private float _timeToLeaveBalk;
 
-    private CharacterInteractionHandler _character;
+    private CharacterInteraction _character;
     private Vector3 _startDragPosition;
 
     public void BeginDragBalk()
@@ -47,7 +47,7 @@ public class BalkInteractionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out CharacterInteractionHandler character))
+        if (other.TryGetComponent(out CharacterInteraction character))
         {
             if (_character != null && _character != character)
             {

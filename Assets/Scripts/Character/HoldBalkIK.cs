@@ -8,7 +8,7 @@ public class HoldBalkIK : MonoBehaviour
     [SerializeField] private bool _ikActive;
     [SerializeField] [Range(0f, 1f)] private float _rightHandWeight;
     [SerializeField] [Range(0f, 1f)] private float _leftHandWeight;
-    [SerializeField] private CharacterInteractionHandler _characterInteractionHandler;
+    [SerializeField] private CharacterInteraction _characterInteractionHandler;
     [SerializeField] private float _turningDistance;
 
     private Animator _animator;

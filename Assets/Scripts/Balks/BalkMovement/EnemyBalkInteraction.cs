@@ -47,7 +47,7 @@ public class EnemyBalkInteraction : MonoBehaviour
         }
         else
         {
-            if (other.gameObject.TryGetComponent(out PlayerCollideHandler playerMovement))
+            if (other.gameObject.TryGetComponent(out PlayerCollider playerMovement))
             {
                 _enemyMovement = null;
                 _springJoint.tolerance = _baseTolerance;
