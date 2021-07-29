@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCollideHandler : MonoBehaviour
 {
-    [SerializeField] private CharacterInteractionHandler _characterInteractionHandler;
+    [SerializeField] private CharacterInteraction _characterInteractionHandler;
 
     private void OnTriggerEnter(Collider other)
     {

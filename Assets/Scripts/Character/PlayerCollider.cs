@@ -3,25 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerCollideHandler : MonoBehaviour
+public class PlayerCollider : MonoBehaviour
 {
-    [SerializeField] private CharacterInteractionHandler _character;
+    [SerializeField] private CharacterInteraction _character;
 
     public event UnityAction<Vector3> KnockedDownEnemy;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out CharacterInteractionHandler enemy))
+        if (other.TryGetComponent(out CharacterInteraction enemy))
         {
             if (enemy.IsAttachingBalk)
             {
                 KnockedDownEnemy?.Invoke(transform.position);
             }
         }
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
         if (other.TryGetComponent(out PlayerBalk playerBalk))
         {
             _character.AttachToBalk(playerBalk);

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(SpringJoint))]
-public class CharacterInteractionHandler : MonoBehaviour
+public class CharacterInteraction : MonoBehaviour
 {
     [SerializeField] private float _pushForce;
     [SerializeField] private float _maxSpeed;

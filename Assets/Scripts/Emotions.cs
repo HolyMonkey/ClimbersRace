@@ -7,7 +7,7 @@ public class Emotions : MonoBehaviour
 {
     [SerializeField] private GameObject _emotionPrefab;
     [SerializeField] private Canvas _canvas;
-    [SerializeField] private PlayerCollideHandler _player;
+    [SerializeField] private PlayerCollider _player;
     [SerializeField] private float _appearanceDuration;
     [SerializeField] private float _disappearanceDuration;
     [SerializeField] private Vector2 _endDistance;
