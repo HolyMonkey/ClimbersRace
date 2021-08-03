@@ -19,11 +19,11 @@ public class CylindricMovement : MonoBehaviour, IMovable
 
     private void FixedUpdate()
     {
-        Vector3 onNormal = _cylindricWall.GetTangentVector(_rigidbody.position);
+        Vector3 cylinderTangent = _cylindricWall.GetTangentXZVector(_rigidbody.position);
 
         float targetMagnitude = _rigidbody.velocity.magnitude;
 
-        Vector3 projectVelocity = Vector3.Project(_rigidbody.velocity, onNormal);
+        Vector3 projectVelocity = Vector3.Project(_rigidbody.velocity, cylinderTangent);
         projectVelocity.y = _rigidbody.velocity.y;
 
         projectVelocity = projectVelocity.normalized * targetMagnitude;

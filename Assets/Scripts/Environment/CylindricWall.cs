@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CylindricWall : MonoBehaviour
+public class CylindricWall : MonoBehaviour, IWall
 {
-    public Vector3 CenterAxis { get; private set; }
-    private float _radius;
+    private Vector3 _centerAxis;
     private void Awake()
     {
-        CenterAxis = new Vector3(0, 0, 2.2f);
-        _radius = transform.localScale.x / 2;
+        _centerAxis = new Vector3(transform.position.x, 0, transform.position.z);
     }
 
-    public Vector3 GetTangentVector(Vector3 position)
+    public Vector3 GetTangentXZVector(Vector3 position)
     {
-        Vector3 normalVector = position - CenterAxis;
+        Vector3 normalVector = GetNormalVector(position);
         return new Vector3(-normalVector.z, 0, normalVector.x);
+    }
+
+    public Vector3 GetNormalVector(Vector3 position)
+    {
+        return (position - _centerAxis).normalized;
     }
 }
