@@ -2,8 +2,8 @@
 // (c) 2014-2020 Jean Moreno
 
 using System;
-using UnityEngine;
 using ToonyColorsPro.Runtime;
+using UnityEngine;
 
 namespace ToonyColorsPro
 {

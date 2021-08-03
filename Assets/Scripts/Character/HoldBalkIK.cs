@@ -8,7 +8,7 @@ public class HoldBalkIK : MonoBehaviour
     [SerializeField] private bool _ikActive;
     [SerializeField] [Range(0f, 1f)] private float _rightHandWeight;
     [SerializeField] [Range(0f, 1f)] private float _leftHandWeight;
-    [SerializeField] private CharacterInteraction _characterInteractionHandler;
+    [SerializeField] private CharacterInteraction _characterInteraction;
     [SerializeField] private float _turningDistance;
 
     private Animator _animator;
@@ -17,14 +17,14 @@ public class HoldBalkIK : MonoBehaviour
 
     private void OnEnable()
     {
-        _characterInteractionHandler.AttachingBalk += OnAttachingBalk;
-        _characterInteractionHandler.DetachingBalk += OnDetachingBalk;
+        _characterInteraction.AttachingBalk += OnAttachingBalk;
+        _characterInteraction.DetachingBalk += OnDetachingBalk;
     }
 
     private void OnDisable()
     {
-        _characterInteractionHandler.AttachingBalk -= OnAttachingBalk;
-        _characterInteractionHandler.DetachingBalk -= OnDetachingBalk;
+        _characterInteraction.AttachingBalk -= OnAttachingBalk;
+        _characterInteraction.DetachingBalk -= OnDetachingBalk;
     }
 
     private void Start()
@@ -61,7 +61,7 @@ public class HoldBalkIK : MonoBehaviour
 
     private void OnAttachingBalk(Balk balk)
     {
-        if (_characterInteractionHandler.DistanceToBalk > _turningDistance)
+        if (_characterInteraction.DistanceToBalk > _turningDistance)
             SetTarget(balk.NearPoint, balk.FarPoint);
         else
             SetTarget(balk.FarPoint, balk.NearPoint);

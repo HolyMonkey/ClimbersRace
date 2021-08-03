@@ -14,6 +14,10 @@ public class CharacterInteraction : MonoBehaviour
     [SerializeField] private float _swingReducerPower;
     [SerializeField] private float _timeToLeaveBalk;
     [SerializeField] private Rigidbody _defaultRigidbody;
+    [SerializeField]
+    private MonoBehaviour _moverBehaviour;
+    private IMovable _mover => (IMovable)_moverBehaviour;
+
 
     private Vector3 _startDragPosition;
     private bool _isAttachingBalk;
@@ -28,6 +32,15 @@ public class CharacterInteraction : MonoBehaviour
 
     public bool IsAttachingBalk => _isAttachingBalk;
     public float DistanceToBalk => _distanceToBalk;
+
+    private void OnValidate()
+    {
+        if (_moverBehaviour is IMovable)
+            return;
+
+        Debug.LogError(_moverBehaviour.name + " needs to implement " + nameof(IMovable));
+        _moverBehaviour= null;
+    }
 
     private void Start()
     {
@@ -46,10 +59,9 @@ public class CharacterInteraction : MonoBehaviour
         }
     }
 
-    public void Push(Vector2 direction)
+    public void Push(Vector3 direction)
     {
-        _rigidbody.velocity = Vector3.zero;
-        _rigidbody.AddForce(direction * _pushForce, ForceMode.Impulse);
+        _mover.Move(direction, _pushForce);
     }
 
     public void PushInDirectionMovement(float force)
