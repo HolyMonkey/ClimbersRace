@@ -7,6 +7,7 @@ public class PlayerBalkInteraction : MonoBehaviour
     [SerializeField] private BalkInteractionHandler _balkInteraction;
     [SerializeField] private float _minDragDistanceToJump;
 
+    private CameraMover _camera;
     private Vector3 _offset;
     private float _zOffset;
     private Vector3 _startDragPosition;
@@ -14,6 +15,7 @@ public class PlayerBalkInteraction : MonoBehaviour
     private void Start()
     {
         _zOffset = Camera.main.WorldToScreenPoint(transform.localPosition).z;
+        _camera = FindObjectOfType<CameraMover>();
     }
 
     private void OnMouseDown()
@@ -34,6 +36,7 @@ public class PlayerBalkInteraction : MonoBehaviour
     {
         if (Vector3.Distance(_startDragPosition, transform.position) > _minDragDistanceToJump)
             _balkInteraction.FinishDragBalk();
+
     }
 
     private Vector3 GetMousePosition()
