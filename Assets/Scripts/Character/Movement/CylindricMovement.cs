@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class CylindricMovement : MonoBehaviour, IMovable
 {
-    [SerializeField] private float _baseSpeed;
     [SerializeField] private CylindricWall _cylindricWall;
 
     private Rigidbody _rigidbody;
-
-    private Vector3 _direction;
-    private float _force;
 
     private void Awake()
     {
@@ -34,10 +30,7 @@ public class CylindricMovement : MonoBehaviour, IMovable
 
     public void Move(Vector3 direction, float force)
     {
-        _direction = direction;
-        _force = force;
-
         _rigidbody.velocity = Vector3.zero;
-        _rigidbody.AddForce(_direction * _force, ForceMode.Impulse);
+        _rigidbody.AddForce(direction * force, ForceMode.Impulse);
     }
 }
