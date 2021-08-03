@@ -29,6 +29,7 @@ public class CylindricMovement : MonoBehaviour, IMovable
         projectVelocity = projectVelocity.normalized * targetMagnitude;
 
         _rigidbody.velocity = projectVelocity;
+
     }
 
     public void Move(Vector3 direction, float force)
