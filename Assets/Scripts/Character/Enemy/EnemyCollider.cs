@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollideHandler : MonoBehaviour
+public class EnemyCollider : MonoBehaviour
 {
-    [SerializeField] private CharacterInteraction _characterInteractionHandler;
+    [SerializeField] private Character _characterInteractionHandler;
 
     private void OnTriggerEnter(Collider other)
     {

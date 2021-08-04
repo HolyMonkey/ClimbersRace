@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(SpringJoint))]
-public class CharacterInteraction : MonoBehaviour
+public class Character : MonoBehaviour
 {
     [SerializeField] private float _pushForce;
     [SerializeField] private float _maxSpeed;
@@ -17,7 +17,6 @@ public class CharacterInteraction : MonoBehaviour
     [SerializeField]
     private MonoBehaviour _moverBehaviour;
     private IMovable _mover => (IMovable)_moverBehaviour;
-
 
     private Vector3 _startDragPosition;
     private bool _isAttachingBalk;
@@ -35,11 +34,16 @@ public class CharacterInteraction : MonoBehaviour
 
     private void OnValidate()
     {
+        if (_moverBehaviour is StraightMovement)
+            GetComponent<CylindricMovement>().enabled = false;
+        else
+            GetComponent<CylindricMovement>().enabled = true;
+
         if (_moverBehaviour is IMovable)
             return;
 
-        Debug.LogError(_moverBehaviour.name + " needs to implement " + nameof(IMovable));
-        _moverBehaviour= null;
+        //Debug.LogError(_moverBehaviour.name + " needs to implement " + nameof(IMovable));
+        _moverBehaviour = null;
     }
 
     private void Start()
@@ -62,11 +66,6 @@ public class CharacterInteraction : MonoBehaviour
     public void Push(Vector3 direction)
     {
         _mover.Move(direction, _pushForce);
-    }
-
-    public void PushInDirectionMovement(float force)
-    {
-        Push(_rigidbody.velocity.normalized * force);
     }
 
     public void SetStartDragPosition()

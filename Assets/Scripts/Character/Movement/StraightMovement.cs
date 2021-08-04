@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallMovement : MonoBehaviour, IMovable
+public class StraightMovement : MonoBehaviour, IMovable
 {
-    [SerializeField] private float _baseSpeed;
-
     private Rigidbody _rigidbody;
 
     private void Awake()
@@ -16,6 +14,7 @@ public class WallMovement : MonoBehaviour, IMovable
     public void Move(Vector3 direction, float force)
     {
         _rigidbody.velocity = Vector3.zero;
+        direction.z = 0;
         _rigidbody.AddForce(direction * force, ForceMode.Impulse);
     }
 }

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CylindricWall : MonoBehaviour, IWall
 {
-    private Vector3 _centerFlatPoint;
+    private Vector3 _centerPoint;
+
     private void Awake()
     {
-        _centerFlatPoint = new Vector3(transform.position.x, 0, transform.position.z);
+        _centerPoint = new Vector3(transform.position.x, 0, transform.position.z);
     }
 
     public Vector3 GetTangentXZVector(Vector3 position)
@@ -18,8 +19,8 @@ public class CylindricWall : MonoBehaviour, IWall
 
     public Vector3 GetNormalVector(Vector3 position)
     {
-        position.y = 0f;
-        Debug.DrawLine(position, _centerFlatPoint, Color.black);
-        return (position - _centerFlatPoint);
+        _centerPoint.y = position.y;
+        Debug.DrawLine(_centerPoint, position, Color.black);
+        return (position - _centerPoint).normalized;
     }
 }

@@ -6,28 +6,13 @@ public class FinishGameHandler : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _confetti;
     [SerializeField] private Transform _pointForCamera;
-    [SerializeField] private OrbitCamera _camera;
-
-    private float _timeToStopWinner = 1f;
-    private float _pushForceWinner = 3f;
+    [SerializeField] private CameraMover _camera;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out CharacterInteraction character))
+        if (other.TryGetComponent(out Character character))
         {
             _confetti.Play();
-            _camera.SetTarget(_pointForCamera);
-
-            StartCoroutine(PushWinner(character, _timeToStopWinner));
         }
-    }
-
-    private IEnumerator PushWinner(CharacterInteraction winnerCharacter, float timeToStop)
-    {
-        winnerCharacter.PushInDirectionMovement(_pushForceWinner);
-
-        yield return new WaitForSeconds(timeToStop);
-
-        winnerCharacter.gameObject.SetActive(false);
     }
 }
