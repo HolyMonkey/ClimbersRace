@@ -4,8 +4,8 @@ using System.Collections;
 public class CurvedLinePoint : MonoBehaviour 
 {
 	private bool _showGizmos = true;
-	private float _gizmosSize = 0.1f;
-	private Color _gizmosColor = new Color(1,0,0,0.5f);
+	private float _gizmosSize = 0.02f;
+	private Color _gizmosColor = new Color(0.7f,0.7f,0,0.8f);
 
     private void OnDrawGizmos()
 	{
