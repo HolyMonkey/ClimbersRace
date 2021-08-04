@@ -5,13 +5,13 @@ using UnityEngine.Events;
 
 public class PlayerCollider : MonoBehaviour
 {
-    [SerializeField] private CharacterInteraction _character;
+    [SerializeField] private Character _character;
 
     public event UnityAction<Vector3> KnockedDownEnemy;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out CharacterInteraction enemy))
+        if (other.TryGetComponent(out Character enemy))
         {
             if (enemy.IsAttachingBalk)
             {

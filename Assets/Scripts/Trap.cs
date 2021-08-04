@@ -6,7 +6,7 @@ public class Trap : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out CharacterInteraction character))
+        if (other.gameObject.TryGetComponent(out Character character))
         {
             character.CollideWithTrap();
         }

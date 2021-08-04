@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class FlyingAnimationState : MonoBehaviour
 {
-    [SerializeField] private CharacterInteraction _character;
+    [SerializeField] private Character _character;
 
     private Animator _animator;
 

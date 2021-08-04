@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class AnimationState : MonoBehaviour
 {
-    [SerializeField] private CharacterInteraction _character;
+    [SerializeField] private Character _character;
 
     private Animator _animator;
 
