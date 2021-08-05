@@ -5655,11 +5655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7255541209806285428, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.621
       objectReference: {fileID: 0}
     - target: {fileID: 7255541209806285428, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.068
       objectReference: {fileID: 0}
     - target: {fileID: 7255541209806285428, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8570,7 +8570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _character: {fileID: 1468891577}
   _smoothSpeed: 20
-  _lookAtOffset: {x: 0, y: 2, z: 0}
+  _lookAtOffset: {x: 0, y: 3, z: 0}
+  _targetOffset: {x: 0, y: 1, z: 0}
   _offsetDistance: 12
   _wallBehavior: {fileID: 446174058}
 --- !u!4 &1718537604173505142

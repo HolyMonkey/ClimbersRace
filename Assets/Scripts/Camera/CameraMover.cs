@@ -7,6 +7,7 @@ public class CameraMover : MonoBehaviour
 {
     [SerializeField] private Character _character;
     [SerializeField] private float _smoothSpeed;
+    [SerializeField] private Vector3 _positionOffset;
     [SerializeField] private Vector3 _lookAtOffset;
     [SerializeField] private float _offsetDistance;
     [SerializeField] private MonoBehaviour _wallBehavior;
@@ -34,6 +35,8 @@ public class CameraMover : MonoBehaviour
         targetPosition.x *= _offsetDistance;
         targetPosition.z *= _offsetDistance;
         targetPosition.y = _character.transform.position.y;
+
+        targetPosition += _positionOffset;
 
         transform.position = Vector3.Lerp(transform.position, targetPosition, _smoothSpeed * Time.deltaTime);
         transform.LookAt(_character.transform.position + _lookAtOffset);
