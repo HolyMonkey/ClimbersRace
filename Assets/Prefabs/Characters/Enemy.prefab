@@ -3190,7 +3190,7 @@ GameObject:
   - component: {fileID: 2098622870712058280}
   - component: {fileID: 2098622870712058287}
   - component: {fileID: 2098622870712058285}
-  - component: {fileID: 2098622870712058281}
+  - component: {fileID: 3002887275272096842}
   m_Layer: 0
   m_Name: Gorilla
   m_TagString: Untagged
@@ -3258,7 +3258,7 @@ MonoBehaviour:
   _leftHandWeight: 1
   _characterInteraction: {fileID: 2098622871309852907}
   _turningDistance: 0.05
---- !u!114 &2098622870712058281
+--- !u!114 &3002887275272096842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2098622870712058284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56654790304d3c4e8bc273ae1046c68, type: 3}
+  m_Script: {fileID: 11500000, guid: fa7b48a7311730e498f35b36617795c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 2098622871309852907}
@@ -4704,9 +4704,8 @@ MonoBehaviour:
   _maxSpeed: 9
   _springTougthness: 100
   _swingReducerPower: 10
-  _timeToLeaveBalk: 0.3
   _defaultRigidbody: {fileID: 2098622870574294667}
-  _moverBehaviour: {fileID: 0}
+  _moverBehaviour: {fileID: 2098622871309852882}
 --- !u!114 &2098622871309852882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4726,7 +4725,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098622871309852906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3683ed2296c4d83459eb357012389ac8, type: 3}
   m_Name: 
@@ -4768,6 +4767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796e20a284c4d614383faa7dcf752aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _character: {fileID: 2098622871309852907}
+  _timeToLeaveBalk: 0.3
   _characterInteractionHandler: {fileID: 2098622871309852907}
 --- !u!1 &2098622871327929779
 GameObject:

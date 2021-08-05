@@ -12,7 +12,6 @@ public class Character : MonoBehaviour
     [SerializeField] private float _maxSpeed;
     [SerializeField] private float _springTougthness;
     [SerializeField] private float _swingReducerPower;
-    [SerializeField] private float _timeToLeaveBalk;
     [SerializeField] private Rigidbody _defaultRigidbody;
     [SerializeField]
     private MonoBehaviour _moverBehaviour;
@@ -22,7 +21,6 @@ public class Character : MonoBehaviour
     private bool _isAttachingBalk;
     private float _distanceToBalk;
     private Rigidbody _rigidbody;
-    private Collider _collider;
     private SpringJoint _springJoint;
 
     public event UnityAction<Balk> AttachingBalk;
@@ -42,14 +40,13 @@ public class Character : MonoBehaviour
         if (_moverBehaviour is IMovable)
             return;
 
-        //Debug.LogError(_moverBehaviour.name + " needs to implement " + nameof(IMovable));
+        Debug.LogError(_moverBehaviour.name + " needs to implement " + nameof(IMovable));
         _moverBehaviour = null;
     }
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _collider = GetComponent<Collider>();
         _springJoint = GetComponent<SpringJoint>();
     }
 
@@ -87,7 +84,6 @@ public class Character : MonoBehaviour
 
         _isAttachingBalk = false;
         SetupJoint(0, _defaultRigidbody, _springJoint.anchor, 0);
-        StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));
     }
 
     public void CollideWithTrap()
@@ -102,14 +98,5 @@ public class Character : MonoBehaviour
         _springJoint.connectedBody = connectedBody;
         _springJoint.connectedAnchor = connectedAnchor;
         _springJoint.spring = spring;
-    }
-
-    private IEnumerator DisableColliderOnTime(float delay)
-    {
-        _collider.enabled = false;
-
-        yield return new WaitForSeconds(delay);
-
-        _collider.enabled = true;
     }
 }

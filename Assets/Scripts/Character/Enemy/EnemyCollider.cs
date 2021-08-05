@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollider : MonoBehaviour
+public class EnemyCollider : CharacterCollider
 {
     [SerializeField] private Character _characterInteractionHandler;
 
-    private void OnTriggerEnter(Collider other)
+    protected override bool CheckBalkType(out Balk balk, Collider collider)
     {
-        if (other.TryGetComponent(out EnemyBalk enemyBalk))
+        if (collider.TryGetComponent(out EnemyBalk enemyBalk))
         {
-            _characterInteractionHandler.AttachToBalk(enemyBalk);
+            balk = enemyBalk;
+            return true;
+        }
+        else
+        {
+            balk = null;
+            return false;
         }
     }
 
