@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -19,12 +18,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _characterInteractionHandler.SlidingDown += OnSlidingDown;
+        _characterInteractionHandler.Falling += OnSlidingDown;
     }
 
     private void OnDisable()
     {
-        _characterInteractionHandler.SlidingDown -= OnSlidingDown;
+        _characterInteractionHandler.Falling -= OnSlidingDown;
     }
 
     private void Start()

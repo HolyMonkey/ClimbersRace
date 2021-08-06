@@ -17,18 +17,18 @@ public class Character : MonoBehaviour
     private MonoBehaviour _moverBehaviour;
     private IMovable _mover => (IMovable)_moverBehaviour;
 
-    private Vector3 _startDragPosition;
-    private bool _isAttachingBalk;
-    private float _distanceToBalk;
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
 
+    private Balk _currentBalk;
+    private Vector3 _startDragPosition;
+
     public event UnityAction<Balk> AttachingBalk;
     public event UnityAction DetachingBalk;
-    public event UnityAction SlidingDown;
+    public event UnityAction Falling;
 
-    public bool IsAttachingBalk => _isAttachingBalk;
-    public float DistanceToBalk => _distanceToBalk;
+    public bool IsAttachingBalk => _currentBalk ? true : false;
+    public Vector3 PushVector { get; private set; }
 
     private void OnValidate()
     {
@@ -44,7 +44,7 @@ public class Character : MonoBehaviour
         _moverBehaviour = null;
     }
 
-    private void Start()
+    private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _springJoint = GetComponent<SpringJoint>();
@@ -54,9 +54,9 @@ public class Character : MonoBehaviour
     {
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
 
-        if (_isAttachingBalk)
+        if (IsAttachingBalk)
         {
-            _distanceToBalk = _startDragPosition.x - transform.localPosition.x;
+            PushVector = transform.localPosition - _startDragPosition;
         }
     }
 
@@ -74,7 +74,9 @@ public class Character : MonoBehaviour
     {
         AttachingBalk?.Invoke(balk);
 
-        _isAttachingBalk = true;
+        balk.CurrentCharacter = this;
+        _currentBalk = balk;
+
         SetupJoint(_swingReducerPower, balk.Rigidbody, balk.Rigidbody.centerOfMass, _springTougthness);
     }
 
@@ -82,13 +84,18 @@ public class Character : MonoBehaviour
     {
         DetachingBalk?.Invoke();
 
-        _isAttachingBalk = false;
+        if (_currentBalk)
+        {
+            _currentBalk.CurrentCharacter = null;
+            _currentBalk = null;
+        }
+
         SetupJoint(0, _defaultRigidbody, _springJoint.anchor, 0);
     }
 
     public void CollideWithTrap()
     {
-        SlidingDown?.Invoke();
+        Falling?.Invoke();
         DetachFromBalk();
     }
 

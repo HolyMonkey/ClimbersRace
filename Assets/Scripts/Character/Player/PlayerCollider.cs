@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 public class PlayerCollider : CharacterCollider
 {
     protected override bool CheckBalkType(out Balk balk, Collider collider)

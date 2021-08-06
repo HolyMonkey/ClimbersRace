@@ -2,27 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Balk))]
 public class BalkInteractionHandler : MonoBehaviour
 {
     [SerializeField] private Collider _balkCollider;
     [SerializeField] private float _maxDragDistance;
     [SerializeField] private float _timeToLeaveBalk;
 
-    private Character _character;
+    private Balk _balk;
     private Vector3 _startDragPosition;
+
+    private void Awake()
+    {
+        _balk = GetComponent<Balk>();
+    }
 
     public void BeginDragBalk()
     {
-        if (_character != null)
+        if (_balk.CurrentCharacter)
         {
-            _character.SetStartDragPosition();
+            _balk.CurrentCharacter.SetStartDragPosition();
             _startDragPosition = transform.position;
         }
     }
 
     public void DragBalk(Vector3 currentPosition)
     {
-        if (_character != null)
+        if (_balk.CurrentCharacter)
         {
             Vector3 offset = currentPosition - _startDragPosition;
 
@@ -32,29 +38,17 @@ public class BalkInteractionHandler : MonoBehaviour
 
     public void FinishDragBalk()
     {
-        if (_character != null)
+        if (_balk.CurrentCharacter)
         {
             Vector3 endDragPosition = transform.position;
             Vector3 direction = _startDragPosition - endDragPosition;
 
-            _character.DetachFromBalk();
-            _character.Push(direction.normalized);
-            _character = null;
+            Debug.Log(direction.normalized);
 
-            StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));
-        }
-    }
+            _balk.CurrentCharacter.Push(direction.normalized);
+            _balk.CurrentCharacter.DetachFromBalk();
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent(out Character character))
-        {
-            if (_character != null && _character != character)
-            {
-                _character.CollideWithTrap();
-            }
-
-            _character = character;
+            //StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));  //NEED TEST
         }
     }
 
