@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public abstract class CharacterCollider : MonoBehaviour
 {
     [SerializeField] private Character _character;
-    [SerializeField]private float _timeToLeaveBalk = 0.3f;
+    //[SerializeField]private float _timeToLeaveBalk = 0.3f;
 
     private Collider _collider;
 

@@ -1,4 +1,4 @@
-public static class CharacterAnimatorController
+public static class IKCharacterAnimatorController
 {
     public static class Params
     {

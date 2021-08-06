@@ -13,6 +13,8 @@ public abstract class Balk : MonoBehaviour
     public Transform NearPoint => _nearPoint;
     public Transform FarPoint => _farPoint;
 
+    public Character CurrentCharacter;
+
     private void Start()
     {
         if (_rigidbody == null)
