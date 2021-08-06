@@ -5,11 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public abstract class Balk : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private Rigidbody _jointRigidbody;
     [SerializeField] private Transform _nearPoint;
     [SerializeField] private Transform _farPoint;
 
-    public Rigidbody Rigidbody => _rigidbody;
+    public Rigidbody Rigidbody => _jointRigidbody;
     public Transform NearPoint => _nearPoint;
     public Transform FarPoint => _farPoint;
 
@@ -17,9 +17,9 @@ public abstract class Balk : MonoBehaviour
 
     private void Start()
     {
-        if (_rigidbody == null)
+        if (_jointRigidbody == null)
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            _jointRigidbody = GetComponent<Rigidbody>();
         }
     }
 }

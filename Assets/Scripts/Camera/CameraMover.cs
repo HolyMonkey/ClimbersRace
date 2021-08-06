@@ -17,11 +17,10 @@ public class CameraMover : MonoBehaviour
 
     private void OnValidate()
     {
-        if (_wallBehavior is IWall)
+        if (_wallBehavior is IWall || !_wallBehavior)
             return;
 
-        Debug.LogError(_wallBehavior.name + " needs to implement " + nameof(IWall));
-        _wallBehavior = null;
+        Debug.LogError(name + " needs to implement " + nameof(IWall));
     }
 
     private void Awake()
