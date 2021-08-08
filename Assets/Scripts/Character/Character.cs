@@ -20,15 +20,15 @@ public class Character : MonoBehaviour
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
 
-    public Balk _currentBalk { get; private set; }
+    public Balk CurrentBalk { get; private set; }
     private Vector3 _startDragPosition;
 
     public event UnityAction<Balk> AttachingBalk;
     public event UnityAction DetachingBalk;
     public event UnityAction Falling;
 
-    public bool IsAttachingBalk => _currentBalk;
-    public Vector3 PushVector => _currentBalk.PushVector;
+    public bool IsAttachingBalk => CurrentBalk;
+    public Vector3 PushVector => CurrentBalk.PushVector;
     public Vector3 Velocity => _rigidbody.velocity;
 
     private void OnValidate()
@@ -65,7 +65,7 @@ public class Character : MonoBehaviour
     public void AttachToBalk(Balk balk)
     {
         balk.CurrentCharacter = this;
-        _currentBalk = balk;
+        CurrentBalk = balk;
 
         SetupJoint(_swingReducerPower, balk.Rigidbody, balk.Rigidbody.centerOfMass, _springTougthness);
 
@@ -74,9 +74,9 @@ public class Character : MonoBehaviour
 
     public void DetachFromBalk()
     {
-        if (_currentBalk)
+        if (CurrentBalk)
         {
-            _currentBalk = null;
+            CurrentBalk = null;
         }
 
         SetupJoint(0, _defaultRigidbody, _springJoint.anchor, 0);
