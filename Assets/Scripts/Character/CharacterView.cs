@@ -7,6 +7,10 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private Character _character;
     [SerializeField] private float _rotationSpeed;
 
+    [Header("IK")]
+    [SerializeField] [Range(0f, 1f)] private float _rightHandWeight;
+    [SerializeField] [Range(0f, 1f)] private float _leftHandWeight;
+
     private Animator _animator;
 
     private Vector3 _targetLookVector;
@@ -33,7 +37,9 @@ public class CharacterView : MonoBehaviour
     private void Update()
     {
         if (_character.IsAttachingBalk)
-            LookRotation(_character.PushVector);
+            LookAt(_character._currentBalk.LookAtPoint);
+        else
+            LookAt(_character.Velocity);
     }
 
     private void OnAttachingBalk(Balk balk)
@@ -52,14 +58,10 @@ public class CharacterView : MonoBehaviour
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, true);
     }
 
-    private void LookRotation(Vector3 direction)
+    private void LookAt(Vector3 targetPoint)
     {
-        direction.y = 0;
-
-        Debug.Log("rotationDirection - " + direction);
-
-        Quaternion lookRotation = Quaternion.LookRotation(-direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
+        targetPoint.y = _character.transform.position.y;
+        transform.LookAt(targetPoint);
     }
 }
 

@@ -6,7 +6,7 @@ using UnityEngine;
 public class BalkInteractionHandler : MonoBehaviour
 {
     [SerializeField] private Collider _balkCollider;
-    [SerializeField] private float _maxDragDistance;
+    [SerializeField] private RangeFloat _minMaxDragDistance;
     [SerializeField] private float _timeToLeaveBalk;
 
     private Balk _balk;
@@ -21,32 +21,27 @@ public class BalkInteractionHandler : MonoBehaviour
     {
         if (_balk.CurrentCharacter)
         {
-            _balk.CurrentCharacter.SetStartDragPosition();
             _startDragPosition = transform.position;
         }
     }
 
-    public void DragBalk(Vector3 currentPosition)
+    public void DragBalk(Vector3 targetPosition)
     {
         if (_balk.CurrentCharacter)
         {
-            Vector3 offset = currentPosition - _startDragPosition;
+            Vector3 dragVector = Vector3.ClampMagnitude(targetPosition - _startDragPosition, _minMaxDragDistance.Max);
 
-            transform.position = _startDragPosition + Vector3.ClampMagnitude(offset, _maxDragDistance);
+            transform.position = _startDragPosition + dragVector;
+
+            _balk.PushVector = -dragVector;
         }
     }
 
     public void FinishDragBalk()
     {
-        if (_balk.CurrentCharacter)
+        if (_balk.CurrentCharacter && _balk.PushVector.magnitude >= _minMaxDragDistance.Min)
         {
-            Vector3 endDragPosition = transform.position;
-            Vector3 direction = _startDragPosition - endDragPosition;
-
-            Debug.Log(direction.normalized);
-
-            _balk.CurrentCharacter.Push(direction.normalized);
-            _balk.CurrentCharacter.DetachFromBalk();
+            _balk.PushCharacter();
 
             //StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));  //NEED TEST
         }

@@ -20,15 +20,16 @@ public class Character : MonoBehaviour
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
 
-    private Balk _currentBalk;
+    public Balk _currentBalk { get; private set; }
     private Vector3 _startDragPosition;
 
     public event UnityAction<Balk> AttachingBalk;
     public event UnityAction DetachingBalk;
     public event UnityAction Falling;
 
-    public bool IsAttachingBalk => _currentBalk ? true : false;
-    public Vector3 PushVector { get; private set; }
+    public bool IsAttachingBalk => _currentBalk;
+    public Vector3 PushVector => _currentBalk.PushVector;
+    public Vector3 Velocity => _rigidbody.velocity;
 
     private void OnValidate()
     {
@@ -53,44 +54,34 @@ public class Character : MonoBehaviour
     private void Update()
     {
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
-
-        if (IsAttachingBalk)
-        {
-            PushVector = transform.localPosition - _startDragPosition;
-        }
     }
 
     public void Push(Vector3 direction)
     {
+        DetachFromBalk();
         _mover.Move(direction, _pushForce);
-    }
-
-    public void SetStartDragPosition()
-    {
-        _startDragPosition = transform.localPosition;
     }
 
     public void AttachToBalk(Balk balk)
     {
-        AttachingBalk?.Invoke(balk);
-
         balk.CurrentCharacter = this;
         _currentBalk = balk;
 
         SetupJoint(_swingReducerPower, balk.Rigidbody, balk.Rigidbody.centerOfMass, _springTougthness);
+
+        AttachingBalk?.Invoke(balk);
     }
 
     public void DetachFromBalk()
     {
-        DetachingBalk?.Invoke();
-
         if (_currentBalk)
         {
-            _currentBalk.CurrentCharacter = null;
             _currentBalk = null;
         }
 
         SetupJoint(0, _defaultRigidbody, _springJoint.anchor, 0);
+
+        DetachingBalk?.Invoke();
     }
 
     public void CollideWithTrap()
