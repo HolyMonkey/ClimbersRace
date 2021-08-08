@@ -224,7 +224,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5748094657686267023}
   - component: {fileID: 5748094657676643173}
-  - component: {fileID: 5748094657686042798}
   - component: {fileID: 246662797826476856}
   m_Layer: 0
   m_Name: Gorilla
@@ -276,22 +275,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5748094657686042798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5748094657686042799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a7ce6d028d5704bb811057d69a213d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ikActive: 1
-  _rightHandWeight: 1
-  _leftHandWeight: 1
-  _character: {fileID: 7255541209806285321}
 --- !u!114 &246662797826476856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 7255541209806285321}
-  _rotationSpeed: 10
+  _ikActive: 1
+  _rightHandWeight: 1
+  _leftHandWeight: 1
 --- !u!1 &5748094657686042801
 GameObject:
   m_ObjectHideFlags: 0

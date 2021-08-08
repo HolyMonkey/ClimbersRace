@@ -1583,26 +1583,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 439412907}
     m_Modifications:
-    - target: {fileID: 469540047518266256, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2679285856291213304, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2679285856291213304, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6349200235399117742, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264905227455990582, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.4
-      objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1
@@ -1610,18 +1590,6 @@ PrefabInstance:
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3162,8 +3130,7 @@ PrefabInstance:
       propertyPath: _cylindricWall
       value: 
       objectReference: {fileID: 446174058}
-    m_RemovedComponents:
-    - {fileID: 7255541209806285320, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
 --- !u!114 &1468891576 stripped
 MonoBehaviour:
