@@ -38,7 +38,11 @@ public class CharacterView : MonoBehaviour
     private void Update()
     {
         if (_character.IsAttachingBalk)
+        {
             LookAt(_character.CurrentBalk.LookAtPoint);
+
+            UpdateIK(_character.CurrentBalk);
+        }
         else
             LookAt(_character.Velocity);
     }
@@ -47,8 +51,6 @@ public class CharacterView : MonoBehaviour
     {
         _animator.SetBool(IKCharacterAnimatorController.Params.Flying, false);
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, false);
-
-        UpdateIK(balk);
     }
 
     private void OnDetachingBalk()
@@ -71,7 +73,7 @@ public class CharacterView : MonoBehaviour
 
     private void UpdateIK(Balk balk)
     {
-        if (Vector3.Angle(_character.PushVector, balk.transform.position) > 90f)
+        if (Vector3.Dot(_character.CurrentBalk.LookAtPoint,transform.right) > 0.1f)
             SetIKTarget(balk.NearPoint, balk.FarPoint);
         else
             SetIKTarget(balk.FarPoint, balk.NearPoint);
