@@ -5,12 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public abstract class Balk : MonoBehaviour
 {
+    [SerializeField] private float _forceOnAttach;
     [SerializeField] private Rigidbody _jointRigidbody;
     [SerializeField] private Transform _nearPoint;
     [SerializeField] private Transform _farPoint;
     [SerializeField] private Transform _lookAtPoint;
 
-    public Rigidbody Rigidbody => _jointRigidbody;
+    private Rigidbody _rigidbody;
+
+    public Rigidbody JointRigidbody => _jointRigidbody;
     public Transform NearPoint => _nearPoint;
     public Transform FarPoint => _farPoint;
     public Vector3 LookAtPoint => _lookAtPoint.position;
@@ -18,12 +21,9 @@ public abstract class Balk : MonoBehaviour
     public Character CurrentCharacter;
     public Vector3 PushVector = Vector3.zero;
 
-    private void Start()
+    private void Awake()
     {
-        if (_jointRigidbody == null)
-        {
-            _jointRigidbody = GetComponent<Rigidbody>();
-        }
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     public void PushCharacter()
@@ -33,5 +33,10 @@ public abstract class Balk : MonoBehaviour
         CurrentCharacter = null;
 
         PushVector = Vector3.zero;
+    }
+
+    public void AddForce(Vector3 direction)
+    {
+        _rigidbody.AddForce(direction * _forceOnAttach, ForceMode.Impulse);
     }
 }

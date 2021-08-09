@@ -5429,7 +5429,7 @@ SpringJoint:
   m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
-  m_Tolerance: 0.025
+  m_Tolerance: 0.01
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -5450,10 +5450,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pushForce: 12
   _maxSpeed: 9
-  _springTougthness: 100
-  _swingReducerPower: 10
+  _springTougthness: 80
+  _swingReducerPower: 7
   _defaultRigidbody: {fileID: 7255541207980241530}
-  _moverBehaviour: {fileID: 5373706696867255151}
+  _moverBehaviour: {fileID: 8809552712608938089}
 --- !u!114 &5373706696867255151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5473,7 +5473,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255541209806285322}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3683ed2296c4d83459eb357012389ac8, type: 3}
   m_Name: 
