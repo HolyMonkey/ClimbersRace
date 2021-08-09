@@ -65,9 +65,13 @@ public class Character : MonoBehaviour
     public void AttachToBalk(Balk balk)
     {
         balk.CurrentCharacter = this;
+        balk.AddForce(Velocity);
+        Debug.Log(Velocity * 10f);
         CurrentBalk = balk;
 
-        SetupJoint(_swingReducerPower, balk.Rigidbody, balk.Rigidbody.centerOfMass, _springTougthness);
+
+        SetupJoint(_swingReducerPower, balk.JointRigidbody, balk.JointRigidbody.centerOfMass, _springTougthness);
+
 
         AttachingBalk?.Invoke(balk);
     }
