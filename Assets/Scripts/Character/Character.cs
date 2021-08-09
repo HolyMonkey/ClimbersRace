@@ -66,9 +66,7 @@ public class Character : MonoBehaviour
     {
         balk.CurrentCharacter = this;
         balk.AddForce(Velocity);
-        Debug.Log(Velocity * 10f);
         CurrentBalk = balk;
-
 
         SetupJoint(_swingReducerPower, balk.JointRigidbody, balk.JointRigidbody.centerOfMass, _springTougthness);
 
