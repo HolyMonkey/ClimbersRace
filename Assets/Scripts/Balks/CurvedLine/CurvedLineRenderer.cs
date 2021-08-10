@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 [RequireComponent(typeof(LineRenderer))]
 public class CurvedLineRenderer : MonoBehaviour
@@ -11,8 +12,10 @@ public class CurvedLineRenderer : MonoBehaviour
 
     private LineRenderer _lineRenderer;
     private CurvedLinePoint[] _linePoints = new CurvedLinePoint[0];
-    private Vector3[] _linePositions = new Vector3[0];
-    private Vector3[] _linePositionsOld = new Vector3[0];
+    private Vector3[] _linePositions;
+    private Vector3[] _basicLinePositions;
+
+    private bool _startDrawing = true;
 
     private void OnValidate()
     {
@@ -27,56 +30,65 @@ public class CurvedLineRenderer : MonoBehaviour
 
     private void Awake()
     {
-        _linePoints = GetComponentsInChildren<CurvedLinePoint>();
         _lineRenderer = GetComponent<LineRenderer>();
+        _linePoints = GetComponentsInChildren<CurvedLinePoint>();
+
+        SetBasicsPoints();
+        SetLineWidth();
     }
 
     private void Update()
     {
-        Render();
+        if (CheckMovingPoints())
+            SetPointsToLine();
     }
 
-    public void Render()
-    {
-        GetPointsPosition();
-        SetPointsToLine();
-    }
-
-    private void GetPointsPosition()
+    private void SetBasicsPoints()
     {
         _linePositions = new Vector3[_linePoints.Length];
+        _basicLinePositions = new Vector3[_linePoints.Length];
 
+        for (int i = 0; i < _linePoints.Length; i++)
+        {
+            _basicLinePositions[i] = _linePoints[i].transform.position;
+        }
+    }
+
+    private void SetLineWidth()
+    {
+        _lineRenderer.startWidth = _lineWidth;
+        _lineRenderer.endWidth = _lineWidth;
+    }
+
+    private bool CheckMovingPoints()
+    {
         for (int i = 0; i < _linePositions.Length; i++)
         {
-            _linePositions[i] = _linePoints[i].transform.position;
+            if (_startDrawing || Vector3.Distance(_linePoints[i].transform.position, _basicLinePositions[i]) > 0.05f)
+            {
+                _startDrawing = false;
+
+                return true;
+            }
         }
+        return false;
     }
 
     private void SetPointsToLine()
     {
-        bool moved = false;
+        GetUpdatedPoints();
 
-        if (_linePositionsOld.Length != _linePositions.Length)
-        {
-            _linePositionsOld = new Vector3[_linePositions.Length];
-        }
+        Vector3[] smoothedPoints = LineSmoother.SmoothLine(_linePositions, _lineSegmentSize);
 
+        _lineRenderer.positionCount = smoothedPoints.Length;
+        _lineRenderer.SetPositions(smoothedPoints);
+    }
+
+    private void GetUpdatedPoints()
+    {
         for (int i = 0; i < _linePositions.Length; i++)
         {
-            if (_linePositions[i] != _linePositionsOld[i])
-            {
-                moved = true;
-            }
-        }
-
-        if (moved == true)
-        {
-            Vector3[] smoothedPoints = LineSmoother.SmoothLine(_linePositions, _lineSegmentSize);
-
-            _lineRenderer.positionCount = smoothedPoints.Length;
-            _lineRenderer.SetPositions(smoothedPoints);
-            _lineRenderer.startWidth = _lineWidth;
-            _lineRenderer.endWidth = _lineWidth;
+            _linePositions[i] = _linePoints[i].transform.position;
         }
     }
 }
