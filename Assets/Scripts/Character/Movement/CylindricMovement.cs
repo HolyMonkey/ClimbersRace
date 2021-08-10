@@ -13,7 +13,7 @@ public class CylindricMovement : MonoBehaviour, IMovable
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         CorrectVelocityVector();
     }
@@ -26,7 +26,7 @@ public class CylindricMovement : MonoBehaviour, IMovable
 
     private void CorrectVelocityVector()
     {
-        Vector3 cylinderTangent = _cylindricWall.GetTangentXZVector(_rigidbody.position);
+        Vector3 cylinderTangent = _cylindricWall.GetTangentXZVector(transform.position);
 
         float targetMagnitude = _rigidbody.velocity.magnitude;
 
