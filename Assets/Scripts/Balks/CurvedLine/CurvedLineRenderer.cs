@@ -37,13 +37,13 @@ public class CurvedLineRenderer : MonoBehaviour
 
     private void Start()
     {
-        SetPointsToLine();
+        RenderSmoothLine();
     }
 
     private void Update()
     {
         if (CheckMovingPoints())
-            SetPointsToLine();
+            RenderSmoothLine();
     }
 
     private void SetBasicsPoints()
@@ -70,7 +70,7 @@ public class CurvedLineRenderer : MonoBehaviour
         return false;
     }
 
-    private void SetPointsToLine()
+    private void RenderSmoothLine()
     {
         GetUpdatedPoints();
 
