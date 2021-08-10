@@ -9,13 +9,12 @@ public class CurvedLineRenderer : MonoBehaviour
     [SerializeField] private float _lineSegmentSize = 0.15f;
     [SerializeField] private float _lineWidth = 0.1f;
     [SerializeField] private bool _showGizmos = true;
+    [SerializeField] private CurvedLinePoint[] _linePoints;
 
     private LineRenderer _lineRenderer;
-    private CurvedLinePoint[] _linePoints = new CurvedLinePoint[0];
+
     private Vector3[] _linePositions;
     private Vector3[] _basicLinePositions;
-
-    private bool _startDrawing = true;
 
     private void OnValidate()
     {
@@ -31,10 +30,14 @@ public class CurvedLineRenderer : MonoBehaviour
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-        _linePoints = GetComponentsInChildren<CurvedLinePoint>();
 
         SetBasicsPoints();
         SetLineWidth();
+    }
+
+    private void Start()
+    {
+        SetPointsToLine();
     }
 
     private void Update()
@@ -62,15 +65,8 @@ public class CurvedLineRenderer : MonoBehaviour
 
     private bool CheckMovingPoints()
     {
-        for (int i = 0; i < _linePositions.Length; i++)
-        {
-            if (_startDrawing || Vector3.Distance(_linePoints[i].transform.position, _basicLinePositions[i]) > 0.05f)
-            {
-                _startDrawing = false;
-
-                return true;
-            }
-        }
+        if (Vector3.Distance(_linePoints[_linePoints.Length - 1].transform.position, _basicLinePositions[_basicLinePositions.Length - 1]) > 0.05f)
+            return true;
         return false;
     }
 
