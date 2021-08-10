@@ -9,7 +9,7 @@ public class BalkToWallAttaching : MonoBehaviour
 
     private void OnValidate()
     {
-        if (!(_wallBehavior is IWall) || !_wallBehavior)
+        if (!(_wallBehavior is IWall) && _wallBehavior)
             Debug.LogError(name + " needs to implement " + nameof(IWall));
     }
 
