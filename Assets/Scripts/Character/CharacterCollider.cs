@@ -37,6 +37,7 @@ public abstract class CharacterCollider : MonoBehaviour
 
         if (CheckBalkType(out Balk balk, collider))
         {
+            balk.Interaction(_character);
             _character.AttachToBalk(balk);
         }
     }
