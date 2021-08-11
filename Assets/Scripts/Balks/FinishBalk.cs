@@ -25,10 +25,6 @@ public class FinishBalk : Balk
 
     public void FinishPush(BonusWall targetWall)
     {
-        float height = targetWall.transform.position.y - transform.position.y;
-        Debug.Log(height);
         
-
-        PushCharacter(new Vector3(0, height / 5, 0));
     }
 }
