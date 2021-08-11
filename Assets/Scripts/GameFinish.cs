@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishGameHandler : MonoBehaviour
+public class GameFinish : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _confetti;
     [SerializeField] private Transform _pointForCamera;

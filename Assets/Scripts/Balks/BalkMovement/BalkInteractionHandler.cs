@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Balk))]
 public class BalkInteractionHandler : MonoBehaviour
 {
     [SerializeField] private Collider _balkCollider;
