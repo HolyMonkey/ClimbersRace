@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BalkInteractionHandler))]
+[RequireComponent(typeof(BalkMovement))]
 public class PlayerBalkInteraction : MonoBehaviour
 {
-    private BalkInteractionHandler _balkInteraction;
+    private BalkMovement _balkInteraction;
 
     private Camera _camera;
 
@@ -15,7 +15,7 @@ public class PlayerBalkInteraction : MonoBehaviour
     private void Awake()
     {
         _camera = Camera.main;
-        _balkInteraction = GetComponent<BalkInteractionHandler>();
+        _balkInteraction = GetComponent<BalkMovement>();
     }
 
     private void OnMouseDown()

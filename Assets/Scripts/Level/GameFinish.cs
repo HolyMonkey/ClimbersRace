@@ -5,8 +5,6 @@ using UnityEngine;
 public class GameFinish : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _confetti;
-    [SerializeField] private Transform _pointForCamera;
-    [SerializeField] private CameraMover _camera;
 
     private void OnTriggerEnter(Collider other)
     {

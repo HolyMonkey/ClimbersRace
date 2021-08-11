@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBalkInteraction : MonoBehaviour
 {
-    [SerializeField] private BalkInteractionHandler _balkInteraction;
+    [SerializeField] private BalkMovement _balkInteraction;
     [SerializeField] private SpringJoint _springJoint;
     [SerializeField] private float _pullingForce;
     [SerializeField] private float _tolerance;

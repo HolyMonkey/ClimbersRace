@@ -28,7 +28,6 @@ public class Character : MonoBehaviour
     public event UnityAction Falling;
 
     public bool IsAttachingBalk => CurrentBalk;
-    public Vector3 PushVector => CurrentBalk.PushVector;
     public Vector3 Velocity => _rigidbody.velocity;
 
     private void OnValidate()
@@ -56,7 +55,7 @@ public class Character : MonoBehaviour
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
     }
 
-    public void Push(Vector3 direction)
+    public void BalkPush(Vector3 direction)
     {
         DetachFromBalk();
         _mover.Move(direction, _pushForce);
@@ -64,12 +63,11 @@ public class Character : MonoBehaviour
 
     public void AttachToBalk(Balk balk)
     {
-        balk.CurrentCharacter = this;
-        balk.AddForce(Velocity);
         CurrentBalk = balk;
 
         SetupJoint(_swingReducerPower, balk.JointRigidbody, balk.JointRigidbody.centerOfMass, _springTougthness);
 
+        balk.AddForce(Velocity);
 
         AttachingBalk?.Invoke(balk);
     }

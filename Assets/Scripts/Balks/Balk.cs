@@ -12,13 +12,14 @@ public abstract class Balk : MonoBehaviour
     [SerializeField] private Transform _lookAtPoint;
 
     private Rigidbody _rigidbody;
+    private Character _currentCharacter;
 
+    public bool HasCharacter => _currentCharacter;
     public Rigidbody JointRigidbody => _jointRigidbody;
     public Transform NearPoint => _nearPoint;
     public Transform FarPoint => _farPoint;
     public Vector3 LookAtPoint => _lookAtPoint.position;
 
-    public Character CurrentCharacter;
     public Vector3 PushVector = Vector3.zero;
 
     private void Awake()
@@ -26,11 +27,11 @@ public abstract class Balk : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void PushCharacter()
+    public void PushCharacter(Vector3 pushVector)
     {
-        CurrentCharacter.Push(PushVector.normalized);
+        _currentCharacter.BalkPush(pushVector);
 
-        CurrentCharacter = null;
+        _currentCharacter = null;
 
         PushVector = Vector3.zero;
     }
@@ -38,5 +39,10 @@ public abstract class Balk : MonoBehaviour
     public void AddForce(Vector3 direction)
     {
         _rigidbody.AddForce(direction * _forceOnAttach, ForceMode.Impulse);
+    }
+
+    public virtual void Interaction(Character character)
+    {
+        _currentCharacter = character;
     }
 }

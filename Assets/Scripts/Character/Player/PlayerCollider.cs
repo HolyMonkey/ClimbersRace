@@ -4,16 +4,17 @@ public class PlayerCollider : CharacterCollider
 {
     protected override bool CheckBalkType(out Balk balk, Collider collider)
     {
-        if (collider.TryGetComponent(out PlayerBalk playerBalk))
+        if (collider.TryGetComponent(out Balk playerBalk))
         {
-            balk = playerBalk;
-            return true;
+            if (playerBalk is PlayerBalk || playerBalk is FinishBalk)
+            {
+                balk = playerBalk;
+                return true;
+            }
         }
-        else
-        {
-            balk = null;
-            return false;
-        }
+
+        balk = null;
+        return false;
     }
 }
 
