@@ -61,6 +61,11 @@ public class Character : MonoBehaviour
         _mover.Move(direction, _pushForce);
     }
 
+    public void FinishPush(BonusWall targetWall)
+    {
+
+    }
+
     public void AttachToBalk(Balk balk)
     {
         CurrentBalk = balk;
