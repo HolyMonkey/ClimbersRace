@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BalkInteractionHandler : MonoBehaviour
 {
-    [SerializeField] private Collider _balkCollider;
     [SerializeField] private RangeFloat _minMaxDragDistance;
-    [SerializeField] private float _timeToLeaveBalk;
 
     private Balk _balk;
     private Vector3 _startDragPosition;
@@ -41,17 +39,6 @@ public class BalkInteractionHandler : MonoBehaviour
         if (_balk.CurrentCharacter && _balk.PushVector.magnitude >= _minMaxDragDistance.Min)
         {
             _balk.PushCharacter();
-
-            //StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));  //NEED TEST
         }
-    }
-
-    private IEnumerator DisableColliderOnTime(float delay)
-    {
-        _balkCollider.enabled = false;
-
-        yield return new WaitForSeconds(delay);
-
-        _balkCollider.enabled = true;
     }
 }
