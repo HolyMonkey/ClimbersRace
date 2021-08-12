@@ -239,7 +239,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5748094657686042799}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2976,7 +2976,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5748094657686042959}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2985,7 +2985,7 @@ Transform:
   - {fileID: 5748094657686267217}
   m_Father: {fileID: 5748094657686267023}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &5748094657686042961
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,11 +5335,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255541207980241531}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 100
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -5391,12 +5391,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255541209806285322}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1.5
+  m_Height: 1.7
   m_Direction: 1
-  m_Center: {x: 0, y: 0.65, z: 0}
+  m_Center: {x: 0, y: 0.55, z: 0}
 --- !u!54 &7255541209806285430
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5454,7 +5454,7 @@ MonoBehaviour:
   _springTougthness: 80
   _swingReducerPower: 7
   _defaultRigidbody: {fileID: 7255541207980241530}
-  _moverBehaviour: {fileID: 5373706696867255151}
+  _moverBehaviour: {fileID: 8809552712608938089}
 --- !u!114 &5373706696867255151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5474,7 +5474,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255541209806285322}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3683ed2296c4d83459eb357012389ac8, type: 3}
   m_Name: 
@@ -5493,6 +5493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 7255541209806285321}
+  _money: {fileID: 1601382677}
 --- !u!114 &1601382677
 MonoBehaviour:
   m_ObjectHideFlags: 0

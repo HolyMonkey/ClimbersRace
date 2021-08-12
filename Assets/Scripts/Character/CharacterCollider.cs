@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public abstract class CharacterCollider : MonoBehaviour
 {
     [SerializeField] private Character _character;
+    [SerializeField] private Money _money;
     //[SerializeField]private float _timeToLeaveBalk = 0.1f;
 
     private Collider _collider;
@@ -32,6 +33,15 @@ public abstract class CharacterCollider : MonoBehaviour
             if (enemy.IsAttachingBalk)
             {
                 KnockedDownEnemy?.Invoke(transform.position);
+            }
+        }
+
+        if (collider.TryGetComponent(out Coin coin))
+        {
+            if (!_character.IsAttachingBalk)
+            {
+                _money.AddLevelMoney(coin.RewardAmount);
+                coin.Collect();
             }
         }
 

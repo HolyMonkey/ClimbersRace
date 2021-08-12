@@ -252,7 +252,7 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: -1.55}
+  m_ConnectedAnchor: {x: -0.00000011920929, y: 0, z: -1.55}
   serializedVersion: 2
   m_Spring: 75
   m_Damper: 0.15
@@ -294,7 +294,6 @@ MonoBehaviour:
   _nearPoint: {fileID: 6349200235399117742}
   _farPoint: {fileID: 469540047518266256}
   _lookAtPoint: {fileID: 3942228464609488859}
-  CurrentCharacter: {fileID: 0}
   PushVector: {x: 0, y: 0, z: 0}
 --- !u!114 &1200766371007926493
 MonoBehaviour:
@@ -308,11 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2e677dc81f6c34eaaeaec9b074f113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balkCollider: {fileID: 6141676960106231248}
   _minMaxDragDistance:
     _min: 0.25
     _max: 0.45
-  _timeToLeaveBalk: 0.2
 --- !u!114 &4910913716650086583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +579,7 @@ GameObject:
   m_Layer: 8
   m_Name: PlayerBalk
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

@@ -48,7 +48,7 @@ public class Money : MonoBehaviour
         if (value < 0)
             throw new ArgumentException();
 
-        if (CurrentMoney > value)
+        if (CurrentMoney >= value)
         {
             ChangeBalance(-value);
             return true;
