@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] private BonusGame _bonusGame;
+    private const string CURRENT_LEVEL_ID = "CurrentLevelID";
 
-    public int CurrentLevel { get; private set; } = 1;
+    [SerializeField] private BonusGame _bonusGame;
+    [SerializeField] private SceneChanger _sceneChanger;
+
+    public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
     public void StartBonusGame(FinishBalk finishBalk)
     {
         _bonusGame.StartBonusGame(finishBalk);
+    }
+
+    public void NextLevel()
+    {
+        PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
+
+        _sceneChanger.LoadLevel(CurrentLevel);
     }
 }
