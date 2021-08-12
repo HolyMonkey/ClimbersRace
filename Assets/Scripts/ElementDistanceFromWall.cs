@@ -19,6 +19,10 @@ public class ElementDistanceFromWall : MonoBehaviour
     private void CorrectDistance()
     {
         Vector3 targetPosition = _wall.GetNormalVector(transform.position) * _distance;
+
+        if (_wall is StraightWall)
+            targetPosition.x = transform.position.x;
+
         targetPosition.y = transform.position.y;
 
         transform.position = targetPosition;
