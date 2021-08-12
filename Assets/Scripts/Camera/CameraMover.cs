@@ -9,7 +9,7 @@ public class CameraMover : MonoBehaviour
     [SerializeField] private float _smoothSpeed;
     [SerializeField] private Vector3 _positionOffset;
     [SerializeField] private Vector3 _lookAtOffset;
-    [SerializeField] private float _offsetDistance;
+    [SerializeField] private float _distanceOffset;
     [SerializeField] private MonoBehaviour _wallBehavior;
     private IWall _wall => (IWall)_wallBehavior;
 
@@ -31,8 +31,13 @@ public class CameraMover : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 targetPosition = _wall.GetNormalVector(_character.transform.position);
-        targetPosition.x *= _offsetDistance;
-        targetPosition.z *= _offsetDistance;
+
+        if (_wall is StraightWall)
+            targetPosition.x = _character.transform.position.x;
+        else
+            targetPosition.x *= _distanceOffset;
+
+        targetPosition.z *= _distanceOffset;
         targetPosition.y = _character.transform.position.y;
 
         targetPosition += _positionOffset;
