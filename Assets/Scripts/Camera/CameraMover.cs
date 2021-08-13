@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(Camera))]
 public class CameraMover : MonoBehaviour
@@ -12,6 +13,15 @@ public class CameraMover : MonoBehaviour
     [SerializeField] private float _distanceOffset;
     [SerializeField] private MonoBehaviour _wallBehavior;
     private IWall _wall => (IWall)_wallBehavior;
+
+    [Header("DragImpact")]
+    [SerializeField] private RangeFloat _minMaxFOV;
+    [SerializeField] private float _scaleInTime = 1f;
+    [SerializeField] private float _scaleOutTime = 1.5f;
+    [SerializeField] private Ease _ease;
+
+    private Tweener _dragImpactTweener;
+    private bool _isFOVScaled = false;
 
     private Camera _camera;
 
@@ -46,8 +56,25 @@ public class CameraMover : MonoBehaviour
         transform.LookAt(_character.transform.position + _lookAtOffset);
     }
 
-    public void UpdateFOV(float multiplierFOV)
+    public void ScaleFOV(float balkDragValue)
     {
-
+        if (balkDragValue > 0.9f)
+        {
+            if (!_isFOVScaled)
+            {
+                _dragImpactTweener.Kill();
+                _dragImpactTweener = _camera.DOFieldOfView(_minMaxFOV.Max, _scaleInTime).SetEase(_ease);
+                _isFOVScaled = true;
+            }
+        }
+        else
+        {
+            if (_isFOVScaled)
+            {
+                _dragImpactTweener.Kill();
+                _dragImpactTweener = _camera.DOFieldOfView(_minMaxFOV.Min, _scaleOutTime).SetEase(_ease);
+                _isFOVScaled = false;
+            }
+        }
     }
 }

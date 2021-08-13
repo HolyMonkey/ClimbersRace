@@ -99,6 +99,12 @@ MonoBehaviour:
   _character: {fileID: 0}
   _smoothSpeed: 20
   _positionOffset: {x: 0, y: 0, z: 0}
-  _lookAtOffset: {x: 0, y: 2, z: 0}
-  _offsetDistance: 10
+  _lookAtOffset: {x: 0, y: 3, z: 0}
+  _distanceOffset: 12
   _wallBehavior: {fileID: 0}
+  _minMaxFOV:
+    _min: 60
+    _max: 67
+  _scaleInTime: 0.8
+  _scaleOutTime: 1.4
+  _ease: 3
