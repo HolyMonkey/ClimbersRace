@@ -11,6 +11,7 @@ public abstract class Balk : MonoBehaviour
     [SerializeField] private Transform _farPoint;
     [SerializeField] private Transform _lookAtPoint;
 
+    private CameraMover _cameraMover;
     private Rigidbody _rigidbody;
     private Character _currentCharacter;
 
@@ -25,6 +26,7 @@ public abstract class Balk : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _cameraMover = Camera.main.GetComponent<CameraMover>();
     }
 
     public void PushCharacter(Vector3 pushVector)
@@ -39,6 +41,11 @@ public abstract class Balk : MonoBehaviour
     public void AddForce(Vector3 direction)
     {
         _rigidbody.AddForce(direction * _forceOnAttach, ForceMode.Impulse);
+    }
+
+    public void ScaleCamera(float dragValue)
+    {
+        _cameraMover.ScaleFOV(dragValue);
     }
 
     public virtual void Interaction(Character character)

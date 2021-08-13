@@ -30,9 +30,7 @@ public class BalkMovement : MonoBehaviour
         {
             Vector3 dragVector = Vector3.ClampMagnitude(targetPosition - _startDragPosition, _minMaxDragDistance.Max);
 
-            transform.position = _startDragPosition + dragVector;
-
-            _balk.PushVector = -dragVector;
+            DragingBalk(dragVector);
         }
     }
 
@@ -42,18 +40,29 @@ public class BalkMovement : MonoBehaviour
         {
             dragValue = Mathf.Lerp(_minMaxDragDistance.Min, _minMaxDragDistance.Max, dragValue);
             Vector3 dragVector = direction * dragValue;
-            
-            transform.position = _startDragPosition + dragVector;
 
-            _balk.PushVector = -dragVector;
+            DragingBalk(dragVector);
         }
     }
 
     public void FinishDragBalk()
     {
-        if (_balk.HasCharacter && _balk.PushVector.magnitude >= _minMaxDragDistance.Min)
+        if (_balk.HasCharacter)
         {
-            _balk.PushCharacter(_balk.PushVector.normalized);
+            _balk.ScaleCamera(0);
+
+            if (_balk.PushVector.magnitude >= _minMaxDragDistance.Min)
+                _balk.PushCharacter(_balk.PushVector.normalized);
         }
+    }
+
+    private void DragingBalk(Vector3 dragVector)
+    {
+        float dragT = dragVector.magnitude / _minMaxDragDistance.Max;
+        _balk.ScaleCamera(dragT);
+
+        transform.position = _startDragPosition + dragVector;
+
+        _balk.PushVector = -dragVector;
     }
 }
