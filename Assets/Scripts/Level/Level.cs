@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Level : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class Level : MonoBehaviour
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
+    public event UnityAction BonusGameStarted;
+
     public void StartBonusGame(FinishBalk finishBalk)
     {
         _bonusGame.StartBonusGame(finishBalk);
+        BonusGameStarted?.Invoke();
     }
 
     public void NextLevel()

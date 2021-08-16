@@ -6,6 +6,7 @@ using UnityEngine;
 public class BonusGame : MonoBehaviour
 {
     [SerializeField] private BonusScaleView _bonusScaleView;
+    [SerializeField] private GameFinish _gameFinish;
     [SerializeField] private float _speed;
 
     [SerializeField] private List<BonusWall> _bonusWallsMultipliers;
@@ -46,6 +47,7 @@ public class BonusGame : MonoBehaviour
     {
         _targetBalk = finishBalk;
         _bonusScaleView.Show();
+        _gameFinish.RotateFinishWall(finishBalk.transform.position);
 
         _time = 0f;
         _isBonusScaling = true;
