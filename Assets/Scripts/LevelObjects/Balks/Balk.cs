@@ -13,9 +13,9 @@ public abstract class Balk : MonoBehaviour
 
     private CameraMover _cameraMover;
     private Rigidbody _rigidbody;
-    private Character _currentCharacter;
+    protected Character CurrentCharacter;
 
-    public bool HasCharacter => _currentCharacter;
+    public bool HasCharacter => CurrentCharacter;
     public Rigidbody JointRigidbody => _jointRigidbody;
     public Transform NearPoint => _nearPoint;
     public Transform FarPoint => _farPoint;
@@ -31,9 +31,9 @@ public abstract class Balk : MonoBehaviour
 
     public void PushCharacter(Vector3 pushVector)
     {
-        _currentCharacter.BalkPush(pushVector);
+        CurrentCharacter.BalkPush(pushVector);
 
-        _currentCharacter = null;
+        CurrentCharacter = null;
 
         PushVector = Vector3.zero;
     }
@@ -50,6 +50,6 @@ public abstract class Balk : MonoBehaviour
 
     public virtual void Interaction(Character character)
     {
-        _currentCharacter = character;
+        CurrentCharacter = character;
     }
 }

@@ -61,9 +61,11 @@ public class Character : MonoBehaviour
         _mover.Move(direction, _pushForce);
     }
 
-    public void FinishPush(BonusWall targetWall)
+    public void FinishPush(BonusWall targetWall, AnimationCurve yCurve)
     {
-
+        DetachFromBalk();
+        _rigidbody.isKinematic = true;
+        StartCoroutine(FinishPushing(targetWall.TargetPoint, yCurve));
     }
 
     public void AttachToBalk(Balk balk)
@@ -101,5 +103,27 @@ public class Character : MonoBehaviour
         _springJoint.connectedBody = connectedBody;
         _springJoint.connectedAnchor = connectedAnchor;
         _springJoint.spring = spring;
+    }
+
+    private IEnumerator FinishPushing(Vector3 targetPoint, AnimationCurve yCurve)
+    {
+        float time = 0;
+        float duration = 2f;
+        Vector3 startPoint = transform.position;
+
+        targetPoint.y += 0.55f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float s = time / duration;
+
+            Vector3 targetPosition = Vector3.Lerp(startPoint, targetPoint, s);
+            targetPosition.y = startPoint.y + yCurve.Evaluate(s) * (targetPoint.y - startPoint.y);
+
+            _rigidbody.MovePosition(targetPosition);
+
+            yield return null;
+        }
     }
 }

@@ -23,8 +23,10 @@ public class FinishBalk : Balk
         _balkMovement.DragBalk(Vector3.down, value);
     }
 
-    public void FinishPush(BonusWall targetWall)
+    public void FinishPush(BonusWall targetWall, AnimationCurve YCurve)
     {
-        
+        ScaleCamera(0);
+
+        CurrentCharacter.FinishPush(targetWall, YCurve);
     }
 }
