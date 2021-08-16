@@ -7,5 +7,5 @@ public class BonusWall : MonoBehaviour
     [SerializeField] private int _multiplier;
     [SerializeField] private Transform _targetPoint;
 
-    public Transform TargetPointTransform =>_targetPoint;
+    public Vector3 TargetPoint =>_targetPoint.position;
 }

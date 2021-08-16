@@ -7,11 +7,14 @@ public class BonusGame : MonoBehaviour
 {
     [SerializeField] private BonusScaleView _bonusScaleView;
     [SerializeField] private GameFinish _gameFinish;
+
     [SerializeField] private float _speed;
 
     [SerializeField] private List<BonusWall> _bonusWallsMultipliers;
     [Range(0f, 1f)]
     [SerializeField] private List<float> _valueToMultiplierBounds;
+
+    [SerializeField] private AnimationCurve _playerYCurve;
 
     private FinishBalk _targetBalk;
 
@@ -66,7 +69,8 @@ public class BonusGame : MonoBehaviour
         }
 
         BonusWall targetWall = _bonusWallsMultipliers[reachedBonusLevel];
-        _targetBalk.FinishPush(targetWall);
+
+        _targetBalk.FinishPush(targetWall, _playerYCurve);
     }
 
     private void UpdateScaleValue(out float value)
