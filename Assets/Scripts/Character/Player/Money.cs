@@ -35,12 +35,12 @@ public class Money : MonoBehaviour
         CountLevelMoney(value);
     }
 
-    public void AddLevelBonus(int value)
+    public void RecieveLevelBonus()
     {
-        if (value < 0)
-            throw new ArgumentException();
+        ChangeBalance(_currentLevelMoney * _currentMultiplier);
 
-        ChangeBalance(value);
+        _currentLevelMoney = 0;
+        _currentMultiplier = 1;
     }
 
     public bool TryRemoveMoney(int value)
@@ -64,9 +64,6 @@ public class Money : MonoBehaviour
 
         _currentMultiplier = multiplier;
         LevelIncomeReady?.Invoke(_currentLevelMoney, _currentMultiplier);
-
-        _currentLevelMoney = 0;
-        _currentMultiplier = 1;
     }
 
     private void ChangeBalance(int value)

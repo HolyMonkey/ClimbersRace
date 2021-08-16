@@ -9,16 +9,6 @@ public class BonusScaleView : MonoBehaviour
     [SerializeField] private RectTransform _arrowBase;
     [SerializeField] private float _arrowMaxAngle = 90f;
 
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
-
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
     internal void ChangeValue(float value)
     {
         float zRotation = Mathf.Lerp(0, _arrowMaxAngle, value);
