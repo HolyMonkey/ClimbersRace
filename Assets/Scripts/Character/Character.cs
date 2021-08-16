@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float _springTougthness;
     [SerializeField] private float _swingReducerPower;
     [SerializeField] private Rigidbody _defaultRigidbody;
+    [SerializeField] private Level _level;
     [SerializeField]
     private MonoBehaviour _moverBehaviour;
     private IMovable _mover => (IMovable)_moverBehaviour;
@@ -65,7 +66,7 @@ public class Character : MonoBehaviour
     {
         DetachFromBalk();
         _rigidbody.isKinematic = true;
-        StartCoroutine(FinishPushing(targetWall.TargetPoint, yCurve));
+        StartCoroutine(BonusGameMoving(targetWall.TargetPoint, yCurve, targetWall.PlayerMoveDuration));
     }
 
     public void AttachToBalk(Balk balk)
@@ -105,13 +106,12 @@ public class Character : MonoBehaviour
         _springJoint.spring = spring;
     }
 
-    private IEnumerator FinishPushing(Vector3 targetPoint, AnimationCurve yCurve)
+    private IEnumerator BonusGameMoving(Vector3 targetPoint, AnimationCurve yCurve, float duration)
     {
         float time = 0;
-        float duration = 2f;
         Vector3 startPoint = transform.position;
 
-        targetPoint.y += 0.55f;
+        targetPoint.y += 0.55f; //character offset
 
         while (time < duration)
         {
@@ -125,5 +125,7 @@ public class Character : MonoBehaviour
 
             yield return null;
         }
+
+        _level.WinGame();
     }
 }

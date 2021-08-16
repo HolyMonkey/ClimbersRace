@@ -10,10 +10,13 @@ public class GameFinish : MonoBehaviour
 
     public void RotateFinishWall(Vector3 targetLookAt)
     {
-        Vector3 direction = _finishWall.position - targetLookAt;
-        direction.y = 0;
+        if (_finishWall)
+        {
+            Vector3 direction = _finishWall.position - targetLookAt;
+            direction.y = 0;
 
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        _finishWall.rotation = lookRotation;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            _finishWall.rotation = lookRotation;
+        }
     }
 }

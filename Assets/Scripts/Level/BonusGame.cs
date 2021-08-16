@@ -7,6 +7,7 @@ public class BonusGame : MonoBehaviour
 {
     [SerializeField] private BonusScaleView _bonusScaleView;
     [SerializeField] private GameFinish _gameFinish;
+    [SerializeField] private Money _money;
 
     [SerializeField] private float _speed;
 
@@ -49,7 +50,6 @@ public class BonusGame : MonoBehaviour
     public void StartBonusGame(FinishBalk finishBalk)
     {
         _targetBalk = finishBalk;
-        _bonusScaleView.Show();
         _gameFinish.RotateFinishWall(finishBalk.transform.position);
 
         _time = 0f;
@@ -59,7 +59,6 @@ public class BonusGame : MonoBehaviour
     private void FinishBonusGame(float endValue)
     {
         _isBonusScaling = false;
-        _bonusScaleView.Hide();
 
         int reachedBonusLevel = 0;
         for (int i = 0; i < _valueToMultiplierBounds.Count; i++)
@@ -69,6 +68,7 @@ public class BonusGame : MonoBehaviour
         }
 
         BonusWall targetWall = _bonusWallsMultipliers[reachedBonusLevel];
+        _money.SetLevelBonusMultiplier(targetWall.BonusMultiplier);
 
         _targetBalk.FinishPush(targetWall, _playerYCurve);
     }

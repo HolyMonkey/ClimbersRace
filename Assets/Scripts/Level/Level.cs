@@ -12,7 +12,24 @@ public class Level : MonoBehaviour
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
+    public event UnityAction LevelStarted;
     public event UnityAction BonusGameStarted;
+    public event UnityAction GameWon;
+    public event UnityAction GameLost;
+
+    private bool _isLevelStarted = false;
+
+    private void Update()
+    {
+        if (_isLevelStarted)
+            return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartLevel();
+            _isLevelStarted = true;
+        }
+    }
 
     public void StartBonusGame(FinishBalk finishBalk)
     {
@@ -25,5 +42,20 @@ public class Level : MonoBehaviour
         PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
 
         _sceneChanger.LoadLevel(CurrentLevel);
+    }
+
+    public void StartLevel()
+    {
+        LevelStarted?.Invoke();
+    }
+
+    public void WinGame()
+    {
+        GameWon?.Invoke();
+    }
+
+    public void LoseGame()
+    {
+        GameLost?.Invoke();
     }
 }
