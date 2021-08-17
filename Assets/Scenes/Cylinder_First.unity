@@ -4964,6 +4964,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2098622870574294667, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098622870574294667, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4982,15 +4990,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.93
+      value: -1.022
       objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 3.409
       objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.5
+      value: -3.882
       objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5088,18 +5096,50 @@ PrefabInstance:
       propertyPath: _wayPoints.Array.data[15]
       value: 
       objectReference: {fileID: 1580149043}
+    - target: {fileID: 2098622871309852885, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_Spring
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098622871309852885, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_Tolerance
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098622871309852887, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_Height
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098622871309852887, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098622871309852887, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852906, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852906, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2098622871309852907, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 42411126245362792}
     - target: {fileID: 2098622871309852907, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: _moverBehaviour
       value: 
       objectReference: {fileID: 2067187365}
+    - target: {fileID: 2098622871309852907, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: _springTougthness
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098622871309852907, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: _swingReducerPower
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7116855338416398736, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_Enabled
       value: 1

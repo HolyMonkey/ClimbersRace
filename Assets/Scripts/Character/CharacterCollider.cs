@@ -40,7 +40,8 @@ public abstract class CharacterCollider : MonoBehaviour
         {
             if (!_character.IsAttachingBalk)
             {
-                _money.AddLevelMoney(coin.RewardAmount);
+                if (_money)
+                    _money.AddLevelMoney(coin.RewardAmount);
                 coin.Collect();
             }
         }
