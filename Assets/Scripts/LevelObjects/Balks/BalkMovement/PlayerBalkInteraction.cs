@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(BalkMovement))]
 public class PlayerBalkInteraction : MonoBehaviour
 {
-    private BalkMovement _balkInteraction;
+    private BalkMovement _balkMovement;
 
     private Camera _camera;
 
@@ -15,25 +15,25 @@ public class PlayerBalkInteraction : MonoBehaviour
     private void Awake()
     {
         _camera = Camera.main;
-        _balkInteraction = GetComponent<BalkMovement>();
+        _balkMovement = GetComponent<BalkMovement>();
     }
 
     private void OnMouseDown()
     {
         _zMouseOffset = _camera.WorldToScreenPoint(transform.position).z;
         _mouseOffset = transform.position - GetMousePosition();
-        _balkInteraction.BeginDragBalk();
+        _balkMovement.BeginDragBalk();
     }
 
     private void OnMouseDrag()
     {
         Vector3 newPosition = GetMousePosition() + _mouseOffset;
-        _balkInteraction.DragBalk(newPosition);
+        _balkMovement.DragBalk(newPosition);
     }
 
     private void OnMouseUp()
     {
-        _balkInteraction.FinishDragBalk();
+        _balkMovement.FinishDragBalk();
     }
 
     private Vector3 GetMousePosition()

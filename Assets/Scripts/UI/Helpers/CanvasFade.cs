@@ -15,7 +15,7 @@ namespace DefaultNamespace.Other.AnimatedUI
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
             KillCurrentFade();
-            _fadeAction = _canvasGroup.DOFade(1, _duration);
+            _fadeAction = _canvasGroup?.DOFade(1, _duration);
         }
 
         public void Hide()
@@ -23,7 +23,7 @@ namespace DefaultNamespace.Other.AnimatedUI
             _canvasGroup.interactable = false;
             _canvasGroup.blocksRaycasts = false;
             KillCurrentFade();
-            _fadeAction = _canvasGroup.DOFade(0, _duration);
+            _fadeAction = _canvasGroup?.DOFade(0, _duration);
         }
         
         private void KillCurrentFade()
