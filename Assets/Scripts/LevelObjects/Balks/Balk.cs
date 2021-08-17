@@ -43,7 +43,7 @@ public abstract class Balk : MonoBehaviour
         _rigidbody.AddForce(direction * _forceOnAttach, ForceMode.Impulse);
     }
 
-    public void ScaleCamera(float dragValue)
+    public virtual void ScaleCamera(float dragValue)
     {
         _cameraMover.ScaleFOV(dragValue);
     }
