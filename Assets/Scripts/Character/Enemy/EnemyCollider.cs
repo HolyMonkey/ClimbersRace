@@ -19,12 +19,4 @@ public class EnemyCollider : CharacterCollider
             return false;
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.TryGetComponent(out EnemyBalk enemyBalk))
-        {
-            _characterInteractionHandler.DetachFromBalk();
-        }
-    }
 }

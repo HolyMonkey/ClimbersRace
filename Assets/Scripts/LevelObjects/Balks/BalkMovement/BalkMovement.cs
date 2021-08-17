@@ -38,8 +38,8 @@ public class BalkMovement : MonoBehaviour
     {
         if (_balk.HasCharacter)
         {
-            dragValue = Mathf.Lerp(_minMaxDragDistance.Min, _minMaxDragDistance.Max, dragValue);
-            Vector3 dragVector = direction * dragValue;
+            float dragDistance = Mathf.Lerp(_minMaxDragDistance.Min, _minMaxDragDistance.Max, dragValue);
+            Vector3 dragVector = direction * dragDistance;
 
             DragingBalk(dragVector);
         }

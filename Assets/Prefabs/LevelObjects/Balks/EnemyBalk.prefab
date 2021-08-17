@@ -98,7 +98,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970781492210108574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.3}
+  m_LocalPosition: {x: 0, y: 0, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5902937992976182122}
@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 1021967545431376184}
   - component: {fileID: 1987676143649612235}
   - component: {fileID: 7806245080492581689}
-  - component: {fileID: 8492460838013127715}
   m_Layer: 7
   m_Name: PipeHead
   m_TagString: Untagged
@@ -310,24 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minMaxDragDistance:
-    _min: 0.25
+    _min: 0.05
     _max: 0.5
---- !u!114 &8492460838013127715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4908998076531906780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cc31e8568b19b41a352ea6a27e6688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _balkInteraction: {fileID: 7806245080492581689}
-  _springJoint: {fileID: 2679285856291213304}
-  _pullingForce: 2
-  _tolerance: 5
 --- !u!1 &5341697363028684300
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5341697363028684300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5902937992976182122}
@@ -657,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9073358658907687260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.8}
+  m_LocalPosition: {x: 0, y: 0, z: 1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5902937992976182122}

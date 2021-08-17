@@ -20,7 +20,6 @@ public class CylindricWall : MonoBehaviour, IWall
     public Vector3 GetNormalVector(Vector3 position)
     {
         _centerPoint.y = position.y;
-        Debug.DrawLine(_centerPoint, position, Color.black);
         return (position - _centerPoint).normalized;
     }
 }

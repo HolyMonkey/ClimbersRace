@@ -13,11 +13,11 @@ public class EnemyAI : MonoBehaviour
     private EnemyBalk _nextBalk;
     private EnemyBalk _prevBalk;
 
-    private float _timer = 0;
-
     private Vector3 _dragVector = new Vector3();
     private float _dragTime;
     private Coroutine _draggingBalkJob;
+
+    private float _timer = 0;
 
     //private void OnEnable()
     //{
@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     _timer = 0;
 
-                    while (!_nextBalk || _nextBalk == _prevBalk)
+                    while (!_nextBalk || (_nextBalk == _prevBalk && _currentBalk.NearBalksCount > 1))
                         _nextBalk = ChooseNextBalk(_currentBalk);
 
                     ConfigureDragParameters();
@@ -62,13 +62,24 @@ public class EnemyAI : MonoBehaviour
 
     private EnemyBalk ChooseNextBalk(EnemyBalk currentBalk)
     {
-        return currentBalk.GetRandomHigherBalk();
+        if (currentBalk.GetRandomHigherBalk())
+            return currentBalk.GetRandomHigherBalk();
+        else
+            return currentBalk.GetRandomBalk();
     }
 
     private void ConfigureDragParameters()
     {
-        _dragVector = (_currentBalk.transform.position - _nextBalk.transform.position).normalized;
         _dragTime = _dragTimeRange.RandomValue;
+
+        Vector3 betweenBalkVector = _nextBalk.transform.position - _currentBalk.transform.position;
+        _dragVector = -betweenBalkVector;
+
+        float t = betweenBalkVector.magnitude / 7f; //average speed
+        float yPrecision = Physics.gravity.y * t * t / 2;
+        _dragVector.y += yPrecision;
+
+        _dragVector.Normalize();
     }
 
     private IEnumerator DraggingBalk()
@@ -76,12 +87,11 @@ public class EnemyAI : MonoBehaviour
         _currentBalk.BalkMovement.BeginDragBalk();
 
         float timer = 0;
-        float dragValue = 0f;
 
         while (timer < _dragTime)
         {
             timer += Time.deltaTime;
-            _currentBalk.BalkMovement.DragBalk(_dragVector, dragValue / _dragTime);
+            _currentBalk.BalkMovement.DragBalk(_dragVector, timer / _dragTime);
 
             yield return null;
         }
