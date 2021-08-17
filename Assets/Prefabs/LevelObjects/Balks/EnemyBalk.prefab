@@ -43,6 +43,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec59aba9255cc948b516cb99801caa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &623162029650841590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5250164544649589300}
+  m_Layer: 8
+  m_Name: LookAtPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5250164544649589300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623162029650841590}
+  m_LocalRotation: {x: -0, y: -0.2035627, z: -0, w: 0.97906196}
+  m_LocalPosition: {x: 1.6202852, y: -0.7787585, z: -0.75956947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7423776188801049831}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970781492210108574
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +160,7 @@ Transform:
   - {fileID: 6349200235399117742}
   - {fileID: 469540047518266256}
   m_Father: {fileID: 7423776188801049831}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2052293619191208199
 MeshFilter:
@@ -222,7 +252,7 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: -1.55}
+  m_ConnectedAnchor: {x: -0.00000008940697, y: 0, z: -1.5499996}
   serializedVersion: 2
   m_Spring: 1000
   m_Damper: 0.2
@@ -259,12 +289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceOnAttach: 0
+  _forceOnAttach: 1.15
   _jointRigidbody: {fileID: 4966776373482628397}
   _nearPoint: {fileID: 6349200235399117742}
   _farPoint: {fileID: 469540047518266256}
-  _lookAtPoint: {fileID: 0}
-  CurrentCharacter: {fileID: 0}
+  _lookAtPoint: {fileID: 5250164544649589300}
   PushVector: {x: 0, y: 0, z: 0}
 --- !u!114 &7806245080492581689
 MonoBehaviour:
@@ -278,11 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2e677dc81f6c34eaaeaec9b074f113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balkCollider: {fileID: 6141676960106231248}
   _minMaxDragDistance:
-    _min: 0
-    _max: 0
-  _timeToLeaveBalk: 0.2
+    _min: 0.25
+    _max: 0.5
 --- !u!114 &8492460838013127715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +430,7 @@ Transform:
   m_Children:
   - {fileID: 3762965703142890205}
   - {fileID: 7104660538468804813}
+  - {fileID: 5250164544649589300}
   - {fileID: 5902937992976182122}
   m_Father: {fileID: 8956675892853581391}
   m_RootOrder: 0
