@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class AINodeMapper : MonoBehaviour
 {
     [SerializeField] private float _maxDistance = 3.8f;
     [SerializeField] private List<BalkAINode> _allNodes;
 
-    [ContextMenu("MapNodes")]
+    [ContextMenu("MapNodes(NO UNDO)")]
     private void MapNodes()
     {
         foreach (BalkAINode node in _allNodes)
@@ -15,7 +16,7 @@ public class AINodeMapper : MonoBehaviour
 
         for (int i = 0; i < _allNodes.Count; i++)
         {
-            for (int j = i + 1; j < _allNodes.Count - 1; j++)
+            for (int j = i + 1; j < _allNodes.Count; j++)
             {
                 if (Vector3.Distance(_allNodes[i].BalkPosition, _allNodes[j].BalkPosition) < _maxDistance)
                 {
