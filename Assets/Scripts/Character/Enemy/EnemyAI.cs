@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Character _enemyCharacter;
     [SerializeField] private float _choseNextBalkTimer;
     [SerializeField] private RangeFloat _dragTimeRange;
+    [SerializeField] private Level _level;
 
     private EnemyBalk _currentBalk => (EnemyBalk)_enemyCharacter.CurrentBalk;
     private EnemyBalk _nextBalk;
@@ -17,27 +18,27 @@ public class EnemyAI : MonoBehaviour
     private float _dragTime;
     private Coroutine _draggingBalkJob;
 
+    private bool _isLevelStarted = false;
     private float _timer = 0;
 
-    //private void OnEnable()
-    //{
-    //    _enemyCharacter.AttachingBalk += OnAttachingBalk;
-    //}
+    private void OnEnable()
+    {
+        _level.LevelStarted += OnLevelStarted;
+    }
 
-    //private void OnDisable()
-    //{
-    //    _enemyCharacter.AttachingBalk -= OnAttachingBalk;
-    //}
+    private void OnDisable()
+    {
+        _level.LevelStarted -= OnLevelStarted;
+    }
 
-    //private void OnAttachingBalk(Balk arg0)
-    //{
-    //    throw new NotImplementedException();
-    //}
-
+    private void OnLevelStarted()
+    {
+        _isLevelStarted = true;
+    }
 
     private void Update()//можно переписать на события
     {
-        if (_enemyCharacter.IsAttachingBalk)
+        if (_isLevelStarted && _enemyCharacter.IsAttachingBalk)
         {
             if (!_nextBalk)
             {
