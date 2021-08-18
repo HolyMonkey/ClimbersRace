@@ -57,6 +57,12 @@ public class BalkAINode : MonoBehaviour
         return GetBalkFromList(_nearBalks);
     }
 
+    public void ClearNodes()
+    {
+        _nearBalks.Clear();
+        _higherBalks.Clear();
+    }
+
     public void AddNearNode(BalkAINode node)
     {
         _nearBalks.Add(node);
