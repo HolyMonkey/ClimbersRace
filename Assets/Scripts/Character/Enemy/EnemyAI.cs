@@ -47,8 +47,34 @@ public class EnemyAI : MonoBehaviour
                 {
                     _timer = 0;
 
-                    while (!_nextBalk || (_nextBalk == _prevBalk && _currentBalk.NearBalksCount > 1))
+                    int cycleCount = 0;
+                    while (!_nextBalk || _nextBalk == _prevBalk)
+                    {
                         _nextBalk = ChooseNextBalk(_currentBalk);
+
+                        if (_currentBalk.NearBalksCount == 0)
+                        {
+                            Debug.LogError(name + " no available balks, enemy turn away");
+                            _nextBalk = _prevBalk;
+                            _prevBalk = _currentBalk;
+                            break;
+                        }
+
+                        if (_nextBalk == _prevBalk && _currentBalk.NearBalksCount < 2)
+                        {
+                            Debug.LogError(name + " no non-previous balk");
+                            enabled = false;
+                            return;
+                        }
+
+                        cycleCount++;
+                        if (cycleCount > 10)
+                        {
+                            Debug.LogError(name + " ñhooseNextBalk cycle error");
+                            enabled = false;
+                            return;
+                        }
+                    }
 
                     ConfigureDragParameters();
                 }
@@ -97,7 +123,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         _prevBalk = _currentBalk;
-        _currentBalk.BalkMovement.FinishDragBalk(); // => _currentBalk == null
+        _currentBalk.BalkMovement.FinishDragBalk(); // => _currentBalk == null, wait for attaching
         _nextBalk = null;
 
         _draggingBalkJob = null;
