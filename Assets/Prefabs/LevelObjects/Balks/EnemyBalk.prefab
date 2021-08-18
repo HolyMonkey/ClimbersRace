@@ -293,10 +293,15 @@ MonoBehaviour:
   _nearPoint: {fileID: 6349200235399117742}
   _farPoint: {fileID: 469540047518266256}
   _lookAtPoint: {fileID: 5250164544649589300}
+  _lineRenderer: {fileID: 1529164421990492908}
   PushVector: {x: 0, y: 0, z: 0}
-  _nearBalks: []
+  _nearBalks:
+  - {fileID: 1987676143649612235}
+  - {fileID: 1987676143649612235}
   _balkMovement: {fileID: 7806245080492581689}
-  _higherBalks: []
+  _higherBalks:
+  - {fileID: 1987676143649612235}
+  - {fileID: 1987676143649612235}
 --- !u!114 &7806245080492581689
 MonoBehaviour:
   m_ObjectHideFlags: 0
