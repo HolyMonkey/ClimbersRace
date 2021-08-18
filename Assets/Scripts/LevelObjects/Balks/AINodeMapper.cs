@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class AINodeMapper : MonoBehaviour
 {
@@ -24,6 +23,10 @@ public class AINodeMapper : MonoBehaviour
                     _allNodes[j].AddNearNode(_allNodes[i]);
                 }
             }
+
+            _allNodes[i].Validate();
         }
+
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
     }
 }
