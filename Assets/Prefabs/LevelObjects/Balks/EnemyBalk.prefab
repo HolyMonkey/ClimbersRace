@@ -67,7 +67,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623162029650841590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7423776188801049831}
@@ -113,8 +113,8 @@ Rigidbody:
   m_GameObject: {fileID: 970781492210108574}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
   PushVector: {x: 0, y: 0, z: 0}
   _nearBalks: []
   _balkMovement: {fileID: 7806245080492581689}
+  _higherBalks: []
 --- !u!114 &7806245080492581689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,7 +529,7 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
+    numCapVertices: 90
     alignment: 0
     textureMode: 0
     shadowBias: 0
@@ -547,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f7da95c9664c4893c853e86dbd94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lineSegmentSize: 0.15
+  _lineSegmentSize: 0.12
   _lineWidth: 0.07
   _showGizmos: 1
   _linePoints:
