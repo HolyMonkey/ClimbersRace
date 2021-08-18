@@ -73,7 +73,7 @@ public class CharacterView : MonoBehaviour
 
     private void UpdateIK(Balk balk)
     {
-        if (Vector3.Dot(_character.CurrentBalk.LookAtPoint,transform.right) > 0.1f)
+        if (Vector3.Dot(_character.CurrentBalk.LookAtPoint,transform.right) > 0.2f)
             SetIKTarget(balk.NearPoint, balk.FarPoint);
         else
             SetIKTarget(balk.FarPoint, balk.NearPoint);
