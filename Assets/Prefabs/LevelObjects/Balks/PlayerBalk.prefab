@@ -181,9 +181,9 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_MotionVectors: 2
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
@@ -294,6 +294,7 @@ MonoBehaviour:
   _nearPoint: {fileID: 6349200235399117742}
   _farPoint: {fileID: 469540047518266256}
   _lookAtPoint: {fileID: 3942228464609488859}
+  _lineRenderer: {fileID: 1529164421990492908}
   PushVector: {x: 0, y: 0, z: 0}
 --- !u!114 &1200766371007926493
 MonoBehaviour:

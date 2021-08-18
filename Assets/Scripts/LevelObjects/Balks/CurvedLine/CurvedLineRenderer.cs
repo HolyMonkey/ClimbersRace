@@ -65,7 +65,7 @@ public class CurvedLineRenderer : MonoBehaviour
 
     private bool CheckMovingPoints()
     {
-        if (Vector3.Distance(_linePoints[_linePoints.Length - 1].transform.position, _basicLinePositions[_basicLinePositions.Length - 1]) > 0.05f)
+        if ((_linePoints[_linePoints.Length - 1].transform.position - _basicLinePositions[_basicLinePositions.Length - 1]).sqrMagnitude > 0.001f)
             return true;
         return false;
     }
