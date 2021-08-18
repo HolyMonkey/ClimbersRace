@@ -5340,7 +5340,7 @@ Rigidbody:
   m_AngularDrag: 100
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &7255541209806285322
@@ -5410,7 +5410,7 @@ Rigidbody:
   m_AngularDrag: 100
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!145 &7255541209806285431
@@ -5430,7 +5430,7 @@ SpringJoint:
   m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
-  m_Tolerance: 0.01
+  m_Tolerance: 0.05
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
