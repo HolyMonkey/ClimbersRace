@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class Level : MonoBehaviour
 
     [SerializeField] private BonusGame _bonusGame;
     [SerializeField] private SceneChanger _sceneChanger;
+    [SerializeField] private Character _playerCharacter;
+    [SerializeField] private List<Character> _enemyCharacters;
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
@@ -18,6 +21,21 @@ public class Level : MonoBehaviour
     public event UnityAction GameLost;
 
     private bool _isLevelStarted = false;
+
+    private void OnEnable()
+    {
+        _playerCharacter.Dying += OnPlayerDying;
+    }
+
+    private void OnDisable()
+    {
+        _playerCharacter.Dying -= OnPlayerDying;
+    }
+
+    private void OnPlayerDying(Character playerCharacter)
+    {
+        LoseGame();
+    }
 
     private void Update()
     {
@@ -41,6 +59,11 @@ public class Level : MonoBehaviour
     {
         PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
 
+        _sceneChanger.LoadLevel(CurrentLevel);
+    }
+
+    public void RestartLevel()
+    {
         _sceneChanger.LoadLevel(CurrentLevel);
     }
 
