@@ -27,6 +27,6 @@ public class FinishBalk : Balk
     {
         ScaleCamera(0);
 
-        CurrentCharacter.FinishPush(targetWall, YCurve);
+        CurrentCharacter.BonusPush(targetWall, YCurve);
     }
 }

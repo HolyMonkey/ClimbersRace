@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,7 @@ public class Character : MonoBehaviour
     public event UnityAction<Balk> AttachingBalk;
     public event UnityAction DetachingBalk;
     public event UnityAction Falling;
+    public event UnityAction<Character> Dying;
 
     public bool IsAttachingBalk => CurrentBalk;
     public Vector3 Velocity => _rigidbody.velocity;
@@ -56,13 +58,20 @@ public class Character : MonoBehaviour
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
     }
 
+    public void Die()
+    {
+        Dying?.Invoke(this);
+        _rigidbody.isKinematic = true;
+        _rigidbody.velocity = Vector3.zero;
+    }
+
     public void BalkPush(Vector3 direction)
     {
         DetachFromBalk();
         _mover.Move(direction, _pushForce);
     }
 
-    public void FinishPush(BonusWall targetWall, AnimationCurve yCurve)
+    public void BonusPush(BonusWall targetWall, AnimationCurve yCurve)
     {
         DetachFromBalk();
         _rigidbody.isKinematic = true;
