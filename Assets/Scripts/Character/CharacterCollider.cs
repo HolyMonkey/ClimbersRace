@@ -53,6 +53,14 @@ public abstract class CharacterCollider : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out DeathCollider deathCollider))
+        {
+            _character.Die();
+        }
+    }
+
     protected abstract bool CheckBalkType(out Balk balk, Collider collider);
 
     //private void OnDetachingBalk()
