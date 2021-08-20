@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class BalkAINode : MonoBehaviour
 {
-    [SerializeField] private EnemyBalk _balk;
-    [SerializeField] private List<BalkAINode> _nearBalks;
-    [SerializeField] private List<BalkAINode> _higherBalks;
+    [SerializeField] private BalkMovement _balkMovement;
+    [SerializeField] private List<BalkAINode> _nearNodes;
+    [SerializeField] private List<BalkAINode> _higherNodes;
 
-    public EnemyBalk Balk => _balk;
-    public Vector3 BalkPosition => _balk.transform.position;
-    public int NearBalksCount => _nearBalks.Count;
+    public BalkMovement BalkMovement => _balkMovement;
+    public Vector3 BalkPosition => _balkMovement.transform.position;
+    public int NearBalksCount => _nearNodes.Count;
 
     private void OnValidate()
     {
@@ -20,67 +20,67 @@ public class BalkAINode : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        for (int i = 0; i < _nearBalks.Count; i++)
+        for (int i = 0; i < _nearNodes.Count; i++)
         {
-            if (Vector3.Distance(BalkPosition, _nearBalks[i].BalkPosition) > 4f) //~max distance for correct enemyMovement
+            if (Vector3.Distance(BalkPosition, _nearNodes[i].BalkPosition) > 4f) //~max distance for correct enemyMovement
                 Gizmos.color = Color.red;
             else
                 Gizmos.color = Color.blue;
 
-            Vector3 targetPos = (_nearBalks[i].BalkPosition + BalkPosition) / 2;
+            Vector3 targetPos = (_nearNodes[i].BalkPosition + BalkPosition) / 2;
             Gizmos.DrawLine(BalkPosition, targetPos);
         }
     }
 
-    public EnemyBalk GetRandomHigherBalk()
+    public BalkAINode GetRandomHigherNode()
     {
-        return GetBalkFromList(_higherBalks);
+        return GetNodeFromList(_higherNodes);
     }
 
-    public EnemyBalk GetRandomBalk()
+    public BalkAINode GetRandomNode()
     {
-        return GetBalkFromList(_nearBalks);
+        return GetNodeFromList(_nearNodes);
     }
 
     public void ClearNodes()
     {
-        _nearBalks.Clear();
-        _higherBalks.Clear();
+        _nearNodes.Clear();
+        _higherNodes.Clear();
     }
 
     public void AddNearNode(BalkAINode node)
     {
-        _nearBalks.Add(node);
+        _nearNodes.Add(node);
         UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(this);
     }
 
     public void Validate()
     {
-        for (int i = 0; i < _nearBalks.Count; i++)
+        for (int i = 0; i < _nearNodes.Count; i++)
         {
-            if (BalkPosition.y < _nearBalks[i].BalkPosition.y && !_higherBalks.Contains(_nearBalks[i]))
-                _higherBalks.Add(_nearBalks[i]);
+            if (BalkPosition.y < _nearNodes[i].BalkPosition.y && !_higherNodes.Contains(_nearNodes[i]))
+                _higherNodes.Add(_nearNodes[i]);
         }
 
-        foreach (BalkAINode node in _higherBalks)
+        foreach (BalkAINode node in _higherNodes)
         {
-            if (_higherBalks.Contains(this) || node.BalkPosition.y < BalkPosition.y)
-                _higherBalks.Remove(node);
+            if (_higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y)
+                _higherNodes.Remove(node);
         }
 
-        foreach (BalkAINode node in _nearBalks)
+        foreach (BalkAINode node in _nearNodes)
         {
-            if (_nearBalks.Contains(this))
-                _nearBalks.Remove(this);
+            if (_nearNodes.Contains(this))
+                _nearNodes.Remove(this);
         }
     }
 
-    private EnemyBalk GetBalkFromList(List<BalkAINode> balks)
+    private BalkAINode GetNodeFromList(List<BalkAINode> nodes)
     {
-        if (balks.Count > 0)
+        if (nodes.Count > 0)
         {
-            int randomValue = UnityEngine.Random.Range(0, balks.Count);
-            return balks[randomValue].Balk;
+            int randomValue = UnityEngine.Random.Range(0, nodes.Count);
+            return nodes[randomValue];
         }
         else return null;
     }

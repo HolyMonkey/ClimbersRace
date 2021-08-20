@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public abstract class Balk : MonoBehaviour
+public class Balk : MonoBehaviour
 {
     [SerializeField] private float _forceOnAttach;
     [SerializeField] private Rigidbody _jointRigidbody;

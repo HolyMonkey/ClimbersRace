@@ -10,9 +10,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private RangeFloat _dragTimeRange;
     [SerializeField] private Level _level;
 
-    private EnemyBalk _currentBalk => (EnemyBalk)_enemyCharacter.CurrentBalk;
-    private EnemyBalk _nextBalk;
-    private EnemyBalk _prevBalk;
+    public BalkAINode CurrentNode;
+    private BalkAINode _nextNode;
+    private BalkAINode _prevNode;
 
     private Vector3 _dragVector = new Vector3();
     private float _dragTime;
@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (_isLevelStarted && _enemyCharacter.IsAttachingBalk)
         {
-            if (!_nextBalk)
+            if (!_nextNode)
             {
                 _timer += Time.deltaTime;
 
@@ -49,19 +49,19 @@ public class EnemyAI : MonoBehaviour
                     _timer = 0;
 
                     int cycleCount = 0;
-                    while (!_nextBalk || _nextBalk == _prevBalk)
+                    while (!_nextNode || _nextNode == _prevNode)
                     {
-                        _nextBalk = ChooseNextBalk(_currentBalk);
+                        _nextNode = ChooseNextNode(CurrentNode);
 
-                        if (_currentBalk.NearBalksCount == 0)
+                        if (CurrentNode.NearBalksCount == 0)
                         {
                             Debug.LogError(name + " no available balks, enemy turn away");
-                            _nextBalk = _prevBalk;
-                            _prevBalk = _currentBalk;
+                            _nextNode = _prevNode;
+                            _prevNode = CurrentNode;
                             break;
                         }
 
-                        if (_nextBalk == _prevBalk && _currentBalk.NearBalksCount < 2)
+                        if (_nextNode == _prevNode && CurrentNode.NearBalksCount < 2)
                         {
                             Debug.LogError(name + " no non-previous balk");
                             enabled = false;
@@ -87,19 +87,19 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private EnemyBalk ChooseNextBalk(EnemyBalk currentBalk)
+    private BalkAINode ChooseNextNode(BalkAINode currentNode)
     {
-        if (currentBalk.GetRandomHigherBalk())
-            return currentBalk.GetRandomHigherBalk();
+        if (currentNode.GetRandomHigherNode())
+            return currentNode.GetRandomHigherNode();
         else
-            return currentBalk.GetRandomBalk();
+            return currentNode.GetRandomNode();
     }
 
     private void ConfigureDragParameters()
     {
         _dragTime = _dragTimeRange.RandomValue;
 
-        Vector3 betweenBalkVector = _nextBalk.transform.position - _currentBalk.transform.position;
+        Vector3 betweenBalkVector = _nextNode.transform.position - CurrentNode.transform.position;
         _dragVector = -betweenBalkVector;
 
         float t = betweenBalkVector.magnitude / 7f; //average speed
@@ -111,21 +111,21 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator DraggingBalk()
     {
-        _currentBalk.BalkMovement.BeginDragBalk();
+        CurrentNode.BalkMovement.BeginDragBalk();
 
         float timer = 0;
 
         while (timer < _dragTime)
         {
             timer += Time.deltaTime;
-            _currentBalk.BalkMovement.DragBalk(_dragVector, timer / _dragTime);
+            CurrentNode.BalkMovement.DragBalk(_dragVector, timer / _dragTime);
 
             yield return null;
         }
 
-        _prevBalk = _currentBalk;
-        _currentBalk.BalkMovement.FinishDragBalk(); // => _currentBalk == null, wait for attaching
-        _nextBalk = null;
+        _prevNode = CurrentNode;
+        CurrentNode.BalkMovement.FinishDragBalk(); // => _currentBalk == null, wait for attaching
+        _nextNode = null;
 
         _draggingBalkJob = null;
     }
