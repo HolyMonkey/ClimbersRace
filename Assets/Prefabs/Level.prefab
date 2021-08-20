@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bonusGame: {fileID: 5640001596488769549}
   _sceneChanger: {fileID: 986372706}
+  _playerCharacter: {fileID: 0}
+  _enemyCharacters: []
+  _cameraMover: {fileID: 0}
 --- !u!114 &5640001596488769549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e18546adaec547a32973410395ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalLevels: 2
+  _totalLevels: 3
   _minCircledLevel: 1
-  _maxCircledLevel: 2
+  _maxCircledLevel: 3
