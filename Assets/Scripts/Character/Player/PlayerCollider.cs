@@ -1,20 +1,36 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Money))]
 public class PlayerCollider : CharacterCollider
 {
-    protected override bool CheckBalkType(out Balk balk, Collider collider)
+    private Money _money;
+
+    protected override void Awake()
     {
-        if (collider.TryGetComponent(out Balk playerBalk))
+        base.Awake();
+        _money = GetComponent<Money>();
+    }
+
+    protected override void OnTriggerEnter(Collider collider)
+    {
+        base.OnTriggerEnter(collider);
+
+        if (collider.TryGetComponent(out Coin coin))
         {
-            if (playerBalk is PlayerBalk || playerBalk is FinishBalk)
+            if (!Character.IsAttachingBalk)
             {
-                balk = playerBalk;
-                return true;
+                _money.AddLevelMoney(coin.RewardAmount);
+                coin.Collect();
             }
         }
+    }
 
-        balk = null;
-        return false;
+    protected override void TrySetupBalkConnection(Collider collider)
+    {
+        if (collider.TryGetComponent(out PlayerBalkInteraction balkInteraction))
+        {
+            SetupConnection(balkInteraction.Balk, Character);
+        }
     }
 }
 

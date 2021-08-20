@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider))]
 public abstract class CharacterCollider : MonoBehaviour
 {
-    [SerializeField] private Character _character;
-    [SerializeField] private Money _money;
+    protected Character Character;
     //[SerializeField]private float _timeToLeaveBalk = 0.1f;
 
-    private Collider _collider;
+    //private Collider _collider;
 
     public event UnityAction<Vector3> KnockedDownEnemy;
+
+    protected virtual void Awake()
+    {
+        Character = GetComponent<Character>();
+    }
 
     //private void OnEnable()
     //{
@@ -26,7 +29,7 @@ public abstract class CharacterCollider : MonoBehaviour
 
     //}
 
-    private void OnTriggerEnter(Collider collider)
+    protected virtual void OnTriggerEnter(Collider collider)
     {
         if (collider.TryGetComponent(out Character enemy))
         {
@@ -36,32 +39,24 @@ public abstract class CharacterCollider : MonoBehaviour
             }
         }
 
-        if (collider.TryGetComponent(out Coin coin))
-        {
-            if (!_character.IsAttachingBalk)
-            {
-                if (_money)
-                    _money.AddLevelMoney(coin.RewardAmount);
-                coin.Collect();
-            }
-        }
-
-        if (CheckBalkType(out Balk balk, collider))
-        {
-            balk.Interaction(_character);
-            _character.AttachToBalk(balk);
-        }
+        TrySetupBalkConnection(collider);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out DeathCollider deathCollider))
         {
-            _character.Die();
+            Character.Die();
         }
     }
 
-    protected abstract bool CheckBalkType(out Balk balk, Collider collider);
+    protected abstract void TrySetupBalkConnection(Collider collider);
+
+    protected void SetupConnection(Balk balk, Character character)
+    {
+        balk.Interaction(character);
+        character.AttachToBalk(balk);
+    }
 
     //private void OnDetachingBalk()
     //{

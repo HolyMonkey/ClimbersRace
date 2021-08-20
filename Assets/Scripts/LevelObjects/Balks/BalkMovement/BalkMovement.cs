@@ -45,12 +45,24 @@ public class BalkMovement : MonoBehaviour
         }
     }
 
+    public float PlayerDragBalk(Vector3 targetPosition)
+    {
+        if (_balk.HasCharacter)
+        {
+            Vector3 dragVector = Vector3.ClampMagnitude(targetPosition - _startDragPosition, _minMaxDragDistance.Max);
+
+            DragingBalk(dragVector);
+
+            return dragVector.magnitude / _minMaxDragDistance.Max;
+        }
+        else
+            return 0f;
+    }
+
     public void FinishDragBalk()
     {
         if (_balk.HasCharacter)
         {
-            _balk.ScaleCamera(0);
-
             if (_balk.PushVector.magnitude >= _minMaxDragDistance.Min)
                 _balk.PushCharacter(_balk.PushVector.normalized);
         }
@@ -59,8 +71,6 @@ public class BalkMovement : MonoBehaviour
     private void DragingBalk(Vector3 dragVector)
     {
         float dragT = dragVector.magnitude / _minMaxDragDistance.Max;
-        _balk.ScaleCamera(dragT);
-
         transform.position = _startDragPosition + dragVector;
 
         _balk.PushVector = -dragVector;

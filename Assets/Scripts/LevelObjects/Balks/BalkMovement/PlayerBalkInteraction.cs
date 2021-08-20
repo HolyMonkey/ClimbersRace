@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BalkMovement))]
-public class PlayerBalkInteraction : MonoBehaviour
+public class PlayerBalkInteraction : BalkInteraction
 {
     private BalkMovement _balkMovement;
-
     private Camera _camera;
+    private CameraMover _cameraMover;
 
     private Vector3 _mouseOffset;
     private float _zMouseOffset;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _camera = Camera.main;
+        _cameraMover = _camera.GetComponent<CameraMover>();
         _balkMovement = GetComponent<BalkMovement>();
     }
 
@@ -28,12 +29,20 @@ public class PlayerBalkInteraction : MonoBehaviour
     private void OnMouseDrag()
     {
         Vector3 newPosition = GetMousePosition() + _mouseOffset;
-        _balkMovement.DragBalk(newPosition);
+        float dragFOV = _balkMovement.PlayerDragBalk(newPosition);
+
+        ScaleCamera(dragFOV);
     }
 
     private void OnMouseUp()
     {
         _balkMovement.FinishDragBalk();
+        ScaleCamera(0);
+    }
+
+    private void ScaleCamera(float value)
+    {
+        _cameraMover.ScaleFOV(value);
     }
 
     private Vector3 GetMousePosition()

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1597505330160404011}
   - component: {fileID: 2679285856291213304}
   - component: {fileID: 1021967545431376184}
-  - component: {fileID: 5177509786339701185}
+  - component: {fileID: 3569377203838151218}
   - component: {fileID: 1200766371007926493}
   - component: {fileID: 4910913716650086583}
   m_Layer: 8
@@ -252,7 +252,7 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: -1.55}
+  m_ConnectedAnchor: {x: 0, y: 0, z: -1.5499997}
   serializedVersion: 2
   m_Spring: 75
   m_Damper: 0.15
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec59aba9255cc948b516cb99801caa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5177509786339701185
+--- !u!114 &3569377203838151218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4908998076531906780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f476c8b2645647248af9680bf9181d56, type: 3}
+  m_Script: {fileID: 11500000, guid: 982fb02e50ae1fe41890ae94741bf644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _forceOnAttach: 1.2
@@ -294,7 +294,6 @@ MonoBehaviour:
   _nearPoint: {fileID: 6349200235399117742}
   _farPoint: {fileID: 469540047518266256}
   _lookAtPoint: {fileID: 3942228464609488859}
-  _lineRenderer: {fileID: 1529164421990492908}
   PushVector: {x: 0, y: 0, z: 0}
 --- !u!114 &1200766371007926493
 MonoBehaviour:

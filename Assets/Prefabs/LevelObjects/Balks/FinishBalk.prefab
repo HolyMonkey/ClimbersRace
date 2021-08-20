@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 1021967545431376184}
   - component: {fileID: 1200766371007926493}
   - component: {fileID: 3686784832124945887}
+  - component: {fileID: 3873888000883440431}
+  - component: {fileID: 1422508164037104521}
   m_Layer: 8
   m_Name: PipeHead
   m_TagString: Untagged
@@ -312,6 +314,31 @@ MonoBehaviour:
   _level: {fileID: 0}
   _collider: {fileID: 6141676960106231248}
   _balkMovement: {fileID: 1200766371007926493}
+--- !u!114 &3873888000883440431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908998076531906780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a457e4878d3bc4980f940d273df4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1422508164037104521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908998076531906780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cc31e8568b19b41a352ea6a27e6688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _balkAINode: {fileID: 6595343103312785156}
 --- !u!1 &5341697363028684300
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +593,8 @@ GameObject:
   - component: {fileID: 8956675892853581391}
   - component: {fileID: 9220453293364523190}
   - component: {fileID: 4168825508157157824}
-  m_Layer: 8
+  - component: {fileID: 6595343103312785156}
+  m_Layer: 13
   m_Name: FinishBalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,6 +645,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallBehavior: {fileID: 0}
+--- !u!114 &6595343103312785156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956675892853581377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacce6662e651624ba1debbbf3f6153e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _balkMovement: {fileID: 1200766371007926493}
+  _nearNodes: []
+  _higherNodes: []
 --- !u!1 &9073358658907687260
 GameObject:
   m_ObjectHideFlags: 0
