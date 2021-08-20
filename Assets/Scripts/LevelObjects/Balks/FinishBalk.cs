@@ -15,7 +15,7 @@ public class FinishBalk : Balk
 
         _collider.enabled = false;
 
-        _level.StartBonusGame(this);
+        _level.StartBonusGame(this, character);
     }
 
     public void DragFinishBalk(float value)

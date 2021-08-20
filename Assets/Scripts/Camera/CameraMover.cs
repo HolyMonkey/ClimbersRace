@@ -6,7 +6,7 @@ using DG.Tweening;
 [RequireComponent(typeof(Camera))]
 public class CameraMover : MonoBehaviour
 {
-    [SerializeField] private Character _character;
+    [SerializeField] private Transform _target;
     [SerializeField] private float _smoothSpeed;
     [SerializeField] private Vector3 _positionOffset;
     [SerializeField] private Vector3 _lookAtOffset;
@@ -40,20 +40,8 @@ public class CameraMover : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 targetPosition = _wall.GetNormalVector(_character.transform.position);
-
-        if (_wall is StraightWall)
-            targetPosition.x = _character.transform.position.x;
-        else
-            targetPosition.x *= _distanceOffset;
-
-        targetPosition.z *= _distanceOffset;
-        targetPosition.y = _character.transform.position.y;
-
-        targetPosition += _positionOffset;
-
-        transform.position = Vector3.Lerp(transform.position, targetPosition, _smoothSpeed * Time.deltaTime);
-        transform.LookAt(_character.transform.position + _lookAtOffset);
+        Follow(_target);
+        transform.LookAt(_target.position + _lookAtOffset);
     }
 
     public void ScaleFOV(float balkDragValue)
@@ -77,4 +65,34 @@ public class CameraMover : MonoBehaviour
             }
         }
     }
+
+    public void ChangeTarget(Character character)
+    {
+        _target = character.transform;
+        _smoothSpeed = 2f;
+    }
+
+    private void Follow(Transform target)
+    {
+        Vector3 targetPosition = _wall.GetNormalVector(_target.transform.position);
+
+        if (_wall is StraightWall)
+            targetPosition.x = _target.position.x;
+        else
+            targetPosition.x *= _distanceOffset;
+
+        targetPosition.z *= _distanceOffset;
+        targetPosition.y = _target.position.y;
+
+        targetPosition += _positionOffset;
+
+        transform.position = Vector3.Lerp(transform.position, targetPosition, _smoothSpeed * Time.deltaTime);
+    }
+
+    //private void LookAt(Transform target)
+    //{
+    //    Quaternion targetRotation =  Quaternion.LookRotation(target.position + _lookAtOffset - transform.position);
+
+    //    transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSmoothSpeed * Time.deltaTime);
+    //}
 }

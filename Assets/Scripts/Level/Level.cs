@@ -12,6 +12,7 @@ public class Level : MonoBehaviour
     [SerializeField] private SceneChanger _sceneChanger;
     [SerializeField] private Character _playerCharacter;
     [SerializeField] private List<Character> _enemyCharacters;
+    [SerializeField] private CameraMover _cameraMover;
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
@@ -49,10 +50,18 @@ public class Level : MonoBehaviour
         }
     }
 
-    public void StartBonusGame(FinishBalk finishBalk)
+    public void StartBonusGame(FinishBalk finishBalk, Character character)
     {
-        _bonusGame.StartBonusGame(finishBalk);
-        BonusGameStarted?.Invoke();
+        if (character == _playerCharacter)
+        {
+            _bonusGame.StartBonusGame(finishBalk);
+            BonusGameStarted?.Invoke();
+        }
+        else
+        {
+            LoseGame();
+            _cameraMover.ChangeTarget(character);
+        }
     }
 
     public void NextLevel()
