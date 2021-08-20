@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    public void ChangeScene(int targetScene)
+    public void ChangeScene()
     {
-        SceneManager.LoadScene(targetScene);
+        var level = FindObjectOfType<Level>();
+        level.NextLevel();
     }
 }

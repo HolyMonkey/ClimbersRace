@@ -11,7 +11,6 @@ public class Level : MonoBehaviour
     [SerializeField] private BonusGame _bonusGame;
     [SerializeField] private SceneChanger _sceneChanger;
     [SerializeField] private Character _playerCharacter;
-    [SerializeField] private List<Character> _enemyCharacters;
     [SerializeField] private CameraMover _cameraMover;
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
