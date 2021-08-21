@@ -39,6 +39,11 @@ public abstract class CharacterCollider : MonoBehaviour
             }
         }
 
+        if (collider.TryGetComponent(out Trap trap))
+        {
+            Character.CollideWithTrap();
+        }
+
         TrySetupBalkConnection(collider);
     }
 
