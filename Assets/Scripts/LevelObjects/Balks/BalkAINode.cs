@@ -51,7 +51,6 @@ public class BalkAINode : MonoBehaviour
     public void AddNearNode(BalkAINode node)
     {
         _nearNodes.Add(node);
-        UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(this);
     }
 
     public void Validate()

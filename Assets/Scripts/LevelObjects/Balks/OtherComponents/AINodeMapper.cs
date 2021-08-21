@@ -7,6 +7,7 @@ public class AINodeMapper : MonoBehaviour
     [SerializeField] private float _maxDistance = 3.8f;
     [SerializeField] private List<BalkAINode> _allNodes;
 
+#if UNITY_EDITOR
     [ContextMenu("MapNodes(NO UNDO)")]
     private void MapNodes()
     {
@@ -21,6 +22,8 @@ public class AINodeMapper : MonoBehaviour
                 {
                     _allNodes[i].AddNearNode(_allNodes[j]);
                     _allNodes[j].AddNearNode(_allNodes[i]);
+                    UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(_allNodes[i]);
+                    UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(_allNodes[j]);
                 }
             }
 
@@ -29,4 +32,5 @@ public class AINodeMapper : MonoBehaviour
 
         UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
     }
+#endif
 }
