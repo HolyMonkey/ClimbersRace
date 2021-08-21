@@ -8,7 +8,6 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Character _enemyCharacter;
     [SerializeField] private float _choseNextBalkTimer;
     [SerializeField] private RangeFloat _dragTimeRange;
-    [SerializeField] private Level _level;
 
     public BalkAINode CurrentNode;
     private BalkAINode _nextNode;
@@ -18,27 +17,20 @@ public class EnemyAI : MonoBehaviour
     private float _dragTime;
     private Coroutine _draggingBalkJob;
 
-    private bool _isLevelStarted = false;
     private float _timer = 0;
-
-    private void OnEnable()
-    {
-        _level.LevelStarted += OnLevelStarted;
-    }
 
     private void OnDisable()
     {
-        _level.LevelStarted -= OnLevelStarted;
-    }
-
-    private void OnLevelStarted()
-    {
-        _isLevelStarted = true;
+        if (_draggingBalkJob != null)
+        {
+            StopCoroutine(_draggingBalkJob);
+            _draggingBalkJob = null;
+        }
     }
 
     private void Update()//можно переписать на события
     {
-        if (_isLevelStarted && _enemyCharacter.IsAttachingBalk)
+        if (_enemyCharacter.IsAttachingBalk)
         {
             if (!_nextNode)
             {
