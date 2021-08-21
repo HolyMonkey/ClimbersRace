@@ -16,14 +16,14 @@ public class UIEvents : MonoBehaviour
     {
         _level.LevelStarted += () => _onLevelStarted?.Invoke();
         _level.BonusGameStarted += () => _onBonusStarted?.Invoke();
-        _level.GameWon += () => _onGameWon?.Invoke();
-        _level.GameLost += () => _onGameLost?.Invoke();
+        _level.LevelWon += () => _onGameWon?.Invoke();
+        _level.LevelLost += () => _onGameLost?.Invoke();
     }
     private void OnDisable()
     {
         _level.LevelStarted -= () => _onLevelStarted?.Invoke();
         _level.BonusGameStarted -= () => _onBonusStarted?.Invoke();
-        _level.GameWon -= () => _onGameWon?.Invoke();
-        _level.GameLost -= () => _onGameLost?.Invoke();
+        _level.LevelWon -= () => _onGameWon?.Invoke();
+        _level.LevelLost -= () => _onGameLost?.Invoke();
     }
 }
