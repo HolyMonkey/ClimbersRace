@@ -1825,30 +1825,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &272785569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 42411126144549169, guid: a0621566eda38404c8607368a6da7d22, type: 3}
-  m_PrefabInstance: {fileID: 42411126245362791}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &272785570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272785569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6579dbd2519ee446a7b35b75269cea6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemiesAI:
-  - {fileID: 46278334}
-  - {fileID: 1912242931}
-  - {fileID: 548877323}
-  - {fileID: 728770836}
-  - {fileID: 909487835}
-  _level: {fileID: 42411126245362792}
 --- !u!1001 &274242522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13393,6 +13369,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 3098511843380568019, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _enemiesAI.Array.data[0]
+      value: 
+      objectReference: {fileID: 46278334}
+    - target: {fileID: 3098511843380568019, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _enemiesAI.Array.data[1]
+      value: 
+      objectReference: {fileID: 1912242931}
+    - target: {fileID: 3098511843380568019, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _enemiesAI.Array.data[2]
+      value: 
+      objectReference: {fileID: 548877323}
+    - target: {fileID: 3098511843380568019, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _enemiesAI.Array.data[3]
+      value: 
+      objectReference: {fileID: 728770836}
+    - target: {fileID: 3098511843380568019, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _enemiesAI.Array.data[4]
+      value: 
+      objectReference: {fileID: 909487835}
     - target: {fileID: 4284685768308042455, guid: a0621566eda38404c8607368a6da7d22, type: 3}
       propertyPath: _cameraMover
       value: 
@@ -13448,7 +13444,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4284685768308042455, guid: a0621566eda38404c8607368a6da7d22, type: 3}
   m_PrefabInstance: {fileID: 42411126245362791}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272785569}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 292b001a9fffd1f4f840aebcb2a32717, type: 3}

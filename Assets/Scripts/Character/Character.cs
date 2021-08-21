@@ -63,6 +63,9 @@ public class Character : MonoBehaviour
         Dying?.Invoke(this);
         _rigidbody.isKinematic = true;
         _rigidbody.velocity = Vector3.zero;
+
+        if (IsAttachingBalk)
+            DetachFromBalk();
     }
 
     public void BalkPush(Vector3 direction)

@@ -17,8 +17,8 @@ public class Level : MonoBehaviour
 
     public event UnityAction LevelStarted;
     public event UnityAction BonusGameStarted;
-    public event UnityAction GameWon;
-    public event UnityAction GameLost;
+    public event UnityAction LevelWon;
+    public event UnityAction LevelLost;
 
     private bool _isLevelStarted = false;
 
@@ -82,11 +82,11 @@ public class Level : MonoBehaviour
 
     public void WinGame()
     {
-        GameWon?.Invoke();
+        LevelWon?.Invoke();
     }
 
     public void LoseGame()
     {
-        GameLost?.Invoke();
+        LevelLost?.Invoke();
     }
 }
