@@ -72,8 +72,9 @@ public class BalkMovement : MonoBehaviour
 
     private void DragingBalk(Vector3 dragVector)
     {
-        float dragT = dragVector.magnitude / _minMaxDragDistance.Max;
-        _rigidbody.MovePosition(_startDragPosition + dragVector);
+        //float dragT = dragVector.magnitude / _minMaxDragDistance.Max;
+        transform.position = _startDragPosition + dragVector;
+        //transform.position = _startDragPosition + dragVector;
 
         _balk.PushVector = -dragVector;
     }
