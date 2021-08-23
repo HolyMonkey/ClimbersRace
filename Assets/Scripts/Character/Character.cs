@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
 
     public bool IsAttachingBalk => CurrentBalk;
     public Vector3 Velocity => _rigidbody.velocity;
+    public bool IsBonusMove { get; private set; } = false;
 
     private void OnValidate()
     {
@@ -78,6 +79,7 @@ public class Character : MonoBehaviour
     {
         DetachFromBalk();
         _rigidbody.isKinematic = true;
+        IsBonusMove = true;
         StartCoroutine(BonusGameMoving(targetWall.TargetPoint, yCurve, targetWall.PlayerMoveDuration));
     }
 
