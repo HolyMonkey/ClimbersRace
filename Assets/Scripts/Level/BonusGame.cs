@@ -71,6 +71,7 @@ public class BonusGame : MonoBehaviour
         _money.SetLevelBonusMultiplier(targetWall.BonusMultiplier);
 
         _targetBalk.FinishPush(targetWall, _playerYCurve);
+        _gameFinish.SetFinishWall(targetWall);
     }
 
     private void UpdateScaleValue(out float value)
