@@ -7,6 +7,22 @@ public class GameFinish : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _confetti;
     [SerializeField] private Transform _finishWall;
+    [SerializeField] private Level _level;
+
+    private void OnEnable()
+    {
+        _level.LevelWon += OnWinGame;
+    }
+
+    private void OnDisable()
+    {
+        _level.LevelWon -= OnWinGame;
+    }
+
+    private void OnWinGame()
+    {
+        _confetti.Play();
+    }
 
     public void RotateFinishWall(Vector3 targetLookAt)
     {
@@ -17,6 +33,12 @@ public class GameFinish : MonoBehaviour
 
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             _finishWall.rotation = lookRotation;
+            _confetti.transform.rotation = lookRotation;
         }
+    }
+
+    internal void SetFinishWall(BonusWall targetWall)
+    {
+        _confetti.transform.position = targetWall.TargetPoint;
     }
 }
