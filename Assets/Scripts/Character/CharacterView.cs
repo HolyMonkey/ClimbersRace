@@ -1,10 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 [RequireComponent(typeof(Animator))]
 public class CharacterView : MonoBehaviour
 {
     [SerializeField] private Character _character;
+    [SerializeField] private MMFeedbacks _attachBalkFeedbacks;
+    [SerializeField] private MMFeedbacks _dieFeedback;
+    [SerializeField] private MMFeedbacks _fallingFeedback;
 
     [Header("IK")]
     [SerializeField] private bool _ikActive;
@@ -12,6 +16,7 @@ public class CharacterView : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] private float _leftHandWeight;
 
     private Animator _animator;
+    private Transform _cameraTransform;
 
     private Transform _targetForRightHand;
     private Transform _targetForLeftHand;
@@ -19,6 +24,7 @@ public class CharacterView : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _cameraTransform = Camera.main.transform;
     }
 
     private void OnEnable()
@@ -26,6 +32,7 @@ public class CharacterView : MonoBehaviour
         _character.AttachingBalk += OnAttachingBalk;
         _character.DetachingBalk += OnDetachingBalk;
         _character.Falling += OnFalling;
+        _character.Dying += OnDying;
     }
 
     private void OnDisable()
@@ -33,7 +40,9 @@ public class CharacterView : MonoBehaviour
         _character.AttachingBalk -= OnAttachingBalk;
         _character.DetachingBalk -= OnDetachingBalk;
         _character.Falling -= OnFalling;
+        _character.Dying -= OnDying;
     }
+
 
     private void Update()
     {
@@ -43,14 +52,17 @@ public class CharacterView : MonoBehaviour
 
             UpdateIK(_character.CurrentBalk);
         }
-        else
+        else if (!_character.IsBonusMove)
             LookAt(_character.Velocity);
+        else
+            LookAt(_cameraTransform.position);
     }
 
     private void OnAttachingBalk(Balk balk)
     {
         _animator.SetBool(IKCharacterAnimatorController.Params.Flying, false);
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, false);
+        _attachBalkFeedbacks?.PlayFeedbacks();
     }
 
     private void OnDetachingBalk()
@@ -63,6 +75,12 @@ public class CharacterView : MonoBehaviour
     private void OnFalling()
     {
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, true);
+        _fallingFeedback?.PlayFeedbacks();
+    }
+
+    private void OnDying(Character character)
+    {
+        _dieFeedback?.PlayFeedbacks();
     }
 
     private void LookAt(Vector3 targetPoint)
@@ -73,7 +91,7 @@ public class CharacterView : MonoBehaviour
 
     private void UpdateIK(Balk balk)
     {
-        if (Vector3.Dot(_character.CurrentBalk.LookAtPoint,transform.right) > 0.2f)
+        if (Vector3.Dot(_character.CurrentBalk.LookAtPoint, transform.right) > 0.2f)
             SetIKTarget(balk.NearPoint, balk.FarPoint);
         else
             SetIKTarget(balk.FarPoint, balk.NearPoint);
