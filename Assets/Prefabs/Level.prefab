@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5640001596488769549}
   - component: {fileID: 986372706}
   - component: {fileID: 3098511843380568019}
+  - component: {fileID: 4211819728974067825}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   _sceneChanger: {fileID: 986372706}
   _playerCharacter: {fileID: 0}
   _cameraMover: {fileID: 0}
+  _bonusLevel: 0
 --- !u!114 &5640001596488769549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +139,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _level: {fileID: 4284685768308042455}
+--- !u!114 &4211819728974067825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42411126144549169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268a406b6a3e23946826f63b43e01992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
