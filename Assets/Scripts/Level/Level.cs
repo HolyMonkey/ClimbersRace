@@ -12,6 +12,7 @@ public class Level : MonoBehaviour
     [SerializeField] private SceneChanger _sceneChanger;
     [SerializeField] private Character _playerCharacter;
     [SerializeField] private CameraMover _cameraMover;
+    [SerializeField] private bool _bonusLevel = false;
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
@@ -65,14 +66,30 @@ public class Level : MonoBehaviour
 
     public void NextLevel()
     {
-        PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
+        if (CurrentLevel % 4 == 0)
+        {
+            PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
 
-        _sceneChanger.LoadLevel(CurrentLevel);
+            _sceneChanger.LoadBonusLevel();
+        }
+        else if (_bonusLevel)
+        {
+            _sceneChanger.LoadLevel(CurrentLevel);
+        }
+        else
+        {
+            PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
+
+            _sceneChanger.LoadLevel(CurrentLevel);
+        }
     }
 
     public void RestartLevel()
     {
-        _sceneChanger.LoadLevel(CurrentLevel);
+        if (_bonusLevel)
+            _sceneChanger.LoadBonusLevel();
+        else
+            _sceneChanger.LoadLevel(CurrentLevel);
     }
 
     public void StartLevel()

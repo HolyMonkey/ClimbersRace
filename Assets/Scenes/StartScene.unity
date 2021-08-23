@@ -182,9 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e18546adaec547a32973410395ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalLevels: 2
+  _totalLevels: 4
   _minCircledLevel: 1
-  _maxCircledLevel: 2
+  _maxCircledLevel: 4
+  _bonusLevel: 5
 --- !u!114 &7995144289980750176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,10 +193,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6130695346767622790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 292b001a9fffd1f4f840aebcb2a32717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bonusGame: {fileID: 0}
   _sceneChanger: {fileID: 6161547018971736533}
+  _playerCharacter: {fileID: 0}
+  _cameraMover: {fileID: 0}
