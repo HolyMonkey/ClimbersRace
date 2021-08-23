@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-namespace DefaultNamespace.Other.AnimatedUI
+namespace AnimatedUI
 {
     public class CanvasFade : MonoBehaviour
     {
