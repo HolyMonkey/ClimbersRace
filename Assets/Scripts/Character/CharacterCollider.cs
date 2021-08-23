@@ -31,14 +31,6 @@ public abstract class CharacterCollider : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider collider)
     {
-        if (collider.TryGetComponent(out Character enemy))
-        {
-            if (enemy.IsAttachingBalk)
-            {
-                KnockedDownEnemy?.Invoke(transform.position);
-            }
-        }
-
         if (collider.TryGetComponent(out Trap trap))
         {
             if (!Character.IsAttachingBalk)
@@ -53,6 +45,16 @@ public abstract class CharacterCollider : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out DeathCollider deathCollider))
         {
             Character.Die();
+        }
+
+        if (collision.gameObject.TryGetComponent(out Character enemy))
+        {
+            if (enemy.IsAttachingBalk)
+            {
+                KnockedDownEnemy?.Invoke(collision.contacts[0].point);
+                enemy.CollideWithTrap();
+                enemy.BalkPush(Character.Velocity.normalized / 2);
+            }
         }
     }
 
