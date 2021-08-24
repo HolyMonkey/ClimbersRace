@@ -109,7 +109,7 @@ public class Character : MonoBehaviour
     public void CollideWithTrap()
     {
         Falling?.Invoke();
-        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.velocity /= 2;
         DetachFromBalk();
     }
 
