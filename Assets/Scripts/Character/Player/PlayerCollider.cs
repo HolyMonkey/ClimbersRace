@@ -17,11 +17,8 @@ public class PlayerCollider : CharacterCollider
 
         if (collider.TryGetComponent(out Coin coin))
         {
-            if (!Character.IsAttachingBalk)
-            {
-                _money.AddLevelMoney(coin.RewardAmount);
-                coin.Collect();
-            }
+            _money.AddLevelMoney(coin.RewardAmount);
+            coin.Collect();
         }
     }
 
