@@ -67,8 +67,43 @@ MonoBehaviour:
   _bonusScaleView: {fileID: 0}
   _gameFinish: {fileID: 0}
   _money: {fileID: 0}
-  _speed: 2
+  _speed: 1
+  _scaleValueCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _bonusWallsMultipliers:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -76,10 +111,12 @@ MonoBehaviour:
   - {fileID: 0}
   _valueToMultiplierBounds:
   - 0
-  - 0.3
-  - 0.55
-  - 0.75
-  - 0.9
+  - 0.14285715
+  - 0.2857143
+  - 0.42857143
+  - 0.5714286
+  - 0.71428573
+  - 0.85714287
   _playerYCurve:
     serializedVersion: 2
     m_Curve:

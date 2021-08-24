@@ -11,6 +11,8 @@ public class BonusGame : MonoBehaviour
 
     [SerializeField] private float _speed;
 
+    [SerializeField] private AnimationCurve _scaleValueCurve;
+
     [SerializeField] private List<BonusWall> _bonusWallsMultipliers;
     [Range(0f, 1f)]
     [SerializeField] private List<float> _valueToMultiplierBounds;
@@ -39,7 +41,6 @@ public class BonusGame : MonoBehaviour
 
         _targetBalk.DragFinishBalk(value);
         _bonusScaleView.ChangeValue(value);
-
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -77,7 +78,7 @@ public class BonusGame : MonoBehaviour
     private void UpdateScaleValue(out float value)
     {
         _time += Time.deltaTime * _speed;
-        value = Mathf.Lerp(0f, 1f, Mathf.PingPong(_time, 1f));
+        value = _scaleValueCurve.Evaluate(Mathf.PingPong(_time, 1f));
 
         value = Mathf.Clamp(value, 0f, 1f);
     }
