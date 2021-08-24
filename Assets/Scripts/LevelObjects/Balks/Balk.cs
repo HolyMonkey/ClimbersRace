@@ -29,13 +29,15 @@ public class Balk : MonoBehaviour
         _cameraMover = Camera.main.GetComponent<CameraMover>();
     }
 
+    public void DetachCharacter()
+    {
+        CurrentCharacter = null;
+        PushVector = Vector3.zero;
+    }
+
     public void PushCharacter(Vector3 pushVector)
     {
         CurrentCharacter.BalkPush(pushVector);
-
-        CurrentCharacter = null;
-
-        PushVector = Vector3.zero;
     }
 
     public void AddForce(Vector3 direction)

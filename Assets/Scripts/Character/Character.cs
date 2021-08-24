@@ -121,6 +121,7 @@ public class Character : MonoBehaviour
     {
         if (CurrentBalk)
         {
+            CurrentBalk.DetachCharacter();
             CurrentBalk = null;
         }
 
