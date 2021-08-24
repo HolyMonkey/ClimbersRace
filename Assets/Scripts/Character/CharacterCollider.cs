@@ -35,7 +35,8 @@ public abstract class CharacterCollider : MonoBehaviour
                 Character.CollideWithTrap();
         }
 
-        TrySetupBalkConnection(collider);
+        if (!Character.IsAttachingBalk)
+            TrySetupBalkConnection(collider);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,7 +57,7 @@ public abstract class CharacterCollider : MonoBehaviour
 
     protected abstract void TrySetupBalkConnection(Collider collider);
 
-    protected void SetupConnection(Balk balk, Character character)
+    protected void TryConnection(Balk balk, Character character)
     {
         balk.Interaction(character);
         character.AttachToBalk(balk);
