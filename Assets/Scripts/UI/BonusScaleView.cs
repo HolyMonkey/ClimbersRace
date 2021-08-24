@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class BonusScaleView : MonoBehaviour
 {
     [SerializeField] private RectTransform _arrowBase;
-    [SerializeField] private float _arrowMaxAngle = 90f;
+    [SerializeField] private RangeFloat _arrowMinMaxAngle;
 
     internal void ChangeValue(float value)
     {
-        float zRotation = Mathf.Lerp(0, _arrowMaxAngle, value);
+        float zRotation = Mathf.Lerp(_arrowMinMaxAngle.Min, _arrowMinMaxAngle.Max, value);
 
-        _arrowBase.localRotation = Quaternion.Euler(0, 0, -zRotation);
+        _arrowBase.localRotation = Quaternion.Euler(0, 0, zRotation);
     }
 }
