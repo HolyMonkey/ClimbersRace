@@ -4,5 +4,7 @@ public static class IKCharacterAnimatorController
     {
         public const string Flying = "Flying";
         public const string Falling = "Falling";
+
+        public const string Die = "Die";
     }
 }

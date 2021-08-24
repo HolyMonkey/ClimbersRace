@@ -80,6 +80,7 @@ public class CharacterView : MonoBehaviour
 
     private void OnDying(Character character)
     {
+        _animator.SetTrigger(IKCharacterAnimatorController.Params.Die);
         _dieFeedback?.PlayFeedbacks();
     }
 
