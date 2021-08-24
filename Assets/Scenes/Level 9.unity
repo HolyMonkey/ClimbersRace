@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6916874, g: 0.8552274, b: 1.038111, a: 1}
+  m_IndirectSpecularColor: {r: 0.69168645, g: 0.85522634, b: 1.0381106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -492,22 +492,22 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 312838675}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1150603090}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1150603090}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.000000059604645
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -1.5499996
+      value: -1.5499998
       objectReference: {fileID: 0}
     - target: {fileID: 2767598360787481363, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _wallBehavior
@@ -568,17 +568,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 89104819}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &89104821 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 89104819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &89104822 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -1124,19 +1113,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -1362,11 +1351,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -1467,22 +1456,22 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 89104821}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 89104821}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.00000017881393
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -1.5499995
+      value: -1.5499996
       objectReference: {fileID: 0}
     - target: {fileID: 2767598360787481363, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _wallBehavior
@@ -1543,17 +1532,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 312838673}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &312838675 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 312838673}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &312838676 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -1787,17 +1765,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
   m_PrefabInstance: {fileID: 20951886}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &394891490 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1672084599}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &396724984 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -2773,23 +2740,23 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 2105622685}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 1893600724}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 2105622685}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -2857,17 +2824,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 572779238}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &572779240 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 572779238}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &572779241 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -3151,19 +3107,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -3276,30 +3232,30 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1123093428}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 312838675}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 312838675}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.000000059604645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -1.5499996
+      value: -1.5499995
       objectReference: {fileID: 0}
     - target: {fileID: 2767598360787481363, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _wallBehavior
@@ -3360,17 +3316,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 621215713}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &621215715 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 621215713}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &621215716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -3420,11 +3365,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1150603090}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 572779240}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.000000044703484
@@ -3907,11 +3852,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -4681,43 +4626,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5290133
+      value: 0.48205525
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18083477
+      value: 0.19291306
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0820527
+      value: -3.0183551
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9973626
+      value: 0.99732214
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.0073796413
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.07257985
+      value: -0.07261134
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0046598013
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.882
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -13.85
+      value: -8.325
       objectReference: {fileID: 0}
     - target: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 0.471
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
@@ -4789,19 +4734,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000014901161
@@ -4906,19 +4851,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.000000059604645
@@ -5151,19 +5096,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000029802322
@@ -5231,17 +5176,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 1123093426}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1123093428 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1123093426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1123093429 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -5299,19 +5233,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -5416,15 +5350,15 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 89104821}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2105622685}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 2105622685}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -5492,17 +5426,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 1150603088}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1150603090 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1150603088}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1150603091 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -5747,19 +5670,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 572779240}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 394891490}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 394891490}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.000000029802322
@@ -5827,17 +5750,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 1226893118}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1226893120 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1226893118}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1226893121 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -6137,19 +6049,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -6465,11 +6377,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -6659,19 +6571,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -6822,19 +6734,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -7042,19 +6954,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -7189,19 +7101,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -7306,11 +7218,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1893600724}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1893600724}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.000000033527613
@@ -7657,19 +7569,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.000000059604645
@@ -7794,11 +7706,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000029802322
@@ -7935,19 +7847,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -8214,19 +8126,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -8500,11 +8412,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -9071,19 +8983,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -9350,19 +9262,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -9475,19 +9387,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 394891490}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 394891490}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00000017881393
@@ -9555,17 +9467,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 1886293710}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1886293712 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1886293710}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1886293713 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -9620,15 +9521,15 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1905955334}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 572779240}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 572779240}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -9696,17 +9597,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 1893600722}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1893600724 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1893600722}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1893600725 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -9858,19 +9748,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1893600724}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1893600724}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00000011920929
@@ -9938,17 +9828,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 1905955332}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1905955334 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 1905955332}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1905955335 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -10718,19 +10597,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -10839,11 +10718,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1886293712}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 1226893120}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000029802322
@@ -10952,22 +10831,22 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1123093428}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 1905955334}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.000000059604645
+      value: 0.00000017881393
       objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -1.5499996
+      value: -1.5499997
       objectReference: {fileID: 0}
     - target: {fileID: 2767598360787481363, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _wallBehavior
@@ -11028,17 +10907,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 2097358969}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2097358971 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 2097358969}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2097358972 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -11092,11 +10960,11 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 1150603090}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 572779240}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.000000044703484
@@ -11164,17 +11032,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 5ed8bf78819023f4180646626387489d, type: 3}
   m_PrefabInstance: {fileID: 2105622683}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2105622685 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
-  m_PrefabInstance: {fileID: 2105622683}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e1ef2b15f331245bc0d20b55c3814e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2105622686 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1764419083821958669, guid: 5ed8bf78819023f4180646626387489d, type: 3}
@@ -11302,19 +11159,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
@@ -11517,19 +11374,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000029802322
@@ -11650,19 +11507,19 @@ PrefabInstance:
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[0]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _nearBalks.Array.data[1]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[2]
       value: 
-      objectReference: {fileID: 621215715}
+      objectReference: {fileID: 0}
     - target: {fileID: 1987676143649612235, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: _higherBalks.Array.data[3]
       value: 
-      objectReference: {fileID: 2097358971}
+      objectReference: {fileID: 0}
     - target: {fileID: 2679285856291213304, guid: 5ed8bf78819023f4180646626387489d, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.000000059604645
