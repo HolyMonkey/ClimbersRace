@@ -11,8 +11,6 @@ public abstract class CharacterCollider : MonoBehaviour
 
     //private Collider _collider;
 
-    public event UnityAction<Vector3> KnockedDownEnemy;
-
     protected virtual void Awake()
     {
         Character = GetComponent<Character>();
@@ -51,9 +49,7 @@ public abstract class CharacterCollider : MonoBehaviour
         {
             if (enemy.IsAttachingBalk)
             {
-                KnockedDownEnemy?.Invoke(collision.contacts[0].point);
-                enemy.CollideWithTrap();
-                enemy.BalkPush(Character.Velocity.normalized / 2);
+                Character.AttackEnemy(enemy, collision.contacts[0].point);
             }
         }
     }
