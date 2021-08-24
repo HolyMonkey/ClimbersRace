@@ -19,10 +19,7 @@ public class EnemyCollider : CharacterCollider
 
         if (collider.TryGetComponent(out Coin coin))
         {
-            if (!Character.IsAttachingBalk)
-            {
-                coin.Collect();
-            }
+            coin.Collect();
         }
     }
 
