@@ -9,6 +9,8 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private MMFeedbacks _attachBalkFeedbacks;
     [SerializeField] private MMFeedbacks _dieFeedback;
     [SerializeField] private MMFeedbacks _fallingFeedback;
+    [SerializeField] private MMFeedbacks _attackFeedbacks;
+    [SerializeField] private ParticleSystem _enemyAttackFX;
 
     [Header("IK")]
     [SerializeField] private bool _ikActive;
@@ -33,6 +35,7 @@ public class CharacterView : MonoBehaviour
         _character.DetachingBalk += OnDetachingBalk;
         _character.Falling += OnFalling;
         _character.Dying += OnDying;
+        _character.EnemyAttacked += OnEnemyAttacked;
     }
 
     private void OnDisable()
@@ -41,8 +44,15 @@ public class CharacterView : MonoBehaviour
         _character.DetachingBalk -= OnDetachingBalk;
         _character.Falling -= OnFalling;
         _character.Dying -= OnDying;
+        _character.EnemyAttacked -= OnEnemyAttacked;
     }
 
+    private void OnEnemyAttacked(Vector3 contactPoint)
+    {
+        _enemyAttackFX.transform.position = contactPoint + _character.Velocity.normalized / 1.5f;
+        _enemyAttackFX.Play();
+        _attackFeedbacks?.PlayFeedbacks();
+    }
 
     private void Update()
     {

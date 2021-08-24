@@ -29,6 +29,7 @@ public class Character : MonoBehaviour
     public event UnityAction DetachingBalk;
     public event UnityAction Falling;
     public event UnityAction<Character> Dying;
+    public event UnityAction<Vector3> EnemyAttacked;
 
     public bool IsAttachingBalk => CurrentBalk;
     public Vector3 Velocity => _rigidbody.velocity;
@@ -106,11 +107,23 @@ public class Character : MonoBehaviour
         DetachingBalk?.Invoke();
     }
 
+    public void AttackEnemy(Character enemy, Vector3 contactPoint)
+    {
+        enemy.Attacked(Velocity);
+        EnemyAttacked?.Invoke(contactPoint);
+    }
+
+    private void Attacked(Vector3 velocity)
+    {
+        Falling?.Invoke();
+        BalkPush(velocity.normalized / 2);
+    }
+
     public void CollideWithTrap()
     {
         Falling?.Invoke();
-        _rigidbody.velocity /= 2;
         DetachFromBalk();
+        _rigidbody.velocity /= 2;
     }
 
     private void SetupJoint(float drag, Rigidbody connectedBody, Vector3 connectedAnchor, float spring)
