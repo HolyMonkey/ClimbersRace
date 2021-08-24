@@ -24,6 +24,11 @@ public class Level : MonoBehaviour
 
     private bool _isLevelStarted = false;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 50;
+    }
+
     private void OnEnable()
     {
         _playerCharacter.Dying += OnPlayerDying;
