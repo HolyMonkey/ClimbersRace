@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class Level : MonoBehaviour
 {
@@ -43,10 +44,13 @@ public class Level : MonoBehaviour
         if (_isLevelStarted)
             return;
 
-        if (Input.GetMouseButtonDown(0))
+#if (UNITY_ANDROID && !UNITY_EDITOR)
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) //-- for build
+#elif (UNITY_EDITOR && UNITY_ANDROID)
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+#endif
         {
             StartLevel();
-            _isLevelStarted = true;
         }
     }
 
@@ -94,6 +98,7 @@ public class Level : MonoBehaviour
 
     public void StartLevel()
     {
+        _isLevelStarted = true;
         LevelStarted?.Invoke();
     }
 
