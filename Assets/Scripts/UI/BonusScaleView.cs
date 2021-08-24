@@ -13,6 +13,6 @@ public class BonusScaleView : MonoBehaviour
     {
         float zRotation = Mathf.Lerp(0, _arrowMaxAngle, value);
 
-        _arrowBase.rotation = Quaternion.Euler(0, 0, -zRotation);
+        _arrowBase.localRotation = Quaternion.Euler(0, 0, -zRotation);
     }
 }
