@@ -7,6 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(SpringJoint))]
+[RequireComponent(typeof(Collider))]
 public class Character : MonoBehaviour
 {
     [SerializeField] private float _pushForce;
@@ -19,6 +20,7 @@ public class Character : MonoBehaviour
     private MonoBehaviour _moverBehaviour;
     private IMovable _mover => (IMovable)_moverBehaviour;
 
+    private Collider _collider;
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
 
@@ -51,8 +53,20 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
+        _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
         _springJoint = GetComponent<SpringJoint>();
+    }
+
+    private void OnEnable()
+    {
+        _level.BonusGameStarted += OnBonusStarted;
+    }
+
+
+    private void OnDisable()
+    {
+        _level.BonusGameStarted -= OnBonusStarted;
     }
 
     private void Update()
@@ -60,14 +74,21 @@ public class Character : MonoBehaviour
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
     }
 
+    private void OnBonusStarted()
+    {
+        _collider.enabled = false;
+    }
+
     public void Die()
     {
-        Dying?.Invoke(this);
-        _rigidbody.isKinematic = true;
-        _rigidbody.velocity = Vector3.zero;
+        _collider.enabled = false;
 
         if (IsAttachingBalk)
             DetachFromBalk();
+
+        Dying?.Invoke(this);
+        _rigidbody.isKinematic = true;
+        _rigidbody.velocity = Vector3.zero;
     }
 
     public void BalkPush(Vector3 direction)
