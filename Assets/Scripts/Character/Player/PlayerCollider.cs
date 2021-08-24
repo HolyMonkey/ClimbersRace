@@ -29,7 +29,7 @@ public class PlayerCollider : CharacterCollider
     {
         if (collider.TryGetComponent(out PlayerBalkInteraction balkInteraction))
         {
-            SetupConnection(balkInteraction.Balk, Character);
+            TryConnection(balkInteraction.Balk, Character);
         }
     }
 }

@@ -30,7 +30,7 @@ public class EnemyCollider : CharacterCollider
     {
         if (collider.TryGetComponent(out EnemyBalkInteraction enemyBalkInteraction))
         {
-            SetupConnection(enemyBalkInteraction.Balk, Character);
+            TryConnection(enemyBalkInteraction.Balk, Character);
             _enemyAI.CurrentNode = enemyBalkInteraction.BalkAINode;
         }
     }
