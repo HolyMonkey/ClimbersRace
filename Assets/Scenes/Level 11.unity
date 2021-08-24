@@ -4812,7 +4812,15 @@ PrefabInstance:
     - target: {fileID: 5640001596488769549, guid: a0621566eda38404c8607368a6da7d22, type: 3}
       propertyPath: _bonusWallsMultipliers.Array.data[4]
       value: 
-      objectReference: {fileID: 2113714632}
+      objectReference: {fileID: 1896732901}
+    - target: {fileID: 5640001596488769549, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _bonusWallsMultipliers.Array.data[5]
+      value: 
+      objectReference: {fileID: 162221837}
+    - target: {fileID: 5640001596488769549, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _bonusWallsMultipliers.Array.data[6]
+      value: 
+      objectReference: {fileID: 1157608032}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0621566eda38404c8607368a6da7d22, type: 3}
 --- !u!1001 &1824593953
@@ -5576,17 +5584,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7468636968510263824, guid: c9fe52cb74b0d7f4db0822d6b65ae1fa, type: 3}
   m_PrefabInstance: {fileID: 1348817437}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2113714632 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2113714632, guid: 96a5140095272014b89ea0b40f487975, type: 3}
-  m_PrefabInstance: {fileID: 4698307004038345235}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 735a0be719c542e4f8e538d8c86cc263, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2124755589 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 485811568, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
@@ -5768,6 +5765,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 4698307002776825216, guid: 96a5140095272014b89ea0b40f487975, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 1456322490}
     - target: {fileID: 4698307002776825217, guid: 96a5140095272014b89ea0b40f487975, type: 3}
       propertyPath: m_RootOrder
       value: 12
