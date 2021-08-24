@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float _swingReducerPower;
     [SerializeField] private Rigidbody _defaultRigidbody;
     [SerializeField] private Level _level;
+    [SerializeField] private ParticleSystem _bonusFlameParticles;
     [SerializeField]
     private MonoBehaviour _moverBehaviour;
     private IMovable _mover => (IMovable)_moverBehaviour;
@@ -160,6 +161,8 @@ public class Character : MonoBehaviour
         float time = 0;
         Vector3 startPoint = transform.position;
 
+        _bonusFlameParticles.Play();
+
         targetPoint.y += 0.55f; //character offset
 
         while (time < duration)
@@ -174,6 +177,8 @@ public class Character : MonoBehaviour
 
             yield return null;
         }
+
+        _bonusFlameParticles.Stop();
 
         _level.WinGame();
     }
