@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameFinish : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _confetti;
-    [SerializeField] private Transform _finishWall;
+    [SerializeField] private Transform _finishWallForRotation;
     [SerializeField] private Level _level;
 
     private void OnEnable()
@@ -26,13 +26,13 @@ public class GameFinish : MonoBehaviour
 
     public void RotateFinishWall(Vector3 targetLookAt)
     {
-        if (_finishWall)
+        if (_finishWallForRotation)
         {
-            Vector3 direction = _finishWall.position - targetLookAt;
+            Vector3 direction = _finishWallForRotation.position - targetLookAt;
             direction.y = 0;
 
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            _finishWall.rotation = lookRotation;
+            _finishWallForRotation.rotation = lookRotation;
             _confetti.transform.rotation = lookRotation;
         }
     }

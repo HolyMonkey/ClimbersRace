@@ -23,10 +23,14 @@ public class CharacterView : MonoBehaviour
     private Transform _targetForRightHand;
     private Transform _targetForLeftHand;
 
+    private StraightWall _testWall;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _cameraTransform = Camera.main.transform;
+
+        _testWall = FindObjectOfType<StraightWall>();
     }
 
     private void OnEnable()
@@ -63,7 +67,7 @@ public class CharacterView : MonoBehaviour
             UpdateIK(_character.CurrentBalk);
         }
         else if (!_character.IsBonusMove)
-            LookAt(_character.Velocity);
+            LookAt(transform.position + _character.Velocity);
         else
             LookAt(_cameraTransform.position);
     }
@@ -96,8 +100,29 @@ public class CharacterView : MonoBehaviour
 
     private void LookAt(Vector3 targetPoint)
     {
+        float y = targetPoint.y;
+        Vector3 projectY = -y * _testWall.GetNormalVector(transform.position);
+        targetPoint += projectY;
         targetPoint.y = _character.transform.position.y;
+
+
         transform.LookAt(targetPoint);
+    }
+
+    private void Calculate(Vector3 velocity)
+    {
+
+
+    }
+
+    private void LookRotation(Vector3 rotateTowards)
+    {
+        float yRot = rotateTowards.y;
+        rotateTowards.y = 0;
+        Vector3 yRotVector = Vector3.Project(new Vector3(0, yRot, 0), rotateTowards);
+
+        Quaternion lookRotation = Quaternion.LookRotation(rotateTowards + yRotVector, Vector3.up);
+        transform.rotation = lookRotation;
     }
 
     private void UpdateIK(Balk balk)
