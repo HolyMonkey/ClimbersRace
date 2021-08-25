@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AmplitudeAnalytics : MonoBehaviour
@@ -13,8 +11,6 @@ public class AmplitudeAnalytics : MonoBehaviour
     private Money _money;
 
     private Amplitude _amplitude;
-
-    private bool _isGameStart = true;
 
     private string _regDay
     {
@@ -49,8 +45,6 @@ public class AmplitudeAnalytics : MonoBehaviour
         _level.LevelStarted += OnLevelStarted;
         _level.LevelWon += OnLevelWon;
         _level.LevelLost += OnlevelLost;
-
-        FireEvent("main_menu");
     }
 
     private void OnDisable()
@@ -97,18 +91,19 @@ public class AmplitudeAnalytics : MonoBehaviour
         _amplitude.setUserProperty("days_after", daysAfter);
     }
 
-    private void SettingUserProperties()
-    {
-        int currentMoney = _money.CurrentMoney;
-        _amplitude.setUserProperty("current_soft", currentMoney);
-
-        int lastLevel = _level.CurrentLevel - 1;
-        _amplitude.setUserProperty("level_last", lastLevel);
-    }
-
     private void FireEvent(string eventName)
     {
         SettingUserProperties();
         _amplitude.logEvent(eventName);
     }
+
+    private void SettingUserProperties()
+    {
+        int currentMoney = _money.CurrentMoney;
+        _amplitude.setUserProperty("current_soft", currentMoney);
+
+        int lastLevel = _level.CurrentLevel;
+        _amplitude.setUserProperty("level_last", lastLevel);
+    }
+
 }
