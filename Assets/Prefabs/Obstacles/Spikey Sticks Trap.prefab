@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 5767482015232859573}
   - component: {fileID: 8642057061854112127}
   - component: {fileID: 6930851525267992473}
+  - component: {fileID: 5592875770099866582}
   m_Layer: 14
   m_Name: Spikey Sticks Trap
   m_TagString: Untagged
@@ -435,3 +436,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5592875770099866582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849278734666811562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8667df73375f34ea553b0d26488350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _angleOffset: 180
+  _distance: 3
+  _wallBehavior: {fileID: 0}
