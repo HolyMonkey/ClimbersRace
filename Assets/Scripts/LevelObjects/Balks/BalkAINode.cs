@@ -11,7 +11,8 @@ public class BalkAINode : MonoBehaviour
 
     public BalkMovement BalkMovement => _balkMovement;
     public Vector3 BalkPosition => _balkMovement.transform.position;
-    public int NearBalksCount => _nearNodes.Count;
+    public int NearNodesCount => _nearNodes.Count;
+    public int HigherNodesCount => _higherNodes.Count;
 
     private void OnValidate()
     {
@@ -63,7 +64,7 @@ public class BalkAINode : MonoBehaviour
 
         foreach (BalkAINode node in _higherNodes)
         {
-            if (_higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y)
+            if (_higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(node))
                 _higherNodes.Remove(node);
         }
 

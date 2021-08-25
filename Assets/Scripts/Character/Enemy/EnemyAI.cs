@@ -2,123 +2,172 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private Character _enemyCharacter;
-    [SerializeField] private float _choseNextBalkTimer;
+    [SerializeField] private RangeFloat _choosingBalkDelayRange;
     [SerializeField] private RangeFloat _dragTimeRange;
 
-    public BalkAINode CurrentNode;
+    private BalkAINode _currentNode;
     private BalkAINode _nextNode;
     private BalkAINode _prevNode;
 
     private Vector3 _dragVector = new Vector3();
     private float _dragTime;
+
+    private Coroutine _choosingJob;
     private Coroutine _draggingBalkJob;
 
-    private float _timer = 0;
+    private void OnEnable()
+    {
+        _enemyCharacter.AttachingBalk += OnAttachingBalk;
+        _enemyCharacter.DetachingBalk += OnDetachingBalk;
+    }
 
     private void OnDisable()
     {
-        if (_draggingBalkJob != null)
-        {
-            StopCoroutine(_draggingBalkJob);
-            _draggingBalkJob = null;
-        }
+        _enemyCharacter.AttachingBalk -= OnAttachingBalk;
+        _enemyCharacter.DetachingBalk -= OnDetachingBalk;
+
+        CheckAndStopCoroutine(ref _draggingBalkJob);
     }
 
-    private void Update()//ìîæíî ïåðåïèñàòü íà ñîáûòèÿ
+    public void SetCurrentNode(BalkAINode balkAINode)
     {
-        if (_enemyCharacter.IsAttachingBalk)
+        _currentNode = balkAINode;
+    }
+
+    public void StartAI()
+    {
+        enabled = true;
+
+        _choosingJob = StartCoroutine(ChoosingNextNode());
+        _draggingBalkJob = StartCoroutine(DraggingBalk(_choosingJob));
+    }
+
+    public void StopAI()
+    {
+        enabled = false;
+
+        CheckAndStopCoroutine(ref _choosingJob);
+        CheckAndStopCoroutine(ref _draggingBalkJob);
+    }
+
+    private void OnAttachingBalk(Balk balk)
+    {
+        CheckAndStopCoroutine(ref _choosingJob);
+        _choosingJob = StartCoroutine(ChoosingNextNode());
+
+        CheckAndStopCoroutine(ref _draggingBalkJob);
+        _draggingBalkJob = StartCoroutine(DraggingBalk(_choosingJob));
+    }
+
+    private void OnDetachingBalk()
+    {
+        CheckAndStopCoroutine(ref _choosingJob);
+        CheckAndStopCoroutine(ref _draggingBalkJob);
+
+        _prevNode = _currentNode;
+        _currentNode = null;
+        _nextNode = null;
+    }
+
+    private IEnumerator ChoosingNextNode()
+    {
+        float choosingBalkDelay = _choosingBalkDelayRange.RandomValue;
+
+        yield return new WaitForSeconds(choosingBalkDelay);
+
+        ChooseNextNode();
+    }
+
+    private void ChooseNextNode()
+    {
+        if (_currentNode.NearNodesCount == 0)
         {
-            if (!_nextNode)
+            Debug.LogError(name + " no near nodes, enemy turn away");
+            _nextNode = _prevNode;
+            return;
+        }
+
+        BalkAINode targetNode = _currentNode.GetRandomHigherNode() != null ? _currentNode.GetRandomHigherNode() : _currentNode.GetRandomNode();
+
+        if (_currentNode.NearNodesCount == 1)
+        {
+            _nextNode = targetNode;
+            return;
+        }
+        else if (_currentNode.NearNodesCount >= 2)
+        {
+            if (_prevNode != null && targetNode == _prevNode)
             {
-                _timer += Time.deltaTime;
-
-                if (_timer > _choseNextBalkTimer)
+                if (_currentNode.HigherNodesCount <= 1)
                 {
-                    _timer = 0;
-
-                    int cycleCount = 0;
-                    while (!_nextNode || _nextNode == _prevNode)
-                    {
-                        _nextNode = ChooseNextNode(CurrentNode);
-
-                        if (CurrentNode.NearBalksCount == 0)
-                        {
-                            Debug.LogError(name + " no available balks, enemy turn away");
-                            _nextNode = _prevNode;
-                            _prevNode = CurrentNode;
-                            break;
-                        }
-
-                        if (_nextNode == _prevNode && CurrentNode.NearBalksCount < 2)
-                        {
-                            Debug.LogError(name + " no non-previous balk");
-                            enabled = false;
-                            return;
-                        }
-
-                        cycleCount++;
-                        if (cycleCount > 10)
-                        {
-                            Debug.LogError(name + " ñhooseNextBalk cycle error");
-                            enabled = false;
-                            return;
-                        }
-                    }
-
-                    ConfigureDragParameters();
+                    targetNode = _currentNode.GetRandomNode();
+                    if (targetNode == _prevNode) //double chance for non-prev
+                        targetNode = _currentNode.GetRandomNode();
+                    _nextNode = targetNode;
+                    return;
+                }
+                else
+                {
+                    ChooseNextNode();
+                    return;
                 }
             }
-            else if (_draggingBalkJob == null)
+            else
             {
-                _draggingBalkJob = StartCoroutine(DraggingBalk());
+                _nextNode = targetNode;
+                return;
             }
         }
     }
 
-    private BalkAINode ChooseNextNode(BalkAINode currentNode)
+    private IEnumerator DraggingBalk(Coroutine choosingJob)
     {
-        if (currentNode.GetRandomHigherNode())
-            return currentNode.GetRandomHigherNode();
-        else
-            return currentNode.GetRandomNode();
+        if (choosingJob != null)
+            yield return choosingJob;
+
+        ConfigureDragParameters();
+
+        _currentNode.BalkMovement.BeginDragBalk();
+
+        float timer = 0;
+        while (timer < _dragTime)
+        {
+            timer += Time.deltaTime;
+            _currentNode.BalkMovement.DragBalk(_dragVector, timer / _dragTime);
+
+            yield return null;
+        }
+
+        _currentNode.BalkMovement.FinishDragBalk(); // => OnDetaching, wait for attaching
+
+        _draggingBalkJob = null;
     }
 
     private void ConfigureDragParameters()
     {
         _dragTime = _dragTimeRange.RandomValue;
 
-        Vector3 betweenBalkVector = _nextNode.transform.position - CurrentNode.transform.position;
+        Vector3 betweenBalkVector = _nextNode.transform.position - _currentNode.transform.position;
         _dragVector = -betweenBalkVector;
 
-        float t = betweenBalkVector.magnitude / 7f; //average speed
+        float t = betweenBalkVector.magnitude / 7f; //7 - average speed
         float yPrecision = Physics.gravity.y * t * t / 2;
         _dragVector.y += yPrecision;
 
         _dragVector.Normalize();
     }
 
-    private IEnumerator DraggingBalk()
+    private void CheckAndStopCoroutine(ref Coroutine coroutine)
     {
-        CurrentNode.BalkMovement.BeginDragBalk();
-
-        float timer = 0;
-
-        while (timer < _dragTime)
+        if (coroutine != null)
         {
-            timer += Time.deltaTime;
-            CurrentNode.BalkMovement.DragBalk(_dragVector, timer / _dragTime);
-
-            yield return null;
+            StopCoroutine(coroutine);
+            coroutine = null;
         }
-
-        _prevNode = CurrentNode;
-        CurrentNode.BalkMovement.FinishDragBalk(); // => _currentBalk == null, wait for attaching
-        _nextNode = null;
-
-        _draggingBalkJob = null;
     }
 }

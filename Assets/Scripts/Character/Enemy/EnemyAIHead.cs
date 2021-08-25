@@ -15,7 +15,7 @@ public class EnemyAIHead : MonoBehaviour
         _level.LevelLost += OnLoseGame;
         _level.BonusGameStarted += OnBonusStarted;
 
-        EnemyAIEnabled(false);
+        StopAIs();
     }
 
     private void OnDisable()
@@ -28,29 +28,33 @@ public class EnemyAIHead : MonoBehaviour
 
     private void OnBonusStarted()
     {
-        EnemyAIEnabled(false);
+        StopAIs();
     }
 
     private void OnGameWon()
     {
-        EnemyAIEnabled(false);
+        StopAIs();
     }
 
     private void OnLevelStarted()
     {
-        EnemyAIEnabled(true);
+        StartAIs();
     }
 
     private void OnLoseGame()
     {
-        EnemyAIEnabled(false);
+        StopAIs();
     }
 
-    private void EnemyAIEnabled(bool isEnabled)
+    private void StartAIs()
     {
         foreach (EnemyAI enemyAI in _enemiesAI)
-        {
-            enemyAI.enabled = isEnabled;
-        }
+            enemyAI.StartAI();
+    }
+
+    private void StopAIs()
+    {
+        foreach (EnemyAI enemyAI in _enemiesAI)
+            enemyAI.StopAI();
     }
 }

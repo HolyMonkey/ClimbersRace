@@ -8,12 +8,10 @@ public class BalkMovement : MonoBehaviour
 
     private Balk _balk;
     private Vector3 _startDragPosition;
-    private Rigidbody _rigidbody;
 
     private void Awake()
     {
         _balk = GetComponent<Balk>();
-        _rigidbody = GetComponent<Rigidbody>();
 
         _startDragPosition = transform.position;
     }
@@ -72,9 +70,7 @@ public class BalkMovement : MonoBehaviour
 
     private void DragingBalk(Vector3 dragVector)
     {
-        //float dragT = dragVector.magnitude / _minMaxDragDistance.Max;
         transform.position = _startDragPosition + dragVector;
-        //transform.position = _startDragPosition + dragVector;
 
         _balk.PushVector = -dragVector;
     }
