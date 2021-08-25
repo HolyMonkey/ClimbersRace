@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementDistanceFromWall : MonoBehaviour
+public class ElementToWallAttaching : MonoBehaviour
 {
-    [SerializeField] private float _distance;
+    [SerializeField] private float _angleOffset = 0f;
+    [SerializeField] private float _distance = 3f;
     [SerializeField] private MonoBehaviour _wallBehavior;
     private IWall _wall => (IWall)_wallBehavior;
 
@@ -14,13 +15,24 @@ public class ElementDistanceFromWall : MonoBehaviour
             Debug.LogError(name + " needs to implement " + nameof(IWall));
     }
 
+    [ContextMenu("CorrectRotation")]
+    private void CorrectRotation()
+    {
+        if (_wall == null)
+            _wallBehavior = FindObjectOfType<CylindricWall>();
+
+        Vector3 direction = -_wall.GetNormalVector(transform.position);
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+
+        transform.rotation = lookRotation;
+        transform.Rotate(0, _angleOffset, 0);
+    }
+
     [ContextMenu("CorrectDistance")]
     private void CorrectDistance()
     {
         if (_wall == null)
             _wallBehavior = FindObjectOfType<CylindricWall>();
-        if (_wall == null)
-            _wallBehavior = FindObjectOfType<StraightWall>();
 
         Vector3 targetPosition = _wall.GetNormalVector(transform.position) * _distance;
 
