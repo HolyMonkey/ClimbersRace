@@ -4698,6 +4698,7 @@ MonoBehaviour:
   _swingReducerPower: 7
   _defaultRigidbody: {fileID: 2098622870574294667}
   _level: {fileID: 0}
+  _bonusFlameParticles: {fileID: 0}
   _moverBehaviour: {fileID: 7116855338416398736}
 --- !u!114 &2098622871309852882
 MonoBehaviour:
@@ -4749,11 +4750,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyCharacter: {fileID: 2098622871309852907}
-  _choseNextBalkTimer: 1
+  _choosingBalkDelayRange:
+    _min: 0.5
+    _max: 1.5
   _dragTimeRange:
     _min: 0.5
     _max: 2
-  CurrentNode: {fileID: 0}
 --- !u!1 &2098622871327929779
 GameObject:
   m_ObjectHideFlags: 0
