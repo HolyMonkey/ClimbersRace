@@ -75,15 +75,16 @@ public class Level : MonoBehaviour
 
     public void NextLevel()
     {
+        if (_bonusLevel)
+        {
+            _sceneChanger.LoadLevel(CurrentLevel);
+        }
+
         if (CurrentLevel % 4 == 0)
         {
             PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
 
             _sceneChanger.LoadBonusLevel();
-        }
-        else if (_bonusLevel)
-        {
-            _sceneChanger.LoadLevel(CurrentLevel);
         }
         else
         {
