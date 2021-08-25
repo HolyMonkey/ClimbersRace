@@ -23,7 +23,7 @@ public class CharacterView : MonoBehaviour
     private Transform _targetForRightHand;
     private Transform _targetForLeftHand;
 
-    private StraightWall _testWall;
+    private IWall _testWall;
 
     private void Awake()
     {
@@ -31,6 +31,8 @@ public class CharacterView : MonoBehaviour
         _cameraTransform = Camera.main.transform;
 
         _testWall = FindObjectOfType<StraightWall>();
+        if (_testWall == null)
+            _testWall = FindObjectOfType<CylindricWall>();
     }
 
     private void OnEnable()
@@ -67,7 +69,7 @@ public class CharacterView : MonoBehaviour
             UpdateIK(_character.CurrentBalk);
         }
         else if (!_character.IsBonusMove)
-            LookAt(transform.position + _character.Velocity);
+            LookRotation(_character.Velocity);
         else
             LookAt(_cameraTransform.position);
     }
@@ -100,28 +102,22 @@ public class CharacterView : MonoBehaviour
 
     private void LookAt(Vector3 targetPoint)
     {
-        float y = targetPoint.y;
-        Vector3 projectY = -y * _testWall.GetNormalVector(transform.position);
-        targetPoint += projectY;
         targetPoint.y = _character.transform.position.y;
-
-
         transform.LookAt(targetPoint);
-    }
-
-    private void Calculate(Vector3 velocity)
-    {
-
-
     }
 
     private void LookRotation(Vector3 rotateTowards)
     {
-        float yRot = rotateTowards.y;
-        rotateTowards.y = 0;
-        Vector3 yRotVector = Vector3.Project(new Vector3(0, yRot, 0), rotateTowards);
+        if (rotateTowards.sqrMagnitude < 0.1f)
+            return;
 
-        Quaternion lookRotation = Quaternion.LookRotation(rotateTowards + yRotVector, Vector3.up);
+        float y = Mathf.Abs(rotateTowards.y) / 2f;
+        Vector3 projectY = -y * _testWall.GetNormalVector(transform.position);
+        rotateTowards += projectY;
+
+        rotateTowards.y = 0;
+
+        Quaternion lookRotation = Quaternion.LookRotation(rotateTowards, Vector3.up);
         transform.rotation = lookRotation;
     }
 
