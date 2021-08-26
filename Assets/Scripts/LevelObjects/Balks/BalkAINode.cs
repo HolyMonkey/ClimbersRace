@@ -21,6 +21,9 @@ public class BalkAINode : MonoBehaviour
     {
         for (int i = 0; i < _nearNodes.Count; i++)
         {
+            if (_nearNodes[i] == null)
+                continue;
+
             float distanceBetweenBalk = Vector3.Distance(BalkPosition, _nearNodes[i].BalkPosition);//~max distance for correct enemyMovement
 
             if (distanceBetweenBalk > 5f)
