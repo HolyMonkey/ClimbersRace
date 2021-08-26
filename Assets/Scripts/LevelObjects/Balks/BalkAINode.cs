@@ -64,10 +64,13 @@ public class BalkAINode : MonoBehaviour
                 _higherNodes.Add(_nearNodes[i]);
         }
 
-        foreach (BalkAINode node in _higherNodes)
+        if (_higherNodes.Count > 0)
         {
-            if (_higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(node))
-                _higherNodes.Remove(node);
+            foreach (BalkAINode node in _higherNodes)
+            {
+                if (_higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(node))
+                    _higherNodes.Remove(node);
+            }
         }
 
         if (_nearNodes.Contains(this))
