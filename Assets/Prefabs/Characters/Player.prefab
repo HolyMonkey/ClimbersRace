@@ -5311,10 +5311,10 @@ MonoBehaviour:
   TestStopButton: 0
   PlayMethod: 1
   PoolSize: 10
-  MinVolume: 1
-  MaxVolume: 1
-  MinPitch: 0.97
-  MaxPitch: 1.05
+  MinVolume: 0.85
+  MaxVolume: 0.85
+  MinPitch: 0.9
+  MaxPitch: 1.1
   SfxAudioMixerGroup: {fileID: 0}
 --- !u!1 &1985712698171828692
 GameObject:
@@ -21079,6 +21079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247f6a24dcfe77743bc779f7991be8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collectCoinFeedbacks: {fileID: 4038891672254028278}
 --- !u!1 &7943258965576866566
 GameObject:
   m_ObjectHideFlags: 0
