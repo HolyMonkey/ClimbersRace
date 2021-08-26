@@ -14890,6 +14890,10 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 278564459, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 475830920, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -14898,6 +14902,14 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 42411126245362792}
+    - target: {fileID: 801621268, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
+    - target: {fileID: 801621268, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2517202264660172603, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
     - target: {fileID: 1077426655, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14930,6 +14942,14 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 42411126245362792}
+    - target: {fileID: 1723714631, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
+    - target: {fileID: 1723714631, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2517202264660172603, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
     - target: {fileID: 493458664426338515, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -15313,29 +15333,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 493458662996263650}
     m_Modifications:
     - target: {fileID: 5619499207865873793, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
+      propertyPath: m_text
+      value: "There is a flood! \nHurry up!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619499207865873793, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_fontSize
-      value: 56.75
+      value: 61.2
       objectReference: {fileID: 0}
     - target: {fileID: 5619499207865873793, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 2f490f72b6ed6ae4d8b31cee2cac3de7, type: 2}
+      objectReference: {fileID: 11400000, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
     - target: {fileID: 5619499207865873793, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -6263097307693789204, guid: 2f490f72b6ed6ae4d8b31cee2cac3de7, type: 2}
+      objectReference: {fileID: 2517202264660172603, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
     - target: {fileID: 5619499208162111954, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_fontSize
-      value: 60.05
+      value: 68.15
       objectReference: {fileID: 0}
     - target: {fileID: 5619499208162111954, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 2f490f72b6ed6ae4d8b31cee2cac3de7, type: 2}
+      objectReference: {fileID: 11400000, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
     - target: {fileID: 5619499208162111954, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -6263097307693789204, guid: 2f490f72b6ed6ae4d8b31cee2cac3de7, type: 2}
+      objectReference: {fileID: 2517202264660172603, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
     - target: {fileID: 5619499209553719314, guid: 96561fba842f6c34ea3c6cde1918407d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
