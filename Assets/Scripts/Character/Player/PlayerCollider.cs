@@ -11,22 +11,17 @@ public class PlayerCollider : CharacterCollider
         _money = GetComponent<Money>();
     }
 
-    protected override void OnTriggerEnter(Collider collider)
+    protected override void CollectCoin(Coin coin)
     {
-        base.OnTriggerEnter(collider);
-
-        if (collider.TryGetComponent(out Coin coin))
-        {
-            _money.AddLevelMoney(coin.RewardAmount);
-            coin.Collect();
-        }
+        _money.AddLevelMoney(coin.RewardAmount);
+        coin.Collect();
     }
 
-    protected override void TrySetupBalkConnection(Collider collider)
+    protected override void TrySetupBalkConnection(Balk balk)
     {
-        if (collider.TryGetComponent(out PlayerBalkInteraction balkInteraction))
+        if (balk.TryGetComponent(out PlayerBalkInteraction balkInteraction))
         {
-            TryConnection(balkInteraction.Balk, Character);
+            BalkConnection(balkInteraction.Balk, Character);
         }
     }
 }

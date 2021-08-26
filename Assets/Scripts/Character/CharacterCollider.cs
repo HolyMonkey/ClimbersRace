@@ -1,79 +1,105 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public abstract class CharacterCollider : MonoBehaviour
 {
+    [SerializeField] private float _timeToCanAttack = 0.5f;
     protected Character Character;
-    //[SerializeField]private float _timeToLeaveBalk = 0.1f;
 
-    //private Collider _collider;
+    private Coroutine _disableAttackJob;
+
+    private bool _canAttack = true;
+
+    private void OnEnable()
+    {
+        Character.BeingAttack += OnBeingAttack;
+    }
+
+    private void OnDisable()
+    {
+        Character.BeingAttack -= OnBeingAttack;
+    }
 
     protected virtual void Awake()
     {
         Character = GetComponent<Character>();
     }
 
-    //private void OnEnable()
-    //{
-    //    _character.DetachingBalk += OnDetachingBalk;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    _character.DetachingBalk -= OnDetachingBalk;
-
-    //}
-
-    protected virtual void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
+        if (collider.TryGetComponent(out Coin coin))
+        {
+            CollectCoin(coin);
+        }
+
+        if (collider.TryGetComponent(out DeathCollider deathCollider))
+            Character.Die();
+
         if (collider.TryGetComponent(out Trap trap))
         {
             if (!Character.IsAttachingBalk)
                 Character.CollideWithTrap();
         }
 
-        if (!Character.IsAttachingBalk)
-            TrySetupBalkConnection(collider);
+        if (!Character.IsAttachingBalk && collider.TryGetComponent(out Balk balk))
+        {
+            if (balk.HasCharacter && _canAttack)
+                Character.AttackEnemy(balk.CurrentCharacter, collider.ClosestPointOnBounds(balk.CurrentCharacter.transform.position));
+
+            TrySetupBalkConnection(balk);
+        }
     }
+
+    //private void OnTriggetExit(Collider collider)
+    //{
+    //    if (_canAttack && !Character.IsAttachingBalk && collider.TryGetComponent(out Balk balk))
+    //        TrySetupBalkConnection(balk);
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out DeathCollider deathCollider))
+        if (!Character.IsAttachingBalk && _canAttack)
         {
-            Character.Die();
-        }
-
-        if (collision.gameObject.TryGetComponent(out Character enemy))
-        {
-            if (enemy.IsAttachingBalk)
+            if (collision.gameObject.TryGetComponent(out Character enemy))
             {
-                Character.AttackEnemy(enemy, collision.contacts[0].point);
+                if (enemy.IsAttachingBalk)
+                {
+                    Debug.Log(Character + " attack " + enemy);
+                    Character.AttackEnemy(enemy, collision.contacts[0].point);
+                }
             }
         }
     }
 
-    protected abstract void TrySetupBalkConnection(Collider collider);
-
-    protected void TryConnection(Balk balk, Character character)
+    protected void BalkConnection(Balk balk, Character character)
     {
         balk.Interaction(character);
         character.AttachToBalk(balk);
     }
 
-    //private void OnDetachingBalk()
-    //{
-    //    StartCoroutine(DisableColliderOnTime(_timeToLeaveBalk));
-    //}
+    protected abstract void TrySetupBalkConnection(Balk balk);
 
-    //private IEnumerator DisableColliderOnTime(float delay)
-    //{
-    //    _collider.enabled = false;
+    protected abstract void CollectCoin(Coin coin);
 
-    //    yield return new WaitForSeconds(delay);
 
-    //    _collider.enabled = true;
-    //}
+    private void OnBeingAttack()
+    {
+        if (_disableAttackJob != null)
+        {
+            StopCoroutine(_disableAttackJob);
+            _disableAttackJob = null;
+        }
+        _disableAttackJob = StartCoroutine(DisableAttack(_timeToCanAttack));
+    }
+
+    private IEnumerator DisableAttack(float time)
+    {
+        _canAttack = false;
+
+        yield return new WaitForSeconds(time);
+
+        _canAttack = true;
+
+        _disableAttackJob = null;
+    }
 }

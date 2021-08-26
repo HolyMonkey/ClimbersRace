@@ -70,7 +70,6 @@ public class EnemyAI : MonoBehaviour
         CheckAndStopCoroutine(ref _draggingBalkJob);
 
         _prevNode = _currentNode;
-        _currentNode = null;
         _nextNode = null;
     }
 

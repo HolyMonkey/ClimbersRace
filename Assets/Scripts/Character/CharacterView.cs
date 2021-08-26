@@ -41,7 +41,7 @@ public class CharacterView : MonoBehaviour
         _character.DetachingBalk += OnDetachingBalk;
         _character.Falling += OnFalling;
         _character.Dying += OnDying;
-        _character.EnemyAttacked += OnEnemyAttacked;
+        _character.AttackedEnemy += OnEnemyAttacked;
     }
 
     private void OnDisable()
@@ -50,7 +50,7 @@ public class CharacterView : MonoBehaviour
         _character.DetachingBalk -= OnDetachingBalk;
         _character.Falling -= OnFalling;
         _character.Dying -= OnDying;
-        _character.EnemyAttacked -= OnEnemyAttacked;
+        _character.AttackedEnemy -= OnEnemyAttacked;
     }
 
     private void OnEnemyAttacked(Vector3 contactPoint)

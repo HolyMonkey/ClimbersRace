@@ -22,12 +22,12 @@ public class Emotions : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.EnemyAttacked += OnKnockedDownEnemy;
+        _player.AttackedEnemy += OnKnockedDownEnemy;
     }
 
     private void OnDisable()
     {
-        _player.EnemyAttacked -= OnKnockedDownEnemy;
+        _player.AttackedEnemy -= OnKnockedDownEnemy;
     }
 
     private void OnKnockedDownEnemy(Vector3 position)
