@@ -6,6 +6,7 @@ public class CharacterView : MonoBehaviour
 {
     [SerializeField] private Character _character;
     [SerializeField] private MMFeedbacks _attachBalkFeedbacks;
+    [SerializeField] private MMFeedbacks _detachBalkFeedbacks;
     [SerializeField] private MMFeedbacks _dieFeedback;
     [SerializeField] private MMFeedbacks _fallingFeedback;
     [SerializeField] private MMFeedbacks _attackFeedbacks;
@@ -83,8 +84,9 @@ public class CharacterView : MonoBehaviour
     private void OnDetachingBalk()
     {
         _animator.SetBool(IKCharacterAnimatorController.Params.Flying, true);
-
         SetIKTarget(null, null);
+
+        _detachBalkFeedbacks?.PlayFeedbacks();
     }
 
     private void OnFalling()
