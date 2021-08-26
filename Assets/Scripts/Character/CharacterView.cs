@@ -112,7 +112,7 @@ public class CharacterView : MonoBehaviour
         if (rotateTowards.sqrMagnitude < 0.1f)
             return;
 
-        float y = Mathf.Abs(rotateTowards.y) / 2f;
+        float y =  Mathf.Clamp(rotateTowards.y, 0.4f, 10f) / 2f; 
         Vector3 projectY = -y * _testWall.GetNormalVector(transform.position);
         rotateTowards += projectY;
 
