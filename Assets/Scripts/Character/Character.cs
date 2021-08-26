@@ -32,7 +32,8 @@ public class Character : MonoBehaviour
     public event UnityAction DetachingBalk;
     public event UnityAction Falling;
     public event UnityAction<Character> Dying;
-    public event UnityAction<Vector3> EnemyAttacked;
+    public event UnityAction<Vector3> AttackedEnemy;
+    public event UnityAction BeingAttack;
 
     public bool IsAttachingBalk => CurrentBalk;
     public Vector3 Velocity => _rigidbody.velocity;
@@ -119,7 +120,7 @@ public class Character : MonoBehaviour
 
     public void DetachFromBalk()
     {
-        if (CurrentBalk)
+        if (IsAttachingBalk)
         {
             CurrentBalk.DetachCharacter();
             CurrentBalk = null;
@@ -132,20 +133,20 @@ public class Character : MonoBehaviour
 
     public void AttackEnemy(Character enemy, Vector3 contactPoint)
     {
-        enemy.Attacked(Velocity);
-        EnemyAttacked?.Invoke(contactPoint);
+        enemy.Attacked();
+        AttackedEnemy?.Invoke(contactPoint);
     }
 
-    private void Attacked(Vector3 velocity)
+    private void Attacked()
     {
         Falling?.Invoke();
-        BalkPush(velocity.normalized / 2);
+        DetachFromBalk();
+        BeingAttack?.Invoke();
     }
 
     public void CollideWithTrap()
     {
         Falling?.Invoke();
-        DetachFromBalk();
         _rigidbody.velocity /= 2;
     }
 

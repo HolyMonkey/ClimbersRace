@@ -13,7 +13,7 @@ public class Balk : MonoBehaviour
 
     private CameraMover _cameraMover;
     private Rigidbody _rigidbody;
-    protected Character CurrentCharacter;
+    public Character CurrentCharacter { get; protected set; }
 
     public bool HasCharacter => CurrentCharacter;
     public Rigidbody JointRigidbody => _jointRigidbody;
@@ -31,8 +31,11 @@ public class Balk : MonoBehaviour
 
     public void DetachCharacter()
     {
-        CurrentCharacter = null;
-        PushVector = Vector3.zero;
+        if (HasCharacter)
+        {
+            CurrentCharacter = null;
+            PushVector = Vector3.zero;
+        }
     }
 
     public void PushCharacter(Vector3 pushVector)

@@ -13,21 +13,16 @@ public class EnemyCollider : CharacterCollider
         _enemyAI = GetComponent<EnemyAI>();
     }
 
-    protected override void OnTriggerEnter(Collider collider)
+    protected override void CollectCoin(Coin coin)
     {
-        base.OnTriggerEnter(collider);
-
-        if (collider.TryGetComponent(out Coin coin))
-        {
-            coin.Collect();
-        }
+        coin.Collect();
     }
 
-    protected override void TrySetupBalkConnection(Collider collider)
+    protected override void TrySetupBalkConnection(Balk balk)
     {
-        if (collider.TryGetComponent(out EnemyBalkInteraction enemyBalkInteraction))
+        if (balk.TryGetComponent(out EnemyBalkInteraction enemyBalkInteraction))
         {
-            TryConnection(enemyBalkInteraction.Balk, Character);
+            BalkConnection(enemyBalkInteraction.Balk, Character);
             _enemyAI.SetCurrentNode(enemyBalkInteraction.BalkAINode);
         }
     }
