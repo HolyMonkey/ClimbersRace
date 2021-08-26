@@ -60,6 +60,9 @@ public class BalkAINode : MonoBehaviour
     {
         for (int i = 0; i < _nearNodes.Count; i++)
         {
+            if (_nearNodes[i] == null)
+                _nearNodes.Remove(_nearNodes[i]);
+
             if (BalkPosition.y < _nearNodes[i].BalkPosition.y && !_higherNodes.Contains(_nearNodes[i]))
                 _higherNodes.Add(_nearNodes[i]);
         }
@@ -68,13 +71,18 @@ public class BalkAINode : MonoBehaviour
         {
             foreach (BalkAINode node in _higherNodes)
             {
-                if (_higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(node))
+                if (node == null || _higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(node))
                     _higherNodes.Remove(node);
             }
         }
 
         if (_nearNodes.Contains(this))
             _nearNodes.Remove(this);
+
+#if UNITY_EDITOR
+        UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(this);
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
+#endif
     }
 
     private BalkAINode GetNodeFromList(List<BalkAINode> nodes)
