@@ -1450,7 +1450,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
@@ -1459,7 +1459,7 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 0
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 0
     importLights: 0
     fileIdsGeneration: 1
@@ -1484,11 +1484,11 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalSmoothAngle: 180
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 3
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
@@ -1949,7 +1949,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Gorilla_l_Eyelids_mesh
       parentName: Gorilla(Clone)
-      position: {x: -0.062438067, y: 1.555505, z: 0.34557745}
+      position: {x: -0.062438067, y: 1.555505, z: 0.34557742}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Gorilla_l_Eyelids_mesh001
@@ -1964,12 +1964,12 @@ ModelImporter:
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_SpineBase_ctrl
       parentName: Gorilla(Clone)
-      position: {x: 0.00000007629395, y: 0.60432106, z: -0.008388806}
+      position: {x: 0.00000007629396, y: 0.60432106, z: -0.008388806}
       rotation: {x: -0.17784737, y: 0.68437594, z: -0.17784728, w: 0.6843758}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_NeckBase_ctrl
       parentName: Gorilla(Clone)
-      position: {x: -0.000000047100016, y: 1.175688, z: 0.09551433}
+      position: {x: -0.000000047100013, y: 1.175688, z: 0.09551433}
       rotation: {x: -0.25227648, y: 0.62144595, z: -0.22146648, w: 0.70789415}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: gorilla_Head_ctrl
@@ -1984,7 +1984,7 @@ ModelImporter:
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: gorilla_r_ShoulderTwist_hlp
       parentName: Gorilla(Clone)
-      position: {x: 0.24504079, y: 0.86748725, z: 0.36543798}
+      position: {x: 0.24504079, y: 0.8674872, z: 0.36543798}
       rotation: {x: 0.83098704, y: -0.08757769, z: -0.2495615, w: 0.48939738}
       scale: {x: 0.99999994, y: 1.0000002, z: 1}
     - name: gorilla_Main_ctrl
@@ -2004,27 +2004,27 @@ ModelImporter:
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_l_ToeLift_hlp 1
       parentName: gorilla_r_Heel_hlp
-      position: {x: 0.25756407, y: 0.00016209841, z: -0.000017290115}
+      position: {x: 0.25756407, y: 0.0001620984, z: -0.000017290115}
       rotation: {x: 1.45519135e-11, y: 1.4551915e-11, z: -2.1175821e-22, w: 1}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_r_HeelPeel_hlp
       parentName: gorilla_l_ToeLift_hlp 1
-      position: {x: -0.083819255, y: -0.015368824, z: -0.0000064373016}
+      position: {x: -0.083819255, y: -0.015368823, z: -0.000006437301}
       rotation: {x: 0, y: 7.275958e-12, z: -0, w: 1}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_r_heel_IKGoal
       parentName: gorilla_r_HeelPeel_hlp
-      position: {x: -0.124443516, y: -0.056817934, z: -0.0000009822845}
+      position: {x: -0.12444351, y: -0.05681793, z: -0.0000009822845}
       rotation: {x: 0.5002, y: -0.49979997, z: 0.5002, w: 0.49979997}
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
     - name: gorilla_r_ball_IKGoal
       parentName: gorilla_r_HeelPeel_hlp
-      position: {x: 0.000014877319, y: -0.000032639502, z: 0.000036401747}
+      position: {x: 0.00001487732, y: -0.0000326395, z: 0.000036401747}
       rotation: {x: 0.5002, y: -0.49979997, z: 0.5002, w: 0.49979997}
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
     - name: gorilla_r_ToeLift_hlp
       parentName: gorilla_l_ToeLift_hlp 1
-      position: {x: -0.083819255, y: -0.015368824, z: -0.0000064373016}
+      position: {x: -0.083819255, y: -0.015368823, z: -0.000006437301}
       rotation: {x: 0, y: 7.275958e-12, z: -0, w: 1}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_r_toe_IKGoal
@@ -2034,7 +2034,7 @@ ModelImporter:
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
     - name: gorilla_l_Foot_ctrl
       parentName: gorilla_Main_ctrl
-      position: {x: -0.13299227, y: 0.32155398, z: 0.20436957}
+      position: {x: -0.13299227, y: 0.32155398, z: 0.20436959}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_l_Heel_hlp
@@ -2054,7 +2054,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_l_heel_IKGoal
       parentName: gorilla_l_HeelPeel_hlp
-      position: {x: 0.12456461, y: 0.0565515, z: 0.000000009536743}
+      position: {x: 0.1245646, y: 0.056551497, z: 0.000000009536743}
       rotation: {x: 0.50649214, y: 0.4934225, z: 0.50649214, w: -0.4934225}
       scale: {x: 1, y: 1, z: 1.0000001}
     - name: gorilla_l_ball_IKGoal
@@ -2069,17 +2069,17 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: gorilla_l_toe_IKGoal
       parentName: gorilla_l_ToeTap_hlp
-      position: {x: -0.083833046, y: -0.0026043046, z: 0}
+      position: {x: -0.08383304, y: -0.0026043043, z: 0}
       rotation: {x: 0.50649214, y: 0.4934225, z: 0.50649214, w: -0.4934225}
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_COM_ctrl
       parentName: gorilla_Main_ctrl
-      position: {x: 0, y: 0.008388817, z: 0.6854046}
+      position: {x: 0, y: 0.008388816, z: 0.68540454}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_r_Hand_IK_ctrl
       parentName: gorilla_COM_ctrl
-      position: {x: 1.1092935, y: -0.11383793, z: 0.40887403}
+      position: {x: 1.1092933, y: -0.11383792, z: 0.40887403}
       rotation: {x: 0.996599, y: -0.08240363, z: 0.00020738218, w: -0.00017899573}
       scale: {x: 0.9999997, y: 1.0000007, z: 1.0000001}
     - name: gorilla_r_Hand_IKGoal
@@ -2104,22 +2104,22 @@ ModelImporter:
       scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
     - name: gorilla_Pelvis-nub_bone
       parentName: gorilla_Pelvis_bone
-      position: {x: -0.15594223, y: 0, z: 0}
+      position: {x: -0.15594222, y: 0, z: 0}
       rotation: {x: -0.0000009499489, y: 0, z: -0, w: 1}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_r_Thigh_bone
       parentName: gorilla_Pelvis_bone
-      position: {x: -0.09024707, y: 0.0059864423, z: 0.13298999}
+      position: {x: -0.090247065, y: 0.005986443, z: 0.13298999}
       rotation: {x: -0, y: -0.00000010058284, z: 0.99514985, w: 0.09837124}
       scale: {x: 0.9999998, y: 0.99999946, z: 1}
     - name: gorilla_r_Knee_bone
       parentName: gorilla_r_Thigh_bone
-      position: {x: 0.3254938, y: -0.0000011444091, z: -0.000000038146972}
+      position: {x: 0.32549378, y: -0.0000011444091, z: -0.000000038146972}
       rotation: {x: -0.000000434619, y: 0.000000039787924, z: -0.2261252, w: -0.9740982}
       scale: {x: 1.0000002, y: 1.0000004, z: 1.0000002}
     - name: gorilla_r_Ankle_bone
       parentName: gorilla_r_Knee_bone
-      position: {x: 0.20889331, y: -0.000000014305114, z: 0.000000085830685}
+      position: {x: 0.2088933, y: -0.000000014305114, z: 0.000000085830685}
       rotation: {x: 0.00000003685025, y: 0.00000029223906, z: 0.66498655, w: -0.7468554}
       scale: {x: 1.0000001, y: 1.0000001, z: 1.0000005}
     - name: gorilla_r_Toe_bone
@@ -2129,12 +2129,12 @@ ModelImporter:
       scale: {x: 1.0000005, y: 1.0000008, z: 1.0000001}
     - name: gorilla_r_Toe-nub_bone
       parentName: gorilla_r_Toe_bone
-      position: {x: 0.08387337, y: -0.0000000333786, z: -0.000000009536743}
+      position: {x: 0.08387336, y: -0.0000000333786, z: -0.000000009536743}
       rotation: {x: 4.3655735e-11, y: -2.910383e-11, z: -0.00000019371505, w: 1}
       scale: {x: 1.0000002, y: 1.0000001, z: 1}
     - name: gorilla_l_Thigh_bone
       parentName: gorilla_Pelvis_bone
-      position: {x: -0.090247154, y: 0.005985908, z: -0.13299228}
+      position: {x: -0.090247154, y: 0.0059859087, z: -0.13299228}
       rotation: {x: 0.00000058859575, y: 0.000000067695495, z: -0.09837116, w: 0.9951498}
       scale: {x: 1.0000001, y: 0.9999997, z: 1.0000001}
     - name: gorilla_l_Knee_bone
@@ -2154,7 +2154,7 @@ ModelImporter:
       scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
     - name: gorilla_l_Toe-nub_bone
       parentName: gorilla_l_Toe_bone
-      position: {x: -0.08387347, y: 0.0000000166893, z: -0.000000009536743}
+      position: {x: -0.083873466, y: 0.0000000166893, z: -0.000000009536743}
       rotation: {x: -0.0000004273206, y: -0.000000035745067, z: -1.5274604e-14, w: 1}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
     - name: gorilla_Spine1_bone
@@ -2164,7 +2164,7 @@ ModelImporter:
       scale: {x: 1.0000002, y: 1.0000006, z: 1.0000001}
     - name: gorilla_Spine2_bone
       parentName: gorilla_Spine1_bone
-      position: {x: -0.13587846, y: 0, z: -0.0000000023841857}
+      position: {x: -0.13587844, y: 0, z: -0.0000000023841857}
       rotation: {x: -0.0000028014183, y: 0.000000059604645, z: -0.05430618, w: -0.99852437}
       scale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
     - name: gorilla_Spine3_bone
@@ -2179,12 +2179,12 @@ ModelImporter:
       scale: {x: 1.0000002, y: 1, z: 1}
     - name: gorilla_r_Clavicle_ctrl
       parentName: gorilla_Spine3_bone
-      position: {x: -0.30024514, y: 0.15814151, z: 0.25000018}
+      position: {x: -0.30024514, y: 0.15814151, z: 0.25000015}
       rotation: {x: 0.70664823, y: -0.025463874, z: 0.6815123, w: 0.18852288}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
     - name: gorilla_Neck_bone
       parentName: gorilla_Spine3_bone
-      position: {x: -0.31671393, y: -0.000000038146972, z: 0}
+      position: {x: -0.3167139, y: -0.000000038146972, z: 0}
       rotation: {x: -0.0000014156103, y: -0.00000008940697, z: 0.039465845, w: 0.99922097}
       scale: {x: 1.0000006, y: 1.0000004, z: 1.0000006}
     - name: gorilla_Head_bone
@@ -2199,7 +2199,7 @@ ModelImporter:
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: gorilla_Mouth_ctrl
       parentName: gorilla_Head_bone
-      position: {x: -0.12332123, y: -0.16895756, z: -0.0000012254715}
+      position: {x: -0.12332123, y: -0.16895755, z: -0.0000012254715}
       rotation: {x: 0.0000040140385, y: -0.0000022545664, z: 0.587427, w: 0.8092772}
       scale: {x: 0.99999994, y: 1, z: 1.0000002}
     - name: gorilla_Mandible_ctrl
@@ -2209,7 +2209,7 @@ ModelImporter:
       scale: {x: 0.9999999, y: 0.99999994, z: 1.0000001}
     - name: Circle004
       parentName: gorilla_Head_bone
-      position: {x: -0.30068955, y: -0.23571323, z: -0.062439736}
+      position: {x: -0.30068952, y: -0.23571323, z: -0.062439736}
       rotation: {x: 0.000004260408, y: -0.0000012959648, z: 0.43956205, w: 0.89821225}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: Circle003
@@ -2219,12 +2219,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Circle001
       parentName: gorilla_Head_bone
-      position: {x: -0.30068922, y: -0.23571433, z: 0.06243865}
+      position: {x: -0.3006892, y: -0.23571435, z: 0.06243865}
       rotation: {x: -0.000001704941, y: -0.0000039628576, z: 0.8982124, w: -0.43956172}
       scale: {x: 0.9999999, y: 1, z: 1}
     - name: Circle002
       parentName: gorilla_Head_bone
-      position: {x: -0.2509575, y: -0.24750693, z: 0.06243819}
+      position: {x: -0.2509575, y: -0.24750692, z: 0.062438186}
       rotation: {x: 0.0000031816496, y: 0.0000031098314, z: -0.62564075, w: 0.7801113}
       scale: {x: 1.0000002, y: 1.0000001, z: 1}
     - name: Circle005
@@ -2234,17 +2234,17 @@ ModelImporter:
       scale: {x: 1.0000001, y: 0.9999999, z: 1}
     - name: Gorilla_l_Eye_mesh001
       parentName: gorilla_Head_bone
-      position: {x: -0.24935058, y: -0.1579996, z: 0.062436976}
+      position: {x: -0.24935058, y: -0.15799959, z: 0.062436976}
       rotation: {x: -0.082539015, y: -0.70227295, z: -0.082539015, w: 0.70227295}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Gorilla_l_Eye_mesh
       parentName: gorilla_Head_bone
-      position: {x: -0.24935058, y: -0.15799838, z: -0.062439412}
+      position: {x: -0.24935058, y: -0.15799837, z: -0.062439412}
       rotation: {x: -0.082539015, y: -0.70227295, z: -0.082539015, w: 0.70227295}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: gorilla_Mouth_bone
       parentName: gorilla_Head_bone
-      position: {x: -0.12332138, y: -0.16895752, z: -0.0000013780593}
+      position: {x: -0.123321384, y: -0.16895752, z: -0.0000013780593}
       rotation: {x: 0.0000035762782, y: -0.0000025033949, z: 0.693772, w: 0.72019476}
       scale: {x: 0.99999994, y: 0.9999998, z: 1}
     - name: gorilla_Mouth-nub_bone
@@ -2254,7 +2254,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_Mandible_bone
       parentName: gorilla_Head_bone
-      position: {x: -0.0922908, y: -0.16979599, z: -0.000001373291}
+      position: {x: -0.09229079, y: -0.16979599, z: -0.000001373291}
       rotation: {x: 0.0000029824937, y: -0.000003160104, z: 0.8093868, w: 0.587276}
       scale: {x: 1.0000002, y: 0.9999996, z: 1.0000004}
     - name: gorilla_Mandible-nub_bone
@@ -2264,7 +2264,7 @@ ModelImporter:
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: gorilla_l_EyelidUp_bone
       parentName: gorilla_Head_bone
-      position: {x: -0.24115722, y: -0.123711124, z: -0.062438972}
+      position: {x: -0.24115723, y: -0.12371113, z: -0.062438972}
       rotation: {x: 0.0000038124872, y: -0.0000019647016, z: 0.5949373, w: 0.8037721}
       scale: {x: 1.0000007, y: 0.9999998, z: 1.0000008}
     - name: gorilla_l_EyelidUp-nub_bone
@@ -2274,17 +2274,17 @@ ModelImporter:
       scale: {x: 0.9999999, y: 0.9999999, z: 1}
     - name: gorilla_l_EyelidLow_bone
       parentName: gorilla_Head_bone
-      position: {x: -0.24115722, y: -0.123711124, z: -0.062438972}
+      position: {x: -0.24115723, y: -0.12371113, z: -0.062438972}
       rotation: {x: 0.0000037202935, y: -0.0000022079012, z: 0.63938797, w: 0.76888436}
       scale: {x: 1.0000005, y: 0.9999996, z: 1.0000007}
     - name: gorilla_l_EyelidLow-nub_bone
       parentName: gorilla_l_EyelidLow_bone
-      position: {x: -0.07256431, y: 0, z: -0.00000015258789}
+      position: {x: -0.072564304, y: 0, z: -0.00000015258789}
       rotation: {x: 0.00000005960459, y: -5.6843426e-14, z: 3.388129e-21, w: 1}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: gorilla_r_EyelidUp_bone
       parentName: gorilla_Head_bone
-      position: {x: -0.24115692, y: -0.123712346, z: 0.062439106}
+      position: {x: -0.24115692, y: -0.12371235, z: 0.062439106}
       rotation: {x: -0.0000020054815, y: -0.0000037846837, z: 0.80377215, w: -0.5949373}
       scale: {x: 1.0000002, y: 1.000001, z: 1.0000007}
     - name: gorilla_r_EyelidUp-nub_bone
@@ -2294,12 +2294,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_r_EyelidLow_bone
       parentName: gorilla_Head_bone
-      position: {x: -0.24115692, y: -0.123712346, z: 0.062439106}
+      position: {x: -0.24115692, y: -0.12371235, z: 0.062439106}
       rotation: {x: -0.0000022851805, y: -0.000003769709, z: 0.76888436, w: -0.6393878}
       scale: {x: 1.000001, y: 1.0000015, z: 1.0000011}
     - name: gorilla_r_EyelidLow-nub_bone
       parentName: gorilla_r_EyelidLow_bone
-      position: {x: 0.07256431, y: 0.00000015258789, z: -0.00000015318393}
+      position: {x: 0.072564304, y: 0.00000015258789, z: -0.00000015318393}
       rotation: {x: 2.541099e-21, y: 2.842171e-14, z: -0.00000008940697, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_r_Clav_bone
@@ -2374,7 +2374,7 @@ ModelImporter:
       scale: {x: 1, y: 0.9999997, z: 1.0000002}
     - name: gorilla_r_Wrist_bone
       parentName: gorilla_r_Forearm_bone
-      position: {x: 0.3497743, y: -0.000000076293944, z: 0}
+      position: {x: 0.34977427, y: -0.000000076293944, z: 0}
       rotation: {x: -0.00000002717547, y: -0.000000115652185, z: -0.000000014901374, w: 1}
       scale: {x: 1.0000001, y: 0.9999992, z: 1.0000014}
     - name: gorilla_r_Hand_bone
@@ -2389,7 +2389,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1.0000001}
     - name: gorilla_l_Thumb_ctrl001
       parentName: gorilla_r_Hand_bone
-      position: {x: 0.06795425, y: -0.0042115403, z: -0.06210062}
+      position: {x: 0.06795425, y: -0.00421154, z: -0.06210062}
       rotation: {x: -0.5955962, y: 0.33652762, z: 0.22328934, w: 0.69437474}
       scale: {x: 0.9999999, y: 1.0000002, z: 1.0000006}
     - name: gorilla_r_Thumb_1_bone
@@ -2404,7 +2404,7 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
     - name: gorilla_r_Thumb_3_bone
       parentName: gorilla_r_Thumb_2_bone
-      position: {x: 0.056800995, y: 0, z: 0}
+      position: {x: 0.05680099, y: 0, z: 0}
       rotation: {x: 0.000000020572523, y: -0.0000006429407, z: -0.003290264, w: 0.9999946}
       scale: {x: 1.0000004, y: 1.0000002, z: 1}
     - name: gorilla_r_Thumb_3-nub_bone
@@ -2414,7 +2414,7 @@ ModelImporter:
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: gorilla_l_Index_ctrl001
       parentName: gorilla_r_Hand_bone
-      position: {x: 0.184561, y: -0.0008407211, z: -0.07292343}
+      position: {x: 0.184561, y: -0.00084072107, z: -0.07292343}
       rotation: {x: 0.02790008, y: 0.037311755, z: 0.67609555, w: 0.7353395}
       scale: {x: 1.0000001, y: 1.0000005, z: 1}
     - name: gorilla_r_Index_1_bone
@@ -2424,12 +2424,12 @@ ModelImporter:
       scale: {x: 0.99999994, y: 0.9999998, z: 1.0000001}
     - name: gorilla_r_Index_2_bone
       parentName: gorilla_r_Index_1_bone
-      position: {x: 0.085117, y: 0.000000009536743, z: -0.000000076293944}
+      position: {x: 0.08511699, y: 0.000000009536743, z: -0.000000076293944}
       rotation: {x: 0.00001443412, y: -0.001256857, z: 0.020805264, w: 0.9997828}
       scale: {x: 0.99999994, y: 1.0000006, z: 1.0000008}
     - name: gorilla_r_Index_3_bone
       parentName: gorilla_r_Index_2_bone
-      position: {x: 0.058930356, y: -0.0000024795531, z: 0.000000114440915}
+      position: {x: 0.05893035, y: -0.0000024795531, z: 0.000000114440915}
       rotation: {x: 0.000025275047, y: 0.00084217463, z: 0.0057720654, w: 0.9999831}
       scale: {x: 0.99999994, y: 0.9999992, z: 0.99999946}
     - name: gorilla_r_Index_3-nub_bone
@@ -2464,7 +2464,7 @@ ModelImporter:
       scale: {x: 1, y: 1.0000002, z: 1.0000002}
     - name: gorilla_l_Ring_ctrl001
       parentName: gorilla_r_Hand_bone
-      position: {x: 0.18936081, y: -0.0017538833, z: 0.028558884}
+      position: {x: 0.1893608, y: -0.0017538834, z: 0.028558882}
       rotation: {x: 0.0021982617, y: 0.010020997, z: 0.68208474, w: 0.7312012}
       scale: {x: 0.9999999, y: 1.0000004, z: 1}
     - name: gorilla_r_Ring_1_bone
@@ -2479,7 +2479,7 @@ ModelImporter:
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
     - name: gorilla_r_Ring_3_bone
       parentName: gorilla_r_Ring_2_bone
-      position: {x: 0.048042066, y: 0.0000010299682, z: 0}
+      position: {x: 0.04804207, y: 0.0000010299682, z: 0}
       rotation: {x: 0.000015850177, y: -0.0005072673, z: 0.013560834, w: 0.9999079}
       scale: {x: 1, y: 1.0000002, z: 0.9999996}
     - name: gorilla_r_Ring_3-nub_bone
@@ -2489,7 +2489,7 @@ ModelImporter:
       scale: {x: 1.0000002, y: 1.0000005, z: 1}
     - name: gorilla_l_Pinky_ctrl001
       parentName: gorilla_r_Hand_bone
-      position: {x: 0.18956636, y: -0.0022606277, z: 0.07947044}
+      position: {x: 0.18956636, y: -0.0022606277, z: 0.07947043}
       rotation: {x: -0.0063110627, y: 0.0003244045, z: 0.6827384, w: 0.7306356}
       scale: {x: 1, y: 1.0000006, z: 0.99999994}
     - name: gorilla_r_Pinky_1_bone
@@ -2504,7 +2504,7 @@ ModelImporter:
       scale: {x: 1.0000005, y: 0.9999998, z: 1.0000006}
     - name: gorilla_r_Pinky_3_bone
       parentName: gorilla_r_Pinky_2_bone
-      position: {x: 0.03941478, y: 0.00000061035155, z: 0.00000015258789}
+      position: {x: 0.039414775, y: 0.00000061035155, z: 0.00000015258789}
       rotation: {x: -0.000024689827, y: 0.0006014228, z: -0.016850533, w: 0.9998579}
       scale: {x: 0.9999997, y: 1.0000006, z: 0.9999998}
     - name: gorilla_r_Pinky_3-nub_bone
@@ -2519,7 +2519,7 @@ ModelImporter:
       scale: {x: 1.0000002, y: 0.99999946, z: 1.0000007}
     - name: gorilla_l_Clav_bone
       parentName: gorilla_Spine3_bone
-      position: {x: -0.16994476, y: -0.07602017, z: -0.037236407}
+      position: {x: -0.16994476, y: -0.07602016, z: -0.037236407}
       rotation: {x: -0.025463898, y: -0.7066481, z: -0.18852292, w: 0.68151253}
       scale: {x: 1.0000001, y: 0.9999998, z: 0.9999998}
     - name: gorilla_l_Shoulder_FK_bone
@@ -2534,7 +2534,7 @@ ModelImporter:
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_l_Wrist_FK_bone
       parentName: gorilla_l_Forearm_FK_bone
-      position: {x: -0.3497743, y: -0.000000076293944, z: 0}
+      position: {x: -0.34977427, y: -0.000000076293944, z: 0}
       rotation: {x: 0.5546486, y: -0.20038442, z: -0.15368748, w: 0.79283744}
       scale: {x: 0.99999994, y: 1, z: 0.9999999}
     - name: gorilla_l_Shoulder_IK_bone
@@ -2549,7 +2549,7 @@ ModelImporter:
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: gorilla_l_Wrist_IK_bone
       parentName: gorilla_l_Forearm_IK_bone
-      position: {x: -0.3497743, y: -0.000000076293944, z: 0}
+      position: {x: -0.34977427, y: -0.000000076293944, z: 0}
       rotation: {x: -0.000000014901161, y: -0.0000000074505797, z: -1.1102229e-16, w: 1}
       scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: gorilla_l_Shoulder_FK_ctrl
@@ -2559,7 +2559,7 @@ ModelImporter:
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: gorilla_l_Elbow_FK_ctrl
       parentName: gorilla_l_Shoulder_FK_ctrl
-      position: {x: -0.48862436, y: -0.000000076293944, z: 0.00000015258789}
+      position: {x: -0.48862433, y: -0.000000076293944, z: 0.00000015258789}
       rotation: {x: -0.000000012399936, y: 0.0000000109099405, z: 0.14317073, w: 0.989698}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: gorilla_l_Hand_FK_ctrl
@@ -2579,17 +2579,17 @@ ModelImporter:
       scale: {x: 0.9999998, y: 1, z: 0.99999976}
     - name: gorilla_l_Forearm_bone
       parentName: gorilla_l_Shoulder_bone
-      position: {x: -0.4886245, y: -0.00000015258789, z: 0.000000038146972}
+      position: {x: -0.48862448, y: -0.00000015258789, z: 0.000000038146972}
       rotation: {x: -0.000000105835404, y: 0.000000102446286, z: 0.058846198, w: 0.9982671}
       scale: {x: 0.9999999, y: 1, z: 1}
     - name: gorilla_l_ForearmRoll2_bone
       parentName: gorilla_l_Forearm_bone
-      position: {x: -0.11770906, y: 0, z: 0}
+      position: {x: -0.117709056, y: 0, z: 0}
       rotation: {x: 0.00000003511568, y: 0.000000023307619, z: 0.000000283122, w: 1}
       scale: {x: 1.0000005, y: 0.9999994, z: 1}
     - name: gorilla_l_ForearmRoll1_bone
       parentName: gorilla_l_Forearm_bone
-      position: {x: -0.23442343, y: -0.000000076293944, z: -0.00000015258789}
+      position: {x: -0.23442341, y: -0.000000076293944, z: -0.00000015258789}
       rotation: {x: 0.00000011404883, y: 0.000000037759204, z: 0.000000283122, w: 1}
       scale: {x: 1.0000005, y: 0.9999997, z: 1.0000001}
     - name: gorilla_l_Wrist_bone
@@ -2609,7 +2609,7 @@ ModelImporter:
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: gorilla_l_Thumb_ctrl
       parentName: gorilla_l_Hand_bone
-      position: {x: -0.06795393, y: 0.004211273, z: 0.062100913}
+      position: {x: -0.06795393, y: 0.004211273, z: 0.06210091}
       rotation: {x: -0.5955961, y: 0.33652797, z: 0.22328962, w: 0.69437456}
       scale: {x: 0.99999976, y: 1.0000002, z: 1.0000001}
     - name: gorilla_l_Thumb_1_bone
@@ -2629,7 +2629,7 @@ ModelImporter:
       scale: {x: 1.0000004, y: 0.9999998, z: 0.9999998}
     - name: gorilla_l_Thumb_3-nub_bone
       parentName: gorilla_l_Thumb_3_bone
-      position: {x: -0.05805168, y: -0.000000057220458, z: -0.000000076293944}
+      position: {x: -0.058051683, y: -0.000000057220458, z: -0.000000076293944}
       rotation: {x: 0.000000037252903, y: 0.00000002980232, z: 0.000000029802317, w: 1}
       scale: {x: 1.0000001, y: 1, z: 0.9999999}
     - name: gorilla_l_Index_ctrl
@@ -2659,7 +2659,7 @@ ModelImporter:
       scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
     - name: gorilla_l_Middle_ctrl
       parentName: gorilla_l_Hand_bone
-      position: {x: -0.18675429, y: 0.0013032531, z: 0.021394128}
+      position: {x: -0.18675427, y: 0.0013032531, z: 0.021394128}
       rotation: {x: 0.020531002, y: 0.015387782, z: 0.6817945, w: 0.73109365}
       scale: {x: 1, y: 1, z: 0.9999998}
     - name: gorilla_l_Middle_1_bone
@@ -2669,7 +2669,7 @@ ModelImporter:
       scale: {x: 1.0000002, y: 0.9999998, z: 1.0000001}
     - name: gorilla_l_Middle_2_bone
       parentName: gorilla_l_Middle_1_bone
-      position: {x: -0.11867027, y: -0.000000038146972, z: 0}
+      position: {x: -0.11867028, y: -0.000000038146972, z: 0}
       rotation: {x: -0.000008593646, y: 0.00022554796, z: 0.009053701, w: 0.999959}
       scale: {x: 0.9999997, y: 0.9999998, z: 0.99999994}
     - name: gorilla_l_Middle_3_bone
@@ -2684,7 +2684,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: gorilla_l_Ring_ctrl
       parentName: gorilla_l_Hand_bone
-      position: {x: -0.1893609, y: 0.001754074, z: -0.028558884}
+      position: {x: -0.1893609, y: 0.0017540739, z: -0.028558882}
       rotation: {x: 0.009696832, y: 0.0033504877, z: 0.68201935, w: 0.73126215}
       scale: {x: 1.0000002, y: 1.0000002, z: 0.99999994}
     - name: gorilla_l_Ring_1_bone
@@ -2694,7 +2694,7 @@ ModelImporter:
       scale: {x: 1.0000006, y: 0.99999994, z: 1.0000005}
     - name: gorilla_l_Ring_2_bone
       parentName: gorilla_l_Ring_1_bone
-      position: {x: -0.11436828, y: 0, z: 0}
+      position: {x: -0.11436829, y: 0, z: 0}
       rotation: {x: -0.000007825528, y: 0.0002338028, z: 0.0053174775, w: 0.9999858}
       scale: {x: 0.99999994, y: 1.0000008, z: 1}
     - name: gorilla_l_Ring_3_bone
@@ -2709,7 +2709,7 @@ ModelImporter:
       scale: {x: 1.0000002, y: 1, z: 0.99999994}
     - name: gorilla_l_Pinky_ctrl
       parentName: gorilla_l_Hand_bone
-      position: {x: -0.18956602, y: 0.0022605895, z: -0.07947044}
+      position: {x: -0.18956602, y: 0.0022605895, z: -0.07947043}
       rotation: {x: 0.0010690904, y: -0.00622834, z: 0.68276715, w: 0.7306087}
       scale: {x: 1.0000001, y: 1, z: 0.99999994}
     - name: gorilla_l_Pinky_1_bone
