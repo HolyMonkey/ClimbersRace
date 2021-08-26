@@ -41,10 +41,15 @@ public class Character : MonoBehaviour
 
     private void OnValidate()
     {
-        if (_moverBehaviour is StraightMovement)
-            GetComponent<CylindricMovement>().enabled = false;
-        else
-            GetComponent<CylindricMovement>().enabled = true;
+        //_moverBehaviour.enabled = true;
+        //if (_moverBehaviour is StraightMovement)
+        //{
+        //    GetComponent<CylindricMovement>().enabled = false;
+        //}
+        //else
+        //{
+        //    GetComponent<StraightMovement>().enabled = false;
+        //}
 
         if (_moverBehaviour is IMovable)
             return;
@@ -73,6 +78,7 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
+        _mover.UpdateVelocity();
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
     }
 

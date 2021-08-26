@@ -13,7 +13,7 @@ public class CylindricMovement : MonoBehaviour, IMovable
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    public void UpdateVelocity()
     {
         CorrectVelocityVector();
     }
