@@ -23,8 +23,12 @@ public class BalkAINode : MonoBehaviour
     {
         for (int i = 0; i < _nearNodes.Count; i++)
         {
-            if (Vector3.Distance(BalkPosition, _nearNodes[i].BalkPosition) > 4f) //~max distance for correct enemyMovement
+            float distanceBetweenBalk = Vector3.Distance(BalkPosition, _nearNodes[i].BalkPosition);//~max distance for correct enemyMovement
+
+            if (distanceBetweenBalk > 5f)
                 Gizmos.color = Color.red;
+            else if (distanceBetweenBalk < 2f)
+                Gizmos.color = Color.yellow;
             else
                 Gizmos.color = Color.blue;
 
