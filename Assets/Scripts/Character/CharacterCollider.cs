@@ -64,7 +64,6 @@ public abstract class CharacterCollider : MonoBehaviour
             {
                 if (enemy.IsAttachingBalk)
                 {
-                    Debug.Log(Character + " attack " + enemy);
                     Character.AttackEnemy(enemy, collision.contacts[0].point);
                 }
             }
