@@ -9,7 +9,7 @@ namespace AnimatedUI
         [SerializeField] private float _duration;
 
         private Tween _fadeAction;
-        
+
         public void Show()
         {
             _canvasGroup.interactable = true;
@@ -25,7 +25,7 @@ namespace AnimatedUI
             KillCurrentFade();
             _fadeAction = _canvasGroup?.DOFade(0, _duration);
         }
-        
+
         private void KillCurrentFade()
         {
             _fadeAction?.Kill();
