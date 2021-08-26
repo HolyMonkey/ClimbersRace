@@ -23,7 +23,7 @@ public class Level : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 50;
+        Application.targetFrameRate = 60;
     }
 
     private void OnEnable()
