@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(SpringJoint))]
-[RequireComponent(typeof(Collider))]
 public class Character : MonoBehaviour
 {
     [SerializeField] private float _pushForce;
@@ -41,16 +38,6 @@ public class Character : MonoBehaviour
 
     private void OnValidate()
     {
-        //_moverBehaviour.enabled = true;
-        //if (_moverBehaviour is StraightMovement)
-        //{
-        //    GetComponent<CylindricMovement>().enabled = false;
-        //}
-        //else
-        //{
-        //    GetComponent<StraightMovement>().enabled = false;
-        //}
-
         if (_moverBehaviour is IMovable)
             return;
 
@@ -69,7 +56,6 @@ public class Character : MonoBehaviour
     {
         _level.BonusGameStarted += OnBonusStarted;
     }
-
 
     private void OnDisable()
     {

@@ -1210,9 +1210,52 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'gorilla_l_Thigh_bone'
+      : position error = 218.983322 mm\n\t'gorilla_l_Knee_bone' : position error
+      = 443.177673 mm\n\t'gorilla_l_Ankle_bone' : position error = 284.420044 mm\n\t'gorilla_l_Toe_bone'
+      : position error = 186.261612 mm\n\t'gorilla_r_Thigh_bone' : position error
+      = 218.980743 mm\n\t'gorilla_r_Knee_bone' : position error = 443.177948 mm\n\t'gorilla_r_Ankle_bone'
+      : position error = 284.419769 mm\n\t'gorilla_r_Toe_bone' : position error =
+      186.261856 mm\n\t'gorilla_Spine2_bone' : position error = 185.006134 mm\n\t'gorilla_Spine3_bone'
+      : position error = 182.462265 mm\n\t'gorilla_Neck_bone' : position error =
+      431.223755 mm\n\t'gorilla_Head_bone' : position error = 139.421463 mm\n\t'gorilla_Mandible_bone'
+      : position error = 263.130402 mm\n\t'gorilla_Mouth_bone' : position error =
+      284.805725 mm\n\t'Gorilla_l_Eye_mesh' : position error = 410.815552 mm\n\t'gorilla_r_Clav_bone'
+      : position error = 258.506012 mm\n\t'gorilla_r_Shoulder_bone' : position error
+      = 334.197845 mm\n\t'gorilla_r_Forearm_bone' : position error = 665.289429 mm\n\t'gorilla_r_Wrist_bone'
+      : position error = 476.236877 mm\n\t'gorilla_l_Thumb_ctrl001' : position error
+      = 125.470253 mm\n\t'gorilla_r_Thumb_2_bone' : position error = 58.822567 mm\n\t'gorilla_l_Index_ctrl001'
+      : position error = 270.196899 mm\n\t'gorilla_r_Index_2_bone' : position error
+      = 115.891548 mm\n\t'gorilla_r_Index_3_bone' : position error = 80.236832 mm\n\t'gorilla_l_Middle_ctrl001'
+      : position error = 255.945480 mm\n\t'gorilla_r_Middle_2_bone' : position error
+      = 161.576096 mm\n\t'gorilla_l_Ring_ctrl001' : position error = 260.751709 mm\n\t'gorilla_r_Ring_2_bone'
+      : position error = 155.719055 mm\n\t'gorilla_l_Pinky_ctrl001' : position error
+      = 279.885101 mm\n\t'gorilla_r_Pinky_2_bone' : position error = 107.211151 mm\n\t'gorilla_l_Clav_bone'
+      : position error = 258.505096 mm\n\t'gorilla_l_Shoulder_bone' : position error
+      = 334.197815 mm\n\t'gorilla_l_Forearm_bone' : position error = 665.289063 mm\n\t'gorilla_l_Wrist_bone'
+      : position error = 476.237091 mm\n\t'gorilla_l_Thumb_ctrl' : position error
+      = 125.470024 mm\n\t'gorilla_l_Thumb_2_bone' : position error = 58.822353 mm\n\t'gorilla_l_Index_ctrl'
+      : position error = 270.196899 mm\n\t'gorilla_l_Index_2_bone' : position error
+      = 115.891563 mm\n\t'gorilla_l_Middle_ctrl' : position error = 255.945389 mm\n\t'gorilla_l_Middle_2_bone'
+      : position error = 161.576126 mm\n\t'gorilla_l_Ring_ctrl' : position error
+      = 260.752014 mm\n\t'gorilla_l_Ring_2_bone' : position error = 155.718719 mm\n\t'gorilla_l_Pinky_ctrl'
+      : position error = 279.884705 mm\n\t'gorilla_l_Pinky_2_bone' : position error
+      = 107.210938 mm\n\t'gorilla_l_Pinky_3_bone' : position error = 53.665833 mm\nCopied
+      Avatar Rig Configuration mis-match. Inbetween bone rotation in copied configuration
+      does not match rotation in animation file:\n\t'gorilla_r_Wrist_bone' : rotation
+      error = 80.913002 deg\n\t'gorilla_l_Index_ctrl001' : rotation error = 5.590795
+      deg\n\t'gorilla_l_Wrist_bone' : rotation error = 80.912979 deg\n\t'gorilla_l_Pinky_ctrl'
+      : rotation error = 5.590772 deg\n"
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'gorilla_Pelvis_bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'gorilla_r_Wrist_bone'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'gorilla_l_Index_ctrl001'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'gorilla_l_Wrist_bone'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'gorilla_l_Pinky_ctrl'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -2868,7 +2911,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 0.01
-    rootMotionBoneName: 
+    rootMotionBoneName: gorilla_Main_ctrl
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 0

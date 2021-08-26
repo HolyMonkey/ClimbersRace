@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -40,7 +38,7 @@ public class CameraMover : MonoBehaviour
 
     private void LateUpdate()
     {
-        Follow(_target);
+        Follow();
         transform.LookAt(_target.position + _lookAtOffset);
     }
 
@@ -72,9 +70,9 @@ public class CameraMover : MonoBehaviour
         _smoothSpeed = 2f;
     }
 
-    private void Follow(Transform target)
+    private void Follow()
     {
-        Vector3 targetPosition = _wall.GetNormalVector(_target.transform.position);
+        Vector3 targetPosition = _wall.GetNormalVector(_target.position);
 
         if (_wall is StraightWall)
             targetPosition.x = _target.position.x;
