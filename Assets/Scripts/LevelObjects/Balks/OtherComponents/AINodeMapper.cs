@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AINodeMapper : MonoBehaviour
 {
-    [SerializeField] private float _maxDistance = 3.8f;
+    [SerializeField] private float _maxDistance = 4.5f;
     [SerializeField] private List<BalkAINode> _allNodes;
 
 #if UNITY_EDITOR
