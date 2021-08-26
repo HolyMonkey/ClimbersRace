@@ -70,13 +70,10 @@ public class BalkAINode : MonoBehaviour
                 _higherNodes.Add(_nearNodes[i]);
         }
 
-        if (_higherNodes.Count > 0)
+        for (int i = 0; i < _higherNodes.Count; i++)
         {
-            foreach (BalkAINode node in _higherNodes)
-            {
-                if (node == null || _higherNodes.Contains(this) || node.BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(node))
-                    _higherNodes.Remove(node);
-            }
+            if (_higherNodes[i] == null || _higherNodes.Contains(this) || _higherNodes[i].BalkPosition.y < BalkPosition.y || !_nearNodes.Contains(_higherNodes[i]))
+                _higherNodes.Remove(_higherNodes[i]);
         }
 
         if (_nearNodes.Contains(this))

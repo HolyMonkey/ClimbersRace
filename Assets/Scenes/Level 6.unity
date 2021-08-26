@@ -5663,6 +5663,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4051410242087645982, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5019161235249738916, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7038031517122545387, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: Feedbacks.Array.data[1]
       value: 
@@ -9800,10 +9808,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 191629551, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 475830922, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _level
       value: 

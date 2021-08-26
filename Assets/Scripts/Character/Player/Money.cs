@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
@@ -5,6 +6,7 @@ using UnityEngine.Events;
 public class Money : MonoBehaviour
 {
     private const string SAVED_MONEY = "MoneySaveID";
+    [SerializeField] private MMFeedbacks _collectCoinFeedbacks;
 
     public event UnityAction<int> MoneyChanged;
     public event UnityAction<int, int> LevelIncomeReady;
@@ -27,6 +29,8 @@ public class Money : MonoBehaviour
     {
         if (value < 0)
             throw new ArgumentException();
+
+        _collectCoinFeedbacks?.PlayFeedbacks();
 
         ChangeBalance(value);
 
