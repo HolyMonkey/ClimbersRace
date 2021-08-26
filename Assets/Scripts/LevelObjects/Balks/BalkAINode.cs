@@ -83,8 +83,11 @@ public class BalkAINode : MonoBehaviour
             _nearNodes.Remove(this);
 
 #if UNITY_EDITOR
-        UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(this);
-        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
+        if (!Application.isPlaying)
+        {
+            UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(this);
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
+        }
 #endif
     }
 
