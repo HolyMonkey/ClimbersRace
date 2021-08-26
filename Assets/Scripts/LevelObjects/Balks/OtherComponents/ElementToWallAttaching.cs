@@ -18,6 +18,8 @@ public class ElementToWallAttaching : MonoBehaviour
     {
         if (_wall == null)
             _wallBehavior = FindObjectOfType<CylindricWall>();
+        if (_wall == null)
+            _wallBehavior = FindObjectOfType<StraightWall>();
 
         Vector3 direction = -_wall.GetNormalVector(transform.position);
         Quaternion lookRotation = Quaternion.LookRotation(direction);
@@ -31,6 +33,8 @@ public class ElementToWallAttaching : MonoBehaviour
     {
         if (_wall == null)
             _wallBehavior = FindObjectOfType<CylindricWall>();
+        if (_wall == null)
+            _wallBehavior = FindObjectOfType<StraightWall>();
 
         Vector3 targetPosition = _wall.GetNormalVector(transform.position) * _distance;
 

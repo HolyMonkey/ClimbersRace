@@ -5,24 +5,12 @@ public class CurvedLineRenderer : MonoBehaviour
 {
     [SerializeField] private float _lineSegmentSize = 0.15f;
     [SerializeField] private float _lineWidth = 0.1f;
-    [SerializeField] private bool _showGizmos = true;
     [SerializeField] private CurvedLinePoint[] _linePoints;
 
     private LineRenderer _lineRenderer;
 
     private Vector3[] _linePositions;
     private Vector3[] _basicLinePositions;
-
-    private void OnValidate()
-    {
-        if (Application.isPlaying && _linePoints.Length > 0)
-        {
-            foreach (CurvedLinePoint linePoint in _linePoints)
-            {
-                linePoint.SetShowGizmos(_showGizmos);
-            }
-        }
-    }
 
     private void Awake()
     {

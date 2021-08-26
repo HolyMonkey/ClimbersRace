@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5250164544649589300}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: LookAtPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970781492210108574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.4}
+  m_LocalPosition: {x: 0, y: 0.3, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5902937992976182122}
@@ -560,7 +560,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lineSegmentSize: 0.12
   _lineWidth: 0.07
-  _showGizmos: 1
   _linePoints:
   - {fileID: 1048444452312159672}
   - {fileID: 8002398482729043348}
@@ -580,7 +579,7 @@ GameObject:
   m_Layer: 7
   m_Name: EnemyBalk
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
