@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AINodeMapper : MonoBehaviour
@@ -10,6 +11,9 @@ public class AINodeMapper : MonoBehaviour
     [ContextMenu("MapNodes(NO UNDO)")]
     private void MapNodes()
     {
+        if (_allNodes.Count == 0)
+            _allNodes = GetComponentsInChildren<BalkAINode>().ToList();
+
         foreach (BalkAINode node in _allNodes)
             node.ClearNodes();
 
