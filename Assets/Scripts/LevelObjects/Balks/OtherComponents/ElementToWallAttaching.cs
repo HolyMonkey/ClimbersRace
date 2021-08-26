@@ -7,6 +7,7 @@ public class ElementToWallAttaching : MonoBehaviour
     [SerializeField] private MonoBehaviour _wallBehavior;
     private IWall _wall => (IWall)_wallBehavior;
 
+#if UNITY_EDITOR
     private void OnValidate()
     {
         if (!(_wallBehavior is IWall) && _wallBehavior)
@@ -26,6 +27,8 @@ public class ElementToWallAttaching : MonoBehaviour
 
         transform.rotation = lookRotation;
         transform.Rotate(0, _angleOffset, 0);
+
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
     }
 
     [ContextMenu("CorrectDistance")]
@@ -44,5 +47,8 @@ public class ElementToWallAttaching : MonoBehaviour
         targetPosition.y = transform.position.y;
 
         transform.position = targetPosition;
+
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
     }
+#endif
 }

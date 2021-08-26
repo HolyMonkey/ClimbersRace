@@ -94,8 +94,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.27475035
-  m_Height: 2.0464628
+  m_Radius: 0.25
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: -0.0091752075, y: -0.8128628, z: -0.003089681}
 --- !u!114 &948877345273429445
@@ -204,8 +204,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.27475035
-  m_Height: 2.0464628
+  m_Radius: 0.25
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: -0.0091752075, y: -0.8128628, z: -0.0030896214}
 --- !u!114 &5311160560508245836
@@ -314,8 +314,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.27475032
-  m_Height: 2.0464628
+  m_Radius: 0.25
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: -0.009175299, y: -0.8128628, z: -0.0030896936}
 --- !u!114 &5837223715173329756
@@ -341,8 +341,8 @@ GameObject:
   - component: {fileID: 7468636968510263824}
   - component: {fileID: 5767482015232859573}
   - component: {fileID: 8642057061854112127}
-  - component: {fileID: 6930851525267992473}
   - component: {fileID: 5592875770099866582}
+  - component: {fileID: 4447539208559710098}
   m_Layer: 14
   m_Name: Spikey Sticks Trap
   m_TagString: Untagged
@@ -417,25 +417,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6930851525267992473
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849278734666811562}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 50a654ff21d8cad4cb1b59ba8ebd2edb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5592875770099866582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,3 +432,19 @@ MonoBehaviour:
   _angleOffset: 180
   _distance: 3
   _wallBehavior: {fileID: 0}
+--- !u!111 &4447539208559710098
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849278734666811562}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 05419224d341a3c47a33b0b7386b62bf, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 05419224d341a3c47a33b0b7386b62bf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
