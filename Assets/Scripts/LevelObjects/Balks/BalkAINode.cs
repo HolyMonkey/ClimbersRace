@@ -72,11 +72,8 @@ public class BalkAINode : MonoBehaviour
                 _higherNodes.Remove(node);
         }
 
-        foreach (BalkAINode node in _nearNodes)
-        {
-            if (_nearNodes.Contains(this))
-                _nearNodes.Remove(this);
-        }
+        if (_nearNodes.Contains(this))
+            _nearNodes.Remove(this);
     }
 
     private BalkAINode GetNodeFromList(List<BalkAINode> nodes)
