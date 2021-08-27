@@ -76,8 +76,7 @@ public class Level : MonoBehaviour
         {
             _sceneChanger.LoadLevel(CurrentLevel);
         }
-
-        if (CurrentLevel % 4 == 0)
+        else if (CurrentLevel % 4 == 0)
         {
             PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
 
