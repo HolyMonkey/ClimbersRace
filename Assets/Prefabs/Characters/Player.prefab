@@ -5563,6 +5563,7 @@ GameObject:
   - component: {fileID: 8750898880236306472}
   - component: {fileID: 5785312513272575619}
   - component: {fileID: 5060110904486453473}
+  - component: {fileID: 4341269729669967530}
   m_Layer: 9
   m_Name: FallingFeedbacks
   m_TagString: Untagged
@@ -5598,6 +5599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 5060110904486453473}
+  - {fileID: 4341269729669967530}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -5740,6 +5742,52 @@ MonoBehaviour:
   Timescale: 1
   AllowRumble: 1
   ControllerID: -1
+--- !u!114 &4341269729669967530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185223040466267499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Sound
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  Sfx: {fileID: 0}
+  RandomSfx:
+  - {fileID: 8300000, guid: 26122351d055a3e4aab5e640d6a5503a, type: 3}
+  - {fileID: 8300000, guid: 09baafbaeda11284cbb896e68659ff95, type: 3}
+  TestButton: 0
+  TestStopButton: 0
+  PlayMethod: 1
+  PoolSize: 10
+  MinVolume: 0.6
+  MaxVolume: 0.7
+  MinPitch: 0.95
+  MaxPitch: 1.05
+  SfxAudioMixerGroup: {fileID: 0}
 --- !u!1 &3311580070709075485
 GameObject:
   m_ObjectHideFlags: 0
@@ -26283,13 +26331,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
---- !u!198 &8473720162417693624 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2200900649641935043, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
-  m_PrefabInstance: {fileID: 7715678731652387707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4597621702970690704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
+  m_PrefabInstance: {fileID: 7715678731652387707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8473720162417693624 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2200900649641935043, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
   m_PrefabInstance: {fileID: 7715678731652387707}
   m_PrefabAsset: {fileID: 0}
