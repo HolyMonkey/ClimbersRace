@@ -5580,6 +5580,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1200792036}
     - target: {fileID: 4284685768308042455, guid: a0621566eda38404c8607368a6da7d22, type: 3}
+      propertyPath: _startLevel
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284685768308042455, guid: a0621566eda38404c8607368a6da7d22, type: 3}
       propertyPath: _cameraMover
       value: 
       objectReference: {fileID: 355902886}
@@ -6321,9 +6325,9 @@ RectTransform:
   m_Father: {fileID: 1153370496}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 540}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -420}
   m_SizeDelta: {x: 500, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1335762097548816907
@@ -6772,6 +6776,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601382677, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+      propertyPath: _startMoney
+      value: 280
+      objectReference: {fileID: 0}
     - target: {fileID: 7255541209806285321, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: _level
       value: 
