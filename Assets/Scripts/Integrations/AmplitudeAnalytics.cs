@@ -67,10 +67,7 @@ public class AmplitudeAnalytics : MonoBehaviour
         FireEvent("game_start");
     }
 
-    private void OnlevelLost()
-    {
-        FireEvent("level_fail");
-    }
+    private void OnlevelLost() => FireEvent("level_fail");
 
     private void OnLevelWon()
     {
