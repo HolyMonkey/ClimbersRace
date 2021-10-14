@@ -7,7 +7,7 @@ public class Emotions : MonoBehaviour
 {
     [SerializeField] private GameObject _emotionPrefab;
     [SerializeField] private Canvas _canvas;
-    [SerializeField] private PlayerCollideHandler _player;
+    [SerializeField] private Character _player;
     [SerializeField] private float _appearanceDuration;
     [SerializeField] private float _disappearanceDuration;
     [SerializeField] private Vector2 _endDistance;
@@ -22,22 +22,22 @@ public class Emotions : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.KnockedDownEnemy += OnKnockedDownEnemy;
+        _player.AttackedEnemy += OnKnockedDownEnemy;
     }
 
     private void OnDisable()
     {
-        _player.KnockedDownEnemy -= OnKnockedDownEnemy;
+        _player.AttackedEnemy -= OnKnockedDownEnemy;
     }
 
     private void OnKnockedDownEnemy(Vector3 position)
     {
-        PositionConverter converter = new PositionConverter();
+        //PositionConverter converter = new PositionConverter();
 
         Vector3 offset = new Vector3(_offset.x, _offset.y);
-        Vector2 emotionPosition = converter.ConvertWorldPositionToCanvasPosition(_canvas, position + offset);
+        //Vector2 emotionPosition = converter.ConvertWorldPositionToCanvasPosition(_canvas, position + offset);
 
-        ShowEmotion(emotionPosition, _appearanceDuration, _disappearanceDuration);
+        //ShowEmotion(emotionPosition, _appearanceDuration, _disappearanceDuration);
     }
 
     private void ShowEmotion(Vector2 position, float apperanceDuration, float disappearanceDuration)

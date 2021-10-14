@@ -325,8 +325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268a406b6a3e23946826f63b43e01992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level: {fileID: 0}
-  _money: {fileID: 0}
 --- !u!114 &6130695346767622794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,8 +338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectCoinFeedbacks: {fileID: 0}
-  _currentLevelMoney: 0
-  _currentMultiplier: 1
 --- !u!114 &6161547018971736533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,4 +371,3 @@ MonoBehaviour:
   _playerCharacter: {fileID: 0}
   _cameraMover: {fileID: 0}
   _bonusLevel: 0
-  _isLevelStarted: 0

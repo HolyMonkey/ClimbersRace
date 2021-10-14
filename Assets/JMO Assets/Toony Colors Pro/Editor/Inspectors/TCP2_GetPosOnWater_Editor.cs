@@ -2,7 +2,6 @@
 // (c) 2014-2020 Jean Moreno
 
 using UnityEditor;
-using ToonyColorsPro.Runtime;
 
 // Script to get the water height from a specific world position
 // Useful to easily make objects float on water for example
@@ -11,7 +10,7 @@ namespace ToonyColorsPro
 {
 	namespace Inspector
 	{
-		[CustomEditor(typeof(TCP2_GetPosOnWater)), CanEditMultipleObjects]
+		[CustomEditor(typeof(TCP2_GetPosOnWater_Editor)), CanEditMultipleObjects]
 		public class TCP2_GetPosOnWater_Editor : Editor
 		{
 			public override void OnInspectorGUI()

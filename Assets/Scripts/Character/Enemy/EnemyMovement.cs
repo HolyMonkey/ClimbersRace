@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private CharacterInteractionHandler _characterInteractionHandler;
+    [SerializeField] private Character _characterInteractionHandler;
     [SerializeField] private Transform[] _wayPoints;
     [SerializeField] private float _timeOfDragging = 0.75f;
     [SerializeField] private float _dragDelay = 1.5f;
@@ -19,12 +16,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _characterInteractionHandler.SlidingDown += OnSlidingDown;
+        _characterInteractionHandler.Falling += OnSlidingDown;
     }
 
     private void OnDisable()
     {
-        _characterInteractionHandler.SlidingDown -= OnSlidingDown;
+        _characterInteractionHandler.Falling -= OnSlidingDown;
     }
 
     private void Start()
