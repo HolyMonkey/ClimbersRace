@@ -23,7 +23,8 @@ public class Level : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        // Don't do this on WebGL.
+        //Application.targetFrameRate = 60;
     }
 
     private void OnEnable()
