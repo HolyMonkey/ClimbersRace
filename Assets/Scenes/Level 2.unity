@@ -2866,6 +2866,18 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 1800368768, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800368768, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147186574, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 493458664426338515, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -4296,12 +4308,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1456322490}
     - target: {fileID: 2067187368, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1532136126}
+    - target: {fileID: 2067187368, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: _dragTimeRange._max
-      value: 1.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2067187368, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: _choosingBalkDelayRange._max
-      value: 1.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_RootOrder

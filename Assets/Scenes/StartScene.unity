@@ -275,7 +275,6 @@ GameObject:
   - component: {fileID: 7995144289980750176}
   - component: {fileID: 6161547018971736533}
   - component: {fileID: 6130695346767622792}
-  - component: {fileID: 6130695346767622793}
   - component: {fileID: 6130695346767622794}
   m_Layer: 0
   m_Name: Level
@@ -312,19 +311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _level: {fileID: 7995144289980750176}
   _sceneChanger: {fileID: 6161547018971736533}
-  _amplitudeAnalytics: {fileID: 6130695346767622793}
---- !u!114 &6130695346767622793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6130695346767622790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268a406b6a3e23946826f63b43e01992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6130695346767622794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247f6a24dcfe77743bc779f7991be8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collectCoinFeedbacks: {fileID: 0}
 --- !u!114 &6161547018971736533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,10 +335,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e18546adaec547a32973410395ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalLevels: 12
+  _totalLevels: 15
   _minCircledLevel: 1
-  _maxCircledLevel: 12
-  _bonusLevel: 13
+  _maxCircledLevel: 15
+  _bonusLevel: 5
 --- !u!114 &7995144289980750176
 MonoBehaviour:
   m_ObjectHideFlags: 0

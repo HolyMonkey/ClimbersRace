@@ -3400,11 +3400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 2098622871309852907}
-  _attachBalkFeedbacks: {fileID: 0}
-  _detachBalkFeedbacks: {fileID: 0}
-  _dieFeedback: {fileID: 1028201716327285308}
-  _fallingFeedback: {fileID: 0}
-  _attackFeedbacks: {fileID: 0}
   _enemyAttackFX: {fileID: 5040951411867945195}
   _ikActive: 1
   _rightHandWeight: 1
@@ -4769,7 +4764,7 @@ Transform:
   m_Children:
   - {fileID: 2098622870574294644}
   - {fileID: 2098622870712058280}
-  - {fileID: 7462315486549896173}
+  - {fileID: 5273592840801103231}
   - {fileID: 7212125462844749604}
   - {fileID: 2641253371932904128}
   m_Father: {fileID: 0}
@@ -5670,119 +5665,6 @@ Transform:
   m_Father: {fileID: 2098622871621028796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8944803720958907662
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7462315486549896173}
-  - component: {fileID: 1028201716327285308}
-  - component: {fileID: 5326737352114716257}
-  m_Layer: 10
-  m_Name: DieFeedbacks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7462315486549896173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8944803720958907662}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5273592840801103231}
-  m_Father: {fileID: 2098622871309852880}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1028201716327285308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8944803720958907662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Feedbacks:
-  - {fileID: 5326737352114716257}
-  InitializationMode: 2
-  SafeMode: 3
-  Direction: 0
-  AutoChangeDirectionOnEnd: 0
-  AutoPlayOnStart: 0
-  AutoPlayOnEnable: 0
-  DurationMultiplier: 1
-  DisplayFullDurationDetails: 0
-  CooldownDuration: 0
-  InitialDelay: 0
-  FeedbacksIntensity: 1
-  Events:
-    TriggerMMFeedbacksEvents: 0
-    TriggerUnityEvents: 1
-    OnPlay:
-      m_PersistentCalls:
-        m_Calls: []
-    OnPause:
-      m_PersistentCalls:
-        m_Calls: []
-    OnResume:
-      m_PersistentCalls:
-        m_Calls: []
-    OnRevert:
-      m_PersistentCalls:
-        m_Calls: []
-    OnComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  DebugActive: 0
---- !u!114 &5326737352114716257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8944803720958907662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27131831afa28b499cb120fc9059997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 1
-  Label: Particles Play
-  Chance: 100
-  Timing:
-    TimescaleMode: 0
-    InitialDelay: 0
-    CooldownDuration: 0
-    NumberOfRepeats: 0
-    RepeatForever: 0
-    DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
-    PlayDirection: 0
-    ConstantIntensity: 0
-    UseIntensityInterval: 0
-    IntensityIntervalMin: 0
-    IntensityIntervalMax: 0
-    Sequence: {fileID: 0}
-    TrackID: 0
-    Quantized: 0
-    TargetBPM: 120
-  DebugActive: 0
-  BoundParticleSystem: {fileID: 250279343202710103}
-  MoveToPosition: 0
-  RandomParticleSystems: []
 --- !u!1001 &253090354059617112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5855,7 +5737,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7462315486549896173}
+    m_TransformParent: {fileID: 2098622871309852880}
     m_Modifications:
     - target: {fileID: 1053189763648585346, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
       propertyPath: m_Name
@@ -5863,7 +5745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7000002
       objectReference: {fileID: 0}
     - target: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5871,7 +5757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.20000005
       objectReference: {fileID: 0}
     - target: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5910,10 +5796,5 @@ PrefabInstance:
 --- !u!4 &5273592840801103231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
-  m_PrefabInstance: {fileID: 2157788023174115988}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &250279343202710103 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2200900649641935043, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
   m_PrefabInstance: {fileID: 2157788023174115988}
   m_PrefabAsset: {fileID: 0}

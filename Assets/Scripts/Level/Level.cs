@@ -12,14 +12,14 @@ public class Level : MonoBehaviour
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private bool _bonusLevel = false;
 
+    private bool _isLevelStarted = false;
+
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
     public event UnityAction LevelStarted;
     public event UnityAction BonusGameStarted;
     public event UnityAction LevelWon;
     public event UnityAction LevelLost;
-
-    private bool _isLevelStarted = false;
 
     private void Start()
     {

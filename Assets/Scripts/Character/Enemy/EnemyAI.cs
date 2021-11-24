@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
 
     private Vector3 _dragVector = new Vector3();
     private float _dragTime;
+    private float _averageSpeed = 7f;
 
     private Coroutine _choosingJob;
     private Coroutine _draggingBalkJob;
@@ -151,7 +152,7 @@ public class EnemyAI : MonoBehaviour
         Vector3 betweenBalkVector = _nextNode.transform.position - _currentNode.transform.position;
         _dragVector = -betweenBalkVector;
 
-        float t = betweenBalkVector.magnitude / 7f; //7 - average speed
+        float t = betweenBalkVector.magnitude / _averageSpeed;
         float yPrecision = Physics.gravity.y * t * t / 2;
         _dragVector.y += yPrecision;
 

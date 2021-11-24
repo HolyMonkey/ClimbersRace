@@ -14,15 +14,14 @@ public class Character : MonoBehaviour
     [SerializeField] private Rigidbody _defaultRigidbody;
     [SerializeField] private Level _level;
     [SerializeField] private ParticleSystem _bonusFlameParticles;
-    [SerializeField]
-    private MonoBehaviour _moverBehaviour;
+    [SerializeField] private MonoBehaviour _moverBehaviour;
+
     private IMovable _mover => (IMovable)_moverBehaviour;
 
     private Collider _collider;
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
-
-    public Balk CurrentBalk { get; private set; }
+    private float _characterOffset = 0.55f;
     private Vector3 _startDragPosition;
 
     public event UnityAction<Balk> AttachingBalk;
@@ -34,6 +33,7 @@ public class Character : MonoBehaviour
 
     public bool IsAttachingBalk => CurrentBalk;
     public Vector3 Velocity => _rigidbody.velocity;
+    public Balk CurrentBalk { get; private set; }
     public bool IsBonusMove { get; private set; } = false;
 
     private void OnValidate()
