@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class CharacterCollider : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public abstract class CharacterCollider : MonoBehaviour
         if (collider.TryGetComponent(out Trap trap))
         {
             if (!Character.IsAttachingBalk)
-                Character.CollideWithTrap();
+                 Character.CollideWithTrap();
         }
 
         if (!Character.IsAttachingBalk && collider.TryGetComponent(out Balk balk))
