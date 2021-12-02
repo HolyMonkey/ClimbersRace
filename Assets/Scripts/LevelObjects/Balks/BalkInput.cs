@@ -4,9 +4,8 @@ using UnityEngine.Events;
 public class BalkInput : MonoBehaviour
 {
     [SerializeField] private BalkMovement _balkMovement;
-    [SerializeField] private ParticleSystem _particle;
 
-    private const string FIRST_TIME_OPENING = "FirstTimeOpening";
+    //private const string FIRST_TIME_OPENING = "FirstTimeOpening";
 
     private Camera _camera;
     private CameraMover _cameraMover;
@@ -18,12 +17,12 @@ public class BalkInput : MonoBehaviour
 
     private void Awake()
     {
-        if (PlayerPrefs.GetInt(FIRST_TIME_OPENING, 1) == 1)
-        {
-            _particle.gameObject.SetActive(true);
+        //if (PlayerPrefs.GetInt(FIRST_TIME_OPENING, 1) == 1)
+        //{
+        //    _particle.gameObject.SetActive(true);
 
-            PlayerPrefs.SetInt(FIRST_TIME_OPENING, 0);
-        }
+        //    //PlayerPrefs.SetInt(FIRST_TIME_OPENING, 1);
+        //}
 
         _camera = Camera.main;
         _cameraMover = _camera.GetComponent<CameraMover>();
@@ -36,10 +35,10 @@ public class BalkInput : MonoBehaviour
         _balkMovement.BeginDragBalk();
         PlayerStartMoved?.Invoke();
 
-        if (_particle == null)
-            return;
-        else
-            _particle.gameObject.SetActive(false);
+        //if (_particle == null)
+        //    return;
+        //else
+        //    _particle.gameObject.SetActive(false);
 
     }
 
