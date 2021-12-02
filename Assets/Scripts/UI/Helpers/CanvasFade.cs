@@ -7,7 +7,7 @@ namespace AnimatedUI
     {
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private float _duration;
-
+        
         private Tween _fadeAction;
 
         public void Show()

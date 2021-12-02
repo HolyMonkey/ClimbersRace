@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
     private Collider _collider;
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
-    private float _characterOffset = 0.55f;
+    private float _offset = 0.55f;
     private Vector3 _startDragPosition;
 
     public event UnityAction<Balk> AttachingBalk;
@@ -157,7 +157,7 @@ public class Character : MonoBehaviour
 
         _bonusFlameParticles.Play();
 
-        targetPoint.y += 0.55f; //character offset
+        targetPoint.y += _offset;
 
         while (time < duration)
         {

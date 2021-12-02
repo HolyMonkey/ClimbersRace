@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -152,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e18546adaec547a32973410395ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalLevels: 12
-  _minCircledLevel: 1
-  _maxCircledLevel: 12
-  _bonusLevel: 13
+  _totalLevels: 24
+  _minCircledLevel: 10
+  _maxCircledLevel: 24
+  _bonusLevel: 25
 --- !u!114 &3098511843380568019
 MonoBehaviour:
   m_ObjectHideFlags: 0

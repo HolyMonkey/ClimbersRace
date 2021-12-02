@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BalkInput : MonoBehaviour
 {
     [SerializeField] private BalkMovement _balkMovement;
+    [SerializeField] private ParticleSystem _particle;
+
+    private const string FIRST_TIME_OPENING = "FirstTimeOpening";
 
     private Camera _camera;
     private CameraMover _cameraMover;
@@ -10,8 +14,17 @@ public class BalkInput : MonoBehaviour
     private Vector3 _mouseOffset;
     private float _zMouseOffset;
 
+    public event UnityAction PlayerStartMoved;
+
     private void Awake()
     {
+        if (PlayerPrefs.GetInt(FIRST_TIME_OPENING, 1) == 1)
+        {
+            _particle.gameObject.SetActive(true);
+
+            PlayerPrefs.SetInt(FIRST_TIME_OPENING, 0);
+        }
+
         _camera = Camera.main;
         _cameraMover = _camera.GetComponent<CameraMover>();
     }
@@ -21,6 +34,13 @@ public class BalkInput : MonoBehaviour
         _zMouseOffset = _camera.WorldToScreenPoint(transform.position).z;
         _mouseOffset = transform.position - GetMousePosition();
         _balkMovement.BeginDragBalk();
+        PlayerStartMoved?.Invoke();
+
+        if (_particle == null)
+            return;
+        else
+            _particle.gameObject.SetActive(false);
+
     }
 
     private void OnMouseDrag()
