@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
     [SerializeField] private Rigidbody _defaultRigidbody;
     [SerializeField] private Level _level;
     [SerializeField] private ParticleSystem _bonusFlameParticles;
+    [SerializeField] private ParticleSystem _dieEffect;
     [SerializeField] private MonoBehaviour _moverBehaviour;
 
     private IMovable _mover => (IMovable)_moverBehaviour;
@@ -81,6 +82,7 @@ public class Character : MonoBehaviour
             DetachFromBalk();
 
         Dying?.Invoke(this);
+        _dieEffect.Play();
         _rigidbody.isKinematic = true;
         _rigidbody.velocity = Vector3.zero;
     }

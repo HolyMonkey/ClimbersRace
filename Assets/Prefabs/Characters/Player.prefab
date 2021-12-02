@@ -20184,6 +20184,7 @@ MonoBehaviour:
   _defaultRigidbody: {fileID: 7255541207980241530}
   _level: {fileID: 0}
   _bonusFlameParticles: {fileID: 5086988235051938511}
+  _dieEffect: {fileID: 8473720162417693624}
   _moverBehaviour: {fileID: 5373706696867255151}
 --- !u!114 &5373706696867255151
 MonoBehaviour:
@@ -20236,7 +20237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: {fileID: 0}
-  _character: {fileID: 7255541209806285321}
 --- !u!1 &7943258965576866566
 GameObject:
   m_ObjectHideFlags: 0
@@ -25115,5 +25115,10 @@ PrefabInstance:
 --- !u!4 &4597621702970690704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115202719211626475, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
+  m_PrefabInstance: {fileID: 7715678731652387707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8473720162417693624 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2200900649641935043, guid: e6ca32148f4ae4b439cb1598743e7da4, type: 3}
   m_PrefabInstance: {fileID: 7715678731652387707}
   m_PrefabAsset: {fileID: 0}

@@ -4031,6 +4031,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1055595344 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8473720162417693624, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+  m_PrefabInstance: {fileID: 7255541208819474615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1062485003 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2067187368, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
@@ -5699,7 +5704,7 @@ PrefabInstance:
     - target: {fileID: 2098622870921925699, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2a9e6b6cba150a6469c02ef9d943b245, type: 2}
+      objectReference: {fileID: 2100000, guid: 126ad34369c21ea4c8969e419afc7b37, type: 2}
     - target: {fileID: 2098622871309852880, guid: 4b33b7589d63a164c9b224cedb969b1d, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -9088,6 +9093,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 7255541209806285321, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+      propertyPath: _dieEffect
+      value: 
+      objectReference: {fileID: 1055595344}
     - target: {fileID: 7255541209806285321, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: _moverBehaviour
       value: 

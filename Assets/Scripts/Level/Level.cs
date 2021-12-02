@@ -21,10 +21,6 @@ public class Level : MonoBehaviour
     public event UnityAction LevelWon;
     public event UnityAction LevelLost;
 
-    private void Start()
-    {
-    }
-
     private void OnEnable()
     {
         _playerCharacter.Dying += OnPlayerDying;
