@@ -3,12 +3,20 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class BackgroundMusic : MonoBehaviour
 {
+    private AudioSource _audioSource;
+
     private void Awake()
     {
-        BackgroundMusic[] loadedObjects = FindObjectsOfType<BackgroundMusic>();
-        if (loadedObjects.Length > 1)
-            Destroy(gameObject);
+        _audioSource = GetComponent<AudioSource>();   
+    }
 
-        DontDestroyOnLoad(gameObject);
+    private void Start()
+    {
+
+        //BackgroundMusic[] loadedObjects = FindObjectsOfType<BackgroundMusic>();
+        //if (loadedObjects.Length > 1)
+        //    Destroy(gameObject);
+
+        //DontDestroyOnLoad(gameObject);
     }
 }
