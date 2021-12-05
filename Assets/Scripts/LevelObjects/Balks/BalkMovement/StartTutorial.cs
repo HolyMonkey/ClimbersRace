@@ -25,7 +25,7 @@ public class StartTutorial : MonoBehaviour
         {
             _particle.gameObject.SetActive(true);
 
-            //PlayerPrefs.SetInt(FIRST_TIME_OPENING, 1);
+            //PlayerPrefs.SetInt(FIRST_TIME_OPENING, 0);
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using YandexGames.Utility;
 
 public class Level : MonoBehaviour
 {
@@ -41,14 +42,14 @@ public class Level : MonoBehaviour
         if (_isLevelStarted)
             return;
 
-#if (UNITY_ANDROID && !UNITY_EDITOR)
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) //-- for build
-#elif (UNITY_EDITOR && UNITY_ANDROID)
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-#endif
-        {
+//#if (UNITY_ANDROID && !UNITY_EDITOR)
+//        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) //-- for build
+//#elif (UNITY_EDITOR && !UNITY_ANDROID)
+//        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+//#endif
+        //{      
             StartLevel();
-        }
+        //}
     }
 
     public void StartBonusGame(FinishBalk finishBalk, Character character)
