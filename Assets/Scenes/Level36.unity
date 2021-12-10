@@ -1508,6 +1508,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd347f4dcae3fc146b725c6e422a4541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &368299974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8791763362294128457, guid: a731a3c61cca74e4282f6a72addad3c2, type: 3}
+  m_PrefabInstance: {fileID: 368299972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d16749416cc7ba49bacf7a5b77d58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &368299975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: a731a3c61cca74e4282f6a72addad3c2, type: 3}
@@ -5516,6 +5527,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _startTutorial
+      value: 
+      objectReference: {fileID: 368299974}
     - target: {fileID: 2147186575, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0

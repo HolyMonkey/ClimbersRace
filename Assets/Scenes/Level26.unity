@@ -424,7 +424,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &106757651
 PrefabInstance:
@@ -8166,6 +8166,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: cef7449861184f94ca42314514003596, type: 3}
   m_PrefabInstance: {fileID: 1898121064}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1898121067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 81206768239760234, guid: cef7449861184f94ca42314514003596, type: 3}
+  m_PrefabInstance: {fileID: 1898121064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d16749416cc7ba49bacf7a5b77d58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1907409848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7468636968510263824, guid: c9fe52cb74b0d7f4db0822d6b65ae1fa, type: 3}
@@ -9967,6 +9978,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 42411126245362792}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _startTutorial
+      value: 
+      objectReference: {fileID: 1898121067}
     - target: {fileID: 493458664426338515, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -9981,7 +9996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493458664426338519, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 493458664426338519, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_AnchorMax.x

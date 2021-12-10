@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82662509}
   m_Layer: 0
-  m_Name: Path
+  m_Name: WallsWayPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4376,6 +4376,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _startTutorial
+      value: 
+      objectReference: {fileID: 1438421685}
     - target: {fileID: 493458664426338515, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -5925,6 +5929,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: a731a3c61cca74e4282f6a72addad3c2, type: 3}
   m_PrefabInstance: {fileID: 1438421681}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1438421685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8791763362294128457, guid: a731a3c61cca74e4282f6a72addad3c2, type: 3}
+  m_PrefabInstance: {fileID: 1438421681}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d16749416cc7ba49bacf7a5b77d58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1456322490 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4284685768308042455, guid: a0621566eda38404c8607368a6da7d22, type: 3}

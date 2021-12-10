@@ -212,6 +212,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a731a3c61cca74e4282f6a72addad3c2, type: 3}
+--- !u!114 &42035328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8791763362294128457, guid: a731a3c61cca74e4282f6a72addad3c2, type: 3}
+  m_PrefabInstance: {fileID: 42035327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d16749416cc7ba49bacf7a5b77d58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &62502994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,23 +848,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3556795050912220246, guid: 24f1c11adbeae0943a2b42a5585d21ed, type: 3}
   m_PrefabInstance: {fileID: 430711550}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &521561773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 493458664426338515, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
-  m_PrefabInstance: {fileID: 1153370495}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &521561780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521561773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3efeaa4fbe86a034586490d9d836373b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &628882861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,7 +1459,7 @@ PrefabInstance:
     - target: {fileID: 575561331, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 521561780}
+      objectReference: {fileID: 0}
     - target: {fileID: 575561331, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1550,6 +1544,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _startTutorial
+      value: 
+      objectReference: {fileID: 42035328}
     - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.size
       value: 1

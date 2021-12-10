@@ -12,7 +12,7 @@ public class LoadScreen : MonoBehaviour
     [SerializeField] private TMP_Text _loadingText;
 
     private float _endValue = 100f;
-    private float _duration = 5f;
+    private float _duration = 2f;
     private float _enough = 99.6f;
     
     private void Start()

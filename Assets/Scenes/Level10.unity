@@ -2395,6 +2395,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _startTutorial
+      value: 
+      objectReference: {fileID: 1159143947}
     - target: {fileID: 1800368768, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 131.2
@@ -2685,6 +2689,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: cef7449861184f94ca42314514003596, type: 3}
   m_PrefabInstance: {fileID: 1159143944}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1159143947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 81206768239760234, guid: cef7449861184f94ca42314514003596, type: 3}
+  m_PrefabInstance: {fileID: 1159143944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d16749416cc7ba49bacf7a5b77d58c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1171480069
 PrefabInstance:
   m_ObjectHideFlags: 0

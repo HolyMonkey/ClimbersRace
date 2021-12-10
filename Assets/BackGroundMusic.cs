@@ -7,7 +7,7 @@ public class BackGroundMusic : MonoBehaviour
 {
     private AudioSource _audioSource;
 
-    void Start()
+    void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
         _audioSource.Play();

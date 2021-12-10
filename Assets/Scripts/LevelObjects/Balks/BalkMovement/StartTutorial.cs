@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StartTutorial : MonoBehaviour
 {
     [SerializeField] private BalkInput _balkInput;
     [SerializeField] private ParticleSystem _particle;
 
-    private const string FIRST_TIME_OPENING = "FirstTimeOpening";
+    private bool _isStarted = false;
+
+    public event UnityAction PlayerMoveStarted;
+    public bool IsStarted => _isStarted;
 
     private void OnEnable()
     {
@@ -19,18 +23,14 @@ public class StartTutorial : MonoBehaviour
         _balkInput.PlayerStartMoved -= OnStarted;
     }
 
-    private void Awake()
+    private void Start()
     {
-        if (PlayerPrefs.GetInt(FIRST_TIME_OPENING, 1) == 1)
-        {
-            _particle.gameObject.SetActive(true);
-
-            //PlayerPrefs.SetInt(FIRST_TIME_OPENING, 0);
-        }
+        _particle.gameObject.SetActive(true);
     }
 
     private void OnStarted()
     {
         _particle.gameObject.SetActive(false);
+        PlayerMoveStarted?.Invoke();
     }
 }
