@@ -17,6 +17,8 @@ public class Level : MonoBehaviour
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
+    public event UnityAction LevelOpenSetting;
+    public event UnityAction LevelCloseSetting;
     public event UnityAction LevelStarted;
     public event UnityAction BonusGameStarted;
     public event UnityAction LevelWon;
@@ -41,15 +43,8 @@ public class Level : MonoBehaviour
     {
         if (_isLevelStarted)
             return;
-
-//#if (UNITY_ANDROID && !UNITY_EDITOR)
-//        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) //-- for build
-//#elif (UNITY_EDITOR && !UNITY_ANDROID)
-//        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-//#endif
-        //{      
+   
             StartLevel();
-        //}
     }
 
     public void StartBonusGame(FinishBalk finishBalk, Character character)
@@ -108,5 +103,15 @@ public class Level : MonoBehaviour
     public void LoseGame()
     {
         LevelLost?.Invoke();
+    }
+
+    public void OpenSettingMenu()
+    {
+        LevelOpenSetting?.Invoke();
+    }
+
+    public void CloseSettingMenu()
+    {
+        LevelCloseSetting?.Invoke();
     }
 }

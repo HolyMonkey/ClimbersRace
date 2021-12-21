@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using YandexGames.Utility;
 
 namespace YandexGames.Samples
 {
@@ -17,7 +18,7 @@ namespace YandexGames.Samples
         private void Awake()
         {
             YandexGamesSdk.CallbackLogging = true;
-            _playerScore.text = "";
+            //WebBackgroundMute.Enabled = true;
         }
 
         private IEnumerator Start()
@@ -28,37 +29,40 @@ namespace YandexGames.Samples
 
             yield return YandexGamesSdk.WaitForInitialization();
 
-            if (PlayerAccount.IsAuthorized)
+            OnRequestPersonalProfileDataPermissionButtonClick();
+
+            if (PlayerAccount.IsAuthorized == false)
             {
-                PlayerAccount.Authenticate(false);
+                OnAuthorize();
             }
+                
         }
 
-        public void OnShowInterestialButtonClick()
+        public void OnShowInterestial()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
             InterestialAd.Show();
 #endif
         }
 
-        public void OnShowVideoButtonClick()
+        public void OnShowVideo()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
             VideoAd.Show();
 #endif
         }
 
-        public void OnAuthenticateButtonClick()
+        public void OnAuthorize()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
-            PlayerAccount.Authenticate(false);
+            PlayerAccount.Authorize();
 #endif
         }
 
-        public void OnAuthenticateWithPermissionsButtonClick()
+        public void OnRequestPersonalProfileDataPermissionButtonClick()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
-            PlayerAccount.Authenticate(true);
+            PlayerAccount.RequestPersonalProfileDataPermission();
 #endif
         }
 
@@ -74,13 +78,14 @@ namespace YandexGames.Samples
 #if UNITY_WEBGL && !UNITY_EDITOR
             Leaderboard.GetEntries("LeaderBoard", (result) =>
             {
-                //foreach (var entry in result.entries)
-                //{
-                //    _playerScore.text = ($"{entry.player.publicName} \t\t {entry.score}");
-                //}
-                for (int i = 0; i < result.entries.Length; i++)
+                for (int i = 0; i < _leaderNames.Length; i++)
                 {
-                    _leaderNames[i].text = result.entries[i].player.publicName;
+                    string name = result.entries[i].player.publicName;
+
+                    if (string.IsNullOrEmpty(name))
+                        name = "Анонимно";
+
+                    _leaderNames[i].text = name;
                     _scoreList[i].text = result.entries[i].formattedScore;
                 }
             });

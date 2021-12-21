@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public abstract class CharacterCollider : MonoBehaviour
 {
     [SerializeField] private float _timeToCanAttack = 0.5f;
+
     protected Character Character;
 
     private Coroutine _disableAttackJob;
@@ -39,7 +40,9 @@ public abstract class CharacterCollider : MonoBehaviour
         if (collider.TryGetComponent(out Trap trap))
         {
             if (!Character.IsAttachingBalk)
+            {
                  Character.CollideWithTrap();
+            }
         }
 
         if (!Character.IsAttachingBalk && collider.TryGetComponent(out Balk balk))

@@ -5,6 +5,7 @@ public class CharacterView : MonoBehaviour
 {
     [SerializeField] private Character _character;
     [SerializeField] private ParticleSystem _enemyAttackFX;
+    [SerializeField] private AudioSource _audioSource;
 
     [Header("IK")]
     [SerializeField] private bool _ikActive;
@@ -21,6 +22,7 @@ public class CharacterView : MonoBehaviour
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _cameraTransform = Camera.main.transform;
 
@@ -49,6 +51,7 @@ public class CharacterView : MonoBehaviour
 
     private void OnEnemyAttacked(Vector3 contactPoint)
     {
+        _audioSource.Play();
         _enemyAttackFX.transform.position = contactPoint + _character.Velocity.normalized / 1.5f;
         _enemyAttackFX.Play();
     }
@@ -81,6 +84,7 @@ public class CharacterView : MonoBehaviour
 
     private void OnFalling()
     {
+        _audioSource.Play();
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, true);
     }
 
