@@ -40,15 +40,15 @@ public class Settings : MonoBehaviour
         Render(GetCurrentAudioSprite(), GetCurrentVibrationSprite());
     }
 
-    //public void ShowSettings()
-    //{
-    //    _settingsPanel.gameObject.SetActive(true);
-    //}
+    public void ShowSettings()
+    {
+        _settingsPanel.gameObject.SetActive(true);
+    }
 
-    //public void HideSettings()
-    //{
-    //    _settingsPanel.gameObject.SetActive(false);
-    //}
+    public void HideSettings()
+    {
+        _settingsPanel.gameObject.SetActive(false);
+    }
 
     private void ApplySettings()
     {
@@ -84,5 +84,13 @@ public class Settings : MonoBehaviour
     private Sprite GetCurrentVibrationSprite()
     {
         return _isVibrationOn ? _vibrationOn : _vibrationOff;
+    }
+
+    public void ChangeVisibilitySetting()
+    {
+        if (_settingsPanel.activeSelf)
+            _settingsPanel.SetActive(false);
+        else
+            _settingsPanel.SetActive(true);
     }
 }

@@ -36,7 +36,7 @@ public class CameraMover : MonoBehaviour
         _camera = GetComponent<Camera>();
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         Follow();
         transform.LookAt(_target.position + _lookAtOffset);
