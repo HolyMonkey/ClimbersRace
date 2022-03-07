@@ -9,6 +9,7 @@ public class NextLevelSlider : MonoBehaviour
     private const string SLIDER_VALUE = "SliderValue";
     private Slider _slider;
     private int _value = 2;
+    private int _fullSlider = 8;
 
     public int SliderValue
     {
@@ -24,7 +25,7 @@ public class NextLevelSlider : MonoBehaviour
 
     public void ChangeValue()
     {
-        if (_slider.value == 8)
+        if (_slider.value == _fullSlider)
         {
             SliderValue = 0;
             _slider.value = SliderValue;

@@ -26,7 +26,7 @@ public class StartTutorial : MonoBehaviour
 
     private void Start()
     {
-        _particle.gameObject.SetActive(true);
+        //_particle.gameObject.SetActive(true);
         _isStarted = false;
     }
 

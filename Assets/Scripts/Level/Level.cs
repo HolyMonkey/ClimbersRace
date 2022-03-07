@@ -17,12 +17,18 @@ public class Level : MonoBehaviour
 
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
+    public event UnityAction LevelPreStart;
     public event UnityAction LevelOpenSetting;
     public event UnityAction LevelCloseSetting;
     public event UnityAction LevelStarted;
     public event UnityAction BonusGameStarted;
     public event UnityAction LevelWon;
     public event UnityAction LevelLost;
+
+    private void Start()
+    {
+        PreStart();
+    }
 
     private void OnEnable()
     {
@@ -43,7 +49,8 @@ public class Level : MonoBehaviour
     {
         if (_isLevelStarted)
             return;
-   
+
+        if (_cameraMover.IsStartReached)
             StartLevel();
     }
 
@@ -87,6 +94,11 @@ public class Level : MonoBehaviour
             _sceneChanger.LoadBonusLevel();
         else
             _sceneChanger.LoadLevel(CurrentLevel);
+    }
+
+    public void PreStart()
+    {
+        LevelPreStart?.Invoke();
     }
 
     public void StartLevel()

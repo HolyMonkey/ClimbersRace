@@ -97,12 +97,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e03c3f2ea2ef5448efc890cc14f49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startPoint: {fileID: 0}
   _target: {fileID: 0}
   _smoothSpeed: 20
   _positionOffset: {x: 0, y: 0, z: 0}
   _lookAtOffset: {x: 0, y: 3, z: 0}
   _distanceOffset: 10
   _wallBehavior: {fileID: 0}
+  _level: {fileID: 0}
+  _duration: 2.5
   _minMaxFOV:
     _min: 62
     _max: 69
