@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using YandexGames.Utility;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -125,5 +126,10 @@ public class Level : MonoBehaviour
     public void CloseSettingMenu()
     {
         LevelCloseSetting?.Invoke();
+    }
+
+    public void StartShopScene()
+    {
+        SceneManager.LoadScene(56);
     }
 }

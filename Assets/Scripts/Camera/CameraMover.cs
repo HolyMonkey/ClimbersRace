@@ -112,8 +112,8 @@ public class CameraMover : MonoBehaviour
 
     private IEnumerator MoveCamera(Transform startPoint, Transform targetPoint)
     {
-        _camera.transform.DOMove(targetPoint.position - new Vector3(0, 0, 8.8f), _duration)/*.SetEase(Ease.Linear)*/;
-        yield return new WaitForSeconds(_duration/* + 0.5f*/);
+        _camera.transform.DOMove(targetPoint.position - new Vector3(0, 0, 8.8f), _duration);
+        yield return new WaitForSeconds(_duration);
         _isTargetReached = true;
     }
 
@@ -129,11 +129,4 @@ public class CameraMover : MonoBehaviour
 
         _moveCameraInJob = StartCoroutine(MoveCamera(_startPoint.transform, _target));
     }
-
-    //private void LookAt(Transform target)
-    //{
-    //    Quaternion targetRotation =  Quaternion.LookRotation(target.position + _lookAtOffset - transform.position);
-
-    //    transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSmoothSpeed * Time.deltaTime);
-    //}
 }
