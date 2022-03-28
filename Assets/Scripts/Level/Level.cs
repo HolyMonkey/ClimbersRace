@@ -130,6 +130,6 @@ public class Level : MonoBehaviour
 
     public void StartShopScene()
     {
-        SceneManager.LoadScene(56);
+        SceneManager.LoadScene(54);
     }
 }

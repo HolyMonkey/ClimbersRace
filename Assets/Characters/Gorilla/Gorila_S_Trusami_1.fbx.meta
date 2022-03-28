@@ -1,0 +1,1063 @@
+fileFormatVersion: 2
+guid: 45ae21f22fa433e4d96aa50ab1f53f96
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 997334339290482728
+    second: Armature|Main
+  - first:
+      74: -4697535724090298472
+    second: Armature|Main (1)
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'gorilla_r_Wrist_bone'
+      : rotation error = 60.055061 deg\n\t'gorilla_l_Wrist_bone' : rotation error
+      = 75.097054 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Armature|Main' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'gorilla_Pelvis_bone' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'gorilla_r_Wrist_bone'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'gorilla_l_Wrist_bone'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Main
+      takeName: Armature|Main
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 518
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 180
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 3
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Armature
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Thigh_bone
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Thigh_bone
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Knee_bone
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Knee_bone
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Ankle_bone
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Ankle_bone
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Spine1_bone
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Spine2_bone
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Neck_bone
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Head_bone
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Clav_bone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Clav_bone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Shoulder_bone
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Shoulder_bone
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Forearm_bone
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Forearm_bone
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Hand_bone
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Hand_bone
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Toe_bone
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Toe_bone
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Gorilla_l_Eye_mesh
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Mouth_bone
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Mandible_bone
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Thumb_ctrl
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Thumb_1_bone
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Thumb_2_bone
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Index_ctrl
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Index_1_bone
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Index_2_bone
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Middle_ctrl
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Middle_1_bone
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Middle_2_bone
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Ring_ctrl
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Ring_1_bone
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Ring_2_bone
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Pinky_ctrl
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Pinky_1_bone
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Pinky_2_bone
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Thumb_ctrl001
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Thumb_1_bone
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Thumb_2_bone
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Index_ctrl001
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Index_1_bone
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Index_2_bone
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Middle_ctrl001
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Middle_1_bone
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Middle_2_bone
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Ring_ctrl001
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Ring_1_bone
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Ring_2_bone
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_l_Pinky_ctrl001
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Pinky_1_bone
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_r_Pinky_2_bone
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gorilla_Spine3_bone
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Gorila_S_Trusami_1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Gorila_S_Trusami_1(Clone)
+      position: {x: 0, y: 0.68535495, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.00999999, y: 0.00999999, z: 0.00999999}
+    - name: gorilla_Pelvis_bone
+      parentName: Armature
+      position: {x: -0.000051348627, y: -0.28131485, z: 0.0050063133}
+      rotation: {x: -0.49576235, y: -0.5041987, z: 0.49576923, w: 0.5041987}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000002}
+    - name: gorilla_Pelvis-nub_bone
+      parentName: gorilla_Pelvis_bone
+      position: {x: 0.554581, y: 15.584362, z: -0.00011064997}
+      rotation: {x: 0.000003486872, y: -0.000004380942, z: 0.017784478, w: -0.99984187}
+      scale: {x: 1.0000004, y: 1.0000011, z: 1.0000006}
+    - name: gorilla_l_Thigh_bone
+      parentName: gorilla_Pelvis_bone
+      position: {x: -0.27717423, y: 9.040387, z: 13.29917}
+      rotation: {x: -0.0000031590462, y: 0.0000031292439, z: 0.080659464, w: 0.9967417}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000004}
+    - name: gorilla_l_Knee_bone
+      parentName: gorilla_l_Thigh_bone
+      position: {x: 0.00000064074993, y: 32.54939, z: 0.0000007003546}
+      rotation: {x: 0.0000000916491, y: -0.00000071571685, z: 0.22612691, w: -0.97409785}
+      scale: {x: 1.0000017, y: 1.0000013, z: 1.0000013}
+    - name: gorilla_l_Ankle_bone
+      parentName: gorilla_l_Knee_bone
+      position: {x: -0.000004544854, y: 20.88936, z: 0.0000011324883}
+      rotation: {x: 0.000000010365789, y: 0.000000032949973, z: 0.6649861, w: 0.7468558}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: gorilla_l_Toe_bone
+      parentName: gorilla_l_Ankle_bone
+      position: {x: 0.0000026747584, y: 13.680064, z: 0.000001065433}
+      rotation: {x: -0.00000007495055, y: 0.000003592492, z: 0.19627464, w: 0.98054904}
+      scale: {x: 1, y: 1.0000006, z: 1.0000005}
+    - name: gorilla_r_Thigh_bone
+      parentName: gorilla_Pelvis_bone
+      position: {x: -0.2774086, y: 9.040197, z: -13.299062}
+      rotation: {x: 0.080659136, y: -0.99674183, z: 0.0000031143427, w: 0.0000034570694}
+      scale: {x: 1.0000007, y: 1.0000014, z: 1.0000005}
+    - name: gorilla_r_Knee_bone
+      parentName: gorilla_r_Thigh_bone
+      position: {x: -0.0000022798777, y: 32.549393, z: -0.0000011771917}
+      rotation: {x: 0.00000010216078, y: 0.00000020664922, z: 0.2261268, w: 0.97409785}
+      scale: {x: 1.0000002, y: 1.0000011, z: 1.0000005}
+    - name: gorilla_r_Ankle_bone
+      parentName: gorilla_r_Knee_bone
+      position: {x: -0.000000074505806, y: 20.889343, z: -0.0000005401671}
+      rotation: {x: 0.0000011297483, y: 0.0000009628566, z: -0.66498643, w: 0.74685544}
+      scale: {x: 0.99999917, y: 0.9999993, z: 0.9999992}
+    - name: gorilla_r_Toe_bone
+      parentName: gorilla_r_Ankle_bone
+      position: {x: 0.0000043371692, y: 13.680084, z: -0.000001411885}
+      rotation: {x: -0.000004382086, y: -0.000027028877, z: -0.19627315, w: 0.98054934}
+      scale: {x: 0.9999997, y: 1.0000005, z: 1.0000006}
+    - name: gorilla_Spine1_bone
+      parentName: Armature
+      position: {x: 0.000007661523, y: 0.000000022689392, z: -0.000009536743}
+      rotation: {x: 0.49439162, y: -0.50554633, z: -0.49438912, w: 0.5055485}
+      scale: {x: 1.0000012, y: 1.0000004, z: 1}
+    - name: gorilla_Spine2_bone
+      parentName: gorilla_Spine1_bone
+      position: {x: 0.00000026892585, y: 13.5878525, z: -0.00000002148954}
+      rotation: {x: -0.000000014901161, y: -0.000002682209, z: -0.05430633, w: 0.9985243}
+      scale: {x: 0.99999946, y: 0.9999994, z: 1.0000001}
+    - name: gorilla_Spine3_bone
+      parentName: gorilla_Spine2_bone
+      position: {x: 0.00000072456896, y: 13.401004, z: 0.00000011920929}
+      rotation: {x: -0.0000038053936, y: -0.0000038222097, z: -0.22168736, w: 0.9751178}
+      scale: {x: 1.0000015, y: 1.0000002, z: 1.0000008}
+    - name: gorilla_Neck_bone
+      parentName: gorilla_Spine3_bone
+      position: {x: -7.144654, y: 30.855001, z: 0.00023841858}
+      rotation: {x: 0.0000030036279, y: 0.000006059824, z: 0.074228555, w: 0.99724126}
+      scale: {x: 1.0000006, y: 1, z: 1.0000006}
+    - name: gorilla_Head_bone
+      parentName: gorilla_Neck_bone
+      position: {x: 0.000004462898, y: 10.239873, z: 0.00000011920929}
+      rotation: {x: -0.00000045170555, y: 0.00000030327737, z: -0.15845469, w: 0.98736626}
+      scale: {x: 1.0000005, y: 1.0000001, z: 0.99999994}
+    - name: Gorilla_l_Eye_mesh001
+      parentName: gorilla_Head_bone
+      position: {x: 0.77197266, y: 28.555712, z: -6.5133157}
+      rotation: {x: 0.67729056, y: -0.22268465, z: -0.665443, w: -0.22107606}
+      scale: {x: 100.00001, y: 99.99996, z: 99.99995}
+    - name: Gorilla_l_Eye_mesh
+      parentName: gorilla_Head_bone
+      position: {x: 0.766098, y: 28.558523, z: 6.353278}
+      rotation: {x: 0.67729056, y: -0.22268465, z: -0.665443, w: -0.22107606}
+      scale: {x: 100.00001, y: 99.99996, z: 99.99995}
+    - name: gorilla_Head-nub_bone
+      parentName: gorilla_Head_bone
+      position: {x: -21.075663, y: 41.638783, z: 0.00006903708}
+      rotation: {x: 0.00000013694026, y: 0.0000025687934, z: 0.23214254, w: 0.97268176}
+      scale: {x: 0.9999992, y: 1.0000015, z: 1.0000004}
+    - name: gorilla_l_EyelidLow_bone
+      parentName: gorilla_Head_bone
+      position: {x: 0.1470883, y: 27.103355, z: 6.243864}
+      rotation: {x: 0.000016186816, y: 0.000038963863, z: 0.44343024, w: -0.8963089}
+      scale: {x: 1.0000015, y: 0.99999917, z: 1.0000006}
+    - name: gorilla_l_EyelidUp_bone
+      parentName: gorilla_Head_bone
+      position: {x: 0.1470883, y: 27.103363, z: 6.243864}
+      rotation: {x: 0.000015371443, y: 0.000029424391, z: -0.39209434, w: 0.919925}
+      scale: {x: 1.0000025, y: 0.99999803, z: 1.0000006}
+    - name: gorilla_r_EyelidLow_bone
+      parentName: gorilla_Head_bone
+      position: {x: 0.14715128, y: 27.10337, z: -6.243943}
+      rotation: {x: 0.44343126, y: 0.8963084, z: -0.00001609462, w: 0.000038652946}
+      scale: {x: 1.0000015, y: 0.99999976, z: 1.0000011}
+    - name: gorilla_r_EyelidUp_bone
+      parentName: gorilla_Head_bone
+      position: {x: 0.14714745, y: 27.103374, z: -6.2439427}
+      rotation: {x: 0.392095, y: 0.9199248, z: 0.0000010267495, w: 0.000001403755}
+      scale: {x: 1.0000027, y: 0.99999875, z: 1.000001}
+    - name: gorilla_Mandible_bone
+      parentName: gorilla_Head_bone
+      position: {x: 10.981669, y: 15.90239, z: 0.00006392598}
+      rotation: {x: -0.0000015297663, y: 0.0000007360048, z: 0.6509441, w: -0.7591257}
+      scale: {x: 1.0000013, y: 1.0000001, z: 1.0000012}
+    - name: gorilla_Mouth_bone
+      parentName: gorilla_Head_bone
+      position: {x: 9.505515, y: 18.633131, z: 0.00006818771}
+      rotation: {x: 0.0000005654057, y: 0.000005165324, z: 0.5076314, w: -0.8615744}
+      scale: {x: 1.0000021, y: 0.9999992, z: 1.000001}
+    - name: gorilla_r_Clav_bone
+      parentName: gorilla_Spine3_bone
+      position: {x: 3.5723042, y: 18.271332, z: -3.7239406}
+      rotation: {x: 0.26467788, y: -0.6557059, z: 0.6991858, w: -0.105520956}
+      scale: {x: 0.99999934, y: 1.0000006, z: 1.0000008}
+    - name: gorilla_r_Shoulder_IK_bone
+      parentName: gorilla_r_Clav_bone
+      position: {x: -0.0000009536743, y: 24.54531, z: 0.0000035762787}
+      rotation: {x: 0.054820284, y: -0.004102219, z: -0.07425062, w: 0.99572325}
+      scale: {x: 1.0000017, y: 1.0000004, z: 1.0000006}
+    - name: gorilla_r_Forearm_IK_bone
+      parentName: gorilla_r_Shoulder_IK_bone
+      position: {x: -0.000002861023, y: 48.86246, z: 0.0000015497208}
+      rotation: {x: 0.00000014528631, y: -0.0000007371417, z: -0.00029540164, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000005}
+    - name: gorilla_r_Shoulder_FK_bone
+      parentName: gorilla_r_Clav_bone
+      position: {x: -0.0000009536743, y: 24.54531, z: 0.0000035762787}
+      rotation: {x: 0.59672606, y: 0.06861785, z: 0.06774951, w: 0.7966302}
+      scale: {x: 1.0000013, y: 1.0000015, z: 1.0000008}
+    - name: gorilla_r_Forearm_FK_bone
+      parentName: gorilla_r_Shoulder_FK_bone
+      position: {x: -0.00000029802322, y: 48.862457, z: 0.000002861023}
+      rotation: {x: -0.00000056624407, y: 0.0000009983777, z: -0.6421675, w: -0.7665643}
+      scale: {x: 1.0000011, y: 1.0000006, z: 1.000001}
+    - name: gorilla_r_Shoulder_bone
+      parentName: gorilla_r_Clav_bone
+      position: {x: -0.00001859665, y: 24.545319, z: -0.000027894974}
+      rotation: {x: -0.09738231, y: 0.99505854, z: 0.0018862893, w: 0.01927947}
+      scale: {x: 1.0000017, y: 1.0000001, z: 1.0000004}
+    - name: gorilla_r_Forearm_bone
+      parentName: gorilla_r_Shoulder_bone
+      position: {x: 0.000003516674, y: 48.862465, z: 0.000012874603}
+      rotation: {x: 0.058834985, y: 0.9980798, z: -0.0011398299, w: -0.01933724}
+      scale: {x: 0.9999993, y: 1.0000011, z: 0.9999999}
+    - name: gorilla_r_Wrist_bone
+      parentName: gorilla_r_Forearm_bone
+      position: {x: -0.0000021457672, y: 34.977448, z: 0.000017285347}
+      rotation: {x: -1, y: 0.00003585964, z: -0.0000002422166, w: 0.0000007492489}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000007}
+    - name: gorilla_r_Hand_bone
+      parentName: gorilla_r_Wrist_bone
+      position: {x: -0.00007659197, y: 0.0003926158, z: -0.000021219254}
+      rotation: {x: 0.7027158, y: -0.007242966, z: 0.71090436, w: 0.027441163}
+      scale: {x: 0.99997437, y: 1.0000005, z: 0.9999924}
+    - name: gorilla_r_Hand-nub_bone
+      parentName: gorilla_r_Hand_bone
+      position: {x: -0.1846013, y: 16.497137, z: 0.80943716}
+      rotation: {x: 0.024544977, y: -0.006547771, z: 0.005428771, w: 0.9996626}
+      scale: {x: 1.0000011, y: 1.0000001, z: 1.0000019}
+    - name: gorilla_l_Thumb_ctrl001
+      parentName: gorilla_r_Hand_bone
+      position: {x: 0.42480826, y: 7.0964804, z: -5.863498}
+      rotation: {x: -0.6540058, y: -0.20469096, z: 0.64170444, w: 0.3443741}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: gorilla_r_Thumb_1_bone
+      parentName: gorilla_l_Thumb_ctrl001
+      position: {x: 0.000009462237, y: -0.000008605421, z: -0.0000011920929}
+      rotation: {x: -0.041876096, y: -0.11512405, z: -0.72225636, w: 0.6806898}
+      scale: {x: 0.9999851, y: 1.0000112, z: 1.0000057}
+    - name: gorilla_r_Thumb_2_bone
+      parentName: gorilla_r_Thumb_1_bone
+      position: {x: -0.0000070631504, y: 4.320299, z: -0.00000023841858}
+      rotation: {x: 0.000017832965, y: -0.0004524216, z: -0.038667265, w: 0.9992521}
+      scale: {x: 1.0000029, y: 0.999991, z: 1.0000063}
+    - name: gorilla_r_Thumb_3_bone
+      parentName: gorilla_r_Thumb_2_bone
+      position: {x: 0.0000044272747, y: 5.6801434, z: -0.0000053867698}
+      rotation: {x: 0.0000009918402, y: 0.0000027650965, z: -0.003288964, w: 0.99999464}
+      scale: {x: 0.99999994, y: 0.99999774, z: 1.0000035}
+    - name: gorilla_l_Index_ctrl001
+      parentName: gorilla_r_Hand_bone
+      position: {x: -0.02866447, y: 18.792059, z: -6.377482}
+      rotation: {x: -0.035237785, y: -0.6914372, z: 0.7213573, w: 0.017794838}
+      scale: {x: 1.0000005, y: 0.9999998, z: 0.99999994}
+    - name: gorilla_r_Index_1_bone
+      parentName: gorilla_l_Index_ctrl001
+      position: {x: -0.0000056028366, y: -0.000004224479, z: -0.000014990568}
+      rotation: {x: 0.03616997, y: 0.67262626, z: -0.7383527, w: 0.033180423}
+      scale: {x: 1.0000265, y: 0.9999739, z: 1.0000005}
+    - name: gorilla_r_Index_2_bone
+      parentName: gorilla_r_Index_1_bone
+      position: {x: -0.0000034570694, y: 8.511703, z: -0.0000013113022}
+      rotation: {x: 0.0012569693, y: 0.000038053826, z: 0.020787371, w: 0.9997831}
+      scale: {x: 0.9999737, y: 1.0000261, z: 1.0000013}
+    - name: gorilla_r_Index_3_bone
+      parentName: gorilla_r_Index_2_bone
+      position: {x: -0.00000047683716, y: 5.89303, z: 0.00000423193}
+      rotation: {x: -0.00084195664, y: 0.0000010857509, z: 0.0057912013, w: 0.99998295}
+      scale: {x: 1.0000266, y: 0.99997467, z: 0.9999997}
+    - name: gorilla_l_Middle_ctrl001
+      parentName: gorilla_r_Hand_bone
+      position: {x: -0.050948128, y: 18.75836, z: -1.2197648}
+      rotation: {x: -0.008856952, y: -0.008638922, z: 0.68592125, w: 0.7275706}
+      scale: {x: 0.99999964, y: 0.99999994, z: 1.0000008}
+    - name: gorilla_r_Middle_1_bone
+      parentName: gorilla_l_Middle_ctrl001
+      position: {x: -0.000017295592, y: -0.0000009834766, z: -0.0000075856224}
+      rotation: {x: 0.018041292, y: -0.016503425, z: -0.6741917, w: 0.73815155}
+      scale: {x: 1.0000275, y: 0.9999721, z: 1.0000007}
+    - name: gorilla_r_Middle_2_bone
+      parentName: gorilla_r_Middle_1_bone
+      position: {x: 0.0000010728836, y: 11.86706, z: 0.0000052452087}
+      rotation: {x: 0.00014381246, y: -0.000013298232, z: 0.009055961, w: 0.999959}
+      scale: {x: 0.99997336, y: 1.000027, z: 1.0000006}
+    - name: gorilla_r_Middle_3_bone
+      parentName: gorilla_r_Middle_2_bone
+      position: {x: -0.0000014305115, y: 6.1570697, z: -0.0000019073486}
+      rotation: {x: 0.0003601377, y: 0.000023613335, z: 0.009627835, w: 0.99995357}
+      scale: {x: 1.000026, y: 0.99997365, z: 1.0000001}
+    - name: gorilla_l_Ring_ctrl001
+      parentName: gorilla_r_Hand_bone
+      position: {x: -0.07286778, y: 18.773657, z: 3.7824824}
+      rotation: {x: -0.02824831, y: -0.71817595, z: 0.69518095, w: 0.012201194}
+      scale: {x: 1.0000002, y: 1.0000006, z: 0.99999964}
+    - name: gorilla_r_Ring_1_bone
+      parentName: gorilla_l_Ring_ctrl001
+      position: {x: 0.000005185604, y: -0.000003941357, z: -0.000028423965}
+      rotation: {x: 0.032209292, y: 0.70126677, z: -0.71146786, w: 0.031638116}
+      scale: {x: 1.0000278, y: 0.9999738, z: 1.0000015}
+    - name: gorilla_r_Ring_2_bone
+      parentName: gorilla_r_Ring_1_bone
+      position: {x: -0.0000039339066, y: 11.436825, z: -0.0000029802322}
+      rotation: {x: -0.000020551144, y: -0.000022780148, z: 0.0053280382, w: 0.9999859}
+      scale: {x: 0.9999745, y: 1.000029, z: 1.0000018}
+    - name: gorilla_r_Ring_3_bone
+      parentName: gorilla_r_Ring_2_bone
+      position: {x: -0, y: 4.8042464, z: -0.0000063180923}
+      rotation: {x: 0.0005081089, y: 0.00003058125, z: 0.013549375, w: 0.9999081}
+      scale: {x: 1.0000288, y: 0.9999737, z: 1.0000014}
+    - name: gorilla_l_Pinky_ctrl001
+      parentName: gorilla_r_Hand_bone
+      position: {x: -0.087721825, y: 18.54452, z: 8.868806}
+      rotation: {x: -0.02738231, y: -0.726734, z: 0.68625754, w: 0.0125921145}
+      scale: {x: 1.0000015, y: 1.0000017, z: 1.0000007}
+    - name: gorilla_r_Pinky_1_bone
+      parentName: gorilla_l_Pinky_ctrl001
+      position: {x: -0.00002026558, y: 0.0000034570694, z: -0.000012613833}
+      rotation: {x: 0.032790396, y: 0.7060751, z: -0.70662135, w: 0.032697562}
+      scale: {x: 1.0000268, y: 0.99997395, z: 1.0000013}
+    - name: gorilla_r_Pinky_2_bone
+      parentName: gorilla_r_Pinky_1_bone
+      position: {x: 0.0000022649765, y: 7.8741517, z: 0.0000026226044}
+      rotation: {x: 0.00055296184, y: -0.000002801418, z: 0.022535805, w: 0.99974597}
+      scale: {x: 0.9999744, y: 1.000028, z: 1.000001}
+    - name: gorilla_r_Pinky_3_bone
+      parentName: gorilla_r_Pinky_2_bone
+      position: {x: -0.0000009536743, y: 3.9414709, z: -0.0000009536743}
+      rotation: {x: -0.0006036449, y: -0.000015184307, z: -0.016859671, w: 0.9998578}
+      scale: {x: 1.0000268, y: 0.9999739, z: 1.0000002}
+    - name: gorilla_r_ForearmRoll1_bone
+      parentName: gorilla_r_Forearm_bone
+      position: {x: -0.0000025629997, y: 23.57026, z: 0.000017017126}
+      rotation: {x: 0.0000001399312, y: -0.00000013597308, z: -0, w: 1}
+      scale: {x: 1.0000011, y: 0.99999994, z: 1.0000012}
+    - name: gorilla_r_ForearmRoll2_bone
+      parentName: gorilla_r_Forearm_bone
+      position: {x: -0.000009953976, y: 11.916186, z: 0.000017374754}
+      rotation: {x: 0.00000019650903, y: -0.00000019371507, z: 0.00000004470348, w: 1}
+      scale: {x: 1.0000005, y: 0.99999976, z: 1.0000005}
+    - name: gorilla_r_ShoulderRoll_bone
+      parentName: gorilla_r_Shoulder_bone
+      position: {x: 0.0000008940697, y: -0.00000333786, z: 0.0000014305115}
+      rotation: {x: 0.49022076, y: 0.49022028, z: -0.50959176, w: -0.509592}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000007}
+    - name: gorilla_l_Clav_bone
+      parentName: gorilla_Spine3_bone
+      position: {x: 3.5723615, y: 18.271307, z: 3.723706}
+      rotation: {x: 0.6991918, y: 0.10552578, z: 0.26467147, w: 0.65570134}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000008}
+    - name: gorilla_l_Shoulder_bone
+      parentName: gorilla_l_Clav_bone
+      position: {x: 0.0000019073486, y: 24.54531, z: 0.00000333786}
+      rotation: {x: -0.000000059604638, y: -0.000000052154057, z: -0.097400814, w: 0.9952452}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000011}
+    - name: gorilla_l_Forearm_bone
+      parentName: gorilla_l_Shoulder_bone
+      position: {x: -0.00000047683716, y: 48.862453, z: -0.000018119812}
+      rotation: {x: -0.00000012295096, y: 0.00000030582004, z: -0.058845416, w: 0.9982671}
+      scale: {x: 0.99999964, y: 0.9999997, z: 1.0000004}
+    - name: gorilla_l_Wrist_bone
+      parentName: gorilla_l_Forearm_bone
+      position: {x: 0.0000150203705, y: 34.977463, z: -0.00001770258}
+      rotation: {x: -1, y: -0.00002384931, z: -0.00000030497324, w: -0.00000015500345}
+      scale: {x: 0.99999964, y: 1.0000004, z: 1.0000001}
+    - name: gorilla_l_Hand_bone
+      parentName: gorilla_l_Wrist_bone
+      position: {x: 0.0000019073486, y: 0, z: -0.000029563904}
+      rotation: {x: -0.70273864, y: -0.007131868, z: 0.7108896, w: -0.027267363}
+      scale: {x: 1.0000237, y: 0.99999976, z: 1.000007}
+    - name: gorilla_l_Hand-nub_bone
+      parentName: gorilla_l_Hand_bone
+      position: {x: 0.19162107, y: 17.2669, z: 0.8406296}
+      rotation: {x: 0.024355171, y: 0.0064953067, z: -0.005385078, w: 0.99966776}
+      scale: {x: 0.9999991, y: 0.99999964, z: 1}
+    - name: gorilla_l_Thumb_ctrl
+      parentName: gorilla_l_Hand_bone
+      position: {x: -0.42475677, y: 7.094162, z: -5.866147}
+      rotation: {x: 0.3177916, y: -0.6070821, z: 0.21020092, w: -0.6973345}
+      scale: {x: 0.9999993, y: 1.0000001, z: 0.9999993}
+    - name: gorilla_l_Thumb_1_bone
+      parentName: gorilla_l_Thumb_ctrl
+      position: {x: -0.0000047683716, y: 0.000005722046, z: -0.0000059604645}
+      rotation: {x: 0.051806156, y: 0.1111315, z: 0.029233845, w: 0.9920239}
+      scale: {x: 1.0000137, y: 0.99999124, z: 0.9999961}
+    - name: gorilla_l_Thumb_2_bone
+      parentName: gorilla_l_Thumb_1_bone
+      position: {x: 0.0000009536743, y: 4.3201866, z: -0.0000059604645}
+      rotation: {x: 0.000015407792, y: 0.00045988683, z: 0.03865984, w: 0.9992524}
+      scale: {x: 0.9999973, y: 1.0000086, z: 0.9999932}
+    - name: gorilla_l_Thumb_3_bone
+      parentName: gorilla_l_Thumb_2_bone
+      position: {x: -0.0000019073486, y: 5.6800766, z: 0.0000023841858}
+      rotation: {x: 0.0000008088317, y: 0.000006574205, z: -0.003290405, w: 0.9999946}
+      scale: {x: 1, y: 1.0000024, z: 0.9999983}
+    - name: gorilla_l_Index_ctrl
+      parentName: gorilla_l_Hand_bone
+      position: {x: 0.027694702, y: 18.789612, z: -6.3845444}
+      rotation: {x: 0.036194235, y: -0.721373, z: -0.6903894, w: 0.040908746}
+      scale: {x: 0.9999991, y: 1, z: 1.0000002}
+    - name: gorilla_l_Index_1_bone
+      parentName: gorilla_l_Index_ctrl
+      position: {x: -0.000010967255, y: -0.00000333786, z: -0.000012874603}
+      rotation: {x: -0.042481083, y: 0.73815376, z: 0.67171097, w: 0.046140935}
+      scale: {x: 0.9999769, y: 1.0000247, z: 1.0000023}
+    - name: gorilla_l_Index_2_bone
+      parentName: gorilla_l_Index_1_bone
+      position: {x: 0.0000047683716, y: 8.511717, z: -0.0000009536743}
+      rotation: {x: -0.000540005, y: 0.00000027567145, z: 0.020809256, w: -0.9997834}
+      scale: {x: 1.0000246, y: 0.99997854, z: 1.0000021}
+    - name: gorilla_l_Index_3_bone
+      parentName: gorilla_l_Index_2_bone
+      position: {x: -0.0000059604645, y: 5.8930154, z: -0.0000035762787}
+      rotation: {x: -0.0010398508, y: -0.000008764952, z: -0.0057794424, w: 0.9999828}
+      scale: {x: 0.9999771, y: 1.000024, z: 1.000001}
+    - name: gorilla_l_Middle_ctrl
+      parentName: gorilla_l_Hand_bone
+      position: {x: 0.04946375, y: 18.757877, z: -1.2268772}
+      rotation: {x: 0.019377675, y: -0.7073671, z: -0.70622545, w: 0.022403011}
+      scale: {x: 0.9999993, y: 1.0000001, z: 1.0000004}
+    - name: gorilla_l_Middle_1_bone
+      parentName: gorilla_l_Middle_ctrl
+      position: {x: 0.0000023841858, y: 0.0000023841858, z: 0.000008583069}
+      rotation: {x: 0.031556726, y: -0.7233112, z: -0.6890031, w: -0.03316405}
+      scale: {x: 0.9999768, y: 1.000023, z: 1.0000018}
+    - name: gorilla_l_Middle_2_bone
+      parentName: gorilla_l_Middle_1_bone
+      position: {x: -0.000008106232, y: 11.867035, z: -0.000002861023}
+      rotation: {x: -0.00022588612, y: 0.000010102987, z: -0.009054055, w: 0.999959}
+      scale: {x: 1.0000231, y: 0.9999785, z: 0.99999946}
+    - name: gorilla_l_Middle_3_bone
+      parentName: gorilla_l_Middle_2_bone
+      position: {x: -0.00000333786, y: 6.1570196, z: 0.00000047683716}
+      rotation: {x: -0.000037173606, y: -0.000000881695, z: -0.009640391, w: 0.99995357}
+      scale: {x: 0.999978, y: 1.0000225, z: 1.0000015}
+    - name: gorilla_l_Ring_ctrl
+      parentName: gorilla_l_Hand_bone
+      position: {x: 0.070842266, y: 18.775097, z: 3.775313}
+      rotation: {x: 0.029281167, y: -0.9994527, z: -0.015333669, w: 0.0013255756}
+      scale: {x: 0.9999986, y: 0.99999994, z: 0.99999934}
+    - name: gorilla_l_Ring_1_bone
+      parentName: gorilla_l_Ring_ctrl
+      position: {x: -0.0000052452087, y: -0.0000052452087, z: -0.0000009536743}
+      rotation: {x: 0.046077903, y: -0.9989109, z: 0.0073289135, w: -0.00045810893}
+      scale: {x: 0.99997747, y: 1.0000234, z: 1.0000013}
+    - name: gorilla_l_Ring_2_bone
+      parentName: gorilla_l_Ring_1_bone
+      position: {x: 0.000007390976, y: 11.436802, z: -0.0000014305115}
+      rotation: {x: -0.00023411278, y: 0.000007890421, z: -0.0053170817, w: 0.9999859}
+      scale: {x: 1.0000242, y: 0.99997866, z: 1.0000012}
+    - name: gorilla_l_Ring_3_bone
+      parentName: gorilla_l_Ring_2_bone
+      position: {x: -0.000012397766, y: 4.804245, z: 0.0000009536743}
+      rotation: {x: -0.00003674171, y: 0.0000009019086, z: -0.013568066, w: 0.99990803}
+      scale: {x: 0.99997777, y: 1.000023, z: 1.0000012}
+    - name: gorilla_l_Pinky_ctrl
+      parentName: gorilla_l_Hand_bone
+      position: {x: 0.08520317, y: 18.547848, z: 8.861628}
+      rotation: {x: 0.028185174, y: -0.99920523, z: -0.028180007, w: 0.0006134257}
+      scale: {x: 0.999999, y: 1.0000002, z: 0.9999998}
+    - name: gorilla_l_Pinky_1_bone
+      parentName: gorilla_l_Pinky_ctrl
+      position: {x: 0.0000038146973, y: 0.000002861023, z: -0.0000047683716}
+      rotation: {x: 0.046459056, y: -0.99892026, z: 0.0000015061269, w: -0.000116870855}
+      scale: {x: 0.99997735, y: 1.0000248, z: 1.000002}
+    - name: gorilla_l_Pinky_2_bone
+      parentName: gorilla_l_Pinky_1_bone
+      position: {x: -0.0000023841858, y: 7.8741336, z: -0.0000019073486}
+      rotation: {x: -0.0003407339, y: 0.000012070435, z: -0.022534002, w: 0.9997461}
+      scale: {x: 1.0000249, y: 0.9999779, z: 1.0000015}
+    - name: gorilla_l_Pinky_3_bone
+      parentName: gorilla_l_Pinky_2_bone
+      position: {x: 0.00000047683716, y: 3.9414868, z: -0.0000014305115}
+      rotation: {x: 0.00006480173, y: 0.000009287202, z: 0.01685378, w: 0.99985796}
+      scale: {x: 0.99997735, y: 1.0000235, z: 1.0000021}
+    - name: gorilla_l_ForearmRoll1_bone
+      parentName: gorilla_l_Forearm_bone
+      position: {x: 0.0000076293945, y: 23.442348, z: 0.000004172325}
+      rotation: {x: -0.000000059282243, y: -0.00000030842978, z: -0.00000026822093, w: 1}
+      scale: {x: 0.99999994, y: 1.0000013, z: 1.0000014}
+    - name: gorilla_l_ForearmRoll2_bone
+      parentName: gorilla_l_Forearm_bone
+      position: {x: -0.0000023841858, y: 11.770914, z: -0.0000028312206}
+      rotation: {x: -0.00000014132169, y: -0.00000020339122, z: -0.00000029057264, w: 1}
+      scale: {x: 0.9999991, y: 1.0000004, z: 0.9999996}
+    - name: gorilla_l_ShoulderRoll_bone
+      parentName: gorilla_l_Shoulder_bone
+      position: {x: 0.000005722046, y: -0.00000834465, z: -0.000026673079}
+      rotation: {x: 0.000000251706, y: 0.00000018184315, z: 0.00000018626449, w: 1}
+      scale: {x: 0.99999964, y: 0.9999996, z: 1.0000004}
+    - name: gorilla_l_Shoulder_FK_bone
+      parentName: gorilla_l_Clav_bone
+      position: {x: 0.0000019073486, y: 24.54531, z: 0.00000333786}
+      rotation: {x: 0.58841026, y: 0.24089812, z: -0.5461224, w: 0.5454281}
+      scale: {x: 1.0000011, y: 0.99999964, z: 1.0000011}
+    - name: gorilla_l_Forearm_FK_bone
+      parentName: gorilla_l_Shoulder_FK_bone
+      position: {x: 0.00000047683716, y: 48.86247, z: 0.0000011622906}
+      rotation: {x: 0.0000002682209, y: 0.000003695488, z: -0.14317101, w: 0.989698}
+      scale: {x: 1.0000013, y: 1.0000007, z: 1.0000011}
+    - name: gorilla_l_Shoulder_IK_bone
+      parentName: gorilla_l_Clav_bone
+      position: {x: 0.0000019073486, y: 24.54531, z: 0.00000333786}
+      rotation: {x: 0.09760673, y: 0.0022730005, z: -0.022925405, w: -0.9949584}
+      scale: {x: 1.0000013, y: 1.0000004, z: 1.0000013}
+    - name: gorilla_l_Forearm_IK_bone
+      parentName: gorilla_l_Shoulder_IK_bone
+      position: {x: -0.0000019073486, y: 48.86245, z: 0.0000019073486}
+      rotation: {x: -0.00000008195639, y: 0.0000000144355, z: 0.00028718502, w: 1}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999976}
+    - name: Gorilla_l_Eyelids_mesh001
+      parentName: Gorila_S_Trusami_1(Clone)
+      position: {x: -0, y: -0.0043204427, z: -0.6205631}
+      rotation: {x: 0.00000004371139, y: 0, z: -0, w: 1}
+      scale: {x: 0.99999905, y: 0.99999905, z: 0.99999905}
+    - name: Gorilla_mesh
+      parentName: Gorila_S_Trusami_1(Clone)
+      position: {x: -0, y: -0.004320562, z: 0.008388798}
+      rotation: {x: 0.00000004371139, y: 0, z: -0, w: 1}
+      scale: {x: 0.99999905, y: 0.99999905, z: 0.99999905}
+    - name: Gorilla_l_Eyelids_mesh
+      parentName: Gorila_S_Trusami_1(Clone)
+      position: {x: -0, y: -0.0043204427, z: -0.6205631}
+      rotation: {x: 0.00000004371139, y: 0, z: -0, w: 1}
+      scale: {x: 0.99999905, y: 0.99999905, z: 0.99999905}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
