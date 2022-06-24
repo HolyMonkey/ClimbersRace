@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Agava.YandexGames;
+using Agava.YandexGames.Utility;
 
 namespace YandexGames.Samples
 {
@@ -37,6 +38,11 @@ namespace YandexGames.Samples
                 OnAuthorize();
             }
                 
+        }
+
+        private void Update()
+        {
+            AudioListener.pause = WebApplication.InBackground;
         }
 
         public void OnShowInterestial()
