@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 833192225613255731}
   - component: {fileID: 833192225613255729}
   - component: {fileID: 833192225613255728}
+  - component: {fileID: 3978984789448657897}
   m_Layer: 5
   m_Name: SoldText
   m_TagString: Untagged
@@ -272,6 +273,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3978984789448657897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833192225613255730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Sold
+  FallbackText: 'Sold
+
+'
 --- !u!1 &833192225759066743
 GameObject:
   m_ObjectHideFlags: 0

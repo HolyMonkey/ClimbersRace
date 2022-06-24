@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using YandexGames.Utility;
+using Agava.YandexGames;
 
 namespace YandexGames.Samples
 {
@@ -12,6 +12,7 @@ namespace YandexGames.Samples
         [SerializeField] private TMP_Text _playerScore;
         [SerializeField] private TMP_Text[] _leaderNames;
         [SerializeField] private TMP_Text[] _scoreList;
+        [SerializeField] private string _leaderboardName = "LeaderBoard";
 
         private Money _money;
 
@@ -69,16 +70,17 @@ namespace YandexGames.Samples
         public void OnSetLeaderboardScoreButtonClick()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
-            Leaderboard.SetScore("LeaderBoard", _money.CurrentMoney);
+            Leaderboard.SetScore(_leaderboardName, _money.CurrentMoney);
 #endif
         }
 
         public void OnGetLeaderboardEntriesButtonClick()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
-            Leaderboard.GetEntries("LeaderBoard", (result) =>
+            Leaderboard.GetEntries(_leaderboardName, (result) =>
             {
-                for (int i = 0; i < _leaderNames.Length; i++)
+                int leadersNumber = result.entries.Length >= _leaderNames.Length ? _leaderNames.Length : result.entries.Length;
+                for (int i = 0; i < leadersNumber; i++)
                 {
                     string name = result.entries[i].player.publicName;
 
