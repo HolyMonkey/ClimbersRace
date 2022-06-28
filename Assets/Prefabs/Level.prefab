@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5640001596488769549}
   - component: {fileID: 986372706}
   - component: {fileID: 3098511843380568019}
-  - component: {fileID: 4211819728974067825}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -31,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -141,6 +141,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _balkMovement: {fileID: 0}
 --- !u!114 &986372706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,10 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e18546adaec547a32973410395ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalLevels: 12
-  _minCircledLevel: 1
-  _maxCircledLevel: 12
-  _bonusLevel: 13
+  _totalLevels: 53
+  _minCircledLevel: 16
+  _maxCircledLevel: 52
+  _bonusLevel: 53
 --- !u!114 &3098511843380568019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,15 +177,3 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _level: {fileID: 4284685768308042455}
---- !u!114 &4211819728974067825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42411126144549169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268a406b6a3e23946826f63b43e01992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

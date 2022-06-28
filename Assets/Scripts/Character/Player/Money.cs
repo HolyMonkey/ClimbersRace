@@ -1,23 +1,36 @@
-using MoreMountains.Feedbacks;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Money : MonoBehaviour
 {
+    [SerializeField] private Level _level;
+
     private const string SAVED_MONEY = "MoneySaveID";
-    [SerializeField] private MMFeedbacks _collectCoinFeedbacks;
 
     public event UnityAction<int> MoneyChanged;
     public event UnityAction<int, int> LevelIncomeReady;
 
     private int _currentLevelMoney = 0;
     private int _currentMultiplier = 1;
+    private int _currentMoneyWithStartLevel;
 
     public int CurrentMoney
     {
         get { return PlayerPrefs.GetInt(SAVED_MONEY, 0); }
         private set { PlayerPrefs.SetInt(SAVED_MONEY, value); }
+    }
+
+    private void OnEnable()
+    {
+        _level.LevelStarted += OnLevelStarted;
+        _level.LevelLost += OnCharacterLosed;
+    }
+
+    private void OnDisable()
+    {
+            _level.LevelStarted -= OnLevelStarted;
+            _level.LevelLost -= OnCharacterLosed;
     }
 
     public void PullEvent()
@@ -29,8 +42,6 @@ public class Money : MonoBehaviour
     {
         if (value < 0)
             throw new ArgumentException();
-
-        _collectCoinFeedbacks?.PlayFeedbacks();
 
         ChangeBalance(value);
 
@@ -77,5 +88,15 @@ public class Money : MonoBehaviour
     private void CountLevelMoney(int value)
     {
         _currentLevelMoney += value;
+    }
+
+    private void OnLevelStarted()
+    {
+        _currentMoneyWithStartLevel = CurrentMoney;
+    }
+
+    private void OnCharacterLosed()
+    {
+        CurrentMoney = _currentMoneyWithStartLevel;
     }
 }

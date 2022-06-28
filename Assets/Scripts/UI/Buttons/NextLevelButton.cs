@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YandexGames.Samples;
 
 [RequireComponent(typeof(Button))]
 public class NextLevelButton : MonoBehaviour
@@ -9,7 +10,7 @@ public class NextLevelButton : MonoBehaviour
     [SerializeField] private Level _level;
     [SerializeField] private TMP_Text _multiplierText;
     [SerializeField] private TMP_Text _rewardCountText;
-
+    
     private Button _button;
 
     private void Awake()

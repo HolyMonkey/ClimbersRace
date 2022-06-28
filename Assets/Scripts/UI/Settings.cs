@@ -1,5 +1,4 @@
-﻿using MoreMountains.NiceVibrations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
@@ -54,7 +53,6 @@ public class Settings : MonoBehaviour
     private void ApplySettings()
     {
         AudioListener.volume = _isAudioOn ? 1 : 0;
-        MMVibrationManager.SetHapticsActive(_isVibrationOn);
 
         Debug.Log("audio:" + _isAudioOn + "  vibration:" + _isVibrationOn);
     }
@@ -86,5 +84,13 @@ public class Settings : MonoBehaviour
     private Sprite GetCurrentVibrationSprite()
     {
         return _isVibrationOn ? _vibrationOn : _vibrationOff;
+    }
+
+    public void ChangeVisibilitySetting()
+    {
+        if (_settingsPanel.activeSelf)
+            _settingsPanel.SetActive(false);
+        else
+            _settingsPanel.SetActive(true);
     }
 }

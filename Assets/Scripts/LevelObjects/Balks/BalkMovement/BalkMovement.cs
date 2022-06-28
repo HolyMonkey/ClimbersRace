@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BalkMovement : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class BalkMovement : MonoBehaviour
 
     private Balk _balk;
     private Vector3 _startDragPosition;
+
+    public event UnityAction CharacterStartMoved;
 
     private void Awake()
     {
@@ -62,7 +65,10 @@ public class BalkMovement : MonoBehaviour
         if (_balk.HasCharacter)
         {
             if (_balk.PushVector.magnitude >= _minMaxDragDistance.Min)
+            {
+                CharacterStartMoved?.Invoke();
                 _balk.PushCharacter(_balk.PushVector.normalized);
+            }
         }
     }
 
