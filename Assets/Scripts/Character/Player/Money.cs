@@ -15,6 +15,8 @@ public class Money : MonoBehaviour
     private int _currentMultiplier = 1;
     private int _currentMoneyWithStartLevel;
 
+    public int CurrentMultiplier => _currentMultiplier;
+
     public int CurrentMoney
     {
         get { return PlayerPrefs.GetInt(SAVED_MONEY, 0); }
@@ -29,8 +31,8 @@ public class Money : MonoBehaviour
 
     private void OnDisable()
     {
-            _level.LevelStarted -= OnLevelStarted;
-            _level.LevelLost -= OnCharacterLosed;
+        _level.LevelStarted -= OnLevelStarted;
+        _level.LevelLost -= OnCharacterLosed;
     }
 
     public void PullEvent()

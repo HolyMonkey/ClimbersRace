@@ -32,6 +32,7 @@ public class BackMusic : MonoBehaviour
 
     private void OnEnable()
     {
+        if(_loadScreen)
             _loadScreen.ProggresBarFinished += OnStop;
     }
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Agava.YandexGames.Utility;
 
 public class Settings : MonoBehaviour
 {
@@ -24,10 +25,22 @@ public class Settings : MonoBehaviour
         Render(GetCurrentAudioSprite(), GetCurrentVibrationSprite());
     }
 
+    private void Update()
+    {
+        AudioListener.volume = WebApplication.InBackground || !_isAudioOn ? 0 : 1;
+    }
+
     public void ChangeAudioSetting()
     {
         _isAudioOn = !_isAudioOn;
         Save();
+        ApplySettings();
+        Render(GetCurrentAudioSprite(), GetCurrentVibrationSprite());
+    }
+
+    public void SetAudioSetting(bool value)
+    {
+        _isAudioOn = value;
         ApplySettings();
         Render(GetCurrentAudioSprite(), GetCurrentVibrationSprite());
     }
@@ -63,7 +76,7 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetInt(VIBRATION, _isVibrationOn ? 1 : 0);
     }
 
-    private void Load()
+    public void Load()
     {
         _isAudioOn = PlayerPrefs.GetInt(AUDIO, 1) == 1;
         _isVibrationOn = PlayerPrefs.GetInt(VIBRATION, 1) == 1;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.46308023, g: 0.59371686, b: 1.1591859, a: 1}
+  m_IndirectSpecularColor: {r: 0.46307957, g: 0.59371656, b: 1.1591859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -525,6 +525,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacce6662e651624ba1debbbf3f6153e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &376475104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3822163722993666218, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+  m_PrefabInstance: {fileID: 746564338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ae28d06890280448f77224ad5c450f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &413864208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -914,11 +925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d16749416cc7ba49bacf7a5b77d58c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &567885929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1845192441399944473, guid: cef7449861184f94ca42314514003596, type: 3}
-  m_PrefabInstance: {fileID: 567885925}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &577022560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3556795050912220246, guid: 24f1c11adbeae0943a2b42a5585d21ed, type: 3}
@@ -1171,17 +1177,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 278564461, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 475830922, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
     - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 376475104}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 439412908}
     - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetAudioSetting
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: DisableCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1264722165, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _money
@@ -1212,20 +1250,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 567885928}
     - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 567885929}
+      objectReference: {fileID: 376475104}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
-      value: SetActive
+      value: SetAudioSetting
       objectReference: {fileID: 0}
     - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1705153297, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _onLevelStarted.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1363,6 +1413,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: EnableCollider
       objectReference: {fileID: 0}
+    - target: {fileID: 5314257822130497308, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 1456322490}
+    - target: {fileID: 5314257822130497308, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: _money
+      value: 
+      objectReference: {fileID: 1601382677}
     - target: {fileID: 5847476823294502303, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
