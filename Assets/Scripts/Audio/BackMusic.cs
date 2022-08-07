@@ -32,6 +32,7 @@ public class BackMusic : MonoBehaviour
 
     private void OnEnable()
     {
+        if(_loadScreen)
             _loadScreen.ProggresBarFinished += OnStop;
     }
 
@@ -51,8 +52,8 @@ public class BackMusic : MonoBehaviour
     {
         if (CurrentMusicState == 1)
         {
-        _audio.Stop();
-        PlayerPrefs.SetInt(CURRENT_MUSIC_STATE, 0);
+            _audio.Stop();
+            PlayerPrefs.SetInt(CURRENT_MUSIC_STATE, 0);
         }
             
         _loadScreen.ProggresBarFinished -= OnStop;

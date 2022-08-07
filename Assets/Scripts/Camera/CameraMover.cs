@@ -10,6 +10,11 @@ public class CameraMover : MonoBehaviour
     [SerializeField] private float _smoothSpeed;
     [SerializeField] private Vector3 _positionOffset;
     [SerializeField] private Vector3 _lookAtOffset;
+<<<<<<< HEAD
+    [SerializeField] private Vector3 _positionOffsetOnWon;
+=======
+>>>>>>> 9e0ee8453a943003ef99071209113a25f4742522
+    [SerializeField] private Vector3 _lookAtOffsetOnWon;
     [SerializeField] private float _distanceOffset;
     [SerializeField] private MonoBehaviour _wallBehavior;
     [SerializeField] private Level _level;
@@ -48,12 +53,14 @@ public class CameraMover : MonoBehaviour
     private void OnEnable()
     {
         _level.LevelPreStart += OnChangePosition;
+        _level.LevelWon += OnLevelWon;
 
     }
 
     private void OnDisable()
     {
         _level.LevelPreStart -= OnChangePosition;
+        _level.LevelWon -= OnLevelWon;
     }
 
     private void FixedUpdate()
@@ -63,6 +70,11 @@ public class CameraMover : MonoBehaviour
             Follow();
             transform.LookAt(_target.position + _lookAtOffset);
         }
+    }
+
+    public void OnLevelWon()
+    {
+        _lookAtOffset = _lookAtOffsetOnWon;
     }
 
     public void ScaleFOV(float balkDragValue)
@@ -91,6 +103,12 @@ public class CameraMover : MonoBehaviour
     {
         _target = character.transform;
         _smoothSpeed = 2f;
+    }
+
+    public void OnLevelWon()
+    {
+        _positionOffset = _positionOffsetOnWon;
+        _lookAtOffset = _lookAtOffsetOnWon;
     }
 
     private void Follow()
@@ -129,4 +147,5 @@ public class CameraMover : MonoBehaviour
 
         _moveCameraInJob = StartCoroutine(MoveCamera(_startPoint.transform, _target));
     }
+
 }

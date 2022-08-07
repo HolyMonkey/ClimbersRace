@@ -47,25 +47,6 @@ public class Level : MonoBehaviour
         LoseGame();
     }
 
-    private void OnApplicationFocus(bool hasFocus)
-    {
-        Debug.Log("OnApplicationFocus");
-        Silence(!hasFocus);
-    }
-
-    private void OnApplicationPause(bool isPaused)
-    {
-        Debug.Log("OnApplicationPause");
-        Silence(isPaused);
-    }
-
-    private void Silence(bool silence)
-    {
-        AudioListener.pause = silence;
-        // Or / And
-        AudioListener.volume = silence ? 0 : 0.2f;
-    }
-
     private void Update()
     {
         if (_isLevelStarted)

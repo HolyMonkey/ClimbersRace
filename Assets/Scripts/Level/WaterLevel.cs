@@ -7,6 +7,7 @@ public class WaterLevel : MonoBehaviour
     [SerializeField] private float _increasingWaterSpeed;
     [SerializeField] private Level _level;
     [SerializeField] private float _startTimer = 2f;
+    [SerializeField] private StartTutorial _startTutorial;
 
     private bool _isWaterIncreasing = false;
 
@@ -43,7 +44,7 @@ public class WaterLevel : MonoBehaviour
 
     private void Update()
     {
-        if (_isWaterIncreasing)
+        if (_isWaterIncreasing && _startTutorial.IsStarted)
         {
             _timer += Time.deltaTime;
             if (_timer > _startTimer)

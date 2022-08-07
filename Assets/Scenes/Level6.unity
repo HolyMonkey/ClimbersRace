@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.46308023, g: 0.59371686, b: 1.1591859, a: 1}
+  m_IndirectSpecularColor: {r: 0.46307957, g: 0.59371656, b: 1.1591859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2751,12 +2751,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1456322490}
     - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1457263810}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 439412908}
     - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetAudioSetting
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: DisableCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 672930992, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1264722165, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _money
@@ -3029,6 +3057,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26cd8e702ee3e10488694ff0c16c6917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1457263810 stripped
+MonoBehaviour:
+<<<<<<< HEAD
+  m_CorrespondingSourceObject: {fileID: 5817999939386829055, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+=======
+  m_CorrespondingSourceObject: {fileID: 3822163722993666218, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+>>>>>>> 9e0ee8453a943003ef99071209113a25f4742522
+  m_PrefabInstance: {fileID: 1457263808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 3efeaa4fbe86a034586490d9d836373b, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 69ae28d06890280448f77224ad5c450f, type: 3}
+>>>>>>> 9e0ee8453a943003ef99071209113a25f4742522
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1532136126 stripped
@@ -4467,6 +4514,10 @@ PrefabInstance:
       propertyPath: _level
       value: 
       objectReference: {fileID: 1456322490}
+    - target: {fileID: 1601382677, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
+      propertyPath: _advertisement
+      value: 
+      objectReference: {fileID: 1457263810}
     - target: {fileID: 7255541209806285321, guid: b0295f06c6c5def43ae0687da0845f9e, type: 3}
       propertyPath: _level
       value: 

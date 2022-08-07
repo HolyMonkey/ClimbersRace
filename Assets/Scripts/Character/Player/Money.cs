@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class Money : MonoBehaviour
 {
     [SerializeField] private Level _level;
+    [SerializeField] private Advertisement _advertisement;
 
     private const string SAVED_MONEY = "MoneySaveID";
 
@@ -14,6 +15,8 @@ public class Money : MonoBehaviour
     private int _currentLevelMoney = 0;
     private int _currentMultiplier = 1;
     private int _currentMoneyWithStartLevel;
+
+    public int CurrentMultiplier => _currentMultiplier;
 
     public int CurrentMoney
     {
@@ -25,12 +28,23 @@ public class Money : MonoBehaviour
     {
         _level.LevelStarted += OnLevelStarted;
         _level.LevelLost += OnCharacterLosed;
+        if(_advertisement)
+        {
+            _advertisement.AdRewarded += OnAdRewarded;
+        }
     }
 
     private void OnDisable()
     {
-            _level.LevelStarted -= OnLevelStarted;
-            _level.LevelLost -= OnCharacterLosed;
+        _level.LevelStarted -= OnLevelStarted;
+        _level.LevelLost -= OnCharacterLosed;
+<<<<<<< HEAD
+        if (_advertisement)
+        {
+            _advertisement.AdRewarded -= OnAdRewarded;
+        }
+=======
+>>>>>>> 9e0ee8453a943003ef99071209113a25f4742522
     }
 
     public void PullEvent()
@@ -77,6 +91,12 @@ public class Money : MonoBehaviour
 
         _currentMultiplier = multiplier;
         LevelIncomeReady?.Invoke(_currentLevelMoney, _currentMultiplier);
+    }
+
+    private void OnAdRewarded()
+    {
+        _currentMultiplier *= _advertisement.AdMultiplier;
+        RecieveLevelBonus();
     }
 
     private void ChangeBalance(int value)
