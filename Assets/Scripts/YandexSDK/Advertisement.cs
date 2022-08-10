@@ -137,6 +137,10 @@ public class Advertisement : MonoBehaviour
 
     public void OnGetLeaderboardEntriesButtonClick()
     {
+#if UNITY_EDITOR
+        _leaderboardPanel.Show();
+#endif
+
 #if UNITY_WEBGL && !UNITY_EDITOR
         Leaderboard.GetEntries(_leaderboardName, (result) =>
         {

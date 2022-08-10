@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.46307957, g: 0.59371656, b: 1.1591859, a: 1}
+  m_IndirectSpecularColor: {r: 0.46308023, g: 0.59371686, b: 1.1591859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (1)
@@ -269,6 +273,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (8)
@@ -493,6 +501,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (2)
@@ -550,6 +562,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 439412907}
     m_Modifications:
+    - target: {fileID: 5865509820952548154, guid: cef7449861184f94ca42314514003596, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: cef7449861184f94ca42314514003596, type: 3}
       propertyPath: m_Name
       value: StartBalk
@@ -657,6 +673,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (3)
@@ -823,6 +843,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (12)
@@ -956,6 +980,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (4)
@@ -1195,6 +1223,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: DisableCollider
       objectReference: {fileID: 0}
+    - target: {fileID: 1083707761, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1264722165, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: _money
       value: 
@@ -1367,6 +1399,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3310051281410464232, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3507971739797262472, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_text
       value: 
@@ -1397,6 +1433,22 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5778132156815226959, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778132156815226959, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 439412908}
+    - target: {fileID: 5778132156815226959, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: EnableCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778132156815226959, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: BalksColliderSetter, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5847476823294502303, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1460,6 +1512,22 @@ PrefabInstance:
     - target: {fileID: 5847476825077229969, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308335853390559056, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308335853390559056, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 439412908}
+    - target: {fileID: 6308335853390559056, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308335853390559056, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BalksColliderSetter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7337933411935263981, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1526,12 +1594,8 @@ PrefabInstance:
       value: BalksColliderSetter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7951297143942756501, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
-      value: 
-      objectReference: {fileID: 439412908}
-    - target: {fileID: 7951297143942756501, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: EnableCollider
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8584746828493286476, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
       propertyPath: m_Value
@@ -2101,6 +2165,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8956675892853581391, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
   m_PrefabInstance: {fileID: 1517026457}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1136380887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2728240136693926174, guid: 530eca36273303741a2fef8d74ca17fc, type: 3}
+  m_PrefabInstance: {fileID: 859390568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72066d15f3dc03845a8d6409684ef0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1153261942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2381,6 +2456,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (7)
@@ -2593,6 +2672,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (13)
@@ -2708,6 +2791,10 @@ PrefabInstance:
       propertyPath: _wallBehavior
       value: 
       objectReference: {fileID: 1087286096}
+    - target: {fileID: 5865509820952548154, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: 1136380887}
     - target: {fileID: 8956675892853581377, guid: 3b1c0efbe85508b46bd025bf704bb004, type: 3}
       propertyPath: m_Name
       value: PlayerBalk 1 (14)
@@ -2962,7 +3049,8 @@ PrefabInstance:
       propertyPath: _bonusWallsMultipliers.Array.data[6]
       value: 
       objectReference: {fileID: 1157608032}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5686673580528708899, guid: a0621566eda38404c8607368a6da7d22, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0621566eda38404c8607368a6da7d22, type: 3}
 --- !u!4 &1842975133 stripped
 Transform:

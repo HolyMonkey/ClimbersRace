@@ -6,6 +6,7 @@ public class WaterLevel : MonoBehaviour
     [SerializeField] private Transform _deathCollider;
     [SerializeField] private float _increasingWaterSpeed;
     [SerializeField] private Level _level;
+    [SerializeField] private StartTutorial _startTutorial;
     [SerializeField] private float _startTimer = 2f;
 
     private bool _isWaterIncreasing = false;
@@ -14,16 +15,18 @@ public class WaterLevel : MonoBehaviour
 
     private void OnEnable()
     {
-        _level.LevelStarted += OnLevelStarted;
+        //_level.LevelStarted += OnLevelStarted;
         _level.BonusGameStarted += OnBonusStarted;
         _level.LevelLost += OnGameLost;
+        _startTutorial.PlayerMoveStarted += OnLevelStarted;
     }
 
     private void OnDisable()
     {
-        _level.LevelStarted -= OnLevelStarted;
+       // _level.LevelStarted -= OnLevelStarted;
         _level.BonusGameStarted -= OnBonusStarted;
         _level.LevelLost -= OnGameLost;
+        _startTutorial.PlayerMoveStarted -= OnLevelStarted;
     }
 
     private void OnGameLost()

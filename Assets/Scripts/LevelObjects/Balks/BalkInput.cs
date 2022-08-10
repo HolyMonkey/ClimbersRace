@@ -7,6 +7,7 @@ public class BalkInput : MonoBehaviour
 {
     [SerializeField] private AudioSource _audio;
     [SerializeField] private BalkMovement _balkMovement;
+    [SerializeField] private PlayerInput _playerInput;
 
     private Camera _camera;
     private CameraMover _cameraMover;
@@ -21,29 +22,39 @@ public class BalkInput : MonoBehaviour
         _audio = GetComponent<AudioSource>();
         _camera = Camera.main;
         _cameraMover = _camera.GetComponent<CameraMover>();
+        _playerInput = FindObjectOfType<PlayerInput>();
     }
 
     private void OnMouseDown()
     {
-            _zMouseOffset = _camera.WorldToScreenPoint(transform.position).z;
-            _mouseOffset = transform.position - GetMousePosition();
-            _balkMovement.BeginDragBalk();
-            PlayerStartMoved?.Invoke();
+        if (!_playerInput.IsOn)
+            return;
+
+        _zMouseOffset = _camera.WorldToScreenPoint(transform.position).z;
+        _mouseOffset = transform.position - GetMousePosition();
+        _balkMovement.BeginDragBalk();
+        PlayerStartMoved?.Invoke();
     }
 
     private void OnMouseDrag()
     {
-            Vector3 newPosition = GetMousePosition() + _mouseOffset;
-            float dragFOV = _balkMovement.PlayerDragBalk(newPosition);
+        if (!_playerInput.IsOn)
+            return;
 
-            ScaleCamera(dragFOV);
+        Vector3 newPosition = GetMousePosition() + _mouseOffset;
+        float dragFOV = _balkMovement.PlayerDragBalk(newPosition);
+
+        ScaleCamera(dragFOV);
     }
 
     private void OnMouseUp()
     {
-            _balkMovement.FinishDragBalk();
-            _audio.Play();
-            ScaleCamera(0);
+        if (!_playerInput.IsOn)
+            return;
+
+        _balkMovement.FinishDragBalk();
+        _audio.Play();
+        ScaleCamera(0);
     }
 
     private void ScaleCamera(float value)
