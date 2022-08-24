@@ -14,15 +14,15 @@ public class Character : MonoBehaviour
     [SerializeField] private Rigidbody _defaultRigidbody;
     [SerializeField] private Level _level;
     [SerializeField] private ParticleSystem _bonusFlameParticles;
-    [SerializeField]
-    private MonoBehaviour _moverBehaviour;
+    [SerializeField] private ParticleSystem _dieEffect;
+    [SerializeField] private MonoBehaviour _moverBehaviour;
+
     private IMovable _mover => (IMovable)_moverBehaviour;
 
     private Collider _collider;
     private Rigidbody _rigidbody;
     private SpringJoint _springJoint;
-
-    public Balk CurrentBalk { get; private set; }
+    private float _offset = 0.55f;
     private Vector3 _startDragPosition;
 
     public event UnityAction<Balk> AttachingBalk;
@@ -34,6 +34,7 @@ public class Character : MonoBehaviour
 
     public bool IsAttachingBalk => CurrentBalk;
     public Vector3 Velocity => _rigidbody.velocity;
+    public Balk CurrentBalk { get; private set; }
     public bool IsBonusMove { get; private set; } = false;
 
     private void OnValidate()
@@ -81,6 +82,7 @@ public class Character : MonoBehaviour
             DetachFromBalk();
 
         Dying?.Invoke(this);
+        _dieEffect.Play();
         _rigidbody.isKinematic = true;
         _rigidbody.velocity = Vector3.zero;
     }
@@ -157,7 +159,7 @@ public class Character : MonoBehaviour
 
         _bonusFlameParticles.Play();
 
-        targetPoint.y += 0.55f; //character offset
+        targetPoint.y += _offset;
 
         while (time < duration)
         {

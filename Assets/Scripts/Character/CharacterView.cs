@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
-using MoreMountains.Feedbacks;
 
 [RequireComponent(typeof(Animator))]
 public class CharacterView : MonoBehaviour
 {
     [SerializeField] private Character _character;
-    [SerializeField] private MMFeedbacks _attachBalkFeedbacks;
-    [SerializeField] private MMFeedbacks _detachBalkFeedbacks;
-    [SerializeField] private MMFeedbacks _dieFeedback;
-    [SerializeField] private MMFeedbacks _fallingFeedback;
-    [SerializeField] private MMFeedbacks _attackFeedbacks;
     [SerializeField] private ParticleSystem _enemyAttackFX;
+    [SerializeField] private AudioSource _audioSource;
 
     [Header("IK")]
     [SerializeField] private bool _ikActive;
@@ -27,6 +22,7 @@ public class CharacterView : MonoBehaviour
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _cameraTransform = Camera.main.transform;
 
@@ -55,9 +51,9 @@ public class CharacterView : MonoBehaviour
 
     private void OnEnemyAttacked(Vector3 contactPoint)
     {
+        _audioSource.Play();
         _enemyAttackFX.transform.position = contactPoint + _character.Velocity.normalized / 1.5f;
         _enemyAttackFX.Play();
-        _attackFeedbacks?.PlayFeedbacks();
     }
 
     private void Update()
@@ -78,27 +74,23 @@ public class CharacterView : MonoBehaviour
     {
         _animator.SetBool(IKCharacterAnimatorController.Params.Flying, false);
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, false);
-        _attachBalkFeedbacks?.PlayFeedbacks();
     }
 
     private void OnDetachingBalk()
     {
         _animator.SetBool(IKCharacterAnimatorController.Params.Flying, true);
         SetIKTarget(null, null);
-
-        _detachBalkFeedbacks?.PlayFeedbacks();
     }
 
     private void OnFalling()
     {
+        _audioSource.Play();
         _animator.SetBool(IKCharacterAnimatorController.Params.Falling, true);
-        _fallingFeedback?.PlayFeedbacks();
     }
 
     private void OnDying(Character character)
     {
         _animator.SetTrigger(IKCharacterAnimatorController.Params.Die);
-        _dieFeedback?.PlayFeedbacks();
     }
 
     private void LookAt(Vector3 targetPoint)

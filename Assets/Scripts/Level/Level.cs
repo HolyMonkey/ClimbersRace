@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using Agava.YandexGames;
+using Agava.YandexGames.Utility;
 
 public class Level : MonoBehaviour
 {
@@ -12,18 +15,21 @@ public class Level : MonoBehaviour
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private bool _bonusLevel = false;
 
+    private bool _isLevelStarted = false;
+
     public int CurrentLevel => PlayerPrefs.GetInt(CURRENT_LEVEL_ID, 1);
 
+    public event UnityAction LevelPreStart;
+    public event UnityAction LevelOpenSetting;
+    public event UnityAction LevelCloseSetting;
     public event UnityAction LevelStarted;
     public event UnityAction BonusGameStarted;
     public event UnityAction LevelWon;
     public event UnityAction LevelLost;
 
-    private bool _isLevelStarted = false;
-
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        PreStart();
     }
 
     private void OnEnable()
@@ -46,14 +52,8 @@ public class Level : MonoBehaviour
         if (_isLevelStarted)
             return;
 
-#if (UNITY_ANDROID && !UNITY_EDITOR)
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) //-- for build
-#elif (UNITY_EDITOR && UNITY_ANDROID)
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-#endif
-        {
+        if (_cameraMover.IsStartReached)
             StartLevel();
-        }
     }
 
     public void StartBonusGame(FinishBalk finishBalk, Character character)
@@ -76,7 +76,7 @@ public class Level : MonoBehaviour
         {
             _sceneChanger.LoadLevel(CurrentLevel);
         }
-        else if (CurrentLevel % 4 == 0)
+        else if (CurrentLevel % 5 == 0)
         {
             PlayerPrefs.SetInt(CURRENT_LEVEL_ID, CurrentLevel + 1);
 
@@ -98,6 +98,11 @@ public class Level : MonoBehaviour
             _sceneChanger.LoadLevel(CurrentLevel);
     }
 
+    public void PreStart()
+    {
+        LevelPreStart?.Invoke();
+    }
+
     public void StartLevel()
     {
         _isLevelStarted = true;
@@ -112,5 +117,20 @@ public class Level : MonoBehaviour
     public void LoseGame()
     {
         LevelLost?.Invoke();
+    }
+
+    public void OpenSettingMenu()
+    {
+        LevelOpenSetting?.Invoke();
+    }
+
+    public void CloseSettingMenu()
+    {
+        LevelCloseSetting?.Invoke();
+    }
+
+    public void StartShopScene()
+    {
+        SceneManager.LoadScene(54);
     }
 }

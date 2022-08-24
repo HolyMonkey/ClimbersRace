@@ -23,6 +23,9 @@ public class BonusGame : MonoBehaviour
 
     private float _time = 0f;
 
+    [SerializeField] private BalkMovement _balkMovement;
+    private Camera _camera;
+
     private void OnValidate()
     {
         if (_valueToMultiplierBounds.Count != _bonusWallsMultipliers.Count)
@@ -35,12 +38,18 @@ public class BonusGame : MonoBehaviour
             return;
 
         float value = 0f;
+
+        if (Input.GetMouseButton(0))
+        {
+            float tempValue = 0.5f;
+            _targetBalk.DragFinishBalk(tempValue);
+        }
+
         UpdateScaleValue(out value);
 
-        _targetBalk.DragFinishBalk(value);
         _bonusScaleView.ChangeValue(value);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             FinishBonusGame(value);
         }

@@ -1,7 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class BalkInput : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audio;
     [SerializeField] private BalkMovement _balkMovement;
 
     private Camera _camera;
@@ -10,31 +14,36 @@ public class BalkInput : MonoBehaviour
     private Vector3 _mouseOffset;
     private float _zMouseOffset;
 
+    public event UnityAction PlayerStartMoved;
+
     private void Awake()
     {
+        _audio = GetComponent<AudioSource>();
         _camera = Camera.main;
         _cameraMover = _camera.GetComponent<CameraMover>();
     }
 
     private void OnMouseDown()
     {
-        _zMouseOffset = _camera.WorldToScreenPoint(transform.position).z;
-        _mouseOffset = transform.position - GetMousePosition();
-        _balkMovement.BeginDragBalk();
+            _zMouseOffset = _camera.WorldToScreenPoint(transform.position).z;
+            _mouseOffset = transform.position - GetMousePosition();
+            _balkMovement.BeginDragBalk();
+            PlayerStartMoved?.Invoke();
     }
 
     private void OnMouseDrag()
     {
-        Vector3 newPosition = GetMousePosition() + _mouseOffset;
-        float dragFOV = _balkMovement.PlayerDragBalk(newPosition);
+            Vector3 newPosition = GetMousePosition() + _mouseOffset;
+            float dragFOV = _balkMovement.PlayerDragBalk(newPosition);
 
-        ScaleCamera(dragFOV);
+            ScaleCamera(dragFOV);
     }
 
     private void OnMouseUp()
     {
-        _balkMovement.FinishDragBalk();
-        ScaleCamera(0);
+            _balkMovement.FinishDragBalk();
+            _audio.Play();
+            ScaleCamera(0);
     }
 
     private void ScaleCamera(float value)

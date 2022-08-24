@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform[] _wayPoints;
     [SerializeField] private float _timeOfDragging = 0.75f;
     [SerializeField] private float _dragDelay = 1.5f;
+    [SerializeField] private BalkInput _playerMovement;
 
     private int _currentWaypointNumber = 0;
     private Tweener _tweener;
@@ -16,17 +17,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        _playerMovement.PlayerStartMoved += OnStartMoved;
         _characterInteractionHandler.Falling += OnSlidingDown;
     }
 
     private void OnDisable()
     {
+        _playerMovement.PlayerStartMoved -= OnStartMoved;
         _characterInteractionHandler.Falling -= OnSlidingDown;
-    }
-
-    private void Start()
-    {
-        MoveToNextPosition();
     }
 
     public void MoveToNextPosition()
@@ -52,5 +50,10 @@ public class EnemyMovement : MonoBehaviour
     {
         _isSlidingDown = true;
         _tweener.Kill();
+    }
+
+    private void OnStartMoved()
+    {
+        MoveToNextPosition();
     }
 }

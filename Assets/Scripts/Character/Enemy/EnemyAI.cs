@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Character _enemyCharacter;
     [SerializeField] private RangeFloat _choosingBalkDelayRange;
     [SerializeField] private RangeFloat _dragTimeRange;
+    [SerializeField] private BalkInput _playerStarted;
 
     private BalkAINode _currentNode;
     private BalkAINode _nextNode;
@@ -13,18 +14,22 @@ public class EnemyAI : MonoBehaviour
 
     private Vector3 _dragVector = new Vector3();
     private float _dragTime;
+    private float _averageSpeed = 7f;
+    private bool _isPlayerStarted = false;
 
     private Coroutine _choosingJob;
     private Coroutine _draggingBalkJob;
 
     private void OnEnable()
     {
+        _playerStarted.PlayerStartMoved += OnPlayerStarted;
         _enemyCharacter.AttachingBalk += OnAttachingBalk;
         _enemyCharacter.DetachingBalk += OnDetachingBalk;
     }
 
     private void OnDisable()
     {
+        _playerStarted.PlayerStartMoved -= OnPlayerStarted;
         _enemyCharacter.AttachingBalk -= OnAttachingBalk;
         _enemyCharacter.DetachingBalk -= OnDetachingBalk;
 
@@ -34,6 +39,11 @@ public class EnemyAI : MonoBehaviour
     public void SetCurrentNode(BalkAINode balkAINode)
     {
         _currentNode = balkAINode;
+    }
+
+    private void OnPlayerStarted()
+    {
+        _isPlayerStarted = true;
     }
 
     public void StartAI()
@@ -123,6 +133,7 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator DraggingBalk(Coroutine choosingJob)
     {
+        yield return new WaitUntil(() => _isPlayerStarted == true);
         if (choosingJob != null)
             yield return choosingJob;
 
@@ -151,7 +162,7 @@ public class EnemyAI : MonoBehaviour
         Vector3 betweenBalkVector = _nextNode.transform.position - _currentNode.transform.position;
         _dragVector = -betweenBalkVector;
 
-        float t = betweenBalkVector.magnitude / 7f; //7 - average speed
+        float t = betweenBalkVector.magnitude / _averageSpeed;
         float yPrecision = Physics.gravity.y * t * t / 2;
         _dragVector.y += yPrecision;
 

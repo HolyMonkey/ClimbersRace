@@ -8,6 +8,8 @@ public class EnemyAIHead : MonoBehaviour
 
     private void OnEnable()
     {
+        _level.LevelOpenSetting += OnOpenSetting;
+        _level.LevelCloseSetting += OnCloseSetting;
         _level.LevelStarted += OnLevelStarted;
         _level.LevelWon += OnGameWon;
         _level.LevelLost += OnLoseGame;
@@ -18,6 +20,8 @@ public class EnemyAIHead : MonoBehaviour
 
     private void OnDisable()
     {
+        _level.LevelOpenSetting -= OnOpenSetting;
+        _level.LevelCloseSetting -= OnCloseSetting;
         _level.LevelStarted -= OnLevelStarted;
         _level.LevelWon -= OnGameWon;
         _level.LevelLost -= OnLoseGame;
@@ -42,6 +46,16 @@ public class EnemyAIHead : MonoBehaviour
     private void OnLoseGame()
     {
         StopAIs();
+    }
+
+    private void OnOpenSetting()
+    {
+        StopAIs();
+    }
+
+    private void OnCloseSetting()
+    {
+        StartAIs();
     }
 
     private void StartAIs()

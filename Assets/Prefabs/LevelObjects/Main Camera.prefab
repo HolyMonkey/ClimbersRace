@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0.4, y: 6.32, z: -10.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,12 +97,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e03c3f2ea2ef5448efc890cc14f49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startPoint: {fileID: 0}
   _target: {fileID: 0}
   _smoothSpeed: 20
   _positionOffset: {x: 0, y: 0, z: 0}
   _lookAtOffset: {x: 0, y: 3, z: 0}
+<<<<<<< HEAD
+  _positionOffsetOnWon: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 9e0ee8453a943003ef99071209113a25f4742522
+  _lookAtOffsetOnWon: {x: 0, y: 1, z: 0}
   _distanceOffset: 10
   _wallBehavior: {fileID: 0}
+  _level: {fileID: 0}
+  _duration: 2.5
   _minMaxFOV:
     _min: 62
     _max: 69

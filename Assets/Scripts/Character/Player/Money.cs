@@ -1,23 +1,50 @@
-using MoreMountains.Feedbacks;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Money : MonoBehaviour
 {
+    [SerializeField] private Level _level;
+    [SerializeField] private Advertisement _advertisement;
+
     private const string SAVED_MONEY = "MoneySaveID";
-    [SerializeField] private MMFeedbacks _collectCoinFeedbacks;
 
     public event UnityAction<int> MoneyChanged;
     public event UnityAction<int, int> LevelIncomeReady;
 
     private int _currentLevelMoney = 0;
     private int _currentMultiplier = 1;
+    private int _currentMoneyWithStartLevel;
+
+    public int CurrentMultiplier => _currentMultiplier;
 
     public int CurrentMoney
     {
         get { return PlayerPrefs.GetInt(SAVED_MONEY, 0); }
         private set { PlayerPrefs.SetInt(SAVED_MONEY, value); }
+    }
+
+    private void OnEnable()
+    {
+        _level.LevelStarted += OnLevelStarted;
+        _level.LevelLost += OnCharacterLosed;
+        if(_advertisement)
+        {
+            _advertisement.AdRewarded += OnAdRewarded;
+        }
+    }
+
+    private void OnDisable()
+    {
+        _level.LevelStarted -= OnLevelStarted;
+        _level.LevelLost -= OnCharacterLosed;
+<<<<<<< HEAD
+        if (_advertisement)
+        {
+            _advertisement.AdRewarded -= OnAdRewarded;
+        }
+=======
+>>>>>>> 9e0ee8453a943003ef99071209113a25f4742522
     }
 
     public void PullEvent()
@@ -29,8 +56,6 @@ public class Money : MonoBehaviour
     {
         if (value < 0)
             throw new ArgumentException();
-
-        _collectCoinFeedbacks?.PlayFeedbacks();
 
         ChangeBalance(value);
 
@@ -68,6 +93,12 @@ public class Money : MonoBehaviour
         LevelIncomeReady?.Invoke(_currentLevelMoney, _currentMultiplier);
     }
 
+    private void OnAdRewarded()
+    {
+        _currentMultiplier *= _advertisement.AdMultiplier;
+        RecieveLevelBonus();
+    }
+
     private void ChangeBalance(int value)
     {
         CurrentMoney += value;
@@ -77,5 +108,15 @@ public class Money : MonoBehaviour
     private void CountLevelMoney(int value)
     {
         _currentLevelMoney += value;
+    }
+
+    private void OnLevelStarted()
+    {
+        _currentMoneyWithStartLevel = CurrentMoney;
+    }
+
+    private void OnCharacterLosed()
+    {
+        CurrentMoney = _currentMoneyWithStartLevel;
     }
 }
